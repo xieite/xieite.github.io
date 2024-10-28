@@ -1,0 +1,96 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.center-container {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.center-x {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.center-y {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.center {
+	margin: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+blockquote {
+	background-color: #0f0f0f;
+	color: #dfdfdf;
+	padding: 10px;
+}
+
+a {
+	color: #afafaf;
+	text-decoration: none;
+}
+
+tab { padding-left: 2em }
+
+w_ { color: #eee; } /* comments */
+k_ { color: #eee; } /* keywords */
+t_ { color: #eee; } /* types */
+v_ { color: #eee; } /* variables */
+c_ { color: #eee; } /* concepts */
+m_ { color: #eee; } /* namespaces */
+f_ { color: #eee; } /* functions */
+a_ { color: #eee; } /* attributes */
+s_ { color: #eee; } /* strings */
+n_ { color: #eee; } /* numbers */
+p_ { color: #eee; } /* preprocessor */
+
+#_0 {
+	background-color: #222;
+	color: #aaa;
+}
+
+#_1 {
+	width: 70%;
+	height: 100%;
+
+	background-color: #333;
+	color: #eee;
+
+	overflow: scroll;
+}
+
+#_2 {
+	width: 80%;
+
+	padding: 50px;
+}
+
+#_3 {
+	position: sticky;
+
+	padding: 25px;
+}
+
+@media (max-width: 850px) {
+	#_1 {
+		width: 100%;
+	}
+
+	#_3 {
+		display: none;
+	}
+}
