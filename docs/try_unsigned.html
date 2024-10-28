@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::try_unsigned&lt;&gt;</title>
+		<link href="../style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<h2><code>xieite::try_unsigned&lt;&gt;</code></h2>
+				Evaluates to the unsigned variant of a type, if it exists.<br/>
+				<br/>
+				<blockquote>
+					template&lt;typename T&gt;<br/>
+					using try_unsigned = std::conditional_t&lt;std::signed_integral&lt;T&gt;, std::make_unsigned&lt;T&gt;, std::type_identity&lt;T&gt;&gt;::type;
+				</blockquote>
+				<br/>
+				<br/>
+				<h3>Example</h3>
+				<blockquote>
+					import std;<br/>
+					import xieite;<br/>
+					<br/>
+					int main() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", std::same_as&lt;unsigned int, xieite::try_unsigned&lt;int&gt;&gt;);<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", std::same_as&lt;double, xieite::try_unsigned&lt;double&gt;&gt;);<br/>
+					}
+				</blockquote>
+				<blockquote>
+					true<br/>
+					true
+				</blockquote>
+				<br/>
+				<br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/src/abs.cpp">Source</a><br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/test/abs.cpp">Tests</a>
+			</div>
+		</div>
+		<iframe id="_3" src="../links.html" frameborder="0"></iframe>
+	</body>
+</html>
