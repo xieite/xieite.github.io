@@ -10,37 +10,37 @@
 				<h2><code>xieite::is_arith&lt;&gt;</code></h2>
 				Specifies that a type is arithmetic (integral or floating-point).<br/>
 				<br/>
-				<blockquote>
-					template&lt;typename T&gt;<br/>
-					concept is_arith = std::integral&lt;T&gt; || std::floating_point&lt;T&gt;;
-				</blockquote>
+				<code><blockquote>
+					<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;<br/>
+					<k_>concept</k_> <c_>is_arith</c_> = <m_>std</m_>::<c_>integral</c_>&lt;<t_>T</t_>&gt; || <m_>std</m_>::<c_>floating_point</c_>&lt;<t_>T</t_>&gt;;
+				</blockquote></code>
 				<br/>
 				<br/>
 				<h3>Example</h3>
-				<blockquote>
-					import std;<br/>
-					import xieite;<br/>
+				<code><blockquote>
+					<p_>import</p_> <v_>std</v_>;<br/>
+					<p_>import</p_> <v_>xieite</v_>;<br/>
 					<br/>
-					template&lt;xieite::is_arith T&gt;<br/>
-					T add(T a, T b) {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br/>
+					<k_>template</k_>&lt;<m_>xieite</m_>::<c_>is_arith</c_> <t_>T</t_>&gt;<br/>
+					<t_>T</t_> <f_>add</f_>(<t_>T</t_> <v_>a</v_>, <t_>T</t_> <v_>b</v_>) {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<r_>return</r_> <v_>a</v_> + <v_>b</v_>;<br/>
 					}<br/>
 					<br/>
-					int main() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", add(2, 3));<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", add(5.1, 4.6));<br/>
+					<t_>int</t_> <f_>main</f_>() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>std</m_>::<f_>print</f_>(<s_>"<i_>{}\n</i_>"</s_>, <f_>add</f_>(<n_>2</n_>, <n_>3</n_>));<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>std</m_>::<f_>print</f_>(<s_>"<i_>{}\n</i_>"</s_>, <f_>add</f_>(<n_>5.1</n_>, <n_>4.6</n_>));<br/>
 					}
-				</blockquote>
-				<blockquote>
+				</blockquote></code>
+				<code><blockquote>
 					5<br/>
 					9.7
-				</blockquote>
+				</blockquote></code>
 				<br/>
 				<br/>
 				<br/>
-				<a href="https://github.com/Eczbek/xieite/blob/main/src/abs.cpp">Source</a><br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/src/is_arith.cpp">Source</a><br/>
 				<br/>
-				<a href="https://github.com/Eczbek/xieite/blob/main/test/abs.cpp">Tests</a>
+				<a href="https://github.com/Eczbek/xieite/blob/main/test/is_arith.cpp">Tests</a>
 			</div>
 		</div>
 		<iframe id="_3" src="../links.html" frameborder="0"></iframe>

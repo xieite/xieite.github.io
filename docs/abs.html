@@ -10,29 +10,30 @@
 				<h2><code>xieite::abs()</code></h2>
 				Computes the absolute of a value.<br/>
 				If the value is an integer, returns the corresponding unsigned integer type.<br/>
+				Otherwise, uses <code>std::abs()</code> for floating-point types.<br/>
 				<br/>
-				<blockquote>
-					template&lt;<a href="is_arith.html">xieite::is_arith</a> T&gt;<br/>
-					[[nodiscard]] constexpr <a href="try_unsigned.html">xieite::try_unsigned</a>&lt;T&gt; abs(T value) noexcept;
-				</blockquote>
+				<code><blockquote>
+					<k_>template</k_>&lt;<a href="is_arith.html"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;<br/>
+					[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="try_unsigned.html"><m_>xieite</m_>::<t_>try_unsigned</t_></a>&lt;<t_>T</t_>&gt; <f_>abs</f_>(<t_>T</t_> <v_>value</v_>) <k_>noexcept</k_>;
+				</blockquote></code>
 				<br/>
 				<br/>
 				<h3>Example</h3>
-				<blockquote>
-					import std;<br/>
-					import xieite;<br/>
+				<code><blockquote>
+					<p_>import</p_> <v_>std</v_>;<br/>
+					<p_>import</p_> <v_>xieite</v_>;<br/>
 					<br/>
-					int main() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;std::int8_t x = std::numeric_limits&lt;std::int8_t&gt;::max();<br/>
+					<t_>int</t_> <f_>main</f_>() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>std</m_>::<t_>int8_t</t_> <v_>x</v_> = <m_>std</m_>::<t_>numeric_limits</t_>&lt;<m_>std</m_>::<t_>int8_t</t_>&gt;::<f_>max</f_>();<br/>
 					<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", x);<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", xieite::abs(x));<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>std</m_>::<f_>print</f_>(<s_>"<i_>{}\n</i_>"</s_>, <v_>x</v_>);<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>std</m_>::<f_>print</f_>(<s_>"<i_>{}\n</i_>"</s_>, <m_>xieite</m_>::<f_>abs</f_>(<v_>x</v_>));<br/>
 					}
-				</blockquote>
-				<blockquote>
+				</blockquote></code>
+				<code><blockquote>
 					-128<br/>
 					128
-				</blockquote>
+				</blockquote></code>
 				<br/>
 				<br/>
 				<br/>
