@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::is_arith&lt;&gt;</title>
+		<link href="../style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<h2><code>xieite::is_arith&lt;&gt;</code></h2>
+				Specifies that a type is arithmetic (integral or floating-point).<br/>
+				<br/>
+				<blockquote>
+					template&lt;typename T&gt;<br/>
+					concept is_arith = std::integral&lt;T&gt; || std::floating_point&lt;T&gt;;
+				</blockquote>
+				<br/>
+				<br/>
+				<h3>Example</h3>
+				<blockquote>
+					import std;<br/>
+					import xieite;<br/>
+					<br/>
+					template&lt;xieite::is_arith T&gt;<br/>
+					T add(T a, T b) {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;return a + b;<br/>
+					}<br/>
+					<br/>
+					int main() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", add(2, 3));<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", add(5.1, 4.6));<br/>
+					}
+				</blockquote>
+				<blockquote>
+					5<br/>
+					9.7
+				</blockquote>
+				<br/>
+				<br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/src/abs.cpp">Source</a><br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/test/abs.cpp">Tests</a>
+			</div>
+		</div>
+		<iframe id="_3" src="../links.html" frameborder="0"></iframe>
+	</body>
+</html>
