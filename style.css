@@ -58,13 +58,21 @@ a {
 	text-decoration: none;
 }
 
+.code {
+	color: #afafaf;
+}
+
 summary {
 	color: #eee;
 }
 
+iframe {
+	height: 50%;
+}
+
 tab { padding-left: 2em }
 
-w_ { color: #2c2c2c; } /* comments */
+w_ { color: #4a4a4a; } /* comments */
 k_ { color: #4b92da; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
 t_ { color: #76b1ec; } /* types */

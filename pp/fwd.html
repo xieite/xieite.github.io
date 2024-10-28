@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XIEITE_FWD()</title>
+		<link href="../style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<h2><code>XIEITE_FWD()</code></h2>
+				A (terrible) replacement for <a href="https://en.cppreference.com/w/cpp/utility/forward"><code>std::forward()</code></a>.<br/>
+				Includes special cases:<br/>
+				- Avoids unnecessarily materializing a temporary: <code class="code">T x = XIEITE_FWD(T())</code><br/>
+				- Does nothing for a prvalue lambda argument: <code class="code">XIEITE_FWD([] {})</code><br/>
+				- Does nothing for a prvalue void argument: <code class="code">XIEITE_FWD(void())</code>
+				<br/>
+				<code><blockquote>
+					<p_>#define</p_> <i_>XIEITE_FWD</i_>(<v_>...</v_>) <w_>/* ... */</w_>
+				</blockquote></code>
+				<br/>
+				<br/>
+				<h3 id="example">Example</h3>
+				<code><blockquote>
+					<p_>#include</p_> <s_>&lt;xieite/fwd.hpp&gt;</s_><br/>
+					<p_>import</p_> <v_>std</v_>;<br/>
+					<br/>
+					<k_>struct</k_> <t_>S</t_> {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<f_>S</f_>() { <a href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html"><i_>__PRETTY_FUNCTION__</i_></a>); }<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<f_>S</f_>(<k_>const</k_> <t_>S</t_>&) { <a href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html"><i_>__PRETTY_FUNCTION__</i_></a>); }<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<f_>S</f_>(<t_>S</t_>&&) { <a href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html"><i_>__PRETTY_FUNCTION__</i_></a>); }<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<f_>~S</f_>() { <a href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html"><i_>__PRETTY_FUNCTION__</i_></a>); }<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<t_>S</t_>& <k_>operator</k_>=(<k_>const</k_> <t_>S</t_>&) { <a href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html"><i_>__PRETTY_FUNCTION__</i_></a>); <r_>return</r_> *<k_>this</k_>; }<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<t_>S</t_>& <k_>operator</k_>=(<t_>S</t_>&&) { <a href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html"><i_>__PRETTY_FUNCTION__</i_></a>); <r_>return</r_> *<k_>this</k_>; }<br/>
+					};<br/>
+					<br/>
+					<k_>int</k_> <f_>main</f_>() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;{ <t_>S</t_> <v_>s</v_> = <a href="https://en.cppreference.com/w/cpp/utility/forward"><m_>std</m_>::<f_>forward</f_></a>&lt;<t_>S</t_>&gt;(<f_>S</f_>()); }<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>std</m_>::<f_>print</f_>(<s_>"====================<i_>\n</i_>"</s_>);<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;{ <t_>S</t_> <v_>s</v_> = <i_>XIEITE_FWD</i_>(<f_>S</f_>()); }<br/>
+					}
+				</blockquote></code>
+				<code><blockquote>
+					S::S()<br/>
+					S::S(S&&)<br/>
+					S::~S()<br/>
+					S::~S()<br/>
+					====================<br/>
+					S::S()<br/>
+					S::~S()
+				</blockquote></code>
+				<br/>
+				<br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fwd.hpp">Source</a><br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/test/pp/fwd.hpp">Tests</a>
+			</div>
+		</div>
+		<iframe id="_3" src="../links.html" frameborder="0"></iframe>
+	</body>
+</html>
