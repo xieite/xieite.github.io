@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::abs()</title>
+		<link href="../style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<h2><code>xieite::abs()</code></h2>
+				Computes the absolute of a value.<br/>
+				If the value is an integer, returns the corresponding unsigned integer type.<br/>
+				<br/>
+				<blockquote>
+					template&lt;<a href="is_arith.html">xieite::is_arith</a> T&gt;<br/>
+					[[nodiscard]] constexpr <a href="try_unsigned.html">xieite::try_unsigned</a>&lt;T&gt; abs(T value) noexcept;
+				</blockquote>
+				<br/>
+				<br/>
+				<h3>Example</h3>
+				<blockquote>
+					import std;<br/>
+					import xieite;<br/>
+					<br/>
+					int main() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::int8_t x = std::numeric_limits&lt;std::int8_t&gt;::max();<br/>
+					<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", x);<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;std::print("{}\n", xieite::abs(x));<br/>
+					}
+				</blockquote>
+				<blockquote>
+					-128<br/>
+					128
+				</blockquote>
+				<br/>
+				<br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/src/abs.cpp">Source</a><br/>
+				<br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/test/abs.cpp">Tests</a>
+			</div>
+		</div>
+		<iframe id="_3" src="../links.html" frameborder="0"></iframe>
+	</body>
+</html>
