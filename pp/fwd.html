@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>XIEITE_FWD()</title>
-		<link href="../style.css" rel="stylesheet"/>
+		<link href="../_style.css" rel="stylesheet"/>
 	</head>
 	<body id="_0" class="center-container">
 		<div id="_1" class="center-x">
@@ -10,9 +10,9 @@
 				<h2><code>XIEITE_FWD()</code></h2>
 				A (terrible) replacement for <a href="https://en.cppreference.com/w/cpp/utility/forward"><code>std::forward()</code></a>.<br/>
 				Includes special cases:<br/>
-				- Avoids unnecessarily materializing a temporary: <code class="code">T x = XIEITE_FWD(T())</code><br/>
-				- Does nothing for a prvalue lambda argument: <code class="code">XIEITE_FWD([] {})</code><br/>
-				- Does nothing for a prvalue void argument: <code class="code">XIEITE_FWD(void())</code>
+				- Avoids pessimization through temporary materialization (see example)<br/>
+				- Does nothing for a prvalues: <code class="code"><a href="https://en.cppreference.com/w/cpp/concepts/same_as">std::same_as</a>&lt;decltype(XIEITE_FWD(0)), int&gt;</code><br/>
+				- Does nothing for a lambda expressions: <code class="code">XIEITE_FWD([] {})</code>
 				<br/>
 				<code><blockquote>
 					<p_>#define</p_> <i_>XIEITE_FWD</i_>(<v_>...</v_>) <w_>/* ... */</w_>
@@ -56,6 +56,6 @@
 				<a href="https://github.com/Eczbek/xieite/blob/main/test/pp/fwd.cpp">Tests</a>
 			</div>
 		</div>
-		<iframe id="_3" src="../links.html" frameborder="0"></iframe>
+		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
 	</body>
 </html>

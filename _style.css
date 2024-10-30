@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 
 :root {
-	--primary-light: #F4F4F2;
-	--secondary-light: #E8E8E8;
-	--primary-dark: #495464;
-	--secondary-dark: #afb2bb;
-}
-
-:root {
 	font-family: "Poppins", sans-serif;
 	color: var(--primary-dark)
 }
@@ -60,6 +53,10 @@ a {
 	text-decoration: none;
 }
 
+.dont-color {
+	color: #eee;
+}
+
 .code {
 	color: #afafaf;
 }
@@ -77,8 +74,8 @@ tab { padding-left: 2em }
 w_ { color: #4a4a4a; } /* comments */
 k_ { color: #4b92da; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
-t_ { color: #76b1ec; } /* types */
-v_ { color: #b0e8fe; } /* variables */
+t_ { color: #85bef7; } /* types */
+v_ { color: #c1edff; } /* variables */
 c_ { color: #a099ff; } /* concepts */
 m_ { color: #63d2c8; } /* namespaces */
 f_ { color: #ffeca1; } /* functions */
