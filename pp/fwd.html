@@ -11,8 +11,8 @@
 				A (terrible) replacement for <a href="https://en.cppreference.com/w/cpp/utility/forward"><code>std::forward()</code></a>.<br/>
 				Includes special cases:<br/>
 				- Avoids pessimization through temporary materialization (see example)<br/>
-				- Does nothing for a prvalues: <code class="code"><a href="https://en.cppreference.com/w/cpp/concepts/same_as">std::same_as</a>&lt;decltype(XIEITE_FWD(0)), int&gt;</code><br/>
-				- Does nothing for a lambda expressions: <code class="code">XIEITE_FWD([] {})</code>
+				- Does nothing for prvalues: <code class="code"><a href="https://en.cppreference.com/w/cpp/concepts/same_as">std::same_as</a>&lt;decltype(XIEITE_FWD(0)), int&gt;</code><br/>
+				- Does nothing for lambda expressions: <code class="code">XIEITE_FWD([] {})</code>
 				<br/>
 				<code><blockquote>
 					<p_>#define</p_> <i_>XIEITE_FWD</i_>(<v_>...</v_>) <w_>/* ... */</w_>
