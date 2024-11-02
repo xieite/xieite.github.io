@@ -11,9 +11,9 @@
 				Replacements for <a href="https://en.cppreference.com/w/cpp/utility/forward"><code><m_>std</m_>::<f_>forward</f_>()</code></a>.<br/>
 				<br/>
 				<br/>
-				<a id="decl" href="#decl"><h3>Declarations</h3></a>
+				<a id="def" href="#def"><h3>Definitions</h3></a>
 				<div>
-					<a id="decl-0" href="#decl-0" class="abs-pos">#0</a>
+					<a id="def-0" href="#def-0" class="abs-pos">#0</a>
 					<code><blockquote>
 						<p_>#define</p_> <i_>XIEITE_FWD</i_>(...) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)<br/>
 					</blockquote></code>
@@ -21,15 +21,15 @@
 				Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward"><code>std::forward()</code></a>, but without requiring a template argument.<br/>
 				<br/>
 				<div>
-					<a id="decl-1" href="#decl-1" class="abs-pos">#1</a>
+					<a id="def-1" href="#def-1" class="abs-pos">#1</a>
 					<code><blockquote>
-						<p_>#define</p_> <a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(...) <w_>/* ... */</w_>
+						<p_>#define</p_> <a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fwd.hpp"><w_>/* ... */</w_></a>
 					</blockquote></code>
 				</div>
 				Includes special cases:<br/>
 				- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 				- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
-				- Does nothing with lambda expressions: <code><i_>XIEITE_FWD_PRVALUE</i_>([] {})</code><br/>
+				- Does nothing with lambda expressions: <a href=""><code><i_>XIEITE_FWD_PRVALUE</i_>([] {})</code></a><br/>
 				Can not be used in non-local scope due to internal usage of lambda with an implicit reference capture-default.<br/>
 				<br/>
 				<br/>
