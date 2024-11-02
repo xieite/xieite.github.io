@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XIEITE_ARROW(), XIEITE_ARROW_CTOR()</title>
+		<link href="../_style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container" style="background-color: #000">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<a href=""><h2 class="gray"><code><i_>XIEITE_ARROW</i_>()</code>, <code><i_>XIEITE_ARROW_CTOR</i_>()</code></h2></a>
+				<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/arrow.hpp" target="_blank"><code><s_>&lt;xieite/arrow.hpp&gt;</s_></code></a></small><br/>
+				<br/>
+				Deduplicates the repetition required for defining the body, return type, and <code><k_>noexcept</k_></code> of a single-statement template function.<br/>
+				(i.e. eliminates annoying typing when defining forwarding function templates.)<br/>
+				<br/>
+				<br/>
+				<a id="def" href="#def"><h3>Definitions</h3></a>
+				<div>
+					<a id="def--arrow" href="#def--arrow" class="abs-pos gray">#0</a>
+					<code><blockquote>
+						<p_>#define</p_> <i_>XIEITE_ARROW</i_>(...) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) -> <k_>decltype</k_>(<v_>__VA_ARGS__</v_>) { <r_>return</r_> <v_>__VA_ARGS__</v_>; }
+					</blockquote></code>
+				</div>
+				The explicit trailing return type is helpful for overload resolution.<br/>
+				<br/>
+				<div>
+					<a id="def--arrow-ctor" href="#def--arrow-ctor" class="abs-pos gray">#1</a>
+					<code><blockquote>
+						<p_>#define</p_> <a href=""><i_>XIEITE_ARROW_CTOR</i_>(...) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) : <v_>__VA_ARGS__</v_> {}
+					</blockquote></code>
+				</div>
+				Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href=""><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} };</code><br/>
+				<br/>
+				<br/>
+				<a id="ex" href="#ex"><h3>Example</h3></a>
+				<code><blockquote>
+					<p_>#include</p_> <s_>&lt;xieite/arrow.hpp&gt;</s_><br/>
+					<p_>import</p_> <v_>xieite</v_>;<br/>
+					<br/>
+					<k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>) <a href=""><i_>XIEITE_ARROW</i_></a>(<v_>a</v_> + <v_>b</v_>)<br/>
+					<br/>
+					<k_>struct</k_> <t_>S</t_> {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<k_>void operator</k_>+(<t_>S</t_>) {} <w_>// not marked `noexcept`</w_><br/>
+					};<br/>
+					<br/>
+					<k_>int</k_> <f_>main</f_>() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<k_>noexcept</k_>(<f_>add</f_>(<n_>1</n_>, <n_>2</n_>)));<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<k_>noexcept</k_>(<f_>add</f_>(<f_>S</f_>(), <f_>S</f_>())));<br/>
+					}
+				</blockquote></code>
+				<tab/>Output:
+				<code><blockquote>
+					true<br/>
+					false
+				</blockquote></code>
+			</div>
+		</div>
+		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	</body>
+</html>
