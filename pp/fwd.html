@@ -23,11 +23,11 @@
 				<div>
 					<a id="decl-1" href="#decl-1" class="abs-pos">#1</a>
 					<code><blockquote>
-						<p_>#define</p_> <i_>XIEITE_FWD_PRVALUE</i_>(...) <w_>/* ... */</w_>
+						<p_>#define</p_> <a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(...) <w_>/* ... */</w_>
 					</blockquote></code>
 				</div>
 				Includes special cases:<br/>
-				- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<i_>XIEITE_FWD_PRVALUE</i_>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
+				- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 				- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
 				- Does nothing with lambda expressions: <code><i_>XIEITE_FWD_PRVALUE</i_>([] {})</code><br/>
 				Can not be used in non-local scope due to internal usage of lambda with an implicit reference capture-default.<br/>
