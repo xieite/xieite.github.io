@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::temp()</title>
+		<link href="../_style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container" style="background-color: #000">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<a href=""><h2><code><m_>xieite</m_>::<f_>temp</f_>()</code></h2></a>
+				<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/fn/temp.cpp" target="_blank"><code><v_>xieite</v_>:<v_>temp</v_></code></a></small><br/>
+				<br/>
+				Creates a temporary argument which lives for the duration of whatever it is called with.<br/>
+				Can be used for ignoring output parameters (<id href="#ex">see example</a>).<br/>
+				<br/>
+				<br/>
+				<a id="decl" href="#decl"><h3>Declaration</h3></a>
+				<code><blockquote>
+					<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;<br/>
+					[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_><k_>&</k_> <f_>temp</f_>(<t_>T</t_><k_>&&</k_> <v_>value</v_> = {}) <k_>noexcept</k_>;
+				</blockquote></code>
+				<br/>
+				<br/>
+				<a id="ex" href="#ex"><h3>Example</h3></a>
+				<code><blockquote>
+					<p_>import</p_> <v_>xieite</v_>;<br/>
+					<br/>
+					<k_>void</k_> <f_>bad_api</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>, <k_>int*</k_> <v_>out</v_>) {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<k_>int</k_> <v_>sum</v_> = <v_>a</v_> + <v_>b</v_>;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;*<v_>out</v_> = <v_>sum</v_>;<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>xieite</m_>::<f_>dump</f_>(<v_>sum</v_>);<br/>
+					}<br/>
+					<br/>
+					<k_>int</k_> <f_>main</f_>() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<w_>// Don't care about output parameter</w_><br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<f_>bad_api</f_>(<n_>1</n_>, <n_>2</n_>, &<m_>xieite</m_>::<f_>temp</f_>&lt;<k_>int</k_>&gt;());</br/>
+					}
+				</blockquote></code>
+				<tab/>Output:
+				<code><blockquote>
+					3
+				</blockquote></code>
+			</div>
+		</div>
+		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	</body>
+</html>
