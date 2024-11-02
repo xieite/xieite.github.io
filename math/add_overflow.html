@@ -4,25 +4,28 @@
 		<title>xieite::add_overflow()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
-	<body id="_0" class="center-container">
+	<body id="_0" class="center-container" style="background-color: #000">
 		<div id="_1" class="center-x">
 			<div id="_2" class="center-x">
-				<h2><code>xieite::add_overflow()</code></h2>
-				Computes whether the addition of two or more integers would overflow or underflow their type (thereby invoking undefined behavior with signed integers).<br/>
+				<a href=""><h2><code><m_>xieite</m_>::<f_>add_overflow</f_>()</code></h2></a>
+				Checks whether the addition of two or more integers would overflow or underflow their type.<br/>
+				Can be used to catch undefined behavior before it is invoked (such as when the addition of two signed integers would overflow).
 				<br/>
+				<br/>
+				<a id="decl" href="#decl"><h3>Declaration</h3></a>
 				<code><blockquote>
-					<k_>template</k_>&lt;<a href="/meta/is_arith.html"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>, <a href="https://en.cppreference.com/w/cpp/concepts/convertible_to"><m_>std</m_>::<c_>convertible_to</c_></a>&lt;<t_>T</t_>&gt;... <t_>Ts</t_>&gt;<br/>
-					[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>add_overflow</f_>(<t_>T</t_> <v_>first</v_>, <t_>Ts</t_>... <v_>rest</v_>) <k_>noexcept</k_>;
+					<k_>template</k_>&lt;<a href="/meta/is_arith.html"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>, <a href="https://en.cppreference.com/w/cpp/concepts/convertible_to"><m_>std</m_>::<c_>convertible_to</c_></a>&lt;<t_>T</t_>&gt;<k_>...</k_> <t_>Ts</t_>&gt;<br/>
+					[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>add_overflow</f_>(<t_>T</t_> <v_>first</v_>, <t_>Ts</t_><k_>...</k_> <v_>rest</v_>) <k_>noexcept</k_>;
 				</blockquote></code>
 				<br/>
 				<br/>
-				<h3 id="example">Example</h3>
+				<a id="ex" href="#ex"><h3>Example</h3></a>
 				<code><blockquote>
 					<p_>import</p_> <v_>std</v_>;<br/>
 					<p_>import</p_> <v_>xieite</v_>;<br/>
 					<br/>
 					<k_>int</k_> <f_>main</f_>() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.cppreference.com/w/cpp/io/print"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}\n</i_>"</s_>, <m_>xieite</m_>::<f_>add_overflow</f_>&lt;<a href="https://en.cppreference.com/w/cpp/types/integer"><m_>std</m_>::<t_>int8_t</t_></a>&gt;(<n_>127</n_>, <n_>1</n_>));<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href=""><m_>xieite</m_>::<f_>add_overflow</f_></a>&lt;<a href="https://en.cppreference.com/w/cpp/types/integer"><m_>std</m_>::<t_>int8_t</t_></a>&gt;(<n_>127</n_>, <n_>1</n_>));<br/>
 					}
 				</blockquote></code>
 				<code><blockquote>
@@ -31,9 +34,9 @@
 				<br/>
 				<br/>
 				<br/>
-				<a href="https://github.com/Eczbek/xieite/blob/main/src/math/add_overflow.cpp">Source</a><br/>
+				<a href="https://github.com/Eczbek/xieite/blob/main/src/math/add_overflow.cpp" class="gray">Source</a><br/>
 				<br/>
-				<a href="https://github.com/Eczbek/xieite/blob/main/test/math/add_overflow.cpp">Tests</a>
+				<a href="https://github.com/Eczbek/xieite/blob/main/test/math/add_overflow.cpp" class="gray">Tests</a>
 			</div>
 		</div>
 		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>

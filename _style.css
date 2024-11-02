@@ -49,16 +49,21 @@ blockquote {
 }
 
 a {
-	color: #afafaf;
 	text-decoration: none;
+	color: inherit;
 }
 
-.dont-color {
-	color: #eee;
+.abs-pos {
+	position: absolute;
 }
 
-.code {
+.gray {
 	color: #afafaf;
+}
+
+code {
+	background-color: #000000;
+	color: #eee;
 }
 
 summary {
@@ -71,7 +76,7 @@ iframe {
 
 tab { padding-left: 2em }
 
-w_ { color: #4a4a4a; } /* comments */
+w_ { color: #6a6a6a; } /* comments */
 k_ { color: #4b92da; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
 t_ { color: #85bef7; } /* types */
@@ -82,7 +87,6 @@ f_ { color: #ffeca1; } /* functions */
 a_ { color: #bb9569; } /* attributes */
 s_ { color: #fc662a; } /* strings */
 n_ { color: #d6ffa1; } /* numbers */
-/* p_ { color: #ff7d20; } preprocessor */
 p_ { color: #ca78e3; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
 
