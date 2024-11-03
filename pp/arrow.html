@@ -29,13 +29,13 @@
 						<p_>#define</p_> <a href=""><i_>XIEITE_ARROW_CTOR</i_>(...) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) : <v_>__VA_ARGS__</v_> {}
 					</blockquote></code>
 				</div>
-				Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href=""><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} };</code><br/>
+				Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href=""><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} };</code><br/>
 				<br/>
 				<br/>
 				<a id="ex" href="#ex"><h3>Example</h3></a>
 				<code><blockquote>
-					<p_>#include</p_> <s_>&lt;xieite/arrow.hpp&gt;</s_><br/>
-					<p_>import</p_> <v_>xieite</v_>;<br/>
+					<p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/arrow.hpp" target="_blank"><s_>&lt;xieite/arrow.hpp&gt;</s_></a><br/>
+					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
 					<br/>
 					<k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>) <a href=""><i_>XIEITE_ARROW</i_></a>(<v_>a</v_> + <v_>b</v_>)<br/>
 					<br/>

@@ -11,19 +11,19 @@
 				<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/is_arith.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_arith</v_></code></a></small><br/>
 				<br/>
 				Specifies that a type is arithmetic (integral or floating-point).<br/>
-				Uses two separate concepts instead of <a href="https://en.cppreference.com/w/cpp/types/is_arithmetic"><code><m_>std</m_>::<t_>is_arithmetic</t_><></code></a> in order to be more useful in overload resolution.<br/>
+				Uses two separate concepts instead of <a href="https://en.cppreference.com/w/cpp/types/is_arithmetic" target="_blank"><code><m_>std</m_>::<t_>is_arithmetic</t_><></code></a> in order to be more useful in overload resolution.<br/>
 				<br/>
 				<br/>
 				<a id="decl" href="#decl"><h3>Declaration</h3></a>
 				<code><blockquote>
 					<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;<br/>
-					<k_>concept</k_> <c_>is_arith</c_> = <a href="https://en.cppreference.com/w/cpp/concepts/integral"><m_>std</m_>::<c_>integral</c_></a>&lt;<t_>T</t_>&gt; || <a href="https://en.cppreference.com/w/cpp/concepts/floating_point"><m_>std</m_>::<c_>floating_point</c_></a>&lt;<t_>T</t_>&gt;;
+					<k_>concept</k_> <c_>is_arith</c_> = <a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a>&lt;<t_>T</t_>&gt; || <a href="https://en.cppreference.com/w/cpp/concepts/floating_point" target="_blank"><m_>std</m_>::<c_>floating_point</c_></a>&lt;<t_>T</t_>&gt;;
 				</blockquote></code>
 				<br/>
 				<br/>
 				<a id="ex" href="#ex"><h3>Example</h3></a>
 				<code><blockquote>
-					<p_>import</p_> <v_>xieite</v_>;<br/>
+					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
 					<br/>
 					<k_>template</k_>&lt;<a href=""><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;<br/>
 					<t_>T</t_> <f_>add</f_>(<t_>T</t_> <v_>a</v_>, <t_>T</t_> <v_>b</v_>) {<br/>

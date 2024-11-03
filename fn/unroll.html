@@ -10,21 +10,21 @@
 				<a href=""><h2><code><m_>xieite</m_>::<f_>unroll</f_>()</code></h2></a>
 				<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/fn/unroll.cpp" target="_blank"><code><v_>xieite</v_>:<v_>unroll</v_></code></a></small><br/>
 				<br/>
-				Unrolls a constant-sized loop using <a href="https://en.cppreference.com/w/cpp/utility/integer_sequence"><code><m_>std</m_>::<t_>integer_sequence</t_> {}</code></a> and <a href="https://en.cppreference.com/w/cpp/utility/integer_sequence#Helper_templates"><code><m_>std</m_>::<t_>make_integer_sequence</t_> {}</code></a>.<br/>
-				Passes the indices to a given functor as a <a href="https://quuxplusone.github.io/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#nttp">NTTP</a> pack.<br/>
+				Unrolls a constant-sized loop using <a href="https://en.cppreference.com/w/cpp/utility/integer_sequence" target="_blank"><code><m_>std</m_>::<t_>integer_sequence</t_> {}</code></a> utilities.<br/>
+				Passes the indices to a given functor as a <a href="https://quuxplusone.github.io/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#nttp" target="_blank">NTTP</a> pack.<br/>
 				<br/>
 				<br/>
 				<a id="decl" href="#decl"><h3>Declaration</h3></a>
 				<code><blockquote>
-					<k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral"><m_>std</m_>::<c_>integral</c_></a> <k_>auto</k_> <v_>n</v_>&gt;<br/>
+					<k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a> <k_>auto</k_> <v_>n</v_>&gt;<br/>
 					<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)<br/>
-					<a href="/pp/arrow"><i_>XIEITE_ARROW</i_></a>(<w_>/* <a href="/pp/fwd">XIEITE_FWD</a>(fn).template operator()&lt;0, 1, 2, ..., n&gt;() */</w_>)
+					<a href="/pp/arrow"><i_>XIEITE_ARROW</i_></a>(<w_>/* <a href="/pp/fwd">XIEITE_FWD</a>(fn).template operator()&lt;0, 1, 2, ..., n&gt;(<a href="/pp/fwd">XIEITE_FWD</a>(args)...) */</w_>)
 				</blockquote></code>
 				<br/>
 				<br/>
 				<a id="ex" href="#ex"><h3>Example</h3></a>
 				<code><blockquote>
-					<p_>import</p_> <v_>xieite</v_>;<br/>
+					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
 					<br/>
 					<k_>int</k_> <f_>main</f_>() {<br/>
 					&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<n_>5</n_>&gt;([]&lt;<k_>int...</k_> <v_>i</v_>&gt; {<br/>
