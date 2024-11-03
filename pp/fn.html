@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XIEITE_FN(), XIEITE_GFN()</title>
+		<link href="../_style.css" rel="stylesheet"/>
+	</head>
+	<body id="_0" class="center-container" style="background-color: #000">
+		<div id="_1" class="center-x">
+			<div id="_2" class="center-x">
+				<a href=""><h2 class="gray"><code><i_>XIEITE_FN</i_>()</code>, <code><i_>XIEITE_GFN</i_>()</code></h2></a>
+				<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><code><s_>&lt;xieite/fn.hpp&gt;</s_></code></a></small><br/>
+				<br/>
+				Allows a sort of shorthand lambda syntax: <code><i_>XIEITE_FN</i_>(<v_>$0</v_> + <v_>$1</v_>)</code>,<br/>
+				which is equivalent to: <code>[<k_>&</k_>](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<v_>a</v_> + <v_>b</v_>) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code>.<br/>
+				<br/>
+				The body of a shorthand lambda has access to a function parameter pack <code><v_>$$</v_></code> containing all arguments, and variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda. Accessing a variable which does not correspond to an argument (when the number of arguments is not greater than the variable's index) results in an unusable dummy value.<br/>
+				<br/>
+				<br/>
+				<a id="def" href="#def"><h3>Definitions</h3></a>
+				<div>
+					<a id="def--fn" href="#def--fn" class="abs-pos gray">#0</a>
+					<code><blockquote>
+						<p_>#define</p_> <i_>XIEITE_FN</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp"><w_>/* ... */</w_></a>
+					</blockquote></code>
+				</div>
+				Expands to a lambda with a reference capture-default.<br/>
+				<br/>
+				<div>
+					<a id="def--gfn" href="#def--gfn" class="abs-pos gray">#1</a>
+					<code><blockquote>
+						<p_>#define</p_> <a href=""><i_>XIEITE_GFN</i_></a>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp"><w_>/* ... */</w_></a>
+					</blockquote></code>
+				</div>
+				Expands to a lambda with no capture-default.<br/>
+				<br/>
+				<br/>
+				<a id="ex" href="#ex"><h3>Example</h3></a>
+				<code><blockquote>
+					<p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a><br/>
+					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
+					<br/>
+					<k_>int</k_> <f_>main</f_>() {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<k_>auto</k_> <v_>add_two</v_> = <i_>XIEITE_FN</i_>(<v_>$0</v_> + <v_>$1</v_>);<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<k_>auto</k_> <v_>add_all</v_> = <i_>XIEITE_FN</i_>(... + <v_>$$</v_>);<br/>
+					<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>xieite</m_>::<f_>dump</f_>(<v_>add_two</v_>(<n_>1</n_>, <n_>2</n_>));<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;<m_>xieite</m_>::<f_>dump</f_>(<v_>add_all</v_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));<br/>
+					}
+				</blockquote></code>
+				<tab/>Output:
+				<code><blockquote>
+					3<br/>
+					15
+				</blockquote></code>
+			</div>
+		</div>
+		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	</body>
+</html>

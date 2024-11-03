@@ -20,7 +20,7 @@
 						<p_>#define</p_> <i_>XIEITE_FWD</i_>(...) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)
 					</blockquote></code>
 				</div>
-				Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward"><code>std::forward()</code></a>, but without requiring a template argument.<br/>
+				Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward"><code><m_>std</m_>::<f_>forward</f_>()</code></a>, but without requiring a template argument.<br/>
 				<br/>
 				<div>
 					<a id="def--fwd-prvalue" href="#def--fwd-prvalue" class="abs-pos gray">#1</a>
@@ -32,7 +32,7 @@
 				- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 				- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
 				- Does nothing with lambda expressions: <a href=""><code><i_>XIEITE_FWD_PRVALUE</i_>([] {})</code></a><br/>
-				Can not be used in non-local scope due to internal usage of lambda with an implicit reference capture-default.<br/>
+				Can not be used in non-local scope due to internal usage of lambda with a reference capture-default.<br/>
 				<br/>
 				<br/>
 				<a id="ex" href="#ex"><h3>Example</h3></a>
