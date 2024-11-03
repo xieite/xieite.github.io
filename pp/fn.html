@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>XIEITE_FN(), XIEITE_GFN()</title>
+		<title>XIEITE_FN(), XIEITE_FN_LOCAL()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
 	<body id="_0" class="center-container" style="background-color: #000">
 		<div id="_1" class="center-x">
 			<div id="_2" class="center-x">
-				<a href=""><h2 class="gray"><code><i_>XIEITE_FN</i_>()</code>, <code><i_>XIEITE_GFN</i_>()</code></h2></a>
+				<a href=""><h2 class="gray"><code><i_>XIEITE_FN</i_>()</code>, <code><i_>XIEITE_FN_LOCAL</i_>()</code></h2></a>
 				<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><code><s_>&lt;xieite/fn.hpp&gt;</s_></code></a></small><br/>
 				<br/>
 				Allows a sort of shorthand lambda syntax: <code><i_>XIEITE_FN</i_>(<v_>$0</v_> + <v_>$1</v_>)</code>,<br/>
-				which is equivalent to: <code>[<k_>&</k_>](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<v_>a</v_> + <v_>b</v_>) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code>.<br/>
+				which is equivalent to: <code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<v_>a</v_> + <v_>b</v_>) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code>.<br/>
 				<br/>
 				The body of a shorthand lambda has access to a function parameter pack <code><v_>$$</v_></code> containing all arguments, and variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda. Accessing a variable which does not correspond to an argument (when the number of arguments is not greater than the variable's index) results in an unusable dummy value.<br/>
 				<br/>
@@ -23,15 +23,15 @@
 						<p_>#define</p_> <i_>XIEITE_FN</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><w_>/* ... */</w_></a>
 					</blockquote></code>
 				</div>
-				Expands to a lambda with a reference capture-default.<br/>
+				Expands to a lambda with no capture-default. Cannot capture local variables.<br/>
 				<br/>
 				<div>
-					<a id="def--gfn" href="#def--gfn" class="abs-pos gray">#1</a>
+					<a id="def--fn-local" href="#def--fn-local" class="abs-pos gray">#1</a>
 					<code><blockquote>
-						<p_>#define</p_> <a href=""><i_>XIEITE_GFN</i_></a>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><w_>/* ... */</w_></a>
+						<p_>#define</p_> <a href=""><i_>XIEITE_FN_LOCAL</i_></a>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><w_>/* ... */</w_></a>
 					</blockquote></code>
 				</div>
-				Expands to a lambda with no capture-default.<br/>
+				Expands to a lambda with a reference capture-default. Cannot be used in global scope.<br/>
 				<br/>
 				<br/>
 				<a id="ex" href="#ex"><h3>Example</h3></a>

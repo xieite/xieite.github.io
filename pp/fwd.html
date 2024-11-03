@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>XIEITE_FWD(), XIEITE_FWD_PRVALUE()</title>
+		<title>XIEITE_FWD(), XIEITE_FWD_PRVALUE(), XIEITE_FWD_PRVALUE_LOCAL()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
 	<body id="_0" class="center-container" style="background-color: #000">
 		<div id="_1" class="center-x">
 			<div id="_2" class="center-x">
-				<a href=""><h2 class="gray"><code><i_>XIEITE_FWD</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE</i_>()</code></h2></a>
+				<a href=""><h2 class="gray"><code><i_>XIEITE_FWD</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE_LOCAL</i_>()</code></h2></a>
 				<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fwd.hpp" target="_blank"><code><s_>&lt;xieite/fwd.hpp&gt;</s_></code></a></small><br/>
 				<br/>
 				Replacements for <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><code><m_>std</m_>::<f_>forward</f_>()</code></a>.<br/>
@@ -32,7 +32,15 @@
 				- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href=""><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 				- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
 				- Does nothing with lambda expressions: <a href=""><code><i_>XIEITE_FWD_PRVALUE</i_>([] {})</code></a><br/>
-				Can not be used in non-local scope due to internal usage of lambda with a reference capture-default.<br/>
+				Internally uses a lambda with no capture-default, thus cannot access local variables.<br/>
+				<br/>
+				<div>
+					<a id="def--fwd-prvalue-local" href="#def--fwd-prvalue-local" class="abs-pos gray">#2</a>
+					<code><blockquote>
+						<p_>#define</p_> <a href=""><i_>XIEITE_FWD_PRVALUE_LOCAL</i_></a>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fwd.hpp" target="_blank"><w_>/* ... */</w_></a>
+					</blockquote></code>
+				</div>
+				Same functionality as <a href="#def--fwd-prvalue" class="gray">#1</a>, but internally uses a lambda with a reference capture-default. Cannot be used in global scope.<br/>
 				<br/>
 				<br/>
 				<a id="ex" href="#ex"><h3>Example</h3></a>
