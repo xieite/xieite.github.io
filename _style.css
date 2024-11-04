@@ -97,7 +97,7 @@ i_ { color: #ffae00; } /* special */
 	background-color: #111111;
 	color: #eee;
 
-	overflow: scroll;
+	overflow: hidden;
 }
 
 #_2 {
