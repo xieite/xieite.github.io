@@ -2,44 +2,65 @@
 
 :root {
 	font-family: "Poppins", sans-serif;
-	color: var(--primary-dark)
+}
+
+* {
+	padding: 0;
+	margin: 0;
 }
 
 html, body {
 	width: 100%;
 	height: 100%;
-	padding: 0;
-	margin: 0;
 
 	overflow-wrap: break-word;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+
+	background-color: #000000;
+	color: #eeeeee;
 }
 
-.center-container {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+body > * {
+	flex-shrink: 0;
 }
 
-.center-x {
-	margin: 0;
+input {
+	display: none;
+}
+
+iframe {
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+	top: 0;
+	left: 0;
+	border: 0;
+	width: 250px;
+	height: 100%;
 }
 
-.center-y {
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+main {
+	padding-top: 25px;
+	padding-bottom: 100px;
+	padding-left: 350px;
+	padding-right: 350px;
+	flex-grow: 1;
+
+	background-color: #111111;
 }
 
-.center {
-	margin: 0;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+code, blockquote {
+	background-color: #000000;
+}
+
+blockquote {
+	margin: 5px;
+	padding: 10px;
+}
+
+pre {
+	tab-size: 4;
+	white-space: pre-wrap;
 }
 
 a {
@@ -47,29 +68,47 @@ a {
 	color: inherit;
 }
 
-.abs-pos {
-	position: absolute;
-}
-
-.gray {
+a:hover, a:hover * {
+	text-decoration: underline;
 	color: #afafaf;
 }
 
-code, blockquote {
-	background-color: #000000;
-	color: #eee;
-	border-radius: 2px;
+@media (max-width: 1200px) {
+	main {
+		padding-left: 300px;
+		padding-right: 50px;
+	}
 }
 
-blockquote {
-	padding: 10px;
+@media (max-width: 700px) {
+	input {
+		display: block;
+		width: 50px;
+		height: 50px;
+	
+		position: absolute;
+		top: 25px;
+		right: 25px;
+
+		z-index: 999;
+	}
+
+	iframe {
+		width: 0;
+	}
+
+	main {
+		margin: 0;
+		padding: 25px;
+		width: calc(100% - 50px);
+	}
+
+	input:checked ~ iframe {
+		width: 100%;
+	}
 }
 
-summary {
-	color: #eee;
-}
-
-tab { padding-left: 2em }
+.gray { color: #afafaf; }
 
 w_ { color: #6a6a6a; } /* comments */
 k_ { color: #4b92da; } /* keywords */
@@ -84,57 +123,3 @@ s_ { color: #fc662a; } /* strings */
 n_ { color: #d6ffa1; } /* numbers */
 p_ { color: #ca78e3; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
-
-#_0 {
-	background-color: #000000;
-	color: #aaa;
-}
-
-#_1 {
-	width: 70%;
-	height: 100%;
-
-	background-color: #111111;
-	color: #eee;
-
-	overflow: scroll;
-}
-
-::-webkit-scrollbar {
-	width: 0;
-	background: transparent;
-}
-
-#_2 {
-	width: 80%;
-
-	padding: 50px;
-}
-
-#_3, iframe {
-	position: sticky;
-	height: 90%;
-	padding: 25px;
-
-	/* display: block;
-	position: absolute;
-	height: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin-top: 25px;
-	margin-bottom: 25px;
-	margin-left: 25px;
-	margin-right: 25px; */
-}
-
-@media (orientation: portrait) {
-	#_1 {
-		width: 100%;
-	}
-
-	#_3 {
-		display: none;
-	}
-}

@@ -4,53 +4,48 @@
 		<title>XIEITE_LIFT(), XIEITE_LIFT_LOCAL()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
-	<body id="_0" class="center-container" style="background-color: #000">
-		<div id="_1" class="center-x">
-			<div id="_2" class="center-x">
-				<a href=""><h2 class="gray"><code><i_>XIEITE_LIFT</i_>()</code>, <code><i_>XIEITE_LIFT_LOCAL</i_>()</code></h2></a>
-				<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><code><s_>&lt;xieite/lift.hpp&gt;</s_></code></a></small><br/>
-				<br/>
-				Wraps a function in a lambda object.<br/>
-				<br/>
-				<br/>
-				<a id="def" href="#def"><h3>Definitions</h3></a>
-				<div>
-					<a id="def--lift" href="#def--lift" class="abs-pos gray">#0</a>
-					<code><blockquote>
-						<p_>#define</p_> <i_>XIEITE_LIFT</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a>
-					</blockquote></code>
-				</div>
-				Expands to a lambda with no capture-default. Cannot access local variables.<br/>
-				<br/>
-				<div>
-					<a id="def--lift-local" href="#def--lift-local" class="abs-pos gray">#1</a>
-					<code><blockquote>
-						<p_>#define</p_> <a href=""><i_>XIEITE_LIFT_LOCAL</i_></a>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a>
-					</blockquote></code>
-				</div>
-				Expands to a lambda with a reference capture-default. Cannot be used in global scope.<br/>
-				<br/>
-				<br/>
-				<a id="ex" href="#ex"><h3>Example</h3></a>
-				<code><blockquote>
-					<p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fwd.hpp" target="_blank"><s_>&lt;xieite/fwd.hpp&gt;</s_></a><br/>
-					<p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><s_>&lt;xieite/lift.hpp&gt;</s_></a><br/>
-					<p_>import</p_> <v_>std</v_>;<br/>
-					<br/>
-					<k_>void</k_> <f_>run</f_>(<k_>auto&&</k_> <v_>fn</v_>) {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.cppreference.com/w/cpp/utility/functional/invoke" target="_blank"><m_>std</m_>::<f_>invoke</f_></a>(<a href="/pp/fwd"><i_>XIEITE_FWD</i_></a>(<v_>fn</v_>), <s_>"Hello, world!"</s_>);<br/>
-					}<br/>
-					<br/>
-					<k_>int</k_> <f_>main</f_>() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<f_>run</f_>(<a href=""><i_>XIEITE_LIFT</i_></a>(<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>));<br/>
-					}
-				</blockquote></code>
-				<tab/>Output:
-				<code><blockquote>
-					Hello, world!
-				</blockquote></code>
-			</div>
-		</div>
-		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><i_>XIEITE_LIFT</i_>()</code>, <code><i_>XIEITE_LIFT_LOCAL</i_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><code><s_>&lt;xieite/lift.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Wraps a function in a lambda object.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Definitions</h3></a>
+			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a></pre>
+			</blockquote>
+			Expands to a lambda with no capture-default.<br/>
+			<br/>
+			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a></pre>
+			</blockquote>
+			Expands to a lambda with a reference capture-default.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fwd.hpp" target="_blank"><s_>&lt;xieite/fwd.hpp&gt;</s_></a>
+<p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><s_>&lt;xieite/lift.hpp&gt;</s_></a>
+<p_>import</p_> <v_>std</v_>;
+
+<k_>void</k_> <f_>run</f_>(<k_>auto&&</k_> <v_>fn</v_>) {
+	<a href="https://en.cppreference.com/w/cpp/utility/functional/invoke" target="_blank"><m_>std</m_>::<f_>invoke</f_></a>(<a href="/pp/fwd"><i_>XIEITE_FWD</i_></a>(<v_>fn</v_>), <s_>"Hello, world!"</s_>);
+}
+
+<k_>int</k_> <f_>main</f_>() {
+	<f_>run</f_>(<i_>XIEITE_LIFT</i_></a>(<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>));
+}
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>Hello, world!</pre>
+			</blockquote>
+		</main>
 	</body>
 </html>

@@ -4,37 +4,36 @@
 		<title>xieite::segfault()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
-	<body id="_0" class="center-container" style="background-color: #000">
-		<div id="_1" class="center-x">
-			<div id="_2" class="center-x">
-				<a href=""><h2><code><m_>xieite</m_>::<f_>segfault</f_>()</code></h2></a>
-				<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/sys/segfault.cpp" target="_blank"><code><v_>xieite</v_>:<v_>segfault</v_></code></a></small><br/>
-				<br/>
-				Dereferences <code><k_>nullptr</k_></code> to cause a segmentation fault, though whether it's handled at all is entirely up to the operating system.<br/>
-				Why would you use this?<br/>
-				<br/>
-				<br/>
-				<a id="decl" href="#decl"><h3>Declaration</h3></a>
-				<code><blockquote>
-					<k_>void</k_> <f_>segfault</f_>() <k_>noexcept</k_>;
-				</blockquote></code>
-				This isn't even marked <code>[[<a_>noreturn</a_>]]</code>.<br/>
-				<br/>
-				<br/>
-				<a id="ex" href="#ex"><h3>Example</h3></a>
-				<code><blockquote>
-					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
-					<br/>
-					<k_>int</k_> <f_>main</f_>() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><m_>xieite</m_>::<f_>segfault</f_></a>();</br/>
-					}
-				</blockquote></code>
-				<tab/>Possible output:
-				<code><blockquote>
-					Segmentation fault (code dumped)
-				</blockquote></code>
-			</div>
-		</div>
-		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><m_>xieite</m_>::<f_>segfault</f_>()</code></h2></a>
+			<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/sys/segfault.cpp" target="_blank"><code><v_>xieite</v_>:<v_>segfault</v_></code></a></small><br/>
+			<br/>
+			Dereferences <code><k_>nullptr</k_></code> to cause a segmentation fault, though whether it's handled at all is entirely up to the operating system.<br/>
+			Why would you use this?<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>void</k_> <f_>segfault</f_>() <k_>noexcept</k_>;</pre>
+			</blockquote>
+			This isn't even marked <code>[[<a_>noreturn</a_>]]</code>.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<m_>xieite</m_>::<f_>segfault</f_>();
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>Segmentation fault (code dumped)</pre>
+			</blockquote>
+		</main>
 	</body>
 </html>

@@ -4,45 +4,44 @@
 		<title>XIEITE_DEBUG</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
-	<body id="_0" class="center-container" style="background-color: #000">
-		<div id="_1" class="center-x">
-			<div id="_2" class="center-x">
-				<a href=""><h2><code><i_>XIEITE_DEBUG</i_></code></h2></a>
-				<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/debug.hpp" target="_blank"><code><s_>&lt;xieite/debug.hpp&gt;</s_></code></a></small><br/>
-				<br/>
-				Detects the presence of platform-specific macros indicating debug mode: <code><i_>DEBUG</i_></code>, <code><i_>NDEBUG</i_></code>, <code><i_>_DEBUG</i_></code>, and <code><i_>QT_DEBUG</i_></code>.<br/>
-				<br/>
-				<br/>
-				<a id="def" href="#def"><h3>Definition</h3></a>
-				<code><blockquote>
-					<p_>#define</p_> <i_>XIEITE_DEBUG</i_> <w_>/* `0` or `1` */</w_>
-				</blockquote></code>
-				<br/>
-				<br/>
-				<a id="ex" href="#ex"><h3>Example</h3></a>
-				<code><blockquote>
-					<p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/debug.hpp" target="_blank"><s_>&lt;xieite/debug.hpp&gt;</s_></a><br/>
-					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
-					<br/>
-					<k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<r_>if constexpr</r_> (<a href=""><i_>XIEITE_DEBUG</i_></a>) {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Adding <i_>{}</i_> and <i_>{}\n</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<r_>return</r_> <v_>a</v_> + <v_>b</v_>;<br/>
-					}<br/>
-					<br/>
-					<k_>int</k_> <f_>main</f_>() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<k_>int</k_> <v_>sum</v_> = <f_>add</f_>(<n_>1</n_>, <n_>2</n_>);<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Result: <i_>{}\n</i_>"</s_>, <v_>sum</v_>);<br/>
-					}
-				</blockquote></code>
-				<tab/>Possible output:
-				<code><blockquote>
-					Adding 1 and 2<br/>
-					Result: 3
-				</blockquote></code>
-			</div>
-		</div>
-		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><i_>XIEITE_DEBUG</i_></code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/debug.hpp" target="_blank"><code><s_>&lt;xieite/debug.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Detects the presence of platform-specific macros indicating debug mode: <code><i_>DEBUG</i_></code>, <code><i_>NDEBUG</i_></code>, <code><i_>_DEBUG</i_></code>, and <code><i_>QT_DEBUG</i_></code>.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definition</h3></a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_DEBUG</i_> <w_>/* `0` or `1` */</w_></pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/debug.hpp" target="_blank"><s_>&lt;xieite/debug.hpp&gt;</s_></a>
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {
+	<r_>if constexpr</r_> (<i_>XIEITE_DEBUG</i_>) {
+		<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Adding <i_>{}</i_> and <i_>{}\n</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
+	}
+	<r_>return</r_> <v_>a</v_> + <v_>b</v_>;
+}
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>int</k_> <v_>sum</v_> = <f_>add</f_>(<n_>1</n_>, <n_>2</n_>);
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Result: <i_>{}\n</i_>"</s_>, <v_>sum</v_>);
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>Adding 1 and 2
+Result: 3</pre>
+			</blockquote>
+		</main>
 	</body>
 </html>

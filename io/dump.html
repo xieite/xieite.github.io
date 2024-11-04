@@ -4,43 +4,42 @@
 		<title>xieite::dump()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
-	<body id="_0" class="center-container" style="background-color: #000">
-		<div id="_1" class="center-x">
-			<div id="_2" class="center-x">
-				<a href=""><h2><code><m_>xieite</m_>::<f_>dump</f_>()</code></h2></a>
-				<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/dump.cpp" target="_blank"><code><v_>xieite</v_>:<v_>dump</v_></code></a></small><br/>
-				<br/>
-				Dumps values to <code>stdout</code>, separated by single spaces.<br/>
-				Essentially just <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><code><m_>std</m_>::<f_>println</f_>()</code></a> with the format generated automatically.<br/>
-				Based on <a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2879r0.pdf" target="_blank">P2879R0</a>.<br/>
-				<br/>
-				<br/>
-				<a id="decl" href="#decl"><h3>Declaration</h3></a>
-				<code><blockquote>
-					<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;<br/>
-					<k_>void</k_> <f_>dump</f_>(<t_>Args</t_><k_>&&...</k_> <v_>args</v_>) <k_>noexcept</k_>;
-				</blockquote></code>
-				<br/>
-				<br/>
-				<a id="ex" href="#ex"><h3>Example</h3></a>
-				<code><blockquote>
-					<p_>import</p_> <v_>std</v_>;<br/>
-					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
-					<br/>
-					<k_>int</k_> <f_>main</f_>() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<k_>int</k_> <v_>x</v_> = <n_>418</n_>;<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>y</v_> = <s_>"hello"</s_>;<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<k_>double</k_> <v_>z</v_> = <n_>3.14159</n_>;<br/>
-					<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><m_>xieite</m_>::<f_>dump</f_></a>(<v_>x</v_>, <v_>y</v_>, <v_>z</v_>);</br/>
-					}
-				</blockquote></code>
-				<tab/>Output:
-				<code><blockquote>
-					418 hello 3.14159
-				</blockquote></code>
-			</div>
-		</div>
-		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><m_>xieite</m_>::<f_>dump</f_>()</code></h2></a>
+			<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/dump.cpp" target="_blank"><code><v_>xieite</v_>:<v_>dump</v_></code></a></small><br/>
+			<br/>
+			Dumps values to <code>stdout</code>, separated by single spaces.<br/>
+			Essentially just <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><code><m_>std</m_>::<f_>println</f_>()</code></a> with the format generated automatically.<br/>
+			Based on <a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2024/p2879r0.pdf" target="_blank">P2879R0</a>.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
+<k_>void</k_> <f_>dump</f_>(<t_>Args</t_><k_>&&...</k_> <v_>args</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>int</k_> <v_>x</v_> = <n_>418</n_>;
+	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>y</v_> = <s_>"hello"</s_>;
+	<k_>double</k_> <v_>z</v_> = <n_>3.14159</n_>;
+
+	<m_>xieite</m_>::<f_>dump</f_>(<v_>x</v_>, <v_>y</v_>, <v_>z</v_>);
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>418 hello 3.14159</pre>
+			</blockquote>
+		</main>
 	</body>
 </html>

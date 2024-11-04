@@ -4,47 +4,46 @@
 		<title>xieite::wrap()</title>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
-	<body id="_0" class="center-container" style="background-color: #000">
-		<div id="_1" class="center-x">
-			<div id="_2" class="center-x">
-				<a href=""><h2><code><m_>xieite</m_>::<f_>wrap</f_>()</code></h2></a>
-				<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/math/wrap.cpp" target="_blank"><code><v_>xieite</v_>:<v_>wrap</v_></code></a></small><br/>
-				<br/>
-				Takes the modulo of a number between two limits, inclusively.<br/>
-				<br/>
-				<br/>
-				<a id="decl" href="#decl"><h3>Declaration</h3></a>
-				<code><blockquote>
-					<k_>template</k_>&lt;<a href="/meta/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;<br/>
-					[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_> <f_>wrap</f_>(<t_>T</t_> <v_>value</v_>, <m_>std</m_>::<t_>type_identity_t</t_>&lt;<t_>T</t_>&gt; <v_>limit0</v_>, <m_>std</m_>::<t_>type_identity_t</t_>&lt;<t_>T</t_>&gt; <v_>limit1</v_>) <k_>noexcept</k_>;
-				</blockquote></code>
-				<br/>
-				<br/>
-				<a id="ex" href="#ex"><h3>Example</h3></a>
-				<code><blockquote>
-					<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;<br/>
-					<br/>
-					<k_>int</k_> <f_>main</f_>() {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;<r_>for</r_> (<k_>int</k_> <v_>i</v_> = <n_>0</n_>; <v_>i</v_> &lt; <n_>10</n_>; ++<v_>i</v_>) {<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<m_>xieite</m_>::<f_>wrap</f_>(<v_>i</v_>, <n_>4</n_>, <n_>-2</n_>));<br/>
-					&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
-					}
-				</blockquote></code>
-				<tab/>Output:
-				<code><blockquote>
-					0<br/>
-					1<br/>
-					2<br/>
-					3<br/>
-					4<br/>
-					-2<br/>
-					-1<br/>
-					0<br/>
-					1<br/>
-					2
-				</blockquote></code>
-			</div>
-		</div>
-		<iframe id="_3" src="../_links.html" frameborder="0"></iframe>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><m_>xieite</m_>::<f_>wrap</f_>()</code></h2></a>
+			<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/math/wrap.cpp" target="_blank"><code><v_>xieite</v_>:<v_>wrap</v_></code></a></small><br/>
+			<br/>
+			Takes the modulo of a number between two limits, inclusively.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/meta/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_> <f_>wrap</f_>(<t_>T</t_> <v_>value</v_>, <m_>std</m_>::<t_>type_identity_t</t_>&lt;<t_>T</t_>&gt; <v_>limit0</v_>, <m_>std</m_>::<t_>type_identity_t</t_>&lt;<t_>T</t_>&gt; <v_>limit1</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<r_>for</r_> (<k_>int</k_> <v_>i</v_> = <n_>0</n_>; <v_>i</v_> &lt; <n_>10</n_>; ++<v_>i</v_>) {
+		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<m_>xieite</m_>::<f_>wrap</f_>(<v_>i</v_>, <n_>4</n_>, <n_>-2</n_>));
+	}
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>0
+1
+2
+3
+4
+-2
+-1
+0
+1
+2</pre>
+			</blockquote>
+		</main>
 	</body>
 </html>
