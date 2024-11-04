@@ -87,8 +87,8 @@ a:hover, a:hover * {
 		height: 50px;
 	
 		position: absolute;
-		top: 25px;
-		right: 25px;
+		top: 50px;
+		right: 50px;
 
 		z-index: 999;
 	}
