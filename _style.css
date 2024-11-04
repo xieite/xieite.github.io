@@ -80,7 +80,7 @@ a:hover, a:hover * {
 	}
 }
 
-@media (max-width: 700px) or (orientation: portrait) {
+@media (orientation: portrait) or (max-width: 700px) {
 	input {
 		display: block;
 		width: 50px;
