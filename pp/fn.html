@@ -13,7 +13,7 @@
 				Allows a sort of shorthand lambda syntax: <code><i_>XIEITE_FN</i_>(<v_>$0</v_> + <v_>$1</v_>)</code>,<br/>
 				which is equivalent to: <code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<v_>a</v_> + <v_>b</v_>) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code>.<br/>
 				<br/>
-				The body of a shorthand lambda has access to a function parameter pack <code><v_>$$</v_></code> containing all arguments, and variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda. Accessing a variable which does not correspond to an argument (when the number of arguments is not greater than the variable's index) results in an unusable dummy value.<br/>
+				The body of a shorthand lambda has access to a function parameter pack <code><v_>$$</v_></code> containing all arguments, and variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda. Accessing a variable which does not correspond to an argument (when the number of arguments is not greater than the variable's index) results in some unusable value.<br/>
 				<br/>
 				<br/>
 				<a id="def" href="#def"><h3>Definitions</h3></a>
