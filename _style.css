@@ -97,7 +97,12 @@ i_ { color: #ffae00; } /* special */
 	background-color: #111111;
 	color: #eee;
 
-	overflow: hidden;
+	overflow: scroll;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
 }
 
 #_2 {
