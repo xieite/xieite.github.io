@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::is_nothrow_move_ctor&lt;&gt;</title>
+		<style> body { background: #000000; } </style>
+		<link href="../_style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><m_>xieite</m_>::<c_>is_nothrow_move_ctor</c_>&lt;&gt;</code></h2></a>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/is_nothrow_move_ctor.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_nothrow_move_ctor</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/is_nothrow_move_ctor.hpp" target="_blank"><code><s_>&lt;xieite/meta/is_nothrow_move_ctor.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			A wrapper around <a href="https://en.cppreference.com/w/cpp/types/is_move_constructible" target="_blank"><code><m_>std</m_>::<t_>is_nothrow_move_constructible</t_> {}</code></a> to specify that a type is move-constructible without throwing.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>concept</k_> <c_>is_nothrow_move_ctor</c_> = <a href="https://en.cppreference.com/w/cpp/types/is_move_constructible#Helper_variable_templates" target="_blank"><m_>std</m_>::<v_>is_nothrow_move_constructible_v</v_></a>&lt;<t_>T</t_>&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>struct</k_> <t_>A</t_> {
+	<f_>A</f_>(<t_>A</t_><k_>&&</k_>) <k_>noexcept</k_> {}
+};
+
+<k_>struct</k_> <t_>B</t_> {
+	<f_>B</f_>(<t_>B</t_><k_>&&</k_>) {}
+};
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<c_>is_nothrow_move_ctor</c_></a>&lt;<t_>A</t_>&gt;);
+	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<c_>is_nothrow_move_ctor</c_></a>&lt;<t_>B</t_>&gt;);
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>true
+false</pre>
+			</blockquote>
+		</main>
+	</body>
+</html>

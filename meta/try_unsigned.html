@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>xieite::try_unsigned&lt;&gt;</title>
+		<style> body { background: #000000; } </style>
 		<link href="../_style.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -9,7 +10,10 @@
 		<iframe src="../_links.html" frameborder="0"></iframe>
 		<main>
 			<a href=""><h2><code><m_>xieite</m_>::<t_>try_unsigned</t_>&lt;&gt;</code></h2></a>
-			<small>Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/try_unsigned.cpp" target="_blank"><code><v_>xieite</v_>:<v_>try_unsigned</v_></code></a></small><br/>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/try_unsigned.cpp" target="_blank"><code><v_>xieite</v_>:<v_>try_unsigned</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/try_unsigned.hpp" target="_blank"><code><s_>&lt;xieite/meta/try_unsigned.hpp&gt;</s_></code></a>)
+			</small><br/>
 			<br/>
 			If a type is a signed integer, evaluates to its unsigned counterpart.<br/>
 			Otherwise, leaves the type unchanged.<br/>
@@ -28,8 +32,8 @@
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>unsigned int</k_>, <a href="#decl"><m_>xieite</m_>::<t_>try_unsigned</t_></a>&lt;<k_>int</k_>&gt;&gt;);
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>double</k_>, <a href="#decl"><m_>xieite</m_>::<t_>try_unsigned</t_></a>&lt;<k_>double</k_>&gt;&gt;);
+	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>unsigned int</k_>, <a href="#decl"><m_>xieite</m_>::<t_>try_unsigned</t_></a>&lt;<k_>int</k_>&gt;&gt;);
+	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>double</k_>, <a href="#decl"><m_>xieite</m_>::<t_>try_unsigned</t_></a>&lt;<k_>double</k_>&gt;&gt;);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
