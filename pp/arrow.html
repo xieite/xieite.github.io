@@ -3,7 +3,7 @@
 	<head>
 		<title>XIEITE_ARROW(), XIEITE_ARROW_CTOR()</title>
 		<style> body { background: #000000; } </style>
-		<link href="../_style.css" rel="stylesheet"/>
+		<link href="/_style.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<input type="checkbox"/>
@@ -22,13 +22,18 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-0" href="#def-0" class="gray">#0</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(...) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) -> <k_>decltype</k_>(<v_>__VA_ARGS__</v_>) { <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
+<pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(...) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
+	-> <k_>decltype</k_>(<v_>__VA_ARGS__</v_>) <i_>\</i_>
+	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
 			</blockquote>
 			The explicit trailing return type is helpful for overload resolution.<br/>
 			<br/>
 			<a id="def-1" href="#def-1">#1</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(...) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) : <v_>__VA_ARGS__</v_> {}</pre>
+<pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(...) <i_>\</i_>
+		<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
+		: <v_>__VA_ARGS__</v_> {}</pre>
 			</blockquote>
 			</div>
 			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <i_>XIEITE_ARROW_CTOR</i_>(<f_>B</f_>(<v_>x</v_>)) {} };</code><br/>

@@ -3,13 +3,13 @@
 	<head>
 		<title>xieite::rotate_swap()</title>
 		<style> body { background: #000000; } </style>
-		<link href="../_style.css" rel="stylesheet"/>
+		<link href="/_style.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<input type="checkbox"/>
 		<iframe src="../_links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><m_>xieite</m_>::<f_>rotate_swap</f_>()</code></h2></a>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><f_>rotate_swap</f_>()</a></code></h2>
 			<small>
 				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/algo/rotate_swap.cpp" target="_blank"><code><v_>xieite</v_>:<v_>rotate_swap</v_></code></a><br/>
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/algo/rotate_swap.hpp" target="_blank"><code><s_>&lt;xieite/algo/rotate_swap.hpp&gt;</s_></code></a>)
@@ -23,7 +23,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>n</v_> = <n_>1</n_>, <k_>typename...</k_> <t_>Args</t_>&gt;
 <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/utility/tuple" target="_blank"><m_>std</m_>::<t_>tuple</t_></a>&lt;<t_>Args</t_><k_>&...</k_>&gt; <f_>rotate_swap</f_>(<t_>Args</t_><k_>&...</k_> <v_>args</v_>)
-<k_>noexcept</k_>((... && (<a href="/meta/is_nothrow_move_ctor#decl"><m_>xieite</m_>::<c_>is_nothrow_move_ctor</c_></a>&lt;<t_>Args</t_>&gt; && <a href="/meta/is_nothrow_move_assign#decl"><m_>xieite</m_>::<c_>is_nothrow_move_assign</c_></a>&lt;<t_>Args</t_>&gt;)));</pre>
+<k_>noexcept</k_>((... && (<a href="/meta/is_nothrow_move_ctor"><m_>xieite</m_>::<c_>is_nothrow_move_ctor</c_></a>&lt;<t_>Args</t_>&gt; && <a href="/meta/is_nothrow_move_assign"><m_>xieite</m_>::<c_>is_nothrow_move_assign</c_></a>&lt;<t_>Args</t_>&gt;)));</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -36,11 +36,11 @@
 	<k_>int</k_> <v_>a</v_> = <n_>1</n_>;
 	<k_>int</k_> <v_>b</v_> = <n_>2</n_>;
 	<k_>int</k_> <v_>c</v_> = <n_>3</n_>;
-	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
 
 	<a href="#decl"><m_>xieite</m_>::<f_>rotate_swap</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
 
-	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
 }</pre>
 			</blockquote>
 			<small>Output:</small>

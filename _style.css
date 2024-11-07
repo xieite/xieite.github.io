@@ -73,6 +73,10 @@ a:hover, a:hover * {
 	color: #afafaf;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 @media (max-width: 1200px) {
 	main {
 		padding-left: 300px;

@@ -3,13 +3,13 @@
 	<head>
 		<title>xieite::unroll()</title>
 		<style> body { background: #000000; } </style>
-		<link href="../_style.css" rel="stylesheet"/>
+		<link href="/_style.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<input type="checkbox"/>
 		<iframe src="../_links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><m_>xieite</m_>::<f_>unroll</f_>()</code></h2></a>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><f_>unroll</f_>()</a></code></h2>
 			<small>
 				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/fn/unroll.cpp" target="_blank"><code><v_>xieite</v_>:<v_>unroll</v_></code></a><br/>
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/fn/unroll.hpp" target="_blank"><code><s_>&lt;xieite/fn/unroll.hpp&gt;</s_></code></a>)
@@ -19,12 +19,22 @@
 			Passes the indices to a given functor as a <a href="https://quuxplusone.github.io/blog/2019/08/02/the-tough-guide-to-cpp-acronyms/#nttp" target="_blank">NTTP</a> pack.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="decl" href="#decl"><h3>Declarations</h3></a>
+			<a id="decl-0" href="#decl-0" class="gray">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a> <k_>auto</k_> <v_>n</v_>&gt;
 <k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
-<a href="/pp/arrow#decl"><i_>XIEITE_ARROW</i_></a>(<w_>/* <a href="/pp/fwd#decl">XIEITE_FWD</a>(fn).template operator()&lt;0, 1, 2, ..., n&gt;(<a href="/pp/fwd#decl">XIEITE_FWD</a>(args)...) */</w_>)</pre>
+<a href="/pp/arrow"><i_>XIEITE_ARROW</i_></a>(<w_>/* <a href="/pp/fwd">XIEITE_FWD</a>(fn).template operator()&lt;0, 1, 2, ..., n&gt;(<a href="/pp/fwd">XIEITE_FWD</a>(args)...) */</w_>)</pre>
 			</blockquote>
+			Unrolls for some constant integer.<br/>
+			<br/>
+			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Ts</t_>&gt;
+<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
+<a href="/pp/arrow"><i_>XIEITE_ARROW</i_></a>(<m_>xieite</m_>::<f_>unroll</f_>&lt;<k_>sizeof...</k_>(<t_>Ts</t_>)&gt;(<i_>XIEITE_FWD</i_>(<v_>fn</v_>), <i_>XIEITE_FWD</i_>(<v_>args</v_>)...))</pre>
+			</blockquote>
+			Unrolls for the number of types passed.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
@@ -33,7 +43,7 @@
 
 <k_>int</k_> <f_>main</f_>() {
 	<a href="#decl"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<n_>5</n_>&gt;([]&lt;<k_>int...</k_> <v_>i</v_>&gt; {
-		<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>...);
+		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>...);
 	});
 }</pre>
 			</blockquote>

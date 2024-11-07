@@ -3,7 +3,7 @@
 	<head>
 		<title>XIEITE_FN(), XIEITE_FN_LOCAL()</title>
 		<style> body { background: #000000; } </style>
-		<link href="../_style.css" rel="stylesheet"/>
+		<link href="/_style.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<input type="checkbox"/>
@@ -16,11 +16,12 @@
 			</small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
-			&emsp;<code><i_>XIEITE_FN</i_>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
+			&emsp;<code><a href="#decl-0"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
 			which is equivalent to writing:<br/>
 			&emsp;<code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<v_>a</v_> + <v_>b</v_>) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
-			The body of a shorthand lambda has access to a function parameter pack <code><v_>$$</v_></code> containing all arguments, and variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda. Accessing a variable which does not correspond to an argument (when the number of arguments is not greater than the variable's index) results in some unusable value.<br/>
+			The body of a shorthand lambda has access to a function parameter pack <code><v_>$$</v_></code> containing all arguments, and variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda.<br/>
+			Accessing a variable which does not correspond to an argument (when the number of arguments is not greater than the variable's index) results in some unusable value.<br/>
 			<br/>
 			<br/>
 			<a id="decl" href="#decl"><h3>Definitions</h3></a>
@@ -46,8 +47,8 @@
 	<k_>auto</k_> <v_>add_two</v_> = <a href="#decl-0"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>);
 	<k_>auto</k_> <v_>add_all</v_> = <a href="#decl-0"><i_>XIEITE_FN</i_></a>(... + <v_>$$</v_>);
 
-	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_two</v_>(<n_>1</n_>, <n_>2</n_>));
-	<a href="/io/dump#decl"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_all</v_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_two</v_>(<n_>1</n_>, <n_>2</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_all</v_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>
