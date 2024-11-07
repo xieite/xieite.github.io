@@ -21,16 +21,16 @@
 			<a id="decl" href="#decl"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>any</t_> {
-	<a href="/meta/any/op/ctor"><f_>any</f_></a>() = <k_>default</k_>;
+	<a href="/meta/any/operator/ctor"><f_>any</f_></a>() = <k_>default</k_>;
 
-	<k_>constexpr</k_> <a href="/meta/any/op/ctor"><f_>any</f_></a>(<k_>auto&&...</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <a href="/meta/any/operator/ctor"><f_>any</f_></a>(<k_>auto&&...</k_>) <k_>noexcept</k_>;
 
 	<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
-	<k_>explicit</k_>(<k_>false</k_>) <a href="/meta/any/op/cast"><k_>operator</k_></a> <t_>T</t_>() <k_>const noexcept</k_>;
+	<k_>explicit</k_>(<k_>false</k_>) <a href="/meta/any/operator/cast"><k_>operator</k_></a> <t_>T</t_>() <k_>const noexcept</k_>;
 };</pre>
 			</blockquote>
-			<a href="/meta/any/op/ctor" class="gray">(constructor)</a><br/>
-			<a href="/meta/any/op/cast" class="gray">(cast operator)</a><br/>
+			<a href="/meta/any/operator/ctor" class="gray">(constructor)</a><br/>
+			<a href="/meta/any/operator/cast" class="gray">(cast operator)</a><br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
