@@ -33,7 +33,7 @@
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/types/integer" target="_blank"><m_>std</m_>::<t_>int8_t</t_></a> <v_>x</v_> = <a href="https://en.cppreference.com/w/cpp/types/numeric_limits" target="_blank"><m_>std</m_>::<t_>numeric_limits</t_></a>&lt;<a href="https://en.cppreference.com/w/cpp/types/integer" target="_blank"><m_>std</m_>::<t_>int8_t</t_></a>&gt;::<a href="https://en.cppreference.com/w/cpp/types/numeric_limits/max" target="_blank"><f_>max</f_></a>();
+	<a href="https://en.cppreference.com/w/cpp/types/integer" target="_blank"><m_>std</m_>::<t_>int8_t</t_></a> <v_>x</v_> = <a href="https://en.cppreference.com/w/cpp/types/numeric_limits" target="_blank"><m_>std</m_>::<t_>numeric_limits</t_></a>&lt;<a href="https://en.cppreference.com/w/cpp/types/integer" target="_blank"><m_>std</m_>::<t_>int8_t</t_></a>&gt;::<a href="https://en.cppreference.com/w/cpp/types/numeric_limits/min" target="_blank"><f_>min</f_></a>();
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>x</v_>);
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<f_>abs</f_></a>(<v_>x</v_>));
@@ -44,6 +44,7 @@
 <pre>-128
 128</pre>
 			</blockquote>
+			<a href="https://godbolt.org/z/7n8Wf5vPW" target="_blank" class="gray">View in Compiler Explorer</a>
 		</main>
 	</body>
 </html>

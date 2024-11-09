@@ -68,7 +68,7 @@ a {
 	color: inherit;
 }
 
-a:hover, a:hover * {
+a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 	text-decoration: underline;
 	color: #afafaf;
 }
@@ -112,7 +112,9 @@ a:hover, a:hover * {
 	}
 }
 
-.gray { color: #afafaf; }
+.gray {
+	color: #afafaf;
+}
 
 w_ { color: #6a6a6a; } /* comments */
 k_ { color: #4b92da; } /* keywords */

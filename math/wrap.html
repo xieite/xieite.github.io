@@ -15,13 +15,13 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/math/wrap.hpp" target="_blank"><code><s_>&lt;xieite/math/wrap.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Takes the modulo of a number between two limits, inclusively.<br/>
+			Takes the modulo of a number between two limits. The upper limit is exclusive.<br/>
 			<br/>
 			<br/>
 			<a id="decl" href="#decl"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/meta/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_> <f_>wrap</f_>(<t_>T</t_> <v_>value</v_>, <m_>std</m_>::<t_>type_identity_t</t_>&lt;<t_>T</t_>&gt; <v_>limit0</v_>, <m_>std</m_>::<t_>type_identity_t</t_>&lt;<t_>T</t_>&gt; <v_>limit1</v_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_> <f_>wrap</f_>(<t_>T</t_> <v_>value</v_>, <a href="https://en.cppreference.com/w/cpp/types/type_identity#Member_types" target="_blank"><m_>std</m_>::<t_>type_identity_t</t_></a>&lt;<t_>T</t_>&gt; <v_>limit0</v_>, <a href="https://en.cppreference.com/w/cpp/types/type_identity#Member_types" target="_blank"><m_>std</m_>::<t_>type_identity_t</t_></a>&lt;<t_>T</t_>&gt; <v_>limit1</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -48,6 +48,7 @@
 1
 2</pre>
 			</blockquote>
+			<!-- <a href="https://godbolt.org" target="_blank" class="gray">View in Compiler Explorer</a> --> <!-- TODO -->
 		</main>
 	</body>
 </html>

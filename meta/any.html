@@ -21,16 +21,19 @@
 			<a id="decl" href="#decl"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>any</t_> {
-	<a href="/meta/any/operator/ctor"><f_>any</f_></a>() = <k_>default</k_>;
+	<a href="/meta/any/any" class="a"><span><f_>any</f_>() = <k_>default</k_>;</span>
 
-	<k_>constexpr</k_> <a href="/meta/any/operator/ctor"><f_>any</f_></a>(<k_>auto&&...</k_>) <k_>noexcept</k_>;
+	<span><k_>constexpr</k_> <f_>any</f_>(<k_>auto&&...</k_>) <k_>noexcept</k_>;</span></a>
 
-	<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
-	<k_>explicit</k_>(<k_>false</k_>) <a href="/meta/any/operator/cast"><k_>operator</k_></a> <t_>T</t_>() <k_>const noexcept</k_>;
+	<a href="/meta/any/operator-cast" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;</span>
+	<span><k_>explicit</k_>(<k_>false</k_>) <k_>operator</k_> <t_>T</t_>() <k_>const noexcept</k_>;</span></a>
 };</pre>
 			</blockquote>
-			<a href="/meta/any/operator/ctor" class="gray">(constructor)</a><br/>
-			<a href="/meta/any/operator/cast" class="gray">(cast operator)</a><br/>
+			<h3>Special member functions</h3>
+			&emsp;-&emsp;<a href="/meta/any/any"><code><f_>any</f_>()</code></a><br/>
+			<br/>
+			<h3>Operators</h3>
+			&emsp;-&emsp;<a href="/meta/any/operator-cast"><code><k_>operator</k_> <t_>T</t_>()</code></a><br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
@@ -56,6 +59,7 @@
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
+			<a href="https://godbolt.org/z/M6GMjTv5n" target="_blank" class="gray">View in Compiler Explorer</a>
 		</main>
 	</body>
 </html>
