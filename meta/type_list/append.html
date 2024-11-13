@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::type_list&lt;Ts...&gt;::append&lt;&gt;</title>
+		<style> body { background: #000000; } </style>
+		<link href="/_style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/_links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href="/meta/type_list"><t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;</a>::<a href=""><t_>append</t_>&lt;&gt;</a></code></h2></a>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/type_list.cpp" target="_blank"><code><v_>xieite</v_>:<v_>type_list</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Appends types to the back of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_></code></a>.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;
+<k_>using</k_> <t_>append</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<t_>Ts</t_>..., <t_>Us</t_>...&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>using</k_> <t_>list</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>&gt;::<a href="#decl"><t_>append</t_></a>&lt;<k_>float</k_>, <k_>double</k_>&gt;;
+
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/meta/name"><m_>xieite</m_>::<f_>name</f_></a>&lt;<t_>list</t_>&gt;());
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>xieite::type_list&lt;int, char, float, double&gt;</pre>
+			</blockquote>
+			<!-- <a href="https://godbolt.org/z/EGKPdvdMG" target="_blank" class="gray">View in Compiler Explorer</a> --> <!-- TODO -->
+		</main>
+	</body>
+</html>

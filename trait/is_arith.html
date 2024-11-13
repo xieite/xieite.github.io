@@ -11,15 +11,15 @@
 		<main>
 			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><c_>is_arith</c_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/is_arith.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_arith</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/is_arith.hpp" target="_blank"><code><s_>&lt;xieite/meta/is_arith.hpp&gt;</s_></code></a>)
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/is_arith.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_arith</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/is_arith.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_arith.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
 			Specifies that a type is arithmetic (integral or floating-point).<br/>
 			Uses two separate concepts instead of <a href="https://en.cppreference.com/w/cpp/types/is_arithmetic" target="_blank"><code><m_>std</m_>::<t_>is_arithmetic</t_></code></a> in order to be more useful in overload resolution.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="decl" href="#decl"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
 <k_>concept</k_> <c_>is_arith</c_> = <a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a>&lt;<t_>T</t_>&gt; || <a href="https://en.cppreference.com/w/cpp/concepts/floating_point" target="_blank"><m_>std</m_>::<c_>floating_point</c_></a>&lt;<t_>T</t_>&gt;;</pre>

@@ -15,24 +15,26 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/str/lower.hpp" target="_blank"><code><s_>&lt;xieite/str/lower.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Converts every character of a string (or a single character) to lower.<br/>
+			Converts every character of a string (or a single character) to lowercase.<br/>
 			Only handles the English alphabet.<br/>
 			<br/>
 			<br/>
 			<a id="decl" href="#decl"><h3>Declarations</h3></a>
 			<a id="decl-0" href="#decl-0" class="gray">#0</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/meta/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>C</t_> = <k_>char</k_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>C</t_> <f_>lower</f_>(<t_>C</t_> <v_>c</v_>) <k_>noexcept</k_>;</pre>
+<pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_> = <k_>char</k_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>Ch</t_> <f_>lower</f_>(<t_>Ch</t_> <v_>c</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Makes a single character lower. Internally uses a lookup table.<br/>
+			Makes a single character lowercase. Internally uses a lookup table.<br/>
 			<br/>
 			<a id="decl-1" href="#decl-1" class="gray">#1</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>C</t_> = <k_>char</k_>, <k_>typename</k_> <t_>Traits</t_> = <a href="https://en.cppreference.com/w/cpp/string/char_traits" target="_blank"><m_>std</m_>::<t_>char_traits</t_></a>&lt;<t_>C</t_>&gt;, <k_>typename</k_> <t_>Alloc</t_> = <a href="https://en.cppreference.com/w/cpp/memory/allocator" target="_blank"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>C</t_>&gt;&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>C</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt; <f_>lower</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>C</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt; <v_>str</v_>) <k_>noexcept</k_>;</pre>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ch</t_> = <k_>char</k_>, <k_>typename</k_> <t_>Traits</t_> = <a href="https://en.cppreference.com/w/cpp/string/char_traits" target="_blank"><m_>std</m_>::<t_>char_traits</t_></a>&lt;<t_>Ch</t_>&gt;, <k_>typename</k_> <t_>Alloc</t_> = <a href="https://en.cppreference.com/w/cpp/memory/allocator" target="_blank"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>Ch</t_>&gt;,
+	<a href="/meta/end"><m_>xieite</m_>::<c_>end</c_></a><k_>...</k_>,
+	<k_>typename</k_> <t_>Str</t_> = <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Ch</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt;&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>Str</t_> <f_>lower</f_>(<t_>Str</t_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Makes an entire string lower. Internally calls <a href="#decl-0" class="gray">#0</a>.<br/>
+			Makes an entire string lowercase. Internally uses <a href="#decl-0" class="gray">#0</a>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>

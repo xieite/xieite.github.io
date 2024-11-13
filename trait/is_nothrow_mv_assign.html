@@ -11,14 +11,14 @@
 		<main>
 			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><c_>is_nothrow_mv_assign</c_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/is_nothrow_mv_assign.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_nothrow_mv_assign</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/is_nothrow_mv_assign.hpp" target="_blank"><code><s_>&lt;xieite/meta/is_nothrow_mv_assign.hpp&gt;</s_></code></a>)
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/is_nothrow_mv_assign.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_nothrow_mv_assign</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/is_nothrow_mv_assign.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_nothrow_mv_assign.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
 			A wrapper around <a href="https://en.cppreference.com/w/cpp/types/is_move_assignable" target="_blank"><code><m_>std</m_>::<t_>is_nothrow_move_assignable</t_></code></a> to specify that a type is move-assignable without throwing.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="decl" href="#decl"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
 <k_>concept</k_> <c_>is_nothrow_mv_assign</c_> = <a href="https://en.cppreference.com/w/cpp/types/is_move_assignable#Helper_variable_templates" target="_blank"><m_>std</m_>::<v_>is_nothrow_move_assignable_v</v_></a>&lt;<t_>T</t_>&gt;;</pre>

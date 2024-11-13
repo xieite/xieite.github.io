@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>xieite::name()</title>
+		<style> body { background: #000000; } </style>
+		<link href="/_style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="../_links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><f_>name</f_>()</a></code></h2></a>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/name.cpp" target="_blank"><code><v_>xieite</v_>:<v_>name</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/name.hpp" target="_blank"><code><s_>&lt;xieite/meta/name.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Returns the name of a type or value as a string by parsing <a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><code><i_>__PRETTY_FUNCTION__</i_></code></a> or <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros#microsoft-specific-predefined-macros" target="_blank"><code><i_>__FUNCSIG__</i_></code></a>. Does not perform any additional string processing, so the output is entirely compiler-dependent.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_>&gt;
+[[<a_>nodiscard</a_>]] <k_>consteval</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <f_>name</f_>() <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Returns the name of a type.<br/>
+			<br/>
+			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>auto</k_>&gt;
+[[<a_>nodiscard</a_>]] <k_>consteval</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <f_>name</f_>() <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Returns the name of a value.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl-0"><m_>xieite</m_>::<f_>name</f_></a>&lt;<a href="https://en.cppreference.com/w/cpp/container/vector" target="_blank"><m_>std</m_>::<t_>vector</t_></a>&lt;<k_>int</k_>&gt;&gt;());
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>std::vector&lt;int&gt;</pre>
+			</blockquote>
+		</main>
+	</body>
+</html>

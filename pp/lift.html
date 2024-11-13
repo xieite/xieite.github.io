@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>XIEITE_LIFT(), XIEITE_LIFT_LOCAL()</title>
+		<title>XIEITE_LIFT(), XIEITE_LIFT_LOCAL(), XIEITE_LIFT_ONE(), XIEITE_LIFT_LOCAL_ONE()</title>
 		<style> body { background: #000000; } </style>
 		<link href="/_style.css" rel="stylesheet"/>
 	</head>
@@ -9,7 +9,7 @@
 		<input type="checkbox"/>
 		<iframe src="../_links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_LIFT</i_>()</code>,&emsp;<code><i_>XIEITE_LIFT_LOCAL</i_>()</code></h2></a>
+			<a href=""><h2><code><i_>XIEITE_LIFT</i_>()</code>, <code><i_>XIEITE_LIFT_LOCAL</i_>()</code>, <code><i_>XIEITE_LIFT_ONE</i_>()</code>, <code><i_>XIEITE_LIFT_LOCAL_ONE</i_>()</code></h2></a>
 			<small>
 				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><code><s_>&lt;xieite/lift.hpp&gt;</s_></code></a><br/>
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/lift.hpp" target="_blank"><code><s_>&lt;xieite/pp/lift.hpp&gt;</s_></code></a>)
@@ -23,13 +23,25 @@
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_LIFT</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a></pre>
 			</blockquote>
-			Expands to a lambda with no capture-default.<br/>
+			Expands to a lambda with no capture-default and variadic parameters.<br/>
 			<br/>
 			<a id="decl-1" href="#decl-1" class="gray">#1</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a></pre>
 			</blockquote>
-			Expands to a lambda with a reference capture-default.<br/>
+			Expands to a lambda with a reference capture-default and variadic parameters.<br/>
+			<br/>
+			<a id="decl-2" href="#decl-2" class="gray">#2</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT_ONE</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a></pre>
+			</blockquote>
+			Expands to a lambda with no capture-default and one parameter.<br/>
+			<br/>
+			<a id="decl-3" href="#decl-3" class="gray">#3</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL_ONE</i_>(...) <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/lift.hpp" target="_blank"><w_>/* ... */</w_></a></pre>
+			</blockquote>
+			Expands to a lambda with a reference capture-default and one parameter.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
