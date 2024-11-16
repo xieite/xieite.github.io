@@ -30,11 +30,11 @@
 <pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>struct</k_> <t_>A</t_> {
-	<f_>A</f_><k_>& operator</k_>=(<t_>A</t_><k_>&&</k_>) <k_>noexcept</k_> {}
+	<k_>void operator</k_>=(<t_>A</t_><k_>&&</k_>) <k_>noexcept</k_> {}
 };
 
 <k_>struct</k_> <t_>B</t_> {
-	<f_>B</f_><k_>& operator</k_>=(<t_>B</t_><k_>&&</k_>) {}
+	<k_>void operator</k_>=(<t_>B</t_><k_>&&</k_>) {}
 };
 
 <k_>int</k_> <f_>main</f_>() {
@@ -47,7 +47,7 @@
 <pre>true
 false</pre>
 			</blockquote>
-			<!-- <a href="https://godbolt.org" target="_blank" class="gray">View in Compiler Explorer</a> --> <!-- TODO -->
+			<a href="https://godbolt.org/z/oMTzj1zqv" target="_blank" class="gray">View in Compiler Explorer</a>
 		</main>
 	</body>
 </html>
