@@ -1,1 +1,49 @@
-// TODO
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/_icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::type_list::find&lt;&gt;</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style> body { background: #000000; } </style>
+		<link href="/_style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/_links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href="/meta/type_list"><t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;</a>::<a href=""><v_>find</v_>&lt;&gt;</a></code></h2></a>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/type_list.cpp" target="_blank"><code><v_>xieite</v_>:<v_>type_list</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Finds the first index of an element in a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_></code></a> that satisfies some functor.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Definition</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;
+<k_>requires</k_>(<a href="/meta/is_satisfd_any"><m_>xieite</m_>::<c_>is_satisfd_any</c_></a>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;)
+<k_>static constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>find</v_> = <w_>/* ... */</w_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>using</k_> <t_>list</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>float</k_>, <k_>void*</k_>&gt;;
+
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<t_>list</t_>::<a href="#decl"><v_>find</v_></a>&lt;[]&lt;<a href="https://en.cppreference.com/w/cpp/concepts/floating_point" target="_blank"><m_>std</m_>::<c_>floating_point</c_></a>&gt; {}&gt;);
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>2</pre>
+			</blockquote>
+			<a href="https://godbolt.org/z/c14qjhsra" target="_blank" class="gray">View in Compiler Explorer</a>
+		</main>
+	</body>
+</html>

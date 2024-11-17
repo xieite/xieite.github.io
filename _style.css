@@ -123,3 +123,11 @@ s_ { color: #fc662a; } /* strings */
 n_ { color: #d6ffa1; } /* numbers */
 p_ { color: #ca78e3; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
+
+/* TODO: Light mode
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: white;
+		color: black;
+	}
+} */
