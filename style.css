@@ -135,7 +135,10 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 
 	main {
 		margin: 0;
-		padding: 25px;
+		padding-top: 75px;
+		padding-bottom: 100px;
+		padding-left: 25px;
+		padding-right: 25px;
 		width: calc(100% - 50px);
 	}
 
