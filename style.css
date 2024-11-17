@@ -1,3 +1,5 @@
+/* This is terrible, please don't read */
+
 * {
 	padding: 0;
 	margin: 0;
@@ -24,13 +26,38 @@ input {
 	display: none;
 }
 
-iframe {
+.sidebar-left, .sidebar-right {
 	position: absolute;
 	top: 0;
-	left: 0;
 	border: 0;
 	width: 250px;
 	height: 100%;
+}
+
+.sidebar-left {
+	left: 0;
+	z-index: 1000000;
+}
+
+.sidebar-right {
+	left: calc(100% - 250px);
+	z-index: 1000002;
+}
+
+.links-body {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-right: 0;
+	width: calc(100% - 25px);
+	height: calc(100% - 50px);
+
+	background-color: #000000;
+}
+
+.links-pre {
+	tab-size: 2;
+	white-space: pre;
 }
 
 main {
@@ -76,23 +103,34 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 		padding-left: 300px;
 		padding-right: 50px;
 	}
+
+	.main {
+		padding-right: 300px;
+	}
 }
 
 @media (orientation: portrait) or (max-width: 700px) {
-	input {
+	.toggle-left, .toggle-right {
 		display: block;
-		width: 50px;
-		height: 50px;
-	
-		position: absolute;
-		top: 50px;
-		right: 50px;
+		width: 40px;
+		height: 40px;
 
-		z-index: 999;
+		position: absolute;
+		top: 25px;
 	}
 
-	iframe {
-		width: 0;
+	.toggle-left {
+		left: 25px;
+		z-index: 1000001;
+	}
+
+	.toggle-right {
+		right: 25px;
+		z-index: 1000003;
+	}
+
+	.sidebar-left, .sidebar-right {
+		display: none;
 	}
 
 	main {
@@ -101,8 +139,25 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 		width: calc(100% - 50px);
 	}
 
-	input:checked ~ iframe {
+	.toggle-left:checked {
+		left: unset;
+		right: 25px;
+	}
+
+	.toggle-left:checked ~ .toggle-right {
+		display: none;
+	}
+
+	.toggle-left:checked ~ .sidebar-left {
+		display: block;
 		width: 100%;
+	}
+
+	.toggle-right:checked ~ .sidebar-right {
+		display: block;
+		width: 100%;
+
+		left: 0;
 	}
 }
 
