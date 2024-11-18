@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::pow_of_2()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style> body { background: #000000; } </style>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><f_>pow_of_2</f_>()</a></code></h2></a>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/math/pow_of_2.cpp" target="_blank"><code><v_>xieite</v_>:<v_>pow_of_2</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/math/pow_of_2.hpp" target="_blank"><code><s_>&lt;xieite/math/pow_of_2.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Checks if an integer is a power of 2. The algorithm is stolen from <a href="https://graphics.stanford.edu/~seander/bithacks.html#DetermineIfPowerOf2" target="_blank" class="gray">Bit Twiddling Hacks</a>.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/unsigned_integral" target="_blank"><m_>std</m_>::<c_>unsigned_integral</c_></a> <t_>T</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>pow_of_2</f_>(<t_>T</t_> <v_>value</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<f_>pow_of_2</f_></a>(<n_>4u</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<f_>pow_of_2</f_></a>(<n_>0u</n_>));
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>true
+false</pre>
+			</blockquote>
+		</main>
+	</body>
+</html>
