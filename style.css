@@ -1,5 +1,11 @@
 /* This is terrible, please don't read */
 
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+	font-family: Inter, sans-serif;
+}
+
 * {
 	padding: 0;
 	margin: 0;
