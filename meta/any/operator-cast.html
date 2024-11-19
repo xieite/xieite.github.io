@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
 		<title>xieite::any::operator T()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<style> body { background: #000000; } </style>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -21,7 +21,7 @@
 			<br/>
 			A declared cast operator of <a href="/meta/any"><code><m_>xieite</m_>::<t_>any</t_></code></a> to any other type. Must be used in unevaluated context, as it is not actually implemented.<br/>
 			<br/>
-			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a href="https://eel.is/c++draft/temp.inst#4" target="_blank" class="gray">implicitly instantiated if the existence of its definition affects the semantics of the program</a> if it is <a href="https://eel.is/c++draft/temp.inst#8" target="_blank" class="gray">needed for constant evaluation (even if not required)</a> if this function is <a href="https://eel.is/c++draft/expr.const#22.6" target="_blank" class="gray">named by an expression that is potentially constant evaluated</a> if the expression is <a href="https://eel.is/c++draft/expr.const#22.3" target="_blank" class="gray">an immediate subexpression of a brace initializer list</a>.<br/> <!-- TODO: Remember to update these links periodically -->
+			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a href="https://eel.is/c++draft/temp.inst#4" target="_blank" class="gray">[implicitly instantiated if the existence of its definition affects the semantics of the program]</a> if it is <a href="https://eel.is/c++draft/temp.inst#8" target="_blank" class="gray">[needed for constant evaluation (even if not required)]</a> if this function is <a href="https://eel.is/c++draft/expr.const#22.6" target="_blank" class="gray">[named by an expression that is potentially constant evaluated]</a> if the expression is <a href="https://eel.is/c++draft/expr.const#22.3" target="_blank" class="gray">[an immediate subexpression of a brace initializer list]</a>.<br/> <!-- TODO: Remember to update these links periodically -->
 			Basically, this function would behave differently in a case like <code><k_>int</k_> { <a href="/meta/any"><m_>xieite</m_>::<t_>any</t_></a>() }</code>.
 			<br/>
 			<br/>
@@ -49,7 +49,7 @@
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/nEvh6vsab" target="_blank" class="gray">View in Compiler Explorer</a>
+			<a href="https://godbolt.org/z/nEvh6vsab" target="_blank" class="gray">[View in Compiler Explorer]</a>
 		</main>
 	</body>
 </html>
