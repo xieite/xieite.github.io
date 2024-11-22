@@ -13,7 +13,7 @@
 		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
 		<iframe src="/meta/any.links.html" frameborder="0" class="sidebar-right"></iframe>
 		<main>
-			<h2><code><a href="/"><m_>xieite</m_></a>::<a href="/meta/any"><t_>any</t_></a>::<a href=""><k_>operator</k_> <t_>T</t_>()</a></code></h2></a>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href="/meta/any"><t_>any</t_></a>::<a href=""><k_>operator</k_> <t_>T</t_>()</a></code></h2>
 			<small>
 				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/any.cpp" target="_blank"><code><v_>xieite</v_>:<v_>any</v_></code></a><br/>
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/any.hpp" target="_blank"><code><s_>&lt;xieite/meta/any.hpp&gt;</s_></code></a>)
@@ -21,7 +21,7 @@
 			<br/>
 			A declared cast operator of <a href="/meta/any"><code><m_>xieite</m_>::<t_>any</t_></code></a> to any other type. Must be used in unevaluated context, as it is not actually implemented.<br/>
 			<br/>
-			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a href="https://eel.is/c++draft/temp.inst#4" target="_blank" class="gray">[implicitly instantiated if the existence of its definition affects the semantics of the program]</a> if it is <a href="https://eel.is/c++draft/temp.inst#8" target="_blank" class="gray">[needed for constant evaluation (even if not required)]</a> if this function is <a href="https://eel.is/c++draft/expr.const#22.6" target="_blank" class="gray">[named by an expression that is potentially constant evaluated]</a> if the expression is <a href="https://eel.is/c++draft/expr.const#22.3" target="_blank" class="gray">[an immediate subexpression of a brace initializer list]</a>.<br/> <!-- TODO: Remember to update these links periodically -->
+			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a href="https://eel.is/c++draft/tmp.inst#4" target="_blank" class="gray">[implicitly instantiated if the existence of its definition affects the semantics of the program]</a> if it is <a href="https://eel.is/c++draft/tmp.inst#8" target="_blank" class="gray">[needed for constant evaluation (even if not required)]</a> if this function is <a href="https://eel.is/c++draft/expr.const#22.6" target="_blank" class="gray">[named by an expression that is potentially constant evaluated]</a> if the expression is <a href="https://eel.is/c++draft/expr.const#22.3" target="_blank" class="gray">[an immediate subexpression of a brace initializer list]</a>.<br/> <!-- TODO: Remember to update these links periodically -->
 			Basically, this function would behave differently in a case like <code><k_>int</k_> { <a href="/meta/any"><m_>xieite</m_>::<t_>any</t_></a>() }</code>.
 			<br/>
 			<br/>

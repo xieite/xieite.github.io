@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::file_pipe {}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<iframe src="/io/file_pipe.links.html" frameborder="0" class="sidebar-right"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><t_>file_pipe</t_> {}</a></code></h2>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/file_pipe.cpp" target="_blank"><code><v_>xieite</v_>:<v_>file_pipe</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Derives from multiple functors and inherits their call operators.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>struct</k_> <t_>file_pipe</t_> {
+	<a href="/io/file_pipe/file_pipe" class="a"><span><f_>file_pipe</f_>() <k_>noexcept</k_>;</span>
+
+	<span><f_>file_pipe</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>std</m_>::<t_>string_view</t_>) <k_>noexcept</k_>;</span>
+
+<span><p_>#if</p_> <i_>XIEITE_PLTF_TYPE_WINDOWS</i_></span>
+	<span><f_>file_pipe</f_>(<m_>std</m_>::<t_>wstring_view</t_>, <m_>std</m_>::<t_>wstring_view</t_>) <k_>noexcept</k_>;</span>
+<span><p_>#endif</p_></span></a>
+
+	<a href="/io/file_pipe/~file_pipe"><f_>~file_pipe</f_>();</a>
+
+	<a href="/io/file_pipe/open" class="a"><span><k_>void</k_> <f_>open</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>std</m_>::<t_>string_view</t_>) <k_>noexcept</k_>;</span>
+
+<span><p_>#if</p_> <i_>XIEITE_PLTF_TYPE_WINDOWS</i_></span>
+	<span><k_>void</k_> <f_>open</f_>(<m_>std</m_>::<t_>wstring_view</t_>, <m_>std</m_>::<t_>wstring_view</t_>) <k_>noexcept</k_>;</span>
+<span><p_>#endif</p_></span></a>
+
+	<a href="/io/file_pipe/close"><k_>int</k_> <f_>close</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/file_pipe/get"><m_>std</m_>::<t_>FILE</t_><k_>*</k_> <f_>get</f_>() <k_>const noexcept</k_>;</a>
+
+	<a href="/io/file_pipe/desc"><k_>int</k_> <f_>desc</f_>() <k_>const noexcept</k_>;</a>
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/io/read"><m_>xieite</m_>::<f_>read</f_></a>(<a href="#decl"><m_>xieite</m_>::<f_>file_pipe</f_></a>(<s_>"echo Hello, world!"</s_>, <s_>"r"</s_>).<a href="/io/file_pipe/get"><f_>get</f_></a>()));
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>Hello, world!
+</pre>
+			</blockquote>
+			<!-- TODO: <a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a> -->
+		</main>
+	</body>
+</html>

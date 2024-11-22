@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::file_pipe::file_pipe()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<input type="checkbox" class="toggle-right"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<iframe src="/io/file_pipe.links.html" frameborder="0" class="sidebar-right"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href="/io/file_pipe"><t_>file_pipe</t_></a>::<a href=""><f_>file_pipe</f_>()</a></code></h2>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/file_pipe.cpp" target="_blank"><code><v_>xieite</v_>:<v_>file_pipe</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Constructs a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_></code></a>.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<blockquote>
+<pre><f_>file_pipe</f_>() <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<blockquote>
+<pre><f_>file_pipe</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>cmd</v_>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>mode</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Internally calls <a href="/io/file_pipe/open"><code><f_>open</f_>()</code></a>.<br/>
+			<br/>
+			<a id="decl-2" href="#decl-2" class="gray">#2</a>
+			<blockquote>
+<pre><p_>#if</p_> <a href="/pp/pltf"><i_>XIEITE_PLTF_TYPE_WINDOWS</i_></a>
+<f_>file_pipe</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>wstring_view</t_></a> <v_>cmd</v_>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>wstring_view</t_></a> <v_>mode</v_>) <k_>noexcept</k_>;
+<p_>#endif</p_></pre>
+			</blockquote>
+			Internally calls <a href="/io/file_pipe/open"><code><f_>open</f_>()</code></a>. Only defined if the target platform is Windows.<br/>
+			<br/>
+			<br/>
+			<a href="/io/file_pipe#ex" class="gray"><h3>[Example]</h3></a>
+		</main>
+	</body>
+</html>

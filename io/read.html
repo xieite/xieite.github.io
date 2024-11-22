@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::read()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><f_>read</f_>()</a></code></h2>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/read.cpp" target="_blank"><code><v_>xieite</v_>:<v_>read</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/read.hpp" target="_blank"><code><s_>&lt;xieite/io/read.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Reads the entire contents of an input stream to a <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><code><m_>std</m_>::<t_>string</t_></code></a>.<br/>
+			<br/>
+			<br/>
+			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<blockquote>
+<pre><a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>string</t_></a> <f_>read</f_>(<a href="https://en.cppreference.com/w/cpp/io/basic_istream" target="_blank"><m_>std</m_>::<t_>istream</t_></a><k_>&</k_> <v_>stream</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Uses <a href="https://en.cppreference.com/w/cpp/iterator/istreambuf_iterator" target="_blank"><code><m_>std</m_>::<t_>istreambuf_iterator</t_></code></a>.<br/>
+			<br/>
+			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<blockquote>
+<pre><a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>string</t_></a> <f_>read</f_>(<a href="https://en.cppreference.com/w/cpp/io/c/FILE" target="_blank"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_> <k_>const</k_> <v_>stream</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Reads the file stream in chunks, with the chunk size doubling every iteration.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="https://en.cppreference.com/w/cpp/io/basic_ofstream" target="_blank"><m_>std</m_>::<t_>ofstream</t_></a>(<s_>"msg.txt"</s_>) &lt;&lt; <s_>"Hello, world!"</s_>;
+
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump<f_><a>(<a href="#decl-0"><m_>xieite</m_>::<f_>read<f_>(<a href="/fn/tmp"><m_>xieite</m_>::<f_>tmp</f_></a>(<a href="https://en.cppreference.com/w/cpp/io/basic_ifstream" target="_blank"><m_>std</m_>::<t_>ifstream</t_></a>(<s_>"msg.txt"</s_>))));
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>Hello, world!</pre>
+			</blockquote>
+			<!-- TODO: <a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a> -->
+		</main>
+	</body>
+</html>

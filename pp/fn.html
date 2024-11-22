@@ -20,7 +20,7 @@
 			Allows a shorthand lambda syntax:<br/>
 			&emsp;<code><a href="#decl-0"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
 			which is equivalent to writing:<br/>
-			&emsp;<code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<v_>a</v_> + <v_>b</v_>) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
+			&emsp;<code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
 			The body of a shorthand lambda has access to a parameter pack <code><v_>$$</v_></code> containing all arguments, a template parameter pack <code><t_>$$_</t_></code> containing all template arguments, variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda, and types <code><t_>$0_</t_></code> through <code><t_>$256_</t_></code> which correspond to individual template arguments.<br/>
 			Accessing a variable or type which does not correspond to an argument (when the number of arguments is not greater than a variable's index or the number of template arguments is not greater than a type's index) results in some unusable value.<br/>
