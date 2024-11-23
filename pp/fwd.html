@@ -35,13 +35,13 @@
 			- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href="#decl-1"><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 			- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
 			- Does nothing with lambda expressions: <code><a href="#decl-1"><i_>XIEITE_FWD_PRVALUE</i_></a>([] {})</code><br/>
-			Internally uses a lambda with no capture-default.<br/>
+			Internally uses a lambda expression with no capture-default.<br/>
 			<br/>
 			<a id="decl-2" href="#decl-2" class="gray">#2</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE_LOCAL</i_>(...) <w_>/* ([&]??? { ??? })() */</w_></pre>
 			</blockquote>
-			Same functionality as <a href="#decl-1" class="gray">#1</a>, but internally uses a lambda with a reference capture-default.<br/>
+			Same functionality as <a href="#decl-1" class="gray">#1</a>, but internally uses a lambda expression with a reference capture-default.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
