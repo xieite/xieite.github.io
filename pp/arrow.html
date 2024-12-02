@@ -22,7 +22,7 @@
 			<br/>
 			<br/>
 			<a id="decl" href="#decl"><h3>Definitions</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="decl-arrow" href="#decl-arrow" class="gray">#arrow</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(...) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
@@ -31,14 +31,14 @@
 			</blockquote>
 			The explicit trailing return type is helpful for overload resolution.<br/>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="decl-arrow-ctor" href="#decl-arrow-ctor" class="gray">#arrow-ctor</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(...) <i_>\</i_>
 		<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
 		: <v_>__VA_ARGS__</v_> {}</pre>
 			</blockquote>
 			</div>
-			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <i_>XIEITE_ARROW_CTOR</i_>(<f_>B</f_>(<v_>x</v_>)) {} };</code><br/>
+			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href="#decl-arrow-ctor"><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} };</code><br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
@@ -46,7 +46,7 @@
 <pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/arrow.hpp" target="_blank"><s_>&lt;xieite/arrow.hpp&gt;</s_></a>
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
-<k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>) <a href="#decl-0"><i_>XIEITE_ARROW</i_></a>(<v_>a</v_> + <v_>b</v_>)
+<k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>) <a href="#decl-arrow"><i_>XIEITE_ARROW</i_></a>(<v_>a</v_> + <v_>b</v_>)
 
 <k_>struct</k_> <t_>S</t_> {
 	<k_>void operator</k_>+(<t_>S</t_>) {} <w_>// not marked `noexcept`</w_>

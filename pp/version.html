@@ -21,19 +21,19 @@
 			<br/>
 			<br/>
 			<a id="decl" href="#decl"><h3>Definitions</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="decl-major" href="#decl-major" class="gray">#major</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VERSION_MAJOR</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			Incremented for every breaking change (i.e. forcing the user to update their code).<br/>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="decl-minor" href="#decl-minor" class="gray">#minor</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VERSION_MINOR</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			Incremented when adding a feature.<br/>
 			<br/>
-			<a id="decl-2" href="#decl-2" class="gray">#2</a>
+			<a id="decl-patch" href="#decl-patch" class="gray">#patch</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VERSION_PATCH</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
@@ -46,12 +46,12 @@
 <p_>import</p_> <v_>std</v_>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"v<i_>{}</i_>.<i_>{}</i_>.<i_>{}\n</i_>"</s_>, <a href="#decl-0"><i_>XIEITE_VERSION_MAJOR</i_></a>, <a href="#decl-1"><i_>XIEITE_VERSION_MINOR</i_></a>, <a href="#decl-2"><i_>XIEITE_VERSION_PATCH</i_></a>);
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"v<i_>{}</i_>.<i_>{}</i_>.<i_>{}\n</i_>"</s_>, <a href="#decl-major"><i_>XIEITE_VERSION_MAJOR</i_></a>, <a href="#decl-minor"><i_>XIEITE_VERSION_MINOR</i_></a>, <a href="#decl-patch"><i_>XIEITE_VERSION_PATCH</i_></a>);
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
-<pre>v217.0.0</pre>
+<pre>v218.3.4</pre>
 			</blockquote>
 			<a href="https://godbolt.org/z/q8o4bMq4h" target="_blank" class="gray">[View in Compiler Explorer]</a>
 		</main>

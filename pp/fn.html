@@ -18,7 +18,7 @@
 			</small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
-			&emsp;<code><a href="#decl-0"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
+			&emsp;<code><a href="#decl-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
 			which is equivalent to writing:<br/>
 			&emsp;<code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
@@ -27,13 +27,13 @@
 			<br/>
 			<br/>
 			<a id="decl" href="#decl"><h3>Definitions</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="decl-fn" href="#decl-fn" class="gray">#fn</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FN</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with no capture-default.<br/>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="decl-fn-local" href="#decl-fn-local" class="gray">#fn-local</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FN_LOCAL</i_>(...) <w_>/* [&]??? { ??? } */</w_></pre>
 			</blockquote>
@@ -46,9 +46,9 @@
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<k_>auto</k_> <v_>add_two</v_> = <a href="#decl-0"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>);
-	<k_>auto</k_> <v_>add_all</v_> = <a href="#decl-0"><i_>XIEITE_FN</i_></a>(... + <v_>$$</v_>);
-	<k_>auto</k_> <v_>cast</v_> = <a href="#decl-0"><i_>XIEITE_FN</i_></a>(<k_>static_cast</k_>&lt;<t_>$0_</t_>&gt;(<v_>$0</v_>));
+	<k_>auto</k_> <v_>add_two</v_> = <a href="#decl-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>);
+	<k_>auto</k_> <v_>add_all</v_> = <a href="#decl-fn"><i_>XIEITE_FN</i_></a>(... + <v_>$$</v_>);
+	<k_>auto</k_> <v_>cast</v_> = <a href="#decl-fn"><i_>XIEITE_FN</i_></a>(<k_>static_cast</k_>&lt;<t_>$0_</t_>&gt;(<v_>$0</v_>));
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_two</v_>(<n_>1</n_>, <n_>2</n_>));
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_all</v_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));
