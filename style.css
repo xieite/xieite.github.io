@@ -88,6 +88,7 @@ blockquote {
 pre {
 	tab-size: 4;
 	white-space: pre-wrap;
+	word-break: break-all;
 }
 
 a {
