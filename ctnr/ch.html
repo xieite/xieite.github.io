@@ -13,57 +13,57 @@
 		<main>
 			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><m_>ch</m_> {}</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/str/ch.cpp" target="_blank"><code><v_>xieite</v_>:<v_>ch</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/str/ch.hpp" target="_blank"><code><s_>&lt;xieite/str/ch.hpp&gt;</s_></code></a>)
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/ctnr/ch.cpp" target="_blank"><code><v_>xieite</v_>:<v_>ch</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/ctnr/ch.hpp" target="_blank"><code><s_>&lt;xieite/ctnr/ch.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
 			A namespace providing collections of characters.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Contents</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="def" href="#def"><h3>Contents</h3></a>
+			<a id="def-0" href="#def-0" class="gray">#0</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>alphabet_size</v_> = <n_>26</n_>;</pre>
 			</blockquote>
 			Provides the size of the English alphabet.<br/>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="def-1" href="#def-1" class="gray">#1</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>upper</v_> = <s_>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</s_>;</pre>
 			</blockquote>
-			The English alphabet in uppercase. Its size is guaranteed to be <a href="#decl-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
+			The English alphabet in uppercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
 			<br/>
-			<a id="decl-2" href="#decl-2" class="gray">#2</a>
+			<a id="def-2" href="#def-2" class="gray">#2</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>lower</v_> = <s_>"abcdefghijklmnopqrstuvwxyz"</s_>;</pre>
 			</blockquote>
-			The English alphabet in lowercase. Its size is guaranteed to be <a href="#decl-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
+			The English alphabet in lowercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
 			<br/>
-			<a id="decl-3" href="#decl-3" class="gray">#3</a>
+			<a id="def-3" href="#def-3" class="gray">#3</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>digits</v_> = <s_>"0123456789"</s_>;</pre>
 			</blockquote>
 			Digits <code>0</code> through <code>9</code> in ascending order.<br/>
 			<br/>
-			<a id="decl-4" href="#decl-4" class="gray">#4</a>
+			<a id="def-4" href="#def-4" class="gray">#4</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>whitesp</v_> = <s_>" <i_>\t\n\v\f\r</i_>"</s_>;</pre>
 			</blockquote>
 			Whitespace characters.</br>
 			<br/>
-			<a id="decl-5" href="#decl-5" class="gray">#5</a>
+			<a id="def-5" href="#def-5" class="gray">#5</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>alphanum</v_> = <s_>"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"</s_>;</pre>
 			</blockquote>
 			All alphanumeric characters. Consists of digits, followed by the uppercase English alphabet, followed by the lowercase English alphabet.</br>
 			<br/>
-			<a id="decl-6" href="#decl-6" class="gray">#6</a>
+			<a id="def-6" href="#def-6" class="gray">#6</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>vowels</v_> = <s_>"AEIOUaeiou"</s_>;</pre>
 			</blockquote>
 			Uppercase and lowercase vowels in the English alphabet. Does not include semivowels.</br>
 			<br/>
-			<a id="decl-7" href="#decl-7" class="gray">#7</a>
+			<a id="def-7" href="#def-7" class="gray">#7</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>consonants</v_> = <s_>"BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz"</s_>;</pre>
 			</blockquote>
@@ -77,7 +77,7 @@
 
 <k_>int</k_> <f_>main</f_>() {
 	<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<n_>16uz</n_>&gt;([]&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt; {
-		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl-5"><m_>xieite</m_>::<m_>ch</m_>::<v_>alphanum</v_></a>[<v_>i</v_>]...);
+		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def-5"><m_>xieite</m_>::<m_>ch</m_>::<v_>alphanum</v_></a>[<v_>i</v_>]...);
 	});
 }</pre>
 			</blockquote>
@@ -85,7 +85,7 @@
 			<blockquote>
 <pre>0 1 2 3 4 5 6 7 8 9 A B C D E F</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/bsjas3h8W" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<small><a href="https://godbolt.org/z/bsjas3h8W" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

@@ -13,8 +13,8 @@
 		<main>
 			<a href=""><h2><code><i_>XIEITE_PLTF_TYPE_</i_><w_>/* ??? */</w_></code>, <code><i_>XIEITE_PLTF_MAJOR_</i_><w_>/* ??? */</w_></code>, <code><i_>XIEITE_PLTF_MINOR_</i_><w_>/* ??? */</w_></code>, <code><i_>XIEITE_PLTF_PATCH_</i_><w_>/* ??? */</w_></code>, <code><i_>XIEITE_PLTF_EQ</i_>()</code>, <code><i_>XIEITE_PLTF_LEAST</i_>()</code>, <code><i_>XIEITE_PLTF_MOST</i_>()</code></h2></a>
 			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/version.hpp" target="_blank"><code><s_>&lt;xieite/version.hpp&gt;</s_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/version.hpp" target="_blank"><code><s_>&lt;xieite/pp/version.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pltf.hpp" target="_blank"><code><s_>&lt;xieite/pltf.hpp&gt;</s_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/pltf.hpp" target="_blank"><code><s_>&lt;xieite/pp/pltf.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
 			Macros for identifying the current platform or operating system and its version (major, minor, patch).<br/>
@@ -22,8 +22,8 @@
 			In the end, the definitions of these still depend on the compiler.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Definitions</h3></a>
-			<a id="decl-type-aegis" href="#decl-type-aegis" class="gray">#type-aegis</a>
+			<a id="def" href="#def"><h3>Definitions</h3></a>
+			<a id="def-type-aegis" href="#def-type-aegis" class="gray">#type-aegis</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_AEGIS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_AEGIS</i_> <w_>/* integer literal */</w_>
@@ -31,7 +31,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_AEGIS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-aix" href="#decl-type-aix" class="gray">#type-aix</a>
+			<a id="def-type-aix" href="#def-type-aix" class="gray">#type-aix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_AIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_AIX</i_> <w_>/* integer literal */</w_>
@@ -39,7 +39,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_AIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-akaros" href="#decl-type-akaros" class="gray">#type-akaros</a>
+			<a id="def-type-akaros" href="#def-type-akaros" class="gray">#type-akaros</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_AKAROS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_AKAROS</i_> <w_>/* integer literal */</w_>
@@ -47,7 +47,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_AKAROS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-amigaos" href="#decl-type-amigaos" class="gray">#type-amigaos</a>
+			<a id="def-type-amigaos" href="#def-type-amigaos" class="gray">#type-amigaos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_AMIGAOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_AMIGAOS</i_> <w_>/* integer literal */</w_>
@@ -55,7 +55,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_AMIGAOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-android" href="#decl-type-android" class="gray">#type-android</a>
+			<a id="def-type-android" href="#def-type-android" class="gray">#type-android</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_ANDROID</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_ANDROID</i_> <w_>/* integer literal */</w_>
@@ -63,7 +63,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_ANDROID</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-asmjs" href="#decl-type-asmjs" class="gray">#type-asmjs</a>
+			<a id="def-type-asmjs" href="#def-type-asmjs" class="gray">#type-asmjs</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_ASMJS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_ASMJS</i_> <w_>/* integer literal */</w_>
@@ -71,7 +71,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_ASMJS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-beos" href="#decl-type-beos" class="gray">#type-beos</a>
+			<a id="def-type-beos" href="#def-type-beos" class="gray">#type-beos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BEOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BEOS</i_> <w_>/* integer literal */</w_>
@@ -79,7 +79,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BEOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-blue-gene" href="#decl-type-blue-gene" class="gray">#type-blue-gene</a>
+			<a id="def-type-blue-gene" href="#def-type-blue-gene" class="gray">#type-blue-gene</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BLUE_GENE</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BLUE_GENE</i_> <w_>/* integer literal */</w_>
@@ -87,7 +87,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BLUE_GENE</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-bsd" href="#decl-type-bsd" class="gray">#type-bsd</a>
+			<a id="def-type-bsd" href="#def-type-bsd" class="gray">#type-bsd</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BSD</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BSD</i_> <w_>/* integer literal */</w_>
@@ -95,7 +95,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BSD</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-bsd-bsdi" href="#decl-type-bsd-bsdi" class="gray">#type-bsd-bsdi</a>
+			<a id="def-type-bsd-bsdi" href="#def-type-bsd-bsdi" class="gray">#type-bsd-bsdi</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BSD_BSDI</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BSD_BSDI</i_> <w_>/* integer literal */</w_>
@@ -103,7 +103,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BSD_BSDI</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-bsd-dragonfly" href="#decl-type-bsd-dragonfly" class="gray">#type-bsd-dragonfly</a>
+			<a id="def-type-bsd-dragonfly" href="#def-type-bsd-dragonfly" class="gray">#type-bsd-dragonfly</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BSD_DRAGONFLY</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BSD_DRAGONFLY</i_> <w_>/* integer literal */</w_>
@@ -111,7 +111,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BSD_DRAGONFLY</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-bsd-free" href="#decl-type-bsd-free" class="gray">#type-bsd-free</a>
+			<a id="def-type-bsd-free" href="#def-type-bsd-free" class="gray">#type-bsd-free</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BSD_FREE</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BSD_FREE</i_> <w_>/* integer literal */</w_>
@@ -119,7 +119,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BSD_FREE</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-bsd-net" href="#decl-type-bsd-net" class="gray">#type-bsd-net</a>
+			<a id="def-type-bsd-net" href="#def-type-bsd-net" class="gray">#type-bsd-net</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BSD_NET</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BSD_NET</i_> <w_>/* integer literal */</w_>
@@ -127,7 +127,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BSD_NET</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-bsd-open" href="#decl-type-bsd-open" class="gray">#type-bsd-open</a>
+			<a id="def-type-bsd-open" href="#def-type-bsd-open" class="gray">#type-bsd-open</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_BSD_OPEN</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_BSD_OPEN</i_> <w_>/* integer literal */</w_>
@@ -135,7 +135,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_BSD_OPEN</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-cloudabi" href="#decl-type-cloudabi" class="gray">#type-cloudabi</a>
+			<a id="def-type-cloudabi" href="#def-type-cloudabi" class="gray">#type-cloudabi</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_CLOUDABI</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_CLOUDABI</i_> <w_>/* integer literal */</w_>
@@ -143,7 +143,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_CLOUDABI</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-convexos" href="#decl-type-convexos" class="gray">#type-convexos</a>
+			<a id="def-type-convexos" href="#def-type-convexos" class="gray">#type-convexos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_CONVEXOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_CONVEXOS</i_> <w_>/* integer literal */</w_>
@@ -151,7 +151,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_CONVEXOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-cygwin" href="#decl-type-cygwin" class="gray">#type-cygwin</a>
+			<a id="def-type-cygwin" href="#def-type-cygwin" class="gray">#type-cygwin</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_CYGWIN</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_CYGWIN</i_> <w_>/* integer literal */</w_>
@@ -159,7 +159,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_CYGWIN</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-dc-osx" href="#decl-type-dc-osx" class="gray">#type-dc-osx</a>
+			<a id="def-type-dc-osx" href="#def-type-dc-osx" class="gray">#type-dc-osx</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_DC_OSX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_DC_OSX</i_> <w_>/* integer literal */</w_>
@@ -167,7 +167,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_DC_OSX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-dg-ux" href="#decl-type-dg-ux" class="gray">#type-dg-ux</a>
+			<a id="def-type-dg-ux" href="#def-type-dg-ux" class="gray">#type-dg-ux</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_DG_UX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_DG_UX</i_> <w_>/* integer literal */</w_>
@@ -175,7 +175,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_DG_UX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-domain-os" href="#decl-type-domain-os" class="gray">#type-domain-os</a>
+			<a id="def-type-domain-os" href="#def-type-domain-os" class="gray">#type-domain-os</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_DOMAIN_OS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_DOMAIN_OS</i_> <w_>/* integer literal */</w_>
@@ -183,7 +183,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_DOMAIN_OS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-dragonfly" href="#decl-type-dragonfly" class="gray">#type-dragonfly</a>
+			<a id="def-type-dragonfly" href="#def-type-dragonfly" class="gray">#type-dragonfly</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_DRAGONFLY</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_DRAGONFLY</i_> <w_>/* integer literal */</w_>
@@ -191,7 +191,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_DRAGONFLY</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-dynix" href="#decl-type-dynix" class="gray">#type-dynix</a>
+			<a id="def-type-dynix" href="#def-type-dynix" class="gray">#type-dynix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_DYNIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_DYNIX</i_> <w_>/* integer literal */</w_>
@@ -199,7 +199,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_DYNIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-ecos" href="#decl-type-ecos" class="gray">#type-ecos</a>
+			<a id="def-type-ecos" href="#def-type-ecos" class="gray">#type-ecos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_ECOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_ECOS</i_> <w_>/* integer literal */</w_>
@@ -207,7 +207,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_ECOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-emx" href="#decl-type-emx" class="gray">#type-emx</a>
+			<a id="def-type-emx" href="#def-type-emx" class="gray">#type-emx</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_EMX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_EMX</i_> <w_>/* integer literal */</w_>
@@ -215,7 +215,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_EMX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-freebsd" href="#decl-type-freebsd" class="gray">#type-freebsd</a>
+			<a id="def-type-freebsd" href="#def-type-freebsd" class="gray">#type-freebsd</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_FREEBSD</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_FREEBSD</i_> <w_>/* integer literal */</w_>
@@ -223,7 +223,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_FREEBSD</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-fuchsia" href="#decl-type-fuchsia" class="gray">#type-fuchsia</a>
+			<a id="def-type-fuchsia" href="#def-type-fuchsia" class="gray">#type-fuchsia</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_FUCHSIA</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_FUCHSIA</i_> <w_>/* integer literal */</w_>
@@ -231,7 +231,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_FUCHSIA</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-gnu-hurd" href="#decl-type-gnu-hurd" class="gray">#type-gnu-hurd</a>
+			<a id="def-type-gnu-hurd" href="#def-type-gnu-hurd" class="gray">#type-gnu-hurd</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_GNU_HURD</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_GNU_HURD</i_> <w_>/* integer literal */</w_>
@@ -239,7 +239,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_GNU_HURD</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-gnu-kfreebsd" href="#decl-type-gnu-kfreebsd" class="gray">#type-gnu-kfreebsd</a>
+			<a id="def-type-gnu-kfreebsd" href="#def-type-gnu-kfreebsd" class="gray">#type-gnu-kfreebsd</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_GNU_KFREEBSD</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_GNU_KFREEBSD</i_> <w_>/* integer literal */</w_>
@@ -247,7 +247,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_GNU_KFREEBSD</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-gnu-linux" href="#decl-type-gnu-linux" class="gray">#type-gnu-linux</a>
+			<a id="def-type-gnu-linux" href="#def-type-gnu-linux" class="gray">#type-gnu-linux</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_GNU_LINUX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_GNU_LINUX</i_> <w_>/* integer literal */</w_>
@@ -255,7 +255,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_GNU_LINUX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-haiku" href="#decl-type-haiku" class="gray">#type-haiku</a>
+			<a id="def-type-haiku" href="#def-type-haiku" class="gray">#type-haiku</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_HAIKU</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_HAIKU</i_> <w_>/* integer literal */</w_>
@@ -263,7 +263,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_HAIKU</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-hi-ux-mpp" href="#decl-type-hi-ux-mpp" class="gray">#type-hi-ux-mpp</a>
+			<a id="def-type-hi-ux-mpp" href="#def-type-hi-ux-mpp" class="gray">#type-hi-ux-mpp</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_HI_UX_MPP</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_HI_UX_MPP</i_> <w_>/* integer literal */</w_>
@@ -271,7 +271,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_HI_UX_MPP</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-hp-ux" href="#decl-type-hp-ux" class="gray">#type-hp-ux</a>
+			<a id="def-type-hp-ux" href="#def-type-hp-ux" class="gray">#type-hp-ux</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_HP_UX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_HP_UX</i_> <w_>/* integer literal */</w_>
@@ -279,7 +279,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_HP_UX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-integrity" href="#decl-type-integrity" class="gray">#type-integrity</a>
+			<a id="def-type-integrity" href="#def-type-integrity" class="gray">#type-integrity</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_INTEGRITY</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_INTEGRITY</i_> <w_>/* integer literal */</w_>
@@ -287,7 +287,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_INTEGRITY</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-interix" href="#decl-type-interix" class="gray">#type-interix</a>
+			<a id="def-type-interix" href="#def-type-interix" class="gray">#type-interix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_INTERIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_INTERIX</i_> <w_>/* integer literal */</w_>
@@ -295,7 +295,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_INTERIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-ios-simulator" href="#decl-type-ios-simulator" class="gray">#type-ios-simulator</a>
+			<a id="def-type-ios-simulator" href="#def-type-ios-simulator" class="gray">#type-ios-simulator</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_IOS_SIMULATOR</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_IOS_SIMULATOR</i_> <w_>/* integer literal */</w_>
@@ -303,7 +303,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_IOS_SIMULATOR</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-irix" href="#decl-type-irix" class="gray">#type-irix</a>
+			<a id="def-type-irix" href="#def-type-irix" class="gray">#type-irix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_IRIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_IRIX</i_> <w_>/* integer literal */</w_>
@@ -311,7 +311,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_IRIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-kallisti" href="#decl-type-kallisti" class="gray">#type-kallisti</a>
+			<a id="def-type-kallisti" href="#def-type-kallisti" class="gray">#type-kallisti</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_KALLISTI</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_KALLISTI</i_> <w_>/* integer literal */</w_>
@@ -319,7 +319,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_KALLISTI</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-linux" href="#decl-type-linux" class="gray">#type-linux</a>
+			<a id="def-type-linux" href="#def-type-linux" class="gray">#type-linux</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_LINUX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_LINUX</i_> <w_>/* integer literal */</w_>
@@ -327,7 +327,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_LINUX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-lynxos" href="#decl-type-lynxos" class="gray">#type-lynxos</a>
+			<a id="def-type-lynxos" href="#def-type-lynxos" class="gray">#type-lynxos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_LYNXOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_LYNXOS</i_> <w_>/* integer literal */</w_>
@@ -335,7 +335,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_LYNXOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-macintosh" href="#decl-type-macintosh" class="gray">#type-macintosh</a>
+			<a id="def-type-macintosh" href="#def-type-macintosh" class="gray">#type-macintosh</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MACINTOSH</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MACINTOSH</i_> <w_>/* integer literal */</w_>
@@ -343,7 +343,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MACINTOSH</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-macintosh-dyld" href="#decl-type-macintosh-dyld" class="gray">#type-macintosh-dyld</a>
+			<a id="def-type-macintosh-dyld" href="#def-type-macintosh-dyld" class="gray">#type-macintosh-dyld</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MACINTOSH_DYLD</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MACINTOSH_DYLD</i_> <w_>/* integer literal */</w_>
@@ -351,7 +351,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MACINTOSH_DYLD</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-mingw32" href="#decl-type-mingw32" class="gray">#type-mingw32</a>
+			<a id="def-type-mingw32" href="#def-type-mingw32" class="gray">#type-mingw32</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MINGW32</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MINGW32</i_> <w_>/* integer literal */</w_>
@@ -359,7 +359,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MINGW32</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-mingw64" href="#decl-type-mingw64" class="gray">#type-mingw64</a>
+			<a id="def-type-mingw64" href="#def-type-mingw64" class="gray">#type-mingw64</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MINGW64</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MINGW64</i_> <w_>/* integer literal */</w_>
@@ -367,7 +367,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MINGW64</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-minix" href="#decl-type-minix" class="gray">#type-minix</a>
+			<a id="def-type-minix" href="#def-type-minix" class="gray">#type-minix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MINIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MINIX</i_> <w_>/* integer literal */</w_>
@@ -375,7 +375,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MINIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-morphos" href="#decl-type-morphos" class="gray">#type-morphos</a>
+			<a id="def-type-morphos" href="#def-type-morphos" class="gray">#type-morphos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MORPHOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MORPHOS</i_> <w_>/* integer literal */</w_>
@@ -383,7 +383,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MORPHOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-mpe-ix" href="#decl-type-mpe-ix" class="gray">#type-mpe-ix</a>
+			<a id="def-type-mpe-ix" href="#def-type-mpe-ix" class="gray">#type-mpe-ix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MPE_IX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MPE_IX</i_> <w_>/* integer literal */</w_>
@@ -391,7 +391,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MPE_IX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-ms-dos" href="#decl-type-ms-dos" class="gray">#type-ms-dos</a>
+			<a id="def-type-ms-dos" href="#def-type-ms-dos" class="gray">#type-ms-dos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_MS_DOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_MS_DOS</i_> <w_>/* integer literal */</w_>
@@ -399,7 +399,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_MS_DOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-nacl" href="#decl-type-nacl" class="gray">#type-nacl</a>
+			<a id="def-type-nacl" href="#def-type-nacl" class="gray">#type-nacl</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_NACL</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_NACL</i_> <w_>/* integer literal */</w_>
@@ -407,7 +407,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_NACL</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-next" href="#decl-type-next" class="gray">#type-next</a>
+			<a id="def-type-next" href="#def-type-next" class="gray">#type-next</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_NEXT</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_NEXT</i_> <w_>/* integer literal */</w_>
@@ -415,7 +415,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_NEXT</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-nonstop" href="#decl-type-nonstop" class="gray">#type-nonstop</a>
+			<a id="def-type-nonstop" href="#def-type-nonstop" class="gray">#type-nonstop</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_NONSTOP</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_NONSTOP</i_> <w_>/* integer literal */</w_>
@@ -423,7 +423,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_NONSTOP</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-nucleus-rtos" href="#decl-type-nucleus-rtos" class="gray">#type-nucleus-rtos</a>
+			<a id="def-type-nucleus-rtos" href="#def-type-nucleus-rtos" class="gray">#type-nucleus-rtos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_NUCLEUS_RTOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_NUCLEUS_RTOS</i_> <w_>/* integer literal */</w_>
@@ -431,7 +431,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_NUCLEUS_RTOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-openserver" href="#decl-type-openserver" class="gray">#type-openserver</a>
+			<a id="def-type-openserver" href="#def-type-openserver" class="gray">#type-openserver</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_OPENSERVER</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_OPENSERVER</i_> <w_>/* integer literal */</w_>
@@ -439,7 +439,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_OPENSERVER</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-os-2" href="#decl-type-os-2" class="gray">#type-os-2</a>
+			<a id="def-type-os-2" href="#def-type-os-2" class="gray">#type-os-2</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_OS_2</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_OS_2</i_> <w_>/* integer literal */</w_>
@@ -447,7 +447,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_OS_2</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-os-400" href="#decl-type-os-400" class="gray">#type-os-400</a>
+			<a id="def-type-os-400" href="#def-type-os-400" class="gray">#type-os-400</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_OS_400</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_OS_400</i_> <w_>/* integer literal */</w_>
@@ -455,7 +455,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_OS_400</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-os-9" href="#decl-type-os-9" class="gray">#type-os-9</a>
+			<a id="def-type-os-9" href="#def-type-os-9" class="gray">#type-os-9</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_OS_9</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_OS_9</i_> <w_>/* integer literal */</w_>
@@ -463,7 +463,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_OS_9</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-palm-os" href="#decl-type-palm-os" class="gray">#type-palm-os</a>
+			<a id="def-type-palm-os" href="#def-type-palm-os" class="gray">#type-palm-os</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_PALM_OS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_PALM_OS</i_> <w_>/* integer literal */</w_>
@@ -471,7 +471,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_PALM_OS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-pdos" href="#decl-type-pdos" class="gray">#type-pdos</a>
+			<a id="def-type-pdos" href="#def-type-pdos" class="gray">#type-pdos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_PDOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_PDOS</i_> <w_>/* integer literal */</w_>
@@ -479,7 +479,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_PDOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-phoenix" href="#decl-type-phoenix" class="gray">#type-phoenix</a>
+			<a id="def-type-phoenix" href="#def-type-phoenix" class="gray">#type-phoenix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_PHOENIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_PHOENIX</i_> <w_>/* integer literal */</w_>
@@ -487,7 +487,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_PHOENIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-plan-9" href="#decl-type-plan-9" class="gray">#type-plan-9</a>
+			<a id="def-type-plan-9" href="#def-type-plan-9" class="gray">#type-plan-9</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_PLAN_9</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_PLAN_9</i_> <w_>/* integer literal */</w_>
@@ -495,7 +495,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_PLAN_9</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-pnacl" href="#decl-type-pnacl" class="gray">#type-pnacl</a>
+			<a id="def-type-pnacl" href="#def-type-pnacl" class="gray">#type-pnacl</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_PNACL</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_PNACL</i_> <w_>/* integer literal */</w_>
@@ -503,7 +503,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_PNACL</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-qnx" href="#decl-type-qnx" class="gray">#type-qnx</a>
+			<a id="def-type-qnx" href="#def-type-qnx" class="gray">#type-qnx</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_QNX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_QNX</i_> <w_>/* integer literal */</w_>
@@ -511,7 +511,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_QNX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-sinix" href="#decl-type-sinix" class="gray">#type-sinix</a>
+			<a id="def-type-sinix" href="#def-type-sinix" class="gray">#type-sinix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_SINIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_SINIX</i_> <w_>/* integer literal */</w_>
@@ -519,7 +519,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_SINIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-solaris" href="#decl-type-solaris" class="gray">#type-solaris</a>
+			<a id="def-type-solaris" href="#def-type-solaris" class="gray">#type-solaris</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_SOLARIS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_SOLARIS</i_> <w_>/* integer literal */</w_>
@@ -527,7 +527,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_SOLARIS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-sygwin" href="#decl-type-sygwin" class="gray">#type-sygwin</a>
+			<a id="def-type-sygwin" href="#def-type-sygwin" class="gray">#type-sygwin</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_SYGWIN</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_SYGWIN</i_> <w_>/* integer literal */</w_>
@@ -535,7 +535,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_SYGWIN</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-syllable" href="#decl-type-syllable" class="gray">#type-syllable</a>
+			<a id="def-type-syllable" href="#def-type-syllable" class="gray">#type-syllable</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_SYLLABLE</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_SYLLABLE</i_> <w_>/* integer literal */</w_>
@@ -543,7 +543,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_SYLLABLE</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-symbian" href="#decl-type-symbian" class="gray">#type-symbian</a>
+			<a id="def-type-symbian" href="#def-type-symbian" class="gray">#type-symbian</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_SYMBIAN</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_SYMBIAN</i_> <w_>/* integer literal */</w_>
@@ -551,7 +551,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_SYMBIAN</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-system-v" href="#decl-type-system-v" class="gray">#type-system-v</a>
+			<a id="def-type-system-v" href="#def-type-system-v" class="gray">#type-system-v</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_SYSTEM_V</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_SYSTEM_V</i_> <w_>/* integer literal */</w_>
@@ -559,7 +559,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_SYSTEM_V</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-tru64" href="#decl-type-tru64" class="gray">#type-tru64</a>
+			<a id="def-type-tru64" href="#def-type-tru64" class="gray">#type-tru64</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_TRU64</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_TRU64</i_> <w_>/* integer literal */</w_>
@@ -567,7 +567,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_TRU64</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-uclinux" href="#decl-type-uclinux" class="gray">#type-uclinux</a>
+			<a id="def-type-uclinux" href="#def-type-uclinux" class="gray">#type-uclinux</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UCLINUX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UCLINUX</i_> <w_>/* integer literal */</w_>
@@ -575,7 +575,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UCLINUX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-ultrix" href="#decl-type-ultrix" class="gray">#type-ultrix</a>
+			<a id="def-type-ultrix" href="#def-type-ultrix" class="gray">#type-ultrix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_ULTRIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_ULTRIX</i_> <w_>/* integer literal */</w_>
@@ -583,7 +583,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_ULTRIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-unicos" href="#decl-type-unicos" class="gray">#type-unicos</a>
+			<a id="def-type-unicos" href="#def-type-unicos" class="gray">#type-unicos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UNICOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UNICOS</i_> <w_>/* integer literal */</w_>
@@ -591,7 +591,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UNICOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-unicos-mp" href="#decl-type-unicos-mp" class="gray">#type-unicos-mp</a>
+			<a id="def-type-unicos-mp" href="#def-type-unicos-mp" class="gray">#type-unicos-mp</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UNICOS_MP</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UNICOS_MP</i_> <w_>/* integer literal */</w_>
@@ -599,7 +599,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UNICOS_MP</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-unix" href="#decl-type-unix" class="gray">#type-unix</a>
+			<a id="def-type-unix" href="#def-type-unix" class="gray">#type-unix</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UNIX</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UNIX</i_> <w_>/* integer literal */</w_>
@@ -607,7 +607,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UNIX</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-unixware" href="#decl-type-unixware" class="gray">#type-unixware</a>
+			<a id="def-type-unixware" href="#def-type-unixware" class="gray">#type-unixware</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UNIXWARE</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UNIXWARE</i_> <w_>/* integer literal */</w_>
@@ -615,7 +615,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UNIXWARE</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-uts" href="#decl-type-uts" class="gray">#type-uts</a>
+			<a id="def-type-uts" href="#def-type-uts" class="gray">#type-uts</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UTS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UTS</i_> <w_>/* integer literal */</w_>
@@ -623,7 +623,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UTS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-uwin" href="#decl-type-uwin" class="gray">#type-uwin</a>
+			<a id="def-type-uwin" href="#def-type-uwin" class="gray">#type-uwin</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_UWIN</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_UWIN</i_> <w_>/* integer literal */</w_>
@@ -631,7 +631,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_UWIN</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-vms" href="#decl-type-vms" class="gray">#type-vms</a>
+			<a id="def-type-vms" href="#def-type-vms" class="gray">#type-vms</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_VMS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_VMS</i_> <w_>/* integer literal */</w_>
@@ -639,7 +639,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_VMS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-vos" href="#decl-type-vos" class="gray">#type-vos</a>
+			<a id="def-type-vos" href="#def-type-vos" class="gray">#type-vos</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_VOS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_VOS</i_> <w_>/* integer literal */</w_>
@@ -647,7 +647,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_VOS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-vxworks" href="#decl-type-vxworks" class="gray">#type-vxworks</a>
+			<a id="def-type-vxworks" href="#def-type-vxworks" class="gray">#type-vxworks</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_VXWORKS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_VXWORKS</i_> <w_>/* integer literal */</w_>
@@ -655,7 +655,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_VXWORKS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-windows" href="#decl-type-windows" class="gray">#type-windows</a>
+			<a id="def-type-windows" href="#def-type-windows" class="gray">#type-windows</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_WINDOWS</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_WINDOWS</i_> <w_>/* integer literal */</w_>
@@ -663,7 +663,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_WINDOWS</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-windows-ce" href="#decl-type-windows-ce" class="gray">#type-windows-ce</a>
+			<a id="def-type-windows-ce" href="#def-type-windows-ce" class="gray">#type-windows-ce</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_WINDOWS_CE</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_WINDOWS_CE</i_> <w_>/* integer literal */</w_>
@@ -671,7 +671,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_WINDOWS_CE</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-windows-nt" href="#decl-type-windows-nt" class="gray">#type-windows-nt</a>
+			<a id="def-type-windows-nt" href="#def-type-windows-nt" class="gray">#type-windows-nt</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_WINDOWS_NT</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_WINDOWS_NT</i_> <w_>/* integer literal */</w_>
@@ -679,7 +679,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_WINDOWS_NT</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-wind-u" href="#decl-type-wind-u" class="gray">#type-wind-u</a>
+			<a id="def-type-wind-u" href="#def-type-wind-u" class="gray">#type-wind-u</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_WIND_U</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_WIND_U</i_> <w_>/* integer literal */</w_>
@@ -687,7 +687,7 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_WIND_U</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-type-z" href="#decl-type-z" class="gray">#type-z</a>
+			<a id="def-type-z" href="#def-type-z" class="gray">#type-z</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_Z</i_> <w_>/* integer literal (0 or 1) */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_Z</i_> <w_>/* integer literal */</w_>
@@ -695,21 +695,21 @@
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_Z</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
-			<a id="decl-eq" href="#decl-eq" class="gray">#eq</a>
+			<a id="def-eq" href="#def-eq" class="gray">#eq</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_EQ</i_>(<v_>type</v_>, <v_>major</v_>, ...) <w_>/* integer literal (0 or 1) */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_EQ</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to some value.<br/>
 			<br/>
-			<a id="decl-least" href="#decl-least" class="gray">#least</a>
+			<a id="def-least" href="#def-least" class="gray">#least</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, ...) <w_>/* integer literal (0 or 1) */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to or greater than some value.<br/>
 			<br/>
-			<a id="decl-most" href="#decl-most" class="gray">#most</a>
+			<a id="def-most" href="#def-most" class="gray">#most</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_MOST</i_>(<v_>type</v_>, <v_>major</v_>, ...) <w_>/* integer literal (0 or 1) */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_MOST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to or less than some value.<br/>
 			<br/>
@@ -720,14 +720,14 @@
 <p_>import</p_> <v_>std</v_>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Is target platform Linux? <i_>{}\n</i_>"</s_>, <a href="#decl-type-linux"><i_>XIEITE_PLTF_TYPE_LINUX</i_></a>);
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Is target platform Linux? <i_>{}\n</i_>"</s_>, <a href="#def-type-linux"><i_>XIEITE_PLTF_TYPE_LINUX</i_></a>);
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
 <pre>Is target platform Linux? 1</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/jaMsK7dzG" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<small><a href="https://godbolt.org/z/jaMsK7dzG" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

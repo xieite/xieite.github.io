@@ -22,7 +22,7 @@
 			A metaprogramming helper class thing. Defines a constructor from any type and declares that it is convertible to any type.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Definition</h3></a>
+			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>any</t_> {
 	<a href="/meta/any/any" class="a"><span><f_>any</f_>() = <k_>default</k_>;</span>
@@ -49,7 +49,7 @@
 		} <r_>else if constexpr</r_> (<k_>requires</k_> { <f_>f</f_>(<v_>args</v_>...); }) {
 			<r_>return</r_> <k_>true</k_>;
 		} <r_>else</r_> {
-			<r_>return</r_> <v_>self</v_>(<v_>args</v_>..., <a href="#decl"><m_>xieite</m_>::<t_>any</t_></a>());
+			<r_>return</r_> <v_>self</v_>(<v_>args</v_>..., <a href="#def"><m_>xieite</m_>::<t_>any</t_></a>());
 		}
 	}());
 }</pre>
@@ -58,7 +58,7 @@
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/M6GMjTv5n" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<small><a href="https://godbolt.org/z/M6GMjTv5n" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

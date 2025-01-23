@@ -13,15 +13,15 @@
 		<main>
 			<h2><code><a href="/"><m_>xieite</m_></a>::<a href=""><f_>rot_swap</f_>()</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/algo/rot_swap.cpp" target="_blank"><code><v_>xieite</v_>:<v_>rot_swap</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/algo/rot_swap.hpp" target="_blank"><code><s_>&lt;xieite/algo/rot_swap.hpp&gt;</s_></code></a>)
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/fn/rot_swap.cpp" target="_blank"><code><v_>xieite</v_>:<v_>rot_swap</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/fn/rot_swap.hpp" target="_blank"><code><s_>&lt;xieite/fn/rot_swap.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
 			Swaps the values of multiple references by rotating their values to the left.<br/>
 			When rotating by multiple spaces, internally uses the least possible number of temporary copies.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>n</v_> = <n_>1</n_>, <k_>typename...</k_> <t_>Args</t_>&gt;
 <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/utility/tuple" target="_blank"><m_>std</m_>::<t_>tuple</t_></a>&lt;<t_>Args</t_><k_>&...</k_>&gt; <f_>rot_swap</f_>(<t_>Args</t_><k_>&...</k_> <v_>args</v_>)
@@ -39,7 +39,7 @@
 	<k_>int</k_> <v_>c</v_> = <n_>3</n_>;
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
 
-	<a href="#decl"><m_>xieite</m_>::<f_>rot_swap</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
+	<a href="#def"><m_>xieite</m_>::<f_>rot_swap</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>);
 }</pre>
@@ -49,7 +49,7 @@
 <pre>1 2 3
 2 3 1</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/646fxqPsP" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small> -->
 		</main>
 	</body>
 </html>

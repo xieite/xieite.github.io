@@ -19,16 +19,16 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Constructs a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_></code></a>.<br/>
+			Opens a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_> {}</code></a>. May be called during construction.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def-0" href="#def-0" class="gray">#0</a>
 			<blockquote>
 <pre><k_>void</k_> <f_>open</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>cmd</v_>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>mode</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="def-1" href="#def-1" class="gray">#1</a>
 			<blockquote>
 <pre><p_>#if</p_> <a href="/pp/pltf"><i_>XIEITE_PLTF_TYPE_WINDOWS</i_></a>
 <k_>void</k_> <f_>open</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>wstring_view</t_></a> <v_>cmd</v_>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>wstring_view</t_></a> <v_>mode</v_>) <k_>noexcept</k_>;
@@ -42,9 +42,9 @@
 <pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="/io/file_pipe"><m_>xieite</m_>::<t_>file_pipe</t_> <v_>pipe</v_>;
+	<a href="/io/file_pipe"><m_>xieite</m_>::<t_>file_pipe</t_></a> <v_>pipe</v_>;
 
-	<v_>pipe</v_>.<a href="#decl-0"><f_>open</f_></a>(<s_>"echo Hello, world!"</s_>, <s_>"r"</s_>);
+	<v_>pipe</v_>.<a href="#def-0"><f_>open</f_></a>(<s_>"echo Hello, world!"</s_>, <s_>"r"</s_>);
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/io/read"><m_>xieite</m_>::<f_>read</f_></a>(<v_>pipe</v_>.<a href="/io/file_pipe/get"><f_>get</f_></a>()));
 }</pre>
@@ -53,7 +53,7 @@
 			<blockquote>
 <pre>Hello, world!</pre>
 			</blockquote>
-			<!-- TODO: <a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a> -->
+			<small>(Demonstration in Compiler Explorer unavailable)</small>
 		</main>
 	</body>
 </html>

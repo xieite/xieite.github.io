@@ -22,10 +22,10 @@
 			Does not heap-allocate, unlike <code><a href="https://en.cppreference.com/w/cpp/memory/unique_ptr/make_unique" target="_blank"><m_>std</m_>::<f_>make_unique</f_></a>&lt;<t_>T</t_>&gt;(<v_>args</v_>...).<a href="https://en.cppreference.com/w/cpp/memory/unique_ptr/get" target="_blank"><f_>get</f_></a>()</code>.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_><k_>&</k_> <f_>tmp</f_>(<t_>T</t_><k_>&&</k_> <v_>value</v_> = {}) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_><k_>&</k_> <f_>tmp</f_>(<t_>T</t_><k_>&&</k_> <v_>x</v_> = {}) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -35,20 +35,20 @@
 
 <k_>void</k_> <f_>bad_api</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>, <k_>int*</k_> <v_>out</v_>) {
 	<k_>int</k_> <v_>sum</v_> = <v_>a</v_> + <v_>b</v_>;
-	*<v_>out</v_> = <v_>sum</v_>;
+	*<v_>out</v_> = <v_>sum</v_>; <w_>// Does not handle nullptr</w_>
 	<m_>xieite</m_>::<f_>dump</f_>(<v_>sum</v_>);
 }
 
 <k_>int</k_> <f_>main</f_>() {
 	<w_>// Don't care about output parameter</w_>
-	<f_>bad_api</f_>(<n_>1</n_>, <n_>2</n_>, &<a href="#decl"><m_>xieite</m_>::<f_>tmp</f_></a>&lt;<k_>int</k_>&gt;());
+	<f_>bad_api</f_>(<n_>1</n_>, <n_>2</n_>, &<a href="#def"><m_>xieite</m_>::<f_>tmp</f_></a>&lt;<k_>int</k_>&gt;());
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
 <pre>3</pre>
 			</blockquote>
-			<!-- TODO: <a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a> -->
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small> -->
 		</main>
 	</body>
 </html>

@@ -11,44 +11,58 @@
 		<input type="checkbox" class="toggle-left"/>
 		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_FN</i_>()</code>, <code><i_>XIEITE_FN_LOCAL</i_>()</code></h2></a>
+			<a href=""><h2><code><i_>XIEITE_FN</i_>()</code>, <code><i_>XIEITE_FN_LOCAL</i_>()</code>, <code><i_>XIEITE_FN_THIS</i_>()</code>, <code><i_>XIEITE_FN_MUT</i_>()</code></h2></a>
 			<small>
 				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><code><s_>&lt;xieite/fn.hpp&gt;</s_></code></a><br/>
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/fn.hpp" target="_blank"><code><s_>&lt;xieite/pp/fn.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
-			&emsp;<code><a href="#decl-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
-			which is equivalent to writing:<br/>
+			&emsp;<code><a href="#def-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
+			which expands to something equivalent to:<br/>
 			&emsp;<code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
-			The body of a shorthand lambda has access to a parameter pack <code><v_>$$</v_></code> containing all arguments, a template parameter pack <code><t_>$$_</t_></code> containing all template arguments, variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments passed to the lambda, and types <code><t_>$0_</t_></code> through <code><t_>$256_</t_></code> which correspond to individual template arguments.<br/>
-			Accessing a variable or type which does not correspond to an argument (when the number of arguments is not greater than a variable's index or the number of template arguments is not greater than a type's index) results in some unusable value.<br/>
+			The body of a shorthand lambda has access to a parameter pack <code><v_>$</v_></code> containing all arguments, a template parameter pack <code><t_>$_</t_></code> containing all template arguments, variables <code><v_>$0</v_></code> through <code><v_>$256</v_></code> which correspond to individual arguments, and types <code><t_>$0_</t_></code> through <code><t_>$256_</t_></code> which correspond to individual template arguments.<br/>
+			Accessing a variable or type which does not correspond to an argument passed to the lambda (when the number of arguments is not greater than the variable's index or the number of template arguments is not greater than the type's index) results in some ambiguously unusable value.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Definitions</h3></a>
-			<a id="decl-fn" href="#decl-fn" class="gray">#fn</a>
+			<a id="def" href="#def"><h3>Definitions</h3></a>
+			<a id="def-fn" href="#def-fn" class="gray">#fn</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FN</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with no capture-default.<br/>
+			Expands to a lambda expression with no capture-default and a <code><k_>static</k_></code> specifier.<br/>
 			<br/>
-			<a id="decl-fn-local" href="#decl-fn-local" class="gray">#fn-local</a>
+			<a id="def-fn-local" href="#def-fn-local" class="gray">#fn-local</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FN_LOCAL</i_>(...) <w_>/* [&]??? { ??? } */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with a reference capture-default.<br/>
+			Expands to a lambda expression with a reference capture-default and no specifiers.<br/>
+			Additionally provides the explicit <code><k_>this</k_></code> parameter through a variable named <code><v_>$this</v_></code> and its corresponding type <code><t_>$$this</t_></code>.<br/>
 			<br/>
-			<br/>
-			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<a id="def-fn-this" href="#def-fn-this" class="gray">#fn-this</a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a><br/>
+<pre><p_>#define</p_> <i_>XIEITE_FN_THIS</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
+			</blockquote>
+			Same as <a href="#def-fn-local" class="gray">#fn-local</a> but with no capture-default.<br/>
+			<br/>
+			<a id="def-fn-mut" href="#def-fn-mut" class="gray">#fn-mut</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_FN_MUT</i_>(<v_>captures_</v_>, ...) <w_>/* [???]??? { ??? } */</w_></pre>
+			</blockquote>
+			Expands to a lambda expression with user-provided captures and a <code><k_>mutable</k_></code> specifier.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Examples</h3></a>
+			<a id="ex-0" href="#ex-0" class="gray">#0</a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<k_>auto</k_> <v_>add_two</v_> = <a href="#decl-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>);
-	<k_>auto</k_> <v_>add_all</v_> = <a href="#decl-fn"><i_>XIEITE_FN</i_></a>(... + <v_>$$</v_>);
-	<k_>auto</k_> <v_>cast</v_> = <a href="#decl-fn"><i_>XIEITE_FN</i_></a>(<k_>static_cast</k_>&lt;<t_>$0_</t_>&gt;(<v_>$0</v_>));
+	<k_>auto</k_> <v_>add_two</v_> = <a href="#def-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>);
+	<k_>auto</k_> <v_>add_all</v_> = <a href="#def-fn"><i_>XIEITE_FN</i_></a>(... + <v_>$</v_>);
+	<k_>auto</k_> <v_>cast</v_> = <a href="#def-fn"><i_>XIEITE_FN</i_></a>(<k_>static_cast</k_>&lt;<t_>$$0</t_>&gt;(<v_>$0</v_>));
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_two</v_>(<n_>1</n_>, <n_>2</n_>));
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>add_all</v_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));
@@ -61,7 +75,63 @@
 15
 6</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/v7c9Pj7Eq" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small><br/> -->
+			<br/>
+			<a id="ex-1" href="#ex-1" class="gray">#1</a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>int</k_> <v_>x</v_> = <n_>5</n_>;
+	<k_>auto</k_> <v_>add_two</v_> = <a href="#def-fn-local"><i_>XIEITE_FN_LOCAL</i_></a>(<v_>x</v_> * <v_>$0</v_>);
+
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>foo</v_>(<n_>2</n_>));
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>10</pre>
+			</blockquote>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small><br/> -->
+			<br/>
+			<a id="ex-2" href="#ex-2" class="gray">#2</a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>struct</k_> : <k_>decltype</k_>(<a href="#def-fn-this"><i_>XIEITE_FN_THIS</i_></a>(<v_>$this</v_>.<v_>x</v_> + <v_>$0</v_>)) { <k_>int</k_> <v_>x</v_> = <n_>5</n_>; } <v_>foo</v_>;
+
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>foo</v_>(<n_>1</n_>));
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>6</pre>
+			</blockquote>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small><br/> -->
+			<br/>
+			<a id="ex-3" href="#ex-3" class="gray">#3</a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
+<p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<k_>auto</k_> <v_>foo</v_> = <a href="#def-fn-mut"><i_>XIEITE_FN_MUT</i_></a>((<v_>x</v_> = <n_>0</n_>), <v_>x</v_>++);
+	<r_>for</r_> (<k_>int</k_> <v_>i</v_> : { <v_>foo</v_>(), <v_>foo</v_>(), <v_>foo</v_>() }) {
+		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>);
+	}
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>0
+1
+2</pre>
+			</blockquote>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small><br/> -->
 		</main>
 	</body>
 </html>

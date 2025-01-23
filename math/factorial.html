@@ -20,9 +20,9 @@
 			A lookup table, generated at compile-time, containing all representable factorial values for some arithmetic type.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/meta/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;
+<pre><k_>template</k_>&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;
 <k_>constexpr auto</k_> <v_>factorial</v_> = <w_>/* <a href="https://en.cppreference.com/w/cpp/container/array" target="_blank">std::array</a>&lt;T, ???&gt; */</w_></pre>
 			</blockquote>
 			<br/>
@@ -33,7 +33,7 @@
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}</i_>! = <i_>{}</i_>"</s_>, <n_>7</n_>, <a href="#decl"><m_>xieite</m_>::<v_>factorial</v_>.<a href="https://en.cppreference.com/w/cpp/container/array/at" target="_blank"><f_>at</f_></a>(<n_>7</n_>));
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}</i_>! = <i_>{}</i_>"</s_>, <n_>7</n_>, <a href="#def"><m_>xieite</m_>::<v_>factorial</v_>.<a href="https://en.cppreference.com/w/cpp/container/array/at" target="_blank"><f_>at</f_></a>(<n_>7</n_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>

@@ -19,10 +19,10 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Closes a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_></code></a>. Automatically called upon destruction.<br/>
+			Closes a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_> {}</code></a>. Automatically called upon destruction.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>void</k_> <f_>close</f_>() <k_>noexcept</k_>;</pre>
 			</blockquote>
@@ -35,9 +35,10 @@
 <k_>int</k_> <f_>main</f_>() {
 	<k_>auto</k_> <v_>pipe</v_> = <a href="/io/file_pipe"><m_>xieite</m_>::<t_>file_pipe</t_></a>(<s_>"echo"</s_>, <s_>"r"</s_>);
 
-	<v_>pipe</v_>.<a href="#decl"><f_>close</f_></a>();
+	<v_>pipe</v_>.<a href="#def"><f_>close</f_></a>();
 }</pre>
 			</blockquote>
+			<small>(Demonstration in Compiler Explorer unavailable)</small>
 		</main>
 	</body>
 </html>

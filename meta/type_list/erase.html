@@ -19,10 +19,10 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Erases a subrange of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_></code></a>.<br/>
+			Erases a subrange of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_> {}</code></a>.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>start</v_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>end</v_> = <v_>start</v_> + <n_>1</n_>&gt;
 <k_>using</k_> <t_>erase</t_> = <w_>/* <a href="/meta/type_list">xieite::type_list</a>&lt;???&gt; */</w_>;</pre>
@@ -36,14 +36,14 @@
 <k_>int</k_> <f_>main</f_>() {
 	<k_>using</k_> <t_>List</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>float</k_>, <k_>double</k_>&gt;;
 
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/meta/name"><m_>xieite</m_>::<f_>name</f_></a>&lt;<t_>List</t_>::<a href="#decl"><t_>erase</t_></a>&lt;<n_>1</n_>, <n_>3</n_>&gt;&gt;());
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/meta/name"><m_>xieite</m_>::<f_>name</f_></a>&lt;<t_>List</t_>::<a href="#def"><t_>erase</t_></a>&lt;<n_>1</n_>, <n_>3</n_>&gt;&gt;());
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
 <pre>xieite::type_list&lt;int, double&gt;</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/x1Thffbd6" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small> -->
 		</main>
 	</body>
 </html>

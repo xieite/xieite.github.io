@@ -19,28 +19,28 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Constructs a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_></code></a>.<br/>
+			Constructs a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_> {}</code></a>.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def-0" href="#def-0" class="gray">#0</a>
 			<blockquote>
 <pre><f_>file_pipe</f_>() <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="def-1" href="#def-1" class="gray">#1</a>
 			<blockquote>
 <pre><f_>file_pipe</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>cmd</v_>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>mode</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Internally calls <a href="/io/file_pipe/open"><code><f_>open</f_>()</code></a>.<br/>
+			Internally calls <a href="/io/file_pipe/open"><code><m_>xieite</m_>::<t_>file_pipe</t_>::<f_>open</f_>()</code></a>.<br/>
 			<br/>
-			<a id="decl-2" href="#decl-2" class="gray">#2</a>
+			<a id="def-2" href="#def-2" class="gray">#2</a>
 			<blockquote>
 <pre><p_>#if</p_> <a href="/pp/pltf"><i_>XIEITE_PLTF_TYPE_WINDOWS</i_></a>
 <f_>file_pipe</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>wstring_view</t_></a> <v_>cmd</v_>, <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>wstring_view</t_></a> <v_>mode</v_>) <k_>noexcept</k_>;
 <p_>#endif</p_></pre>
 			</blockquote>
-			Internally calls <a href="/io/file_pipe/open"><code><f_>open</f_>()</code></a>. Only defined if the target platform is Windows.<br/>
+			Internally calls <a href="/io/file_pipe/open"><code><m_>xieite</m_>::<t_>file_pipe</t_>::<f_>open</f_>()</code></a>. Only defined if the target platform is Windows.<br/>
 			<br/>
 			<br/>
 			<a href="/io/file_pipe#ex" class="gray"><h3>[Example]</h3></a>

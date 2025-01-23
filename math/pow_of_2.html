@@ -18,9 +18,10 @@
 			</small><br/>
 			<br/>
 			Checks if an integer is a power of 2. The algorithm is stolen from <a href="https://graphics.stanford.edu/~seander/bithacks.html#DetermineIfPowerOf2" target="_blank" class="gray">[Bit Twiddling Hacks]</a>.<br/>
+			This feature is deprecated; Use <a href="https://en.cppreference.com/w/cpp/numeric/has_single_bit" target="_blank"><code><m_>std</m_>::<f_>has_single_bit</f_>()</code></a> instead.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/unsigned_integral" target="_blank"><m_>std</m_>::<c_>unsigned_integral</c_></a> <t_>T</t_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>pow_of_2</f_>(<t_>T</t_> <v_>value</v_>) <k_>noexcept</k_>;</pre>
@@ -32,8 +33,8 @@
 <pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<f_>pow_of_2</f_></a>(<n_>4u</n_>));
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl"><m_>xieite</m_>::<f_>pow_of_2</f_></a>(<n_>0u</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>pow_of_2</f_></a>(<n_>4u</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>pow_of_2</f_></a>(<n_>0u</n_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -41,7 +42,7 @@
 <pre>true
 false</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/f9vPE4soj" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<small><a href="https://godbolt.org/z/f9vPE4soj" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

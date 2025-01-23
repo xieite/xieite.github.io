@@ -17,24 +17,24 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/name.hpp" target="_blank"><code><s_>&lt;xieite/meta/name.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Returns the name of a type or value as a string by parsing <a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><code><i_>__PRETTY_FUNCTION__</i_></code></a> or <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros#microsoft-specific-predefined-macros" target="_blank"><code><i_>__FUNCSIG__</i_></code></a>. Does not perform any additional string processing, so the output is entirely compiler-dependent.<br/>
-			The functions are marked <code><k_>constexpr</k_></code> rather than <code><k_>consteval</k_></code> due to <a href="https://github.com/llvm/llvm-project/issues/82994" target="_blank" class="gray">[this Clang bug]</a>.
+			Returns the name of a type or value as a string by extracting it from <a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><code><i_>__PRETTY_FUNCTION__</i_></code></a> or <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/predefined-macros#microsoft-specific-predefined-macros" target="_blank"><code><i_>__FUNCSIG__</i_></code></a>.<br/>
+			Does not perform any additional string processing, so the output is entirely compiler-dependent.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
-			<a id="decl-0" href="#decl-0" class="gray">#0</a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def-0" href="#def-0" class="gray">#0</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <f_>name</f_>() <k_>noexcept</k_>;</pre>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>consteval</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <f_>name</f_>() <k_>noexcept</k_>;</pre>
 			</blockquote>
 			Returns the name of a type.<br/>
 			<br/>
-			<a id="decl-1" href="#decl-1" class="gray">#1</a>
+			<a id="def-1" href="#def-1" class="gray">#1</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>auto</k_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <f_>name</f_>() <k_>noexcept</k_>;</pre>
+<pre><k_>template</k_>&lt;<k_>auto</k_> <v_>x</v_>&gt;
+[[<a_>nodiscard</a_>]] <k_>consteval</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <f_>name</f_>() <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Returns the name of a value.<br/>
+			Returns the string representation of a value.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
@@ -43,7 +43,7 @@
 <p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#decl-0"><m_>xieite</m_>::<f_>name</f_></a>&lt;<a href="https://en.cppreference.com/w/cpp/container/vector" target="_blank"><m_>std</m_>::<t_>vector</t_></a>&lt;<k_>int</k_>&gt;&gt;());
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def-0"><m_>xieite</m_>::<f_>name</f_></a>&lt;<a href="https://en.cppreference.com/w/cpp/container/vector" target="_blank"><m_>std</m_>::<t_>vector</t_></a>&lt;<k_>int</k_>&gt;&gt;());
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>

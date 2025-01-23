@@ -19,10 +19,10 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Checks if at least one element of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_></code></a> satisfies some functor.<br/>
+			Checks if at least one element of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_> {}</code></a> satisfies some functor.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Definition</h3></a>
+			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;
 <k_>static constexpr bool</k_> <v_>any</v_> = <a href="/trait/is_satisfd_all"><m_>xieite</m_>::<c_>is_satisfd_any</c_></a>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;;</pre>
@@ -38,14 +38,14 @@
 	<k_>using</k_> <t_>List</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>float</k_>, <k_>void*</k_>&gt;;
 
 	<w_>// Check if any element is an integer type</w_>
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<t_>List</t_>::<a href="#decl"><v_>any</v_></a>&lt;[]&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a>&gt; {}&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<t_>List</t_>::<a href="#def"><v_>any</v_></a>&lt;[]&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a>&gt; {}&gt;);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/oW4obbK7j" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small> -->
 		</main>
 	</body>
 </html>

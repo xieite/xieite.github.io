@@ -19,10 +19,10 @@
 				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>)
 			</small><br/>
 			<br/>
-			Instantiates another template with the elements of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_></code></a> as the arguments.<br/>
+			Instantiates another template with the elements of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_> {}</code></a> as the arguments.<br/>
 			<br/>
 			<br/>
-			<a id="decl" href="#decl"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;
 <k_>requires</k_>(!(<k_>sizeof...</k_>(<t_>Ts</t_>) % <v_>arity</v_>))
@@ -38,7 +38,7 @@
 <k_>int</k_> <f_>main</f_>() {
 	<k_>using</k_> <t_>Foo</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>float</k_>, <k_>double</k_>, <k_>void</k_>, <k_>bool</k_>&gt;;
 
-	<k_>using</k_> <t_>Bar</t_> = <t_>Foo</t_>::<a href="#decl"><t_>xform</t_></a>&lt;<n_>2</n_>, []&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename</k_> <t_>U</t_>, <k_>typename...</k_>&gt; {
+	<k_>using</k_> <t_>Bar</t_> = <t_>Foo</t_>::<a href="#def"><t_>xform</t_></a>&lt;<n_>2</n_>, []&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename</k_> <t_>U</t_>, <k_>typename...</k_>&gt; {
 		<r_>return</r_> <a href="https://en.cppreference.com/w/cpp/types/type_identity" target="_blank"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<a href="https://en.cppreference.com/w/cpp/utility/pair" target="_blank"><m_>std</m_>::<t_>pair</t_></a>&lt;<t_>T</t_>, <t_>U</t_>&gt;&gt;();
 	}>;
 
@@ -49,7 +49,7 @@
 			<blockquote>
 <pre>xieite::type_list&lt;std::pair&lt;int, char&gt;, std::pair&lt;float, double&gt;, std::pair&lt;void, bool&gt;&gt;</pre>
 			</blockquote>
-			<a href="https://godbolt.org/z/eMjj1oYWT" target="_blank" class="gray">[View in Compiler Explorer]</a>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small> -->
 		</main>
 	</body>
 </html>

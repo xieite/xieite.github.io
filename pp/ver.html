@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>XIEITE_VER</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<main>
+			<a href=""><h2><code><i_>XIEITE_VER_MAJOR</i_></code>, <code><i_>XIEITE_VER_MINOR</i_></code>, <code><i_>XIEITE_VER_PATCH</i_></code></h2></a>
+			<small>
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/ver.hpp" target="_blank"><code><s_>&lt;xieite/ver.hpp&gt;</s_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/ver.hpp" target="_blank"><code><s_>&lt;xieite/pp/ver.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Macros defining the current version of this library.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definitions</h3></a>
+			<a id="def-major" href="#def-major" class="gray">#major</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_VER_MAJOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Incremented when breaking changes are applied (which forces users to update their code).<br/>
+			<br/>
+			<a id="def-minor" href="#def-minor" class="gray">#minor</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_VER_MINOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Incremented when new features are added.<br/>
+			<br/>
+			<a id="def-patch" href="#def-patch" class="gray">#patch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_VER_PATCH</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Incremented when bug fixes are applied or internal changes are made.<br/>
+			<br/>
+			<a id="def-eq" href="#def-eq" class="gray">#eq</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_VER_EQ</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+			</blockquote>
+			Expands to an expression checking whether the library version is equal to some value.<br/>
+			<br/>
+			<a id="def-least" href="#def-least" class="gray">#least</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_VER_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+			</blockquote>
+			Expands to an expression checking whether the library version is equal to or greater than some value.<br/>
+			<br/>
+			<a id="def-most" href="#def-most" class="gray">#most</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_VER_MOST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+			</blockquote>
+			Expands to an expression checking whether the library version is equal to or less than some value.<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/version.hpp" target="_blank"><s_>&lt;xieite/ver.hpp&gt;</s_></a>
+<p_>import</p_> <v_>std</v_>;
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"v<i_>{}</i_>.<i_>{}</i_>.<i_>{}\n</i_>"</s_>, <a href="#def-major"><i_>XIEITE_VER_MAJOR</i_></a>, <a href="#def-minor"><i_>XIEITE_VER_MINOR</i_></a>, <a href="#def-patch"><i_>XIEITE_VER_PATCH</i_></a>);
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>v0.1.0</pre>
+			</blockquote>
+			<!-- TODO: <small><a href="https://godbolt.org" target="_blank" class="gray">[View in Compiler Explorer]</a></small> -->
+		</main>
+	</body>
+</html>
