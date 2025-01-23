@@ -27,14 +27,14 @@
 <k_>requires</k_>(<a href="https://en.cppreference.com/w/cpp/types/is_pointer#Helper_variable_template" target="_blank"><m_>std</m_>::<v_>is_pointer_v</v_></a>&lt;<t_>Str</t_>&gt; && <a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a>&lt;<a href="https://en.cppreference.com/w/cpp/types/remove_pointer#Helper_types" target="_blank"><m_>std</m_>::<t_>remove_pointer_t</t_></a>&lt;<t_>Str</t_>&gt;&gt;)
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Str</t_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Invokes undefined behavior if the passed string is not null-terminated.<br/>
+			Uses a <code><k_>requires</k_></code> clause to make this overload less preferred by the compiler. Invokes undefined behavior if the passed string is not null-terminated.<br/>
 			<br/>
 			<a id="def-1" href="#def-1" class="gray">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>size</v_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Ch</t_>(<k_>&</k_>)[<v_>size</v_>]) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Returns <code><v_>size</v_> - <n_>1</n_></code>. This overload is preferred for string literals.<br/>
+			Returns <code><v_>size</v_> - <n_>1</n_></code>. The compiler should prefer this overload for string literals.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
