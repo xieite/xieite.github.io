@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::add_rref&lt;&gt;</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>add_rref</t_>&lt;&gt;</a></code></h2>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/add_rref.cpp" target="_blank"><code><v_>xieite</v_>:<v_>add_rref</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/add_rref.hpp" target="_blank"><code><s_>&lt;xieite/trait/add_rref.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			A shorter alias for <a href="https://en.cppreference.com/w/cpp/types/add_reference#Helper_types" target="_blank"><code><m_>std</m_>::<t_>add_rvalue_reference_t</t_>&lt;&gt;</code></a>, named consistently with other utilities in this library.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>using</k_> <t_>add_rref</t_> = <a href="https://en.cppreference.com/w/cpp/types/add_reference#Helper_types" target="_blank"><m_>std</m_>::<t_>add_rvalue_reference_t</t_></a>&lt;<t_>T</t_>&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>add_rref</t_></a>&lt;<k_>int</k_>&gt;, <k_>int&&</k_>&gt;);
+<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>add_rref</t_></a>&lt;<k_>int&</k_>&gt;, <k_>int&</k_>&gt;);
+<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>add_rref</t_></a>&lt;<k_>int&&</k_>&gt;, <k_>int&&</k_>&gt;);</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/r95jaenoT" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

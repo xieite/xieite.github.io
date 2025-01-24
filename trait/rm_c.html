@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::rm_c&lt;&gt;</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>rm_c</t_>&lt;&gt;</a></code></h2>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/rm_c.cpp" target="_blank"><code><v_>xieite</v_>:<v_>rm_c</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/rm_c.hpp" target="_blank"><code><s_>&lt;xieite/trait/rm_c.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			Removes the <code><k_>const</k_></code> qualifier from a type, ignoring references.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>using</k_> <t_>rm_c</t_> = <a href="/trait/cp_ref"><m_>xieite</m_>::<t_>cp_ref</t_></a>&lt;<t_>T</t_>, <a href="https://en.cppreference.com/w/cpp/types/remove_cv#Helper_types" target="_blank"><m_>std</m_>::<t_>remove_const_t</t_></a>&lt;<a href="/trait/rm_ref"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<t_>T</t_>&gt;&gt;&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <v_>std</v_>;
+<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_c</t_></a>&lt;<k_>const int</k_>&gt;, <k_>int</k_>&gt;);
+<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_c</t_></a>&lt;<k_>const int&</k_>&gt;, <k_>int&</k_>&gt;);</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/6b5Wbn9PG" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

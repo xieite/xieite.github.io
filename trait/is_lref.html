@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::is_lref&lt;&gt;</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox" class="toggle-left"/>
+		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<c_>is_lref</c_>&lt;&gt;</a></code></h2>
+			<small>
+				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/is_lref.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_lref</v_></code></a><br/>
+				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/is_lref.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_lref.hpp&gt;</s_></code></a>)
+			</small><br/>
+			<br/>
+			A wrapper for <a href="https://en.cppreference.com/w/cpp/types/is_lvalue_reference#Helper_variable_template" target="_blank"><code><m_>std</m_>::<v_>is_lvalue_reference_v</v_>&lt;&gt;</code></a>.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>concept</k_> <c_>is_lref</c_> = <a href="https://en.cppreference.com/w/cpp/types/is_lvalue_reference#Helper_variable_template" target="_blank"><m_>std</m_>::<v_>is_lvalue_reference_v</v_></a>&lt;<t_>T</t_>&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
+
+<k_>static_assert</k_>(<a href="#def"><m_>xieite</m_>::<c_>is_lref</c_></a>&lt;<k_>int&</k_>&gt;);
+<k_>static_assert</k_>(!<a href="#def"><m_>xieite</m_>::<c_>is_lref</c_></a>&lt;<k_>int</k_>&gt;);
+<k_>static_assert</k_>(!<a href="#def"><m_>xieite</m_>::<c_>is_lref</c_></a>&lt;<k_>int&&</k_>&gt;);</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/jc3ardG7G" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
