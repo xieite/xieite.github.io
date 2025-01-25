@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<c_>has_noex_mv_assign</c_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/has_noex_mv_assign.cpp" target="_blank"><code><v_>xieite</v_>:<v_>has_noex_mv_assign</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/has_noex_mv_assign.hpp" target="_blank"><code><s_>&lt;xieite/trait/has_noex_mv_assign.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/has_noex_mv_assign.hpp" target="_blank"><code><s_>&lt;xieite/trait/has_noex_mv_assign.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			A wrapper around <a href="https://en.cppreference.com/w/cpp/types/is_move_assignable" target="_blank"><code><m_>std</m_>::<t_>is_nothrow_move_assignable</t_> {}</code></a> to specify that a type is move-assignable without throwing.<br/>
@@ -29,9 +28,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>struct</k_> <t_>A</t_> {
+<pre><k_>struct</k_> <t_>A</t_> {
 	<k_>void operator</k_>=(<t_>A</t_><k_>&&</k_>) <k_>noexcept</k_> {}
 };
 

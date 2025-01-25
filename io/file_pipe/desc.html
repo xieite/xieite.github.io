@@ -15,8 +15,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>file_pipe</t_>::<f_>desc</f_>()</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/file_pipe.cpp" target="_blank"><code><v_>xieite</v_>:<v_>file_pipe</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/file_pipe.hpp" target="_blank"><code><s_>&lt;xieite/io/file_pipe.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Returns the file descriptor of the underlying stream of a <a href="/io/file_pipe"><code><m_>xieite</m_>::<t_>file_pipe</t_> {}</code></a>.<br/>
@@ -30,9 +29,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>auto</k_> <v_>pipe</v_> = <a href="/io/file_pipe"><m_>xieite</m_>::<t_>file_pipe</t_></a>(<s_>"echo"</s_>, <s_>"r"</s_>);
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>pipe</v_>.<a href="#def"><f_>desc</f_></a>());

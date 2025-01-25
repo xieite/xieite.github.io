@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<c_>is_same_any</c_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/is_same_any.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_same_any</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/is_same_any.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_same_any.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/is_same_any.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_same_any.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Specifies that a type is the same as at least one of several other types.<br/>
@@ -29,9 +28,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
 <k_>concept</k_> <c_>test</c_> = <a href="#def"><m_>xieite</m_>::<c_>is_same_any</c_></a>&lt;<t_>T</t_>, <k_>int</k_>, <k_>char</k_>, <k_>float</k_>&gt;;
 
 <k_>static_assert</k_>(<c_>test</c_>&lt;<k_>int</k_>&gt;);

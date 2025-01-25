@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>read</f_>()</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/io/read.cpp" target="_blank"><code><v_>xieite</v_>:<v_>read</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/io/read.hpp" target="_blank"><code><s_>&lt;xieite/io/read.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/read.hpp" target="_blank"><code><s_>&lt;xieite/io/read.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Reads the entire contents of an input stream to a <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><code><m_>std</m_>::<t_>string</t_> {}</code></a>.<br/>
@@ -36,10 +35,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<a href="https://en.cppreference.com/w/cpp/io/basic_ofstream" target="_blank"><m_>std</m_>::<t_>ofstream</t_></a>(<s_>"msg.txt"</s_>) &lt;&lt; <s_>"Hello, world!"</s_>;
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump<f_><a>(<a href="#def-0"><m_>xieite</m_>::<f_>read<f_>(<a href="/fn/tmp"><m_>xieite</m_>::<f_>tmp</f_></a>(<a href="https://en.cppreference.com/w/cpp/io/basic_ifstream" target="_blank"><m_>std</m_>::<t_>ifstream</t_></a>(<s_>"msg.txt"</s_>))));

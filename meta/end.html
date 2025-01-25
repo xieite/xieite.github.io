@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<c_>end</c_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/end.cpp" target="_blank"><code><v_>xieite</v_>:<v_>end</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/end.hpp" target="_blank"><code><s_>&lt;xieite/meta/end.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/end.hpp" target="_blank"><code><s_>&lt;xieite/meta/end.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			A utility for marking the end of a template parameter list to allow defining type aliases after.<br/>
@@ -29,10 +28,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>template</k_>&lt;<k_>typename</k_> <t_>A</t_>, <k_>typename</k_> <t_>B</t_>, <a href="#def"><m_>xieite</m_>::<c_>end</c_></a><k_>...</k_>, <k_>typename</k_> <t_>C</t_> = <a href="https://en.cppreference.com/w/cpp/types/common_type#Helper_types" target="_blank"><m_>std</m_>::<t_>common_type_t</t_></a>&lt;<t_>A</t_>, <t_>B</t_>&gt;&gt;
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>A</t_>, <k_>typename</k_> <t_>B</t_>, <a href="#def"><m_>xieite</m_>::<c_>end</c_></a><k_>...</k_>, <k_>typename</k_> <t_>C</t_> = <a href="https://en.cppreference.com/w/cpp/types/common_type#Helper_types" target="_blank"><m_>std</m_>::<t_>common_type_t</t_></a>&lt;<t_>A</t_>, <t_>B</t_>&gt;&gt;
 <k_>void</k_> <f_>foo</f_>(<t_>A</t_>, <t_>B</t_>, <t_>C</t_>, <t_>C</t_>) {}
 
 <k_>int</k_> <f_>main</f_>() {

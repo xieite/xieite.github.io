@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>unroll</f_>()</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/fn/unroll.cpp" target="_blank"><code><v_>xieite</v_>:<v_>unroll</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/fn/unroll.hpp" target="_blank"><code><s_>&lt;xieite/fn/unroll.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/unroll.hpp" target="_blank"><code><s_>&lt;xieite/fn/unroll.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Unrolls a constant-sized loop using a <a href="https://en.cppreference.com/w/cpp/utility/integer_sequence" target="_blank"><code><m_>std</m_>::<t_>integer_sequence</t_> {}</code></a>.<br/>
@@ -41,9 +40,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<a href="#def"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<n_>5</n_>&gt;([]&lt;<k_>int...</k_> <v_>i</v_>&gt; {
 		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>...);
 	});

@@ -13,8 +13,7 @@
 		<main>
 			<a href=""><h2><code><i_>XIEITE_ARROW</i_>()</code>, <code><i_>XIEITE_ARROW_RET</i_>()</code>, <code><i_>XIEITE_ARROW_CTOR</i_>()</code>, <code><i_>XIEITE_ARROW_PARAM</i_>()</code></h2></a>
 			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/arrow.hpp" target="_blank"><code><s_>&lt;xieite/arrow.hpp&gt;</s_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a single-statement template function.<br/>
@@ -64,10 +63,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/arrow.hpp" target="_blank"><s_>&lt;xieite/arrow.hpp&gt;</s_></a>
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>)
+<pre><k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>)
 	<a href="#def-arrow"><i_>XIEITE_ARROW</i_></a>(<v_>a</v_> + <v_>b</v_>)
 
 <k_>struct</k_> <t_>S</t_> {

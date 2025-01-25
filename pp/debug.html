@@ -13,8 +13,7 @@
 		<main>
 			<a href=""><h2><code><i_>XIEITE_DEBUG</i_></code></h2></a>
 			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/debug.hpp" target="_blank"><code><s_>&lt;xieite/debug.hpp&gt;</s_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/debug.hpp" target="_blank"><code><s_>&lt;xieite/pp/debug.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/debug.hpp" target="_blank"><code><s_>&lt;xieite/pp/debug.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Detects the presence of platform-specific macros indicating debug mode: <code><i_>DEBUG</i_></code>, <code><i_>NDEBUG</i_></code>, <code><i_>_DEBUG</i_></code>, and <code><i_>QT_DEBUG</i_></code>.<br/>
@@ -28,10 +27,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/debug.hpp" target="_blank"><s_>&lt;xieite/debug.hpp&gt;</s_></a>
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {
+<pre><k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {
 	<r_>if constexpr</r_> (<a href="#def"><i_>XIEITE_DEBUG</i_></a>) {
 		<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Adding <i_>{}</i_> and <i_>{}\n</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
 	}

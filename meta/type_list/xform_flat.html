@@ -15,8 +15,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<t_>xform_flat</t_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/meta/type_list.cpp" target="_blank"><code><v_>xieite</v_>:<v_>type_list</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Instantiates another template with the elements of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_> {}</code></a> as the arguments.<br/>
@@ -32,10 +31,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>using</k_> <t_>Foo</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>float</k_>, <k_>double</k_>, <k_>void</k_>, <k_>bool</k_>&gt;;
 
 	<w_>// Swap every 2 elements</w_>

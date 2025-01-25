@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>rm_ref</t_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/rm_ref.cpp" target="_blank"><code><v_>xieite</v_>:<v_>rm_ref</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/rm_ref.hpp" target="_blank"><code><s_>&lt;xieite/trait/rm_ref.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/rm_ref.hpp" target="_blank"><code><s_>&lt;xieite/trait/rm_ref.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			A shorter alias for <a href="https://en.cppreference.com/w/cpp/types/remove_reference#Helper_types" target="_blank"><code><m_>std</m_>::<t_>remove_reference_t</t_>&lt;&gt;</code></a>, named consistently with other utilities in this library.<br/>
@@ -29,10 +28,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<k_>int</k_>&gt;, <k_>int</k_>&gt;);
+<pre><k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<k_>int</k_>&gt;, <k_>int</k_>&gt;);
 <k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<k_>int&</k_>&gt;, <k_>int</k_>&gt;);
 <k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<k_>int&&</k_>&gt;, <k_>int</k_>&gt;);</pre>
 			</blockquote>

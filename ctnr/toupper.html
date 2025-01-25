@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::tolower()</title>
+		<title>xieite::toupper()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,12 +11,12 @@
 		<input type="checkbox" class="toggle-left"/>
 		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<f_>tolower</f_>()</a></code></h2>
+			<h2><code><a href=""><m_>xieite</m_>::<f_>toupper</f_>()</a></code></h2>
 			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/ctnr/tolower.hpp" target="_blank"><code><s_>&lt;xieite/ctnr/tolower.hpp&gt;</s_></code></a>
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/ctnr/toupper.hpp" target="_blank"><code><s_>&lt;xieite/ctnr/toupper.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
-			Converts every character of a string (or a single character) to lowercase.<br/>
+			Converts every character of a string (or a single character) to uppercase.<br/>
 			Only handles the English alphabet.<br/>
 			<br/>
 			<br/>
@@ -24,16 +24,16 @@
 			<a id="def-0" href="#def-0" class="gray">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_> = <k_>char</k_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>Ch</t_> <f_>tolower</f_>(<t_>Ch</t_> <v_>c</v_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>Ch</t_> <f_>toupper</f_>(<t_>Ch</t_> <v_>c</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Makes a single character lowercase. Internally uses a lookup table.<br/>
+			Makes a single character uppercase. Internally uses a lookup table.<br/>
 			<br/>
 			<a id="def-1" href="#def-1" class="gray">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ch</t_> = <k_>char</k_>, <k_>typename</k_> <t_>Traits</t_> = <a href="https://en.cppreference.com/w/cpp/string/char_traits" target="_blank"><m_>std</m_>::<t_>char_traits</t_></a>&lt;<t_>Ch</t_>&gt;, <k_>typename</k_> <t_>Alloc</t_> = <a href="https://en.cppreference.com/w/cpp/memory/allocator" target="_blank"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>Ch</t_>&gt;&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Ch</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt; <f_>tolower</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>basic_string_view</t_></a>&lt;<t_>Ch</t_>, <t_>Traits</t_>&gt; <v_>str</v_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Ch</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt; <f_>toupper</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>basic_string_view</t_></a>&lt;<t_>Ch</t_>, <t_>Traits</t_>&gt; <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Makes an entire string lowercase. Internally calls <a href="#def-0" class="gray">#0</a>.<br/>
+			Makes an entire string uppercase. Internally calls <a href="#def-0" class="gray">#0</a>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
@@ -41,14 +41,14 @@
 <pre><k_>int</k_> <f_>main</f_>() {
 	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>text</v_> = <s_>"HeLlO, wOrLd!"</s_>;
 
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def-1"><m_>xieite</m_>::<f_>tolower</f_></a>(<v_>text</v_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def-1"><m_>xieite</m_>::<f_>toupper</f_></a>(<v_>text</v_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
-<pre>hello, world!</pre>
+<pre>HELLO, WORLD!</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/T43KEPbE3" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/3bY6xMGbY" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

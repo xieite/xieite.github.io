@@ -13,8 +13,7 @@
 		<main>
 			<a href=""><h2><code><i_>XIEITE_FN</i_>()</code>, <code><i_>XIEITE_FN_LOCAL</i_>()</code>, <code><i_>XIEITE_FN_THIS</i_>()</code>, <code><i_>XIEITE_FN_MUT</i_>()</code></h2></a>
 			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><code><s_>&lt;xieite/fn.hpp&gt;</s_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/pp/fn.hpp" target="_blank"><code><s_>&lt;xieite/pp/fn.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/fn.hpp" target="_blank"><code><s_>&lt;xieite/pp/fn.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
@@ -56,10 +55,7 @@
 			<a id="ex" href="#ex"><h3>Examples</h3></a>
 			<a id="ex-0" href="#ex-0" class="gray">#0</a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>auto</k_> <v_>add_two</v_> = <a href="#def-fn"><i_>XIEITE_FN</i_></a>(<v_>$0</v_> + <v_>$1</v_>);
 	<k_>auto</k_> <v_>add_all</v_> = <a href="#def-fn"><i_>XIEITE_FN</i_></a>(... + <v_>$</v_>);
 	<k_>auto</k_> <v_>cast</v_> = <a href="#def-fn"><i_>XIEITE_FN</i_></a>(<k_>static_cast</k_>&lt;<t_>$$0</t_>&gt;(<v_>$0</v_>));
@@ -79,10 +75,7 @@
 			<br/>
 			<a id="ex-1" href="#ex-1" class="gray">#1</a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>int</k_> <v_>x</v_> = <n_>5</n_>;
 	<k_>auto</k_> <v_>foo</v_> = <a href="#def-fn-local"><i_>XIEITE_FN_LOCAL</i_></a>(<v_>x</v_> * <v_>$0</v_>);
 
@@ -97,10 +90,7 @@
 			<br/>
 			<a id="ex-2" href="#ex-2" class="gray">#2</a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>struct</k_> : <k_>decltype</k_>(<a href="#def-fn-this"><i_>XIEITE_FN_THIS</i_></a>(<v_>$this</v_>.<v_>x</v_> + <v_>$0</v_>)) { <k_>int</k_> <v_>x</v_> = <n_>5</n_>; } <v_>foo</v_>;
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>foo</v_>(<n_>1</n_>));
@@ -114,11 +104,7 @@
 			<br/>
 			<a id="ex-3" href="#ex-3" class="gray">#3</a>
 			<blockquote>
-<pre><p_>#include</p_> <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn.hpp" target="_blank"><s_>&lt;xieite/fn.hpp&gt;</s_></a>
-<p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>auto</k_> <v_>foo</v_> = <a href="#def-fn-mut"><i_>XIEITE_FN_MUT</i_></a>((<v_>x</v_> = <n_>0</n_>), <v_>x</v_>++);
 	<r_>for</r_> (<k_>int</k_> <v_>i</v_> : { <v_>foo</v_>(), <v_>foo</v_>(), <v_>foo</v_>() }) {
 		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>);

@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>visitor</t_> {}</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/fn/visitor.cpp" target="_blank"><code><v_>xieite</v_>:<v_>visitor</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/fn/visitor.hpp" target="_blank"><code><s_>&lt;xieite/fn/visitor.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/visitor.hpp" target="_blank"><code><s_>&lt;xieite/fn/visitor.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Derives from multiple functors and inherits their call operators.<br/>
@@ -34,10 +33,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>int</k_> <f_>main</f_>() {
+<pre><k_>int</k_> <f_>main</f_>() {
 	<k_>auto</k_> <v_>f</v_> = <a href="#def"><m_>xieite</m_>::<t_>visitor</t_></a>(
 		[](<k_>int</k_>) { <a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"a<i_>\n</i_>"</s_>); },
 		[](<k_>double</k_>) { <a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"b<i_>\n</i_>"</s_>); },

@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<c_>is_rref</c_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/is_rref.cpp" target="_blank"><code><v_>xieite</v_>:<v_>is_rref</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/is_rref.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_rref.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/is_rref.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_rref.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			A wrapper for <a href="https://en.cppreference.com/w/cpp/types/is_rvalue_reference#Helper_variable_template" target="_blank"><code><m_>std</m_>::<v_>is_rvalue_reference_v</v_>&lt;&gt;</code></a>.<br/>
@@ -29,9 +28,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>static_assert</k_>(<a href="#def"><m_>xieite</m_>::<c_>is_rref</c_></a>&lt;<k_>int&&</k_>&gt;);
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xieite</m_>::<c_>is_rref</c_></a>&lt;<k_>int&&</k_>&gt;);
 <k_>static_assert</k_>(!<a href="#def"><m_>xieite</m_>::<c_>is_rref</c_></a>&lt;<k_>int</k_>&gt;);
 <k_>static_assert</k_>(!<a href="#def"><m_>xieite</m_>::<c_>is_rref</c_></a>&lt;<k_>int&</k_>&gt;);</pre>
 			</blockquote>

@@ -13,8 +13,7 @@
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>rm_v</t_>&lt;&gt;</a></code></h2>
 			<small>
-				Defined in fragment <a href="https://github.com/Eczbek/xieite/blob/main/src/trait/rm_v.cpp" target="_blank"><code><v_>xieite</v_>:<v_>rm_v</v_></code></a><br/>
-				(header-only: <a href="https://github.com/Eczbek/xieite/blob/header/include/xieite/trait/rm_v.hpp" target="_blank"><code><s_>&lt;xieite/trait/rm_v.hpp&gt;</s_></code></a>)
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/rm_v.hpp" target="_blank"><code><s_>&lt;xieite/trait/rm_v.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
 			Removes the <code><k_>volatile</k_></code> qualifier from a type, ignoring references.<br/>
@@ -29,10 +28,7 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>import</p_> <v_>std</v_>;
-<p_>import</p_> <a href="https://github.com/Eczbek/xieite/blob/main/src/xieite.cpp" target="_blank"><v_>xieite</v_></a>;
-
-<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_v</t_></a>&lt;<k_>volatile int</k_>&gt;, <k_>int</k_>&gt;);
+<pre><k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_v</t_></a>&lt;<k_>volatile int</k_>&gt;, <k_>int</k_>&gt;);
 <k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_v</t_></a>&lt;<k_>volatile int&</k_>&gt;, <k_>int&</k_>&gt;);</pre>
 			</blockquote>
 			<small><a href="https://godbolt.org/z/nrW7EYP9b" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
