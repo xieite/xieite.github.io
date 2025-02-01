@@ -41,8 +41,9 @@
 			<br/>
 			<a id="def-3" href="#def-3" class="gray">#3</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/trait/is_ch_ptr"><m_>xieite</m_>::<c_>is_ch_ptr</c_></a> <t_>Str</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Str</t_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
+<pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_>, <k_>typename</k_> <t_>Str</t_>&gt;
+<k_>requires</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<t_>Ch</t_>, <a href="/trait/rm_ptr"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<a href="/trait/rm_ref"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<t_>Str</t_>&gt;&gt;&gt;)
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <t_>Ch</t_><k_>*</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			Invokes undefined behavior if the passed string is not null-terminated.<br/>
 			<br/>

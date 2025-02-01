@@ -24,19 +24,19 @@
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_LIFT</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with no capture-default and variadic parameters.<br/>
+			Expands to a lambda expression with no capture-default, a <code><k_>static</k_></code> specifier, and variadic forwarding reference parameters.<br/>
 			<br/>
 			<a id="def-lift-local" href="#def-lift-local" class="gray">#lift-local</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL</i_>(...) <w_>/* [&]??? { ??? } */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with a reference capture-default and variadic parameters.<br/>
+			Expands to a lambda expression with a reference capture-default and variadic forwaring reference parameters.<br/>
 			<br/>
 			<a id="def-lift-m" href="#def-lift-m" class="gray">#lift-m</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_LIFT_M</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression which calls a member of its first parameter with the rest of its parameters.<br/>
+			Same as <a href="#def-lift" class="gray">#lift</a> but calls a member of its first parameter with the rest of its parameters.<br/>
 			<br/>
 			<a id="def-lift-m-ptr" href="#def-lift-m-ptr" class="gray">#lift-m-ptr</a>
 			<blockquote>
@@ -59,7 +59,7 @@
 			<blockquote>
 <pre>Hello, world!</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/EEdo6osna" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/nqPxn56co" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
