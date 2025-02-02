@@ -111,7 +111,7 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 		padding-right: 50px;
 	}
 
-	.main {
+	body:has(.sidebar-right) > main {
 		padding-right: 300px;
 	}
 }
@@ -188,6 +188,7 @@ s_ { color: #fc662a; } /* strings */
 n_ { color: #d6ffa1; } /* numbers */
 p_ { color: #ca78e3; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
+E_ { color: #ff0000; } /* ERROR */
 
 /* TODO: Light mode
 @media (prefers-color-scheme: light) {

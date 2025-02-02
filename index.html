@@ -16,43 +16,48 @@
 			<br/>
 			This project extends the standard library without external dependencies and provides a somewhat organized collection of questionably useful tools for assisting in various shenanigans<br/>
 			<br/>
+			<br/>
+			<br/>
 			<a href="https://github.com/Eczbek/xieite" target="_blank" class="gray">[Source code]</a><br/>
+			<small>This library is currently header-only.</small><br/>
+			<br/>
 			<br/>
 			<br/>
 			<h3>Requirements</h3>
-			- C++26 (mostly)<br/>
-			- GCC trunk<br/>
-			- Clang trunk<br/>
-			- MSVC latest (not fully supported)<br/>
-			<br/>
-			<br/>
-			<h3>Building</h3>
-			<blockquote>
-<pre>git clone <a href="https://github.com/Eczbek/xieite" target="_blank">https://github.com/Eczbek/xieite</a>
-cd xieite
-# TODO</pre>
-			</blockquote>
-			Alternatively, include the <a href="https://github.com/Eczbek/xieite/tree/header" target="_blank" class="gray">[header-only branch of the library]</a><br/>
+			- C++26 <small>(but most is C++23, and some parts support C89)</small><br/>
+			- GCC trunk <span class="gray">or</span> Clang trunk <small>(still has major bugs)</small> <span class="gray">or</span> MSVC latest <small>(not fully supported)</small><br/>
 			<br/>
 			<br/>
 			<br/>
-			This library is entirely contained within the <code><m_>xieite</m_></code> namespace.<br/>
-			All macros are prefixed with <code><i_>XIEITE</i_></code> to prevent naming collisions.<br/>
-			Internal identifiers within the library are prefixed with <code><i_>XIEITE_DETAIL</i_></code> and are not intended to be used directly.<br/>
+			This library is entirely contained within the '<code><m_>xieite</m_></code>' namespace.<br/>
+			All macros are prefixed with '<code><i_>XIEITE</i_></code>' to prevent naming collisions.<br/>
+			Internal identifiers within the library are prefixed with '<code><w_>XIEITE_DETAIL</w_></code>' and are not intended to be used directly.<br/>
 			<br/>
 			<br/>
 			<br/>
-			<a id="ex" href="#ex"><h3>Examples</h3></a>
-			<a id="def-0" href="#ex-0"><small>#0</small></a>
-			<blockquote>
-<pre><k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_></a>(<n_>99</n_>).<a href="/math/big_int/pow"><f_>pow</f_></a>(<n_>99</n_>).<a href="/math/big_int/str"><f_>str</f_></a>());
-}</pre>
-			</blockquote>
-			<small>Output:</small>
-			<blockquote>
-<pre>369729637649726772657187905628805440595668764281741102430259972423552570455277523421410650010128232727940978889548326540119429996769494359451621570193644014418071060667659301384999779999159200499899</pre>
-			</blockquote>
+			This documentation is currently incomplete.<br/>
+			<br/>
+			Key:<br/>
+			- <a href="" class="gray">[Hyperlink]</a><br/>
+			- <w_>Missing page</w_><br/>
+			- Outdated page <E_>#</E_><br/>
+			- <code><w_>// Comment</w_></code><br/>
+			- <code><k_>Keyword</k_></code><br/>
+			- <code><r_>Control flow</r_></code><br/>
+			- <code><t_>Type</t_> {}</code><br/>
+			- <code><t_>Type alias</t_></code><br/>
+			- <code><t_>Type alias template</t_>&lt;&gt;</code><br/>
+			- <code><v_>Variable</v_></code><br/>
+			- <code><v_>Variable template</v_>&lt;&gt;</code><br/>
+			- <code><c_>Concept</c_>&lt;&gt;</code><br/>
+			- <code><m_>Namespace</m_> {}</code><br/>
+			- <code><m_>Namespace alias</m_></code><br/>
+			- <code><f_>Function</f_>()</code><br/>
+			- <code>[[<a_>Attribute</a_>]]</code><br/>
+			- <code><s_>"String"</s_></code><br/>
+			- <code><n_>Number</n_></code><br/>
+			- <code><i_>Macro</i_></code><br/>
+			- <code><i_>Function-like macro</i_>()</code><br/>
 		</main>
 	</body>
 </html>
