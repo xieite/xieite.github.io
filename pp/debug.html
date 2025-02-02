@@ -29,22 +29,22 @@
 			<blockquote>
 <pre><k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {
 	<r_>if constexpr</r_> (<a href="#def"><i_>XIEITE_DEBUG</i_></a>) {
-		<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Adding <i_>{}</i_> and <i_>{}\n</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
+		<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"DEBUG: <i_>{}</i_> + <i_>{}\n</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
 	}
 	<r_>return</r_> <v_>a</v_> + <v_>b</v_>;
 }
 
 <k_>int</k_> <f_>main</f_>() {
 	<k_>int</k_> <v_>sum</v_> = <f_>add</f_>(<n_>1</n_>, <n_>2</n_>);
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Result: <i_>{}\n</i_>"</s_>, <v_>sum</v_>);
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"LOG: <i_>{}\n</i_>"</s_>, <v_>sum</v_>);
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
-<pre>Adding 1 and 2
-Result: 3</pre>
+<pre>DEBUG: 1 + 2
+LOG: 3</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/hrzo9aTbG" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/8577z4T6T" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
