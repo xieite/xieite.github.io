@@ -21,7 +21,6 @@
 		iters {}
 		make_array()
 		make_sparse_array()
-		make_tuple()
 		md_ctnr&lt;&gt;
 		pad()
 		pad_back()
@@ -204,6 +203,14 @@
 	meta	
 		<a href="/meta/any" target="_top"><t_>any</t_> {}</a> <E_>#</E_>
 		<w_>arity()
+		as_c()
+		as_c_referent()
+		as_cv()
+		as_cv_referent()
+		as_v()
+		as_v_referent()
+		collapse_fwd&lt;&gt;
+		collapse_fwd_as_tuple&lt;&gt;
 		decay_as_tuple()
 		demangle()</w_>
 		<a href="/meta/end" target="_top"><c_>end</c_>&lt;&gt;</a> <E_>#</E_>
@@ -212,12 +219,12 @@
 		group&lt;&gt;
 		id&lt;&gt;
 		make_constexpr()
-		make_seq&lt;&gt;</w_>
+		make_seq&lt;&gt;
+		make_tuple()</w_>
 		<a href="/meta/name" target="_top"><f_>name</f_>()</a> <E_>#</E_>
 		<w_>reverse_tuple()
 		seq&lt;&gt;
 		seq_for&lt;&gt;
-		set_ptr&lt;&gt;
 		splice_tuple()
 		state</w_>
 		<a href="/meta/t" target="_top"><t_>t</t_>&lt;&gt;</a> <E_>#</E_>
@@ -230,7 +237,7 @@
 	pp
 		<w_>ANY()
 		ARCH</w_>
-		<a href="/pp/arrow" target="_top"><i_>ARROW</i_>()</a> <E_>#</E_>
+		<a href="/pp/arrow" target="_top"><i_>ARROW</i_>()</a>
 		<w_>ASCII_SUPPORT
 		AT()
 		ATTR
@@ -387,15 +394,7 @@
 		add_vrref&lt;&gt;
 		add_vrref_noex&lt;&gt;
 		add_vrref_referent&lt;&gt;
-		as_c()
-		as_c_referent()
-		as_cv()
-		as_cv_referent()
-		as_v()
-		as_v_referent()
-		collapse&lt;&gt;
-		collapse_fwd&lt;&gt;
-		collapse_fwd_as_tuple&lt;&gt;
+		collapse_ref&lt;&gt;
 		cp_c&lt;&gt;
 		cp_c_noex&lt;&gt;
 		cp_c_referent&lt;&gt;
@@ -799,7 +798,8 @@
 		set_lref_referent&lt;&gt;
 		set_mv_assign&lt;&gt;
 		set_mv_ctor&lt;&gt;
-		set_noex&lt;&gt;</w_>
+		set_noex&lt;&gt;
+		set_ptr&lt;&gt;</w_>
 		<a href="/trait/set_rref" target="_top"><t_>set_rref</t_>&lt;&gt;</a> <E_>#</E_>
 		<w_>set_rref_noex&lt;&gt;
 		set_rref_referent&lt;&gt;
