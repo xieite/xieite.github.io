@@ -23,7 +23,7 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-arrow" href="#def-arrow" class="gray">#arrow</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(...) <i_>\</i_>
+<pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
@@ -33,7 +33,7 @@
 			<br/>
 			<a id="def-arrow-ret" href="#def-arrow-ret" class="gray">#arrow-ret</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_RET</i_>(...) <i_>\</i_>
+<pre><p_>#define</p_> <i_>XIEITE_ARROW_RET</i_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
 	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
@@ -42,7 +42,7 @@
 			<br/>
 			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="gray">#arrow-ctor</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(...) <i_>\</i_>
+<pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(<k_>...</k_>) <i_>\</i_>
 		<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
 		: <v_>__VA_ARGS__</v_> {}</pre>
 			</blockquote>
@@ -50,7 +50,7 @@
 			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-ctor"><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} }</code>.<br/>
 			<br/><a id="def-arrow-param" href="#def-arrow-param" class="gray">#arrow-param</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_PARAM</i_>(<v_>params_</v_>, ...) <i_>\</i_>
+<pre><p_>#define</p_> <i_>XIEITE_ARROW_PARAM</i_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>requires</k_> <v_>params_</v_> { <k_>requires</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))); }) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> <v_>params_</v_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>

@@ -28,26 +28,26 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-fn" href="#def-fn" class="gray">#fn</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FN</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_FN</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with no capture-default and a <code><k_>static</k_></code> specifier.<br/>
 			<br/>
 			<a id="def-fn-local" href="#def-fn-local" class="gray">#fn-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FN_LOCAL</i_>(...) <w_>/* [&]??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_FN_LOCAL</i_>(<k_>...</k_>) <w_>/* [&]??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with a reference capture-default and no specifiers.<br/>
 			Additionally provides the explicit <code><k_>this</k_></code> parameter through a variable named <code><v_>$this</v_></code> and its corresponding type <code><t_>$$this</t_></code>.<br/>
 			<br/>
 			<a id="def-fn-this" href="#def-fn-this" class="gray">#fn-this</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FN_THIS</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_FN_THIS</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Same as <a href="#def-fn-local" class="gray">#fn-local</a> but with no capture-default.<br/>
 			<br/>
 			<a id="def-fn-mut" href="#def-fn-mut" class="gray">#fn-mut</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FN_MUT</i_>(<v_>captures_</v_>, ...) <w_>/* [???]??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_FN_MUT</i_>(<v_>captures_</v_>, <k_>...</k_>) <w_>/* [???]??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with user-provided captures and a <code><k_>mutable</k_></code> specifier.<br/>
 			<br/>

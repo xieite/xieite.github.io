@@ -22,13 +22,13 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-fwd" href="#def-fwd" class="gray">#fwd</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FWD</i_>(...) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)</pre>
+<pre><p_>#define</p_> <i_>XIEITE_FWD</i_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)</pre>
 			</blockquote>
 			Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><code><m_>std</m_>::<f_>forward</f_>()</code></a> without requiring a template argument.<br/>
 			<br/>
 			<a id="def-fwd-prvalue" href="#def-fwd-prvalue" class="gray">#fwd-prvalue</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE</i_>(...) <w_>/* ([]??? { ??? })() */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE</i_>(<k_>...</k_>) <w_>/* ([]??? { ??? })() */</w_></pre>
 			</blockquote>
 			Based on <a href="#def-fwd" class="gray">#fwd</a>, but includes special cases:<br/>
 			- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href="#def-fwd-prvalue"><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
@@ -38,7 +38,7 @@
 			<br/>
 			<a id="def-fwd-prvalue-local" href="#def-fwd-prvalue-local" class="gray">#fwd-prvalue-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE_LOCAL</i_>(...) <w_>/* ([&]??? { ??? })() */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE_LOCAL</i_>(<k_>...</k_>) <w_>/* ([&]??? { ??? })() */</w_></pre>
 			</blockquote>
 			Same functionality as <a href="#def-fwd-prvalue" class="gray">#fwd-prvalue</a>, but internally uses a lambda expression with a reference capture-default.<br/>
 			<br/>

@@ -22,25 +22,25 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-lift" href="#def-lift" class="gray">#lift</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with no capture-default, a <code><k_>static</k_></code> specifier, and variadic forwarding reference parameters.<br/>
 			<br/>
 			<a id="def-lift-local" href="#def-lift-local" class="gray">#lift-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL</i_>(...) <w_>/* [&]??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL</i_>(<k_>...</k_>) <w_>/* [&]??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with a reference capture-default and variadic forwaring reference parameters.<br/>
 			<br/>
 			<a id="def-lift-m" href="#def-lift-m" class="gray">#lift-m</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT_M</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT_M</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Same as <a href="#def-lift" class="gray">#lift</a> but calls a member of its first parameter with the rest of its parameters.<br/>
 			<br/>
 			<a id="def-lift-m-ptr" href="#def-lift-m-ptr" class="gray">#lift-m-ptr</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT_M_PTR</i_>(...) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_LIFT_M_PTR</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Same as <a href="#def-lift-m" class="gray">#lift-m</a> but accesses a member through <code><k_>operator</k_>->()</code>.<br/>
 			<br/>
