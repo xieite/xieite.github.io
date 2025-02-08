@@ -34,7 +34,7 @@
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>using</k_> <t_>Foo</t_> = <a href="/meta/type_list"><m_>xieite</m_>::<t_>type_list</t_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>float</k_>, <k_>double</k_>, <k_>void</k_>, <k_>bool</k_>&gt;;
 
-	<k_>using</k_> <t_>Bar</t_> = <t_>Foo</t_>::<a href="#def"><t_>xform</t_></a>&lt;<n_>2</n_>, []&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename</k_> <t_>U</t_>, <k_>typename...</k_>&gt; {
+	<k_>using</k_> <t_>Bar</t_> = <t_>Foo</t_>::<a href="#def"><t_>xform</t_></a>&lt;<n_>2</n_>, []&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename</k_> <t_>U</t_>&gt; {
 		<r_>return</r_> <a href="https://en.cppreference.com/w/cpp/types/type_identity" target="_blank"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<a href="https://en.cppreference.com/w/cpp/utility/pair" target="_blank"><m_>std</m_>::<t_>pair</t_></a>&lt;<t_>T</t_>, <t_>U</t_>&gt;&gt;();
 	}>;
 
@@ -45,7 +45,7 @@
 			<blockquote>
 <pre>xieite::type_list&lt;std::pair&lt;int, char&gt;, std::pair&lt;float, double&gt;, std::pair&lt;void, bool&gt;&gt;</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/7fezKavGh" target="_blank" class="gray">[View in Compiler Explorer]</a> <E_>#</E_></small>
+			<small><a href="https://godbolt.org/z/xdx1MnP9n" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
