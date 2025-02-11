@@ -8,8 +8,8 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<a href=""><h2><code><i_>XIEITE_VER_MAJOR</i_></code>, <code><i_>XIEITE_VER_MINOR</i_></code>, <code><i_>XIEITE_VER_PATCH</i_></code></h2></a>
 			<small>
@@ -20,37 +20,37 @@
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definitions</h3></a>
-			<a id="def-major" href="#def-major" class="gray">#major</a>
+			<a id="def-major" href="#def-major" class="g">#major</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VER_MAJOR</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			Incremented when breaking changes are applied (which forces users to update their code).<br/>
 			<br/>
-			<a id="def-minor" href="#def-minor" class="gray">#minor</a>
+			<a id="def-minor" href="#def-minor" class="g">#minor</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VER_MINOR</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			Incremented when new features are added.<br/>
 			<br/>
-			<a id="def-patch" href="#def-patch" class="gray">#patch</a>
+			<a id="def-patch" href="#def-patch" class="g">#patch</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VER_PATCH</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			Incremented when bug fixes are applied or internal changes are made.<br/>
 			<br/>
-			<a id="def-eq" href="#def-eq" class="gray">#eq</a>
+			<a id="def-eq" href="#def-eq" class="g">#eq</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VER_EQ</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether the library version is equal to some value.<br/>
 			<br/>
-			<a id="def-least" href="#def-least" class="gray">#least</a>
+			<a id="def-least" href="#def-least" class="g">#least</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VER_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether the library version is equal to or greater than some value.<br/>
 			<br/>
-			<a id="def-most" href="#def-most" class="gray">#most</a>
+			<a id="def-most" href="#def-most" class="g">#most</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_VER_MOST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
 			</blockquote>
@@ -66,7 +66,7 @@
 			<blockquote>
 <pre>v0.8.1</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/KEvno4h6a" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/KEvno4h6a" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

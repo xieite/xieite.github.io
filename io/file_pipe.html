@@ -8,10 +8,10 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<input type="checkbox" class="toggle-right"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
-		<iframe src="/io/file_pipe.links.html" frameborder="0" class="sidebar-right"></iframe>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/io/file_pipe.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>file_pipe</t_> {}</a></code></h2>
 			<small>
@@ -24,7 +24,7 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>file_pipe</t_> {
-	<a href="/io/file_pipe/file_pipe" class="a"><span><f_>file_pipe</f_>() <k_>noexcept</k_>;</span>
+	<a href="/io/file_pipe/file_pipe"><span><f_>file_pipe</f_>() <k_>noexcept</k_>;</span>
 
 	<span><f_>file_pipe</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>std</m_>::<t_>string_view</t_>) <k_>noexcept</k_>;</span>
 
@@ -34,7 +34,7 @@
 
 	<a href="/io/file_pipe/~file_pipe"><f_>~file_pipe</f_>();</a>
 
-	<a href="/io/file_pipe/open" class="a"><span><k_>void</k_> <f_>open</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>std</m_>::<t_>string_view</t_>) <k_>noexcept</k_>;</span>
+	<a href="/io/file_pipe/open"><span><k_>void</k_> <f_>open</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>std</m_>::<t_>string_view</t_>) <k_>noexcept</k_>;</span>
 
 <span><p_>#if</p_> <i_>XIEITE_PLTF_TYPE_WINDOWS</i_></span>
 	<span><k_>void</k_> <f_>open</f_>(<m_>std</m_>::<t_>wstring_view</t_>, <m_>std</m_>::<t_>wstring_view</t_>) <k_>noexcept</k_>;</span>

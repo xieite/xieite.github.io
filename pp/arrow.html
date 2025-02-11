@@ -8,8 +8,8 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<a href=""><h2><code><i_>XIEITE_ARROW</i_>()</code>, <code><i_>XIEITE_ARROW_RET</i_>()</code>, <code><i_>XIEITE_ARROW_CTOR</i_>()</code>, <code><i_>XIEITE_ARROW_PARAM</i_>()</code></h2></a>
 			<small>
@@ -21,7 +21,7 @@
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definitions</h3></a>
-			<a id="def-arrow" href="#def-arrow" class="gray">#arrow</a>
+			<a id="def-arrow" href="#def-arrow" class="g">#arrow</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
@@ -31,16 +31,16 @@
 			</blockquote>
 			<code><v_>__VA_ARGS__</v_></code> is wrapped in an extra set of parentheses to allow neater fold expressions: <code>[](<k_>auto...</k_> <v_>args</v_>) <a href="#def-arrow"><i_>XIEITE_ARROW</i_></a>(... + <v_>args</v_>)</code>.<br/>
 			<br/>
-			<a id="def-arrow-ret" href="#def-arrow-ret" class="gray">#arrow-ret</a>
+			<a id="def-arrow-ret" href="#def-arrow-ret" class="g">#arrow-ret</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_ARROW_RET</i_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
 	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
 			</blockquote>
-			Same as <a href="#def-arrow" class="gray">#arrow</a> but does not specify a trailing return type.<br/>
+			Same as <a href="#def-arrow" class="g">#arrow</a> but does not specify a trailing return type.<br/>
 			<br/>
-			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="gray">#arrow-ctor</a>
+			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="g">#arrow-ctor</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(<k_>...</k_>) <i_>\</i_>
 		<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
@@ -48,7 +48,7 @@
 			</blockquote>
 			</div>
 			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-ctor"><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} }</code>.<br/>
-			<br/><a id="def-arrow-param" href="#def-arrow-param" class="gray">#arrow-param</a>
+			<br/><a id="def-arrow-param" href="#def-arrow-param" class="g">#arrow-param</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_ARROW_PARAM</i_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>requires</k_> <v_>params_</v_> { <k_>requires</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))); }) <i_>\</i_>
@@ -57,7 +57,7 @@
 	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
 			</blockquote>
 			</div>
-			Compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="gray">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="gray">Clang</a>) prevent lambdas outside the function body from capturing function parameters.<br/>
+			Compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) prevent lambdas outside the function body from capturing function parameters.<br/>
 			This macro allows a workaround: <code>[](<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-param"><i_>XIEITE_ARROW_PARAM</i_></a>((<k_>int</k_> <v_>x</v_>), [<k_>=</k_>] { <v_>x</v_>; }())</code>.<br/>
 			<br/>
 			<br/>
@@ -80,7 +80,7 @@
 <pre>true
 false</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/W5rvev6KM" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/W5rvev6KM" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

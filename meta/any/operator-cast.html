@@ -8,10 +8,10 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<input type="checkbox" class="toggle-right"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
-		<iframe src="/meta/any.links.html" frameborder="0" class="sidebar-right"></iframe>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/meta/any.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>any</t_>::<k_>operator</k_> <t_>T</t_>()</a></code></h2>
 			<small>
@@ -20,7 +20,7 @@
 			<br/>
 			A declared cast operator of <a href="/meta/any"><code><m_>xieite</m_>::<t_>any</t_> {}</code></a> to any other type. Must be used in unevaluated context, as it is not actually implemented.<br/>
 			<br/>
-			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a href="https://timsong-cpp.github.io/cppwp/n4950/temp.inst#4" target="_blank" class="gray">[implicitly instantiated if the existence of its definition affects the semantics of the program]</a> if it is <a href="https://timsong-cpp.github.io/cppwp/n4950/temp.inst#8" target="_blank" class="gray">[needed for constant evaluation (even if not required)]</a> if this function is <a href="https://timsong-cpp.github.io/cppwp/n4950/expr.const#29.6" target="_blank" class="gray">[named by an expression that is potentially constant evaluated]</a> if the expression is <a href="https://timsong-cpp.github.io/cppwp/n4950/expr.const#29.3" target="_blank" class="gray">[an immediate subexpression of a brace initializer list]</a>.<br/>
+			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a href="https://timsong-cpp.github.io/cppwp/n4950/temp.inst#4" target="_blank" class="g">[implicitly instantiated if the existence of its definition affects the semantics of the program]</a> if it is <a href="https://timsong-cpp.github.io/cppwp/n4950/temp.inst#8" target="_blank" class="g">[needed for constant evaluation (even if not required)]</a> if this function is <a href="https://timsong-cpp.github.io/cppwp/n4950/expr.const#29.6" target="_blank" class="g">[named by an expression that is potentially constant evaluated]</a> if the expression is <a href="https://timsong-cpp.github.io/cppwp/n4950/expr.const#29.3" target="_blank" class="g">[an immediate subexpression of a brace initializer list]</a>.<br/>
 			Basically, this function would behave differently in a case like <code><k_>int</k_> { <a href="/meta/any"><m_>xieite</m_>::<t_>any</t_></a>() }</code>.
 			<br/>
 			<br/>
@@ -46,7 +46,7 @@
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/YjPMonGrs" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/YjPMonGrs" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

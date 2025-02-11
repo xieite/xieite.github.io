@@ -8,10 +8,10 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<input type="checkbox" class="toggle-right"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
-		<iframe src="/meta/any.links.html" frameborder="0" class="sidebar-right"></iframe>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/meta/any.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>any</t_> {}</a></code></h2>
 			<small>
@@ -24,11 +24,11 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>any</t_> {
-	<a href="/meta/any/any" class="a"><span><f_>any</f_>() = <k_>default</k_>;</span>
+	<a href="/meta/any/any"><span><f_>any</f_>() = <k_>default</k_>;</span>
 
 	<span><k_>constexpr</k_> <f_>any</f_>(<k_>auto&&...</k_>) <k_>noexcept</k_>;</span></a>
 
-	<a href="/meta/any/operator-cast" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;</span>
+	<a href="/meta/any/operator-cast"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;</span>
 	<span><k_>explicit</k_>(<k_>false</k_>) <k_>operator</k_> <t_>T</t_>() <k_>const noexcept</k_>;</span></a>
 };</pre>
 			</blockquote>
@@ -55,7 +55,7 @@
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/h4h8frqa5" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/h4h8frqa5" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

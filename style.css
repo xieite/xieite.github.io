@@ -32,7 +32,7 @@ input {
 	display: none;
 }
 
-.sidebar-left, .sidebar-right {
+iframe {
 	position: absolute;
 	top: 0;
 	border: 0;
@@ -40,17 +40,17 @@ input {
 	height: 100%;
 }
 
-.sidebar-left {
+iframe:nth-of-type(1) {
 	left: 0;
 	z-index: 1000000;
 }
 
-.sidebar-right {
+iframe:nth-of-type(2) {
 	left: calc(100% - 250px);
 	z-index: 1000002;
 }
 
-.links-body {
+body:has(script) {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	padding-left: 25px;
@@ -61,7 +61,7 @@ input {
 	background-color: #000000;
 }
 
-.links-pre {
+pre:has(a[target="_top"]) {
 	tab-size: 2;
 	white-space: pre;
 }
@@ -96,8 +96,14 @@ a {
 	color: inherit;
 }
 
-a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
+/* TODO: Remove `g` class */
+
+a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:not(.g)):hover > *, a:has(span:not(.g)):hover > * * {
 	text-decoration: underline;
+	color: #afafaf;
+}
+
+a[href^="#"], a[href^="https://godbolt.org"], body:has(script) > pre > a > span {
 	color: #afafaf;
 }
 
@@ -111,13 +117,13 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 		padding-right: 50px;
 	}
 
-	body:has(.sidebar-right) > main {
+	body:has(iframe[src$=".links.html"]) > main {
 		padding-right: 300px;
 	}
 }
 
 @media (orientation: portrait) or (max-width: 700px) {
-	.toggle-left, .toggle-right {
+	input {
 		display: block;
 		width: 40px;
 		height: 40px;
@@ -126,17 +132,17 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 		top: 25px;
 	}
 
-	.toggle-left {
+	input:nth-of-type(1) {
 		left: 25px;
 		z-index: 1000001;
 	}
 
-	.toggle-right {
+	input:nth-of-type(2) {
 		right: 25px;
 		z-index: 1000003;
 	}
 
-	.sidebar-left, .sidebar-right {
+	iframe {
 		display: none;
 	}
 
@@ -149,30 +155,26 @@ a:not(.a):hover, a:not(.a):hover *, .a:hover > *, .a:hover > * * {
 		width: calc(100% - 50px);
 	}
 
-	.toggle-left:checked {
+	input:nth-of-type(1):checked {
 		left: unset;
 		right: 25px;
 	}
 
-	.toggle-left:checked ~ .toggle-right {
+	input:nth-of-type(1):checked ~ input:nth-of-type(2) {
 		display: none;
 	}
 
-	.toggle-left:checked ~ .sidebar-left {
+	input:nth-of-type(1):checked ~ iframe:nth-of-type(1) {
 		display: block;
 		width: 100%;
 	}
 
-	.toggle-right:checked ~ .sidebar-right {
+	input:nth-of-type(2):checked ~ iframe:nth-of-type(2) {
 		display: block;
 		width: 100%;
 
 		left: 0;
 	}
-}
-
-.gray {
-	color: #afafaf;
 }
 
 w_ { color: #6a6a6a; } /* comments */

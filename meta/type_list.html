@@ -8,17 +8,17 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<input type="checkbox" class="toggle-right"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
-		<iframe src="/meta/type_list.links.html" frameborder="0" class="sidebar-right"></iframe>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/meta/type_list.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>type_list</t_> {}</a></code></h2>
 			<small>
 				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a>
 			</small><br/>
 			<br/>
-			A metaprogramming utility for storing and manipulating a list of types.<br/>
+			A metaprogramming utility for storing and manipulating a list of types. Does not use recursion at all!<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
@@ -27,109 +27,109 @@
 <k_>struct</k_> <t_>type_list</t_> {
 	<a href="/meta/type_list/size"><k_>static constexpr</k_> <m_>std</m_>::<t_>size_t</t_> <v_>size</v_> = <k_>sizeof...</k_>(<t_>Ts</t_>);</a>
 
-	<a href="/meta/type_list/all" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
+	<a href="/meta/type_list/all"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>static constexpr bool</k_> <v_>all</v_> = <m_>xieite</m_>::<c_>is_satisfd_all</c_>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/any" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
+	<a href="/meta/type_list/any"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>static constexpr bool</k_> <v_>any</v_> = <m_>xieite</m_>::<c_>is_satisfd_any</c_>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/has" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
+	<a href="/meta/type_list/has"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
 	<span><k_>static constexpr bool</k_> <v_>has</v_> = (... || <m_>xieite</m_>::<c_>is_satisfd</c_>&lt;<v_>cmp</v_>, <t_>T</t_>, <t_>Ts</t_>&gt;);</span></a>
 
-	<a href="/meta/type_list/at" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>&gt;</span>
+	<a href="/meta/type_list/at"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>&gt;</span>
 	<span><k_>using</k_> <t_>at</t_> = <w_>/* Ts...[idx] */</w_>;</span></a>
 
-	<a href="/meta/type_list/find_idx" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
+	<a href="/meta/type_list/find_idx"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>requires</k_>(<m_>xieite</m_>::<c_>is_satisfd_any</c_>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;)</span>
 	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>size_t</t_> <v_>find_idx</v_> = <w_>/* ??? */</w_>;</span></a>
 
-	<a href="/meta/type_list/idx_of" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <v_>T</v_>, <k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
+	<a href="/meta/type_list/idx_of"><span><k_>template</k_>&lt;<k_>typename</k_> <v_>T</v_>, <k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
 	<span><k_>requires</k_>(<m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<v_>has</v_>&lt;<t_>T</t_>, <v_>cmp</v_>&gt;)</span>
 	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>size_t</t_> <v_>idx_of</v_> = <w_>/* ??? */</w_>;</span></a>
 
-	<a href="/meta/type_list/find" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
+	<a href="/meta/type_list/find"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>requires</k_>(<m_>xieite</m_>::<c_>is_satisfd_any</c_>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;)</span>
 	<span><k_>using</k_> <t_>find</t_> = <w_>/* ??? */</w_>;</span></a>
 
-	<a href="/meta/type_list/apply" class="a"><span><k_>static constexpr auto</k_> <f_>apply</f_>(<k_>auto&&</k_>, <k_>auto&&...</k_>)</span>
+	<a href="/meta/type_list/apply"><span><k_>static constexpr auto</k_> <f_>apply</f_>(<k_>auto&&</k_>, <k_>auto&&...</k_>)</span>
 		<span><i_>XIEITE_ARROW</i_>(<w_>/* ??? */</w_>)</span></a>
 
-	<a href="/meta/type_list/satisf" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>fn</v_>&gt;</span>
+	<a href="/meta/type_list/satisf"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>fn</v_>&gt;</span>
 	<span><k_>static constexpr bool</k_> <v_>satisf</v_> = <m_>xieite</m_>::<c_>is_satisfd</c_>&lt;<v_>fn</v_>, <t_>Ts</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/to" class="a"><span><k_>template</k_>&lt;<k_>template</k_>&lt;<k_>typename...</k_>&gt; <k_>typename</k_> <t_>M</t_>&gt;</span>
+	<a href="/meta/type_list/to"><span><k_>template</k_>&lt;<k_>template</k_>&lt;<k_>typename...</k_>&gt; <k_>typename</k_> <t_>M</t_>&gt;</span>
 	<span><k_>using</k_> <t_>to</t_> = <t_>M</t_>&lt;<t_>Ts</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/as_fn" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>Ret</t_>&gt;</span>
+	<a href="/meta/type_list/as_fn"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>Ret</t_>&gt;</span>
 	<span><k_>using</k_> <t_>as_fn</t_> = <w_>/* Ret(Ts...) */</w_>;</span></a>
 
-	<a href="/meta/type_list/append" class="a"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
+	<a href="/meta/type_list/append"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
 	<span><k_>using</k_> <t_>append</t_> = <m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>..., <t_>Us</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/append_range" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>List</t_>&gt;</span>
+	<a href="/meta/type_list/append_range"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>List</t_>&gt;</span>
 	<span><k_>using</k_> <t_>append_range</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/prepend" class="a"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
+	<a href="/meta/type_list/prepend"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
 	<span><k_>using</k_> <t_>prepend</t_> = <m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Us</t_>..., <t_>Ts</t_>...&gt;;</span></a>
 	
-	<a href="/meta/type_list/prepend_range" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>List</t_>&gt;</span>
+	<a href="/meta/type_list/prepend_range"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>List</t_>&gt;</span>
 	<span><k_>using</k_> <t_>prepend_range</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/reverse" class="a"><span><k_>template</k_>&lt;<m_>xieite</m_>::<c_>end</c_><k_>...</k_>&gt;</span>
+	<a href="/meta/type_list/reverse"><span><k_>template</k_>&lt;<m_>xieite</m_>::<c_>end</c_><k_>...</k_>&gt;</span>
 	<span><k_>using</k_> <t_>reverse</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/slice" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_> = <k_>sizeof...</k_>(<t_>Ts</t_>)&gt;</span>
+	<a href="/meta/type_list/slice"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_> = <k_>sizeof...</k_>(<t_>Ts</t_>)&gt;</span>
 	<span><k_>using</k_> <t_>slice</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/erase" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_> = <v_>start</v_> + <n_>1</n_>&gt;</span>
+	<a href="/meta/type_list/erase"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_> = <v_>start</v_> + <n_>1</n_>&gt;</span>
 	<span><k_>using</k_> <t_>erase</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/replace" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_>, <k_>typename...</k_> <t_>Us</t_>&gt;</span>
+	<a href="/meta/type_list/replace"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_>, <k_>typename...</k_> <t_>Us</t_>&gt;</span>
 	<span><k_>using</k_> <t_>replace</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/replace_range" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_>, <k_>typename</k_> <t_>List</t_>&gt;</span>
+	<a href="/meta/type_list/replace_range"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end</v_>, <k_>typename</k_> <t_>List</t_>&gt;</span>
 	<span><k_>using</k_> <t_>replace_range</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/insert" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>, <k_>typename...</k_> <t_>Us</t_>&gt;</span>
+	<a href="/meta/type_list/insert"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>, <k_>typename...</k_> <t_>Us</t_>&gt;</span>
 	<span><k_>using</k_> <t_>insert</t_> = <m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<t_>replace</t_>&lt;<v_>idx</v_>, <v_>idx</v_>, <t_>Us</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/insert_range" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>, <k_>typename</k_> <t_>List</t_>&gt;</span>
+	<a href="/meta/type_list/insert_range"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>, <k_>typename</k_> <t_>List</t_>&gt;</span>
 	<span><k_>using</k_> <t_>insert_range</t_> = <m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<t_>replace_range</t_>&lt;<v_>idx</v_>, <v_>idx</v_>, <t_>List</t_>&gt;;</span></a>
 
-	<a href="/meta/type_list/set" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>, <k_>typename</k_> <t_>T</t_>&gt;</span>
+	<a href="/meta/type_list/set"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>, <k_>typename</k_> <t_>T</t_>&gt;</span>
 	<span><k_>using</k_> <t_>set</t_> = <m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<t_>replace</t_>&lt;<v_>idx</v_>, <v_>idx</v_> + <n_>1</n_>, <t_>T</t_>&gt;;</span></a>
 
-	<a href="/meta/type_list/swap" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx0</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>idx1</v_>&gt;</span>
+	<a href="/meta/type_list/swap"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx0</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>idx1</v_>&gt;</span>
 	<span><k_>using</k_> <t_>swap</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 	
-	<a href="/meta/type_list/swap_slices" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start0</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end0</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>start1</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end1</v_>&gt;</span>
+	<a href="/meta/type_list/swap_slices"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>start0</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end0</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>start1</v_>, <m_>std</m_>::<t_>size_t</t_> <v_>end1</v_>&gt;</span>
 	<span><k_>using</k_> <t_>swap_slices</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/arrange" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_><k_>...</k_> <v_>idxs</v_>&gt;</span>
+	<a href="/meta/type_list/arrange"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_><k_>...</k_> <v_>idxs</v_>&gt;</span>
 	<span><k_>using</k_> <t_>arrange</t_> = <m_>xieite</m_>::<t_>type_list</t_>&lt;<m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<t_>at</t_>&lt;<v_>idxs</v_>&gt;...&gt;;</span></a>
 
-	<a href="/meta/type_list/filter" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
+	<a href="/meta/type_list/filter"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>using</k_> <t_>filter</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/dedup" class="a"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
+	<a href="/meta/type_list/dedup"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
 	<span><k_>using</k_> <t_>dedup</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/repeat" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>n</v_>&gt;</span>
+	<a href="/meta/type_list/repeat"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>n</v_>&gt;</span>
 	<span><k_>using</k_> <t_>repeat</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/xform" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
+	<a href="/meta/type_list/xform"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
 	<span><k_>requires</k_>(!(<k_>sizeof...</k_>(<t_>Ts</t_>) % <v_>arity</v_>))</span>
 	<span><k_>using</k_> <t_>xform</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/xform_flat" class="a"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
+	<a href="/meta/type_list/xform_flat"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
 	<span><k_>requires</k_>(!(<k_>sizeof...</k_>(<t_>Ts</t_>) % <v_>arity</v_>))</span>
 	<span><k_>using</k_> <t_>xform_flat</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/zip" class="a"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
+	<a href="/meta/type_list/zip"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
 	<span><k_>requires</k_>(<k_>sizeof...</k_>(<t_>Ts</t_>) == <k_>sizeof...</k_>(<t_>Us</t_>))</span>
 	<span><k_>using</k_> <t_>zip</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/zip_range" class="a"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>List</t_>&gt;</span>
+	<a href="/meta/type_list/zip_range"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>List</t_>&gt;</span>
 	<span><k_>using</k_> <t_>zip_range</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 };</pre>
 			</blockquote>
@@ -151,7 +151,7 @@
 			<blockquote>
 <pre>xieite::type_list&lt;double, float, int&gt;</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/xWb6rMfvh" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/xWb6rMfvh" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

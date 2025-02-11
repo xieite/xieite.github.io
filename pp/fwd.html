@@ -8,8 +8,8 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<a href=""><h2><code><i_>XIEITE_FWD</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE_LOCAL</i_>()</code></h2></a>
 			<small>
@@ -20,27 +20,27 @@
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definitions</h3></a>
-			<a id="def-fwd" href="#def-fwd" class="gray">#fwd</a>
+			<a id="def-fwd" href="#def-fwd" class="g">#fwd</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FWD</i_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)</pre>
 			</blockquote>
 			Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><code><m_>std</m_>::<f_>forward</f_>()</code></a> without requiring a template argument.<br/>
 			<br/>
-			<a id="def-fwd-prvalue" href="#def-fwd-prvalue" class="gray">#fwd-prvalue</a>
+			<a id="def-fwd-prvalue" href="#def-fwd-prvalue" class="g">#fwd-prvalue</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE</i_>(<k_>...</k_>) <w_>/* ([]??? { ??? })() */</w_></pre>
 			</blockquote>
-			Based on <a href="#def-fwd" class="gray">#fwd</a>, but includes special cases:<br/>
+			Based on <a href="#def-fwd" class="g">#fwd</a>, but includes special cases:<br/>
 			- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href="#def-fwd-prvalue"><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 			- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
 			- Does nothing with lambda expressions: <code><a href="#def-fwd-prvalue"><i_>XIEITE_FWD_PRVALUE</i_></a>([] {})</code><br/>
 			Internally uses a lambda expression with no capture-default.<br/>
 			<br/>
-			<a id="def-fwd-prvalue-local" href="#def-fwd-prvalue-local" class="gray">#fwd-prvalue-local</a>
+			<a id="def-fwd-prvalue-local" href="#def-fwd-prvalue-local" class="g">#fwd-prvalue-local</a>
 			<blockquote>
 <pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE_LOCAL</i_>(<k_>...</k_>) <w_>/* ([&]??? { ??? })() */</w_></pre>
 			</blockquote>
-			Same functionality as <a href="#def-fwd-prvalue" class="gray">#fwd-prvalue</a>, but internally uses a lambda expression with a reference capture-default.<br/>
+			Same functionality as <a href="#def-fwd-prvalue" class="g">#fwd-prvalue</a>, but internally uses a lambda expression with a reference capture-default.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
@@ -70,7 +70,7 @@ S::~S()
 S::S()
 S::~S()</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/P77xh3bKK" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/P77xh3bKK" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

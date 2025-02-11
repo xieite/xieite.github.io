@@ -8,8 +8,8 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>strlen</f_>()</a></code></h2>
 			<small>
@@ -20,26 +20,26 @@
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
-			<a id="def-0" href="#def-0" class="gray">#0</a>
+			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ch</t_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>basic_string_view</t_></a>&lt;<t_>Ch</t_>&gt; <v_>strv</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
-			<a id="def-1" href="#def-1" class="gray">#1</a>
+			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ch</t_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Ch</t_>&gt;<k_>&</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
-			<a id="def-2" href="#def-2" class="gray">#2</a>
+			<a id="def-2" href="#def-2" class="g">#2</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>n</v_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <t_>Ch</t_>(<k_>&</k_>)[<v_>n</v_>]) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			Returns <code><v_>n</v_> - <n_>1</n_></code>. The compiler should prefer this overload for string literals.<br/>
 			<br/>
-			<a id="def-3" href="#def-3" class="gray">#3</a>
+			<a id="def-3" href="#def-3" class="g">#3</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_>, <k_>typename</k_> <t_>Str</t_>&gt;
 <k_>requires</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<t_>Ch</t_>, <a href="/trait/rm_ptr"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<a href="/trait/rm_ref"><m_>xieite</m_>::<t_>rm_ref</t_></a>&lt;<t_>Str</t_>&gt;&gt;&gt;)
@@ -47,7 +47,7 @@
 			</blockquote>
 			Invokes undefined behavior if the passed string is not null-terminated.<br/>
 			<br/>
-			<a id="def-4" href="#def-4" class="gray">#4</a>
+			<a id="def-4" href="#def-4" class="g">#4</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Ch</t_>) <k_>noexcept</k_>;</pre>
@@ -65,7 +65,7 @@
 			<blockquote>
 <pre>6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/7xPGrrjbs" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/7xPGrrjbs" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

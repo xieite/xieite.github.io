@@ -8,8 +8,8 @@
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
-		<input type="checkbox" class="toggle-left"/>
-		<iframe src="/links.html" frameborder="0" class="sidebar-left"></iframe>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<m_>ch</m_> {}</a></code></h2>
 			<small>
@@ -20,49 +20,49 @@
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Contents</h3></a>
-			<a id="def-alphabet-size" href="#def-alphabet-size" class="gray">#alphabet-size</a>
+			<a id="def-alphabet-size" href="#def-alphabet-size" class="g">#alphabet-size</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>alphabet_size</v_> = <n_>26</n_>;</pre>
 			</blockquote>
 			Provides the size of the English alphabet.<br/>
 			<br/>
-			<a id="def-upper" href="#def-upper" class="gray">#upper</a>
+			<a id="def-upper" href="#def-upper" class="g">#upper</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>upper</v_> = <s_>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</s_>;</pre>
 			</blockquote>
 			The English alphabet in uppercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
 			<br/>
-			<a id="def-lower" href="#def-lower" class="gray">#lower</a>
+			<a id="def-lower" href="#def-lower" class="g">#lower</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>lower</v_> = <s_>"abcdefghijklmnopqrstuvwxyz"</s_>;</pre>
 			</blockquote>
 			The English alphabet in lowercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
 			<br/>
-			<a id="def-digits" href="#def-digits" class="gray">#digits</a>
+			<a id="def-digits" href="#def-digits" class="g">#digits</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>digits</v_> = <s_>"0123456789"</s_>;</pre>
 			</blockquote>
 			Digits <code>0</code> through <code>9</code> in ascending order.<br/>
 			<br/>
-			<a id="def-whitesp" href="#def-whitesp" class="gray">#whitesp</a>
+			<a id="def-whitesp" href="#def-whitesp" class="g">#whitesp</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>whitesp</v_> = <s_>" <i_>\t\n\v\f\r</i_>"</s_>;</pre>
 			</blockquote>
 			Whitespace characters.</br>
 			<br/>
-			<a id="def-alphanum" href="#def-alphanum" class="gray">#alphanum</a>
+			<a id="def-alphanum" href="#def-alphanum" class="g">#alphanum</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>alphanum</v_> = <s_>"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"</s_>;</pre>
 			</blockquote>
 			All alphanumeric characters. Consists of digits, followed by the uppercase English alphabet, followed by the lowercase English alphabet.</br>
 			<br/>
-			<a id="def-vowels" href="#def-vowels" class="gray">#vowels</a>
+			<a id="def-vowels" href="#def-vowels" class="g">#vowels</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>vowels</v_> = <s_>"AEIOUaeiou"</s_>;</pre>
 			</blockquote>
 			Uppercase and lowercase vowels in the English alphabet. Does not include semivowels.</br>
 			<br/>
-			<a id="def-consonants" href="#def-consonants" class="gray">#consonants</a>
+			<a id="def-consonants" href="#def-consonants" class="g">#consonants</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>consonants</v_> = <s_>"BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz"</s_>;</pre>
 			</blockquote>
@@ -81,7 +81,7 @@
 			<blockquote>
 <pre>0 1 2 3 4 5 6 7 8 9 A B C D E F</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/qa6Ta4WMn" target="_blank" class="gray">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/qa6Ta4WMn" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
