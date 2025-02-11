@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::big_int::log()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/math/big_int.links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;::<f_>log</f_>()</a></code></h2>
+			<small>
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/big_int.hpp" target="_blank"><code><s_>&lt;xieite/math/big_int.hpp&gt;</s_></code></a>
+			</small><br/>
+			<br/>
+			Estimates the logarithm of a <a href="/math/big_int"><code><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; {}</code></a> of a base. Throws <a href="https://en.cppreference.com/w/cpp/error/out_of_range" target="_blank"><code><m_>std</m_>::<t_>out_of_range</t_> {}</code></a> if the anti-logarithm is negative, the base is <code>1</code>, or the base is negative.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>log</f_>(<k_>const</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_> <v_>base</v_>) <k_>const</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>log</f_>(<t_>U</t_> <v_>base</v_>) <k_>const</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>int</k_> <f_>main</f_>() {
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_></a>(<n_>1000</n_>).<a href="#def"><f_>log</f_></a>(<n_>10</n_>).<a href="/math/big_int/str"><f_>str</f_></a>());
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>3</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/3fnnGrcve" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
