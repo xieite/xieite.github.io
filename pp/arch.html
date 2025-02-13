@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>XIEITE_ARCH</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><i_>XIEITE_ARCH_TYPE_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_ARCH_MAJOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_ARCH_MINOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_ARCH_PATCH_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_ARCH_EQ</i_>()</code>, <code><i_>XIEITE_ARCH_LEAST</i_>()</code>, <code><i_>XIEITE_ARCH_MOST</i_>()</code></h2></a>
+			<small>
+				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arch.hpp" target="_blank"><code><s_>&lt;xieite/pp/arch.hpp&gt;</s_></code></a>
+			</small><br/>
+			<br/>
+			Macros for identifying the current computer architecture and its version (major, minor, patch).<br/>
+			The macros are not mutually exclusive because I have no way to check which architectures are.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definitions</h3></a>
+			<a id="def-type" href="#def-type" class="g">#type</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_ARCH_TYPE_</i_><w_>/*???*/ /* integer literal (0 or 1) */</w_>
+<p_>#define</p_> <i_>XIEITE_ARCH_MAJOR_</i_><w_>/*???*/ /* integer literal */</w_>
+<p_>#define</p_> <i_>XIEITE_ARCH_MINOR_</i_><w_>/*???*/ /* integer literal */</w_>
+<p_>#define</p_> <i_>XIEITE_ARCH_PATCH_</i_><w_>/*???*/ /* integer literal */</w_></pre>
+			</blockquote>
+			Use with <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_ALPHA$/&type=code" target="_blank"><code><i_>ALPHA</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_ARM$/&type=code" target="_blank"><code><i_>ARM</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_BLACKFIN$/&type=code" target="_blank"><code><i_>BLACKFIN</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_CONVEX$/&type=code" target="_blank"><code><i_>CONVEX</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_CRAY$/&type=code" target="_blank"><code><i_>CRAY</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_CSKY$/&type=code" target="_blank"><code><i_>CSKY</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_EPIPHANY$/&type=code" target="_blank"><code><i_>EPIPHANY</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_ELBRUS_2000$/&type=code" target="_blank"><code><i_>ELBRUS_2000</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_FR30$/&type=code" target="_blank"><code><i_>FR30</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_HEXAGON$/&type=code" target="_blank"><code><i_>HEXAGON</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_HP_800$/&type=code" target="_blank"><code><i_>HP_800</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_HP_9000$/&type=code" target="_blank"><code><i_>HP_9000</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_IA64$/&type=code" target="_blank"><code><i_>IA64</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_IBM_SYSTEM_32$/&type=code" target="_blank"><code><i_>IBM_SYSTEM_32</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_IBM_SYSTEM_370$/&type=code" target="_blank"><code><i_>IBM_SYSTEM_370</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_IBM_SYSTEM_390$/&type=code" target="_blank"><code><i_>IBM_SYSTEM_390</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_IBM_Z$/&type=code" target="_blank"><code><i_>IBM_Z</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_LOONGARCH$/&type=code" target="_blank"><code><i_>LOONGARCH</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_M_CORE$/&type=code" target="_blank"><code><i_>M_CORE</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_M32R$/&type=code" target="_blank"><code><i_>M32R</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_MIPS$/&type=code" target="_blank"><code><i_>MIPS</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_MMIX$/&type=code" target="_blank"><code><i_>MMIX</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_MN103$/&type=code" target="_blank"><code><i_>MN103</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_MOTOROLA_68000$/&type=code" target="_blank"><code><i_>MOTOROLA_68000</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_MOXIE$/&type=code" target="_blank"><code><i_>MOXIE</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_NDS32$/&type=code" target="_blank"><code><i_>NDS32</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_NEC_SX_AURORA_TSUBASA$/&type=code" target="_blank"><code><i_>NEC_SX_AURORA_TSUBASA</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_NIOS_II$/&type=code" target="_blank"><code><i_>NIOS_II</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_OR1K$/&type=code" target="_blank"><code><i_>OR1K</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_PA_RISC$/&type=code" target="_blank"><code><i_>PA_RISC</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_PDP_11$/&type=code" target="_blank"><code><i_>PDP_11</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_PNACL$/&type=code" target="_blank"><code><i_>PNACL</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_POWERPC$/&type=code" target="_blank"><code><i_>POWERPC</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_PTX$/&type=code" target="_blank"><code><i_>PTX</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_PYRAMID_9810$/&type=code" target="_blank"><code><i_>PYRAMID_9810</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_RISC_V$/&type=code" target="_blank"><code><i_>RISC_V</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_RS_6000$/&type=code" target="_blank"><code><i_>RS_6000</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_SPARC$/&type=code" target="_blank"><code><i_>SPARC</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_SUPERH$/&type=code" target="_blank"><code><i_>SUPERH</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_TAHOE$/&type=code" target="_blank"><code><i_>TAHOE</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_TMS320$/&type=code" target="_blank"><code><i_>TMS320</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_TMS470$/&type=code" target="_blank"><code><i_>TMS470</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_V850$/&type=code" target="_blank"><code><i_>V850</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_VAX$/&type=code" target="_blank"><code><i_>VAX</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_X80$/&type=code" target="_blank"><code><i_>X80</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_X86_32$/&type=code" target="_blank"><code><i_>X86_32</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_X86_64$/&type=code" target="_blank"><code><i_>X86_64</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_XENON$/&type=code" target="_blank"><code><i_>XENON</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_XSTORMY16$/&type=code" target="_blank"><code><i_>XSTORMY16</i_></code></a>, or <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/arch.hpp /XIEITE_ARCH_TYPE_XTENSA$/&type=code" target="_blank"><code><i_>XTENSA</i_></code></a>. <a href="#ex">See example</a>.<br/>
+			<br/>
+			<a id="def-eq" href="#def-eq" class="g">#eq</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_ARCH_EQ</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+			</blockquote>
+			Allows two optional arguments for the minor and patch version numbers. Expands to an expression checking whether an architecture is the target architecture and its version is equal to some value.<br/>
+			<br/>
+			<a id="def-least" href="#def-least" class="g">#least</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_ARCH_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+			</blockquote>
+			Expands to an expression checking whether an architecture is the target architecture and its version is equal to or greater than some value.<br/>
+			<br/>
+			<a id="def-most" href="#def-most" class="g">#most</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XIEITE_ARCH_MOST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+			</blockquote>
+			Expands to an expression checking whether an architecture is the target architecture and its version is equal to or less than some value.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>int</k_> <f_>main</f_>() {
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"Is target architecture x86-64? <i_>{}\n</i_>"</s_>, <a href="#def-type"><i_>XIEITE_ARCH_TYPE_X86_64</i_></a>);
+}</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>Is target architecture x86-64? 1</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/5vM6Kf54K" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
