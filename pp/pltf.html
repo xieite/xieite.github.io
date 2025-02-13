@@ -23,7 +23,7 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-type" href="#def-type" class="g">#type</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_</i_><w_>/*???*/ /* integer literal (0 or 1) */</w_>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_TYPE_</i_><w_>/*???*/ /* boolean integer literal */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MAJOR_</i_><w_>/*???*/ /* integer literal */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_MINOR_</i_><w_>/*???*/ /* integer literal */</w_>
 <p_>#define</p_> <i_>XIEITE_PLTF_PATCH_</i_><w_>/*???*/ /* integer literal */</w_></pre>
@@ -32,19 +32,19 @@
 			<br/>
 			<a id="def-eq" href="#def-eq" class="g">#eq</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_EQ</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_EQ</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Allows two optional arguments for the minor and patch version numbers. Expands to an expression checking whether a platform is the target platform and its version is equal to some value.<br/>
 			<br/>
 			<a id="def-least" href="#def-least" class="g">#least</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to or greater than some value.<br/>
 			<br/>
 			<a id="def-most" href="#def-most" class="g">#most</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_MOST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* integer literal (0 or 1) */</w_></pre>
+<pre><p_>#define</p_> <i_>XIEITE_PLTF_MOST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to or less than some value.<br/>
 			<br/>
