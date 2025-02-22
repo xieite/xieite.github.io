@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_VER_MAJOR</i_></code>, <code><i_>XIEITE_VER_MINOR</i_></code>, <code><i_>XIEITE_VER_PATCH</i_></code></h2></a>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/ver.hpp" target="_blank"><code><s_>&lt;xieite/pp/ver.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><i_>XIEITE_VER_MAJOR</i_></code>, <code><i_>XIEITE_VER_MINOR</i_></code>, <code><i_>XIEITE_VER_PATCH</i_></code>, <code><j_>XIEITE_VER_EQ</j_>()</code>, <code><j_>XIEITE_VER_LEAST</j_>()</code>, <code><j_>XIEITE_VER_MOST</j_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/ver.hpp" target="_blank"><code><s_>&lt;xieite/pp/ver.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Macros defining the current version of this library.<br/>
 			<br/>
@@ -40,19 +38,19 @@
 			<br/>
 			<a id="def-eq" href="#def-eq" class="g">#eq</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_VER_EQ</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* boolean integer literal */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_VER_EQ</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean integer literal */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether the library version is equal to some value.<br/>
 			<br/>
 			<a id="def-least" href="#def-least" class="g">#least</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_VER_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* boolean integer literal */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_VER_LEAST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean integer literal */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether the library version is equal to or greater than some value.<br/>
 			<br/>
 			<a id="def-most" href="#def-most" class="g">#most</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_VER_MOST</i_>(<v_>type</v_>, <v_>major</v_>, ... <w_>/* minor, patch */</w_>) <w_>/* boolean integer literal */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_VER_MOST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean integer literal */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether the library version is equal to or less than some value.<br/>
 			<br/>

@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_EACH</i_>()</code></h2>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/each.hpp" target="_blank"><code><s_>&lt;xieite/pp/each.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><j_>XIEITE_EACH</j_>()</code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/each.hpp" target="_blank"><code><s_>&lt;xieite/pp/each.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Expands a given function-like macro with every argument passed.<br/>
 			<br/>
@@ -22,22 +20,22 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_EACH</i_>(<v_>m</v_>, <k_>...</k_>) <w_>/* ... */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_EACH</j_>(<v_>m</v_>, <k_>...</k_>) <w_>/* ... */</w_></pre>
 			</blockquote>
 			Separates expanded expressions with commas.<br/>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_EACH_DELIM</i_>(<v_>m</v_>, <v_>delim</v_>, <k_>...</k_>) <w_>/* ... */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_EACH_DELIM</j_>(<v_>m</v_>, <v_>delim</v_>, <k_>...</k_>) <w_>/* ... */</w_></pre>
 			</blockquote>
 			Separates expanded expressions with the provided <code><v_>delim</v_></code>eter.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>M</i_>(<v_>x</v_>) <v_>x</v_>##<n_>0</n_>
+<pre><p_>#define</p_> <j_>M</j_>(<v_>x</v_>) <v_>x</v_>##<n_>0</n_>
 
-<i_>XIEITE_EACH_DELIM</i_>(<i_>M</i_>, +, <n_>1</n_>, <n_>2</n_>, <n_>3</n_>)</pre>
+<j_>XIEITE_EACH_DELIM</j_>(<j_>M</j_>, +, <n_>1</n_>, <n_>2</n_>, <n_>3</n_>)</pre>
 			</blockquote>
 			<small>Preprocessor output:</small>
 			<blockquote>

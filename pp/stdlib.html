@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_STDLIB_TYPE_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_MAJOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_MINOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_PATCH_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_EQ</i_>()</code>, <code><i_>XIEITE_STDLIB_LEAST</i_>()</code>, <code><i_>XIEITE_STDLIB_MOST</i_>()</code></h2></a>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/stdlib.hpp" target="_blank"><code><s_>&lt;xieite/pp/stdlib.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><i_>XIEITE_STDLIB_TYPE_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_MAJOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_MINOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_STDLIB_PATCH_</i_><w_>/*???*/</w_></code>, <code><j_>XIEITE_STDLIB_EQ</j_>()</code>, <code><j_>XIEITE_STDLIB_LEAST</j_>()</code>, <code><j_>XIEITE_STDLIB_MOST</j_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/stdlib.hpp" target="_blank"><code><s_>&lt;xieite/pp/stdlib.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Macros for identifying the current language and its version (major, minor, patch). The macros are not mutually exclusive.<br/>
 			<br/>
@@ -31,19 +29,19 @@
 			<br/>
 			<a id="def-eq" href="#def-eq" class="g">#eq</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_STDLIB_EQ</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_STDLIB_EQ</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Allows two optional arguments for the minor and patch version numbers. Expands to an expression checking whether a language is in use and its version is equal to some value.<br/>
 			<br/>
 			<a id="def-least" href="#def-least" class="g">#least</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_STDLIB_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_STDLIB_LEAST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a language is in use and its version is equal to or greater than some value.<br/>
 			<br/>
 			<a id="def-most" href="#def-most" class="g">#most</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_STDLIB_MOST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_STDLIB_MOST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a language is in use and its version is equal to or less than some value.<br/>
 			<br/>

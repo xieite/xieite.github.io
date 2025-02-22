@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_ARROW</i_>()</code>, <code><i_>XIEITE_ARROW_RET</i_>()</code>, <code><i_>XIEITE_ARROW_CTOR</i_>()</code>, <code><i_>XIEITE_ARROW_PARAM</i_>()</code></h2></a>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code>, <code><j_>XIEITE_ARROW_PARAM</j_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a single-statement template function.<br/>
 			(i.e. eliminates annoying typing when defining forwarding function templates.)<br/>
@@ -23,17 +21,17 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-arrow" href="#def-arrow" class="g">#arrow</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW</i_>(<k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW</j_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
 	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
 			</blockquote>
-			<code><v_>__VA_ARGS__</v_></code> is wrapped in an extra set of parentheses to allow neater fold expressions: <code>[](<k_>auto...</k_> <v_>args</v_>) <a href="#def-arrow"><i_>XIEITE_ARROW</i_></a>(... + <v_>args</v_>)</code>.<br/>
+			<code><v_>__VA_ARGS__</v_></code> is wrapped in an extra set of parentheses to allow neater fold expressions: <code>[](<k_>auto...</k_> <v_>args</v_>) <a href="#def-arrow"><j_>XIEITE_ARROW</j_></a>(... + <v_>args</v_>)</code>.<br/>
 			<br/>
 			<a id="def-arrow-ret" href="#def-arrow-ret" class="g">#arrow-ret</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_RET</i_>(<k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_RET</j_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
 	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
@@ -42,15 +40,15 @@
 			<br/>
 			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="g">#arrow-ctor</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_CTOR</i_>(<k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_CTOR</j_>(<k_>...</k_>) <i_>\</i_>
 		<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
 		: <v_>__VA_ARGS__</v_> {}</pre>
 			</blockquote>
 			</div>
-			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-ctor"><i_>XIEITE_ARROW_CTOR</i_></a>(<f_>B</f_>(<v_>x</v_>)) {} }</code>.<br/>
+			Intended for <a href="https://en.cppreference.com/w/cpp/language/constructor#Delegating_constructor" target="_blank">delegating constructors</a>: <code><k_>struct</k_> <t_>D</t_> : <t_>B</t_> { <f_>D</f_>(<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-ctor"><j_>XIEITE_ARROW_CTOR</j_></a>(<f_>B</f_>(<v_>x</v_>)) {} }</code>.<br/>
 			<br/><a id="def-arrow-param" href="#def-arrow-param" class="g">#arrow-param</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_ARROW_PARAM</i_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_PARAM</j_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>requires</k_> <v_>params_</v_> { <k_>requires</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))); }) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> <v_>params_</v_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
@@ -58,13 +56,13 @@
 			</blockquote>
 			</div>
 			Compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) prevent lambdas outside the function body from capturing function parameters.<br/>
-			This macro allows a workaround: <code>[](<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-param"><i_>XIEITE_ARROW_PARAM</i_></a>((<k_>int</k_> <v_>x</v_>), [<k_>=</k_>] { <v_>x</v_>; }())</code>.<br/>
+			This macro allows a workaround: <code>[](<k_>int</k_> <v_>x</v_>) <a href="#def-arrow-param"><j_>XIEITE_ARROW_PARAM</j_></a>((<k_>int</k_> <v_>x</v_>), [<k_>=</k_>] { <v_>x</v_>; }())</code>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>auto</k_> <f_>add</f_>(<k_>auto</k_> <v_>a</v_>, <k_>auto</k_> <v_>b</v_>)
-	<a href="#def-arrow"><i_>XIEITE_ARROW</i_></a>(<v_>a</v_> + <v_>b</v_>)
+	<a href="#def-arrow"><j_>XIEITE_ARROW</j_></a>(<v_>a</v_> + <v_>b</v_>)
 
 <k_>struct</k_> <t_>S</t_> {
 	<k_>void operator</k_>+(<t_>S</t_>) {} <w_>// not marked `noexcept`</w_>
@@ -72,7 +70,7 @@
 
 <k_>int</k_> <f_>main</f_>() {
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<k_>noexcept</k_>(<f_>add</f_>(<n_>1</n_>, <n_>2</n_>)));
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<k_>noexcept</k_>(<f_>add</f_>(<f_>S</f_>(), <f_>S</f_>())));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<k_>noexcept</k_>(<f_>add</f_>(<t_>S</t_>(), <t_>S</t_>())));
 }</pre>
 			</blockquote>
 			<small>Output:</small>

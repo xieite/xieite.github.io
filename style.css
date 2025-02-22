@@ -186,11 +186,13 @@ c_ { color: #a099ff; } /* concepts */
 m_ { color: #63d2c8; } /* namespaces */
 f_ { color: #ffeca1; } /* functions */
 a_ { color: #bb9569; } /* attributes */
-s_ { color: #fc662a; } /* strings */
+s_ { color: #fc582a; } /* strings */
 n_ { color: #d6ffa1; } /* numbers */
 p_ { color: #ca78e3; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
 E_ { color: #ff0000; } /* ERROR */
+j_ { color: #ff8026; } /* function-like macro */
+o_ { color: #99ffb1; } /* callable object */
 
 /* TODO: Light mode
 @media (prefers-color-scheme: light) {

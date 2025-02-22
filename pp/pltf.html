@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_PLTF_TYPE_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_MAJOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_MINOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_PATCH_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_EQ</i_>()</code>, <code><i_>XIEITE_PLTF_LEAST</i_>()</code>, <code><i_>XIEITE_PLTF_MOST</i_>()</code></h2></a>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/pltf.hpp" target="_blank"><code><s_>&lt;xieite/pp/pltf.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><i_>XIEITE_PLTF_TYPE_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_MAJOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_MINOR_</i_><w_>/*???*/</w_></code>, <code><i_>XIEITE_PLTF_PATCH_</i_><w_>/*???*/</w_></code>, <code><j_>XIEITE_PLTF_EQ</j_>()</code>, <code><j_>XIEITE_PLTF_LEAST</j_>()</code>, <code><j_>XIEITE_PLTF_MOST</j_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/pltf.hpp" target="_blank"><code><s_>&lt;xieite/pp/pltf.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Macros for identifying the current platform or operating system and its version (major, minor, patch).<br/>
 			The macros are not mutually exclusive due to some being related to others (e.g. an Android platform is also a Linux platform).<br/>
@@ -32,19 +30,19 @@
 			<br/>
 			<a id="def-eq" href="#def-eq" class="g">#eq</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_EQ</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_PLTF_EQ</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Allows two optional arguments for the minor and patch version numbers. Expands to an expression checking whether a platform is the target platform and its version is equal to some value.<br/>
 			<br/>
 			<a id="def-least" href="#def-least" class="g">#least</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_LEAST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_PLTF_LEAST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to or greater than some value.<br/>
 			<br/>
 			<a id="def-most" href="#def-most" class="g">#most</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_PLTF_MOST</i_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_> <w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_PLTF_MOST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
 			Expands to an expression checking whether a platform is the target platform and its version is equal to or less than some value.<br/>
 			<br/>

@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_LIFT</i_>()</code>, <code><i_>XIEITE_LIFT_LOCAL</i_>()</code>, <code><i_>XIEITE_LIFT_M</i_>()</code>, <code><i_>XIEITE_LIFT_M_PTR</i_>()</code></h2></a>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/lift.hpp" target="_blank"><code><s_>&lt;xieite/pp/lift.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><j_>XIEITE_LIFT</j_>()</code>, <code><j_>XIEITE_LIFT_LOCAL</j_>()</code>, <code><j_>XIEITE_LIFT_M</j_>()</code>, <code><j_>XIEITE_LIFT_M_PTR</j_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/lift.hpp" target="_blank"><code><s_>&lt;xieite/pp/lift.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Wraps a function in a lambda object.<br/>
 			<br/>
@@ -22,25 +20,25 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-lift" href="#def-lift" class="g">#lift</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_LIFT</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with no capture-default, a <code><k_>static</k_></code> specifier, and variadic forwarding reference parameters.<br/>
 			<br/>
 			<a id="def-lift-local" href="#def-lift-local" class="g">#lift-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT_LOCAL</i_>(<k_>...</k_>) <w_>/* [&]??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_LIFT_LOCAL</j_>(<k_>...</k_>) <w_>/* [&]??? { ??? } */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with a reference capture-default and variadic forwaring reference parameters.<br/>
 			<br/>
 			<a id="def-lift-m" href="#def-lift-m" class="g">#lift-m</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT_M</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_LIFT_M</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Same as <a href="#def-lift" class="g">#lift</a> but calls a member of its first parameter with the rest of its parameters.<br/>
 			<br/>
 			<a id="def-lift-m-ptr" href="#def-lift-m-ptr" class="g">#lift-m-ptr</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_LIFT_M_PTR</i_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_LIFT_M_PTR</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
 			Same as <a href="#def-lift-m" class="g">#lift-m</a> but accesses a member through <code><k_>operator</k_>->()</code>.<br/>
 			<br/>
@@ -52,7 +50,7 @@
 }
 
 <k_>int</k_> <f_>main</f_>() {
-	<f_>run</f_>(<a href="#def-lift"><i_>XIEITE_LIFT</i_></a>(<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>));
+	<f_>run</f_>(<a href="#def-lift"><j_>XIEITE_LIFT</j_></a>(<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>

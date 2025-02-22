@@ -12,9 +12,7 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>repeat</f_>()</a></code></h2>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/repeat.hpp" target="_blank"><code><s_>&lt;xieite/fn/repeat.hpp&gt;</s_></code></a>
-			</small><br/>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/repeat.hpp" target="_blank"><code><s_>&lt;xieite/fn/repeat.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Repeatedly calls a functor some constant number of times.<br/>
 			Passes indices to the given functor as an individual template argument.<br/>
@@ -25,7 +23,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a> <k_>auto</k_> <v_>n</v_>&gt;
 <k_>constexpr void</k_> <f_>repeat</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
-	<a href="/pp/arrow"><i_>XIEITE_ARROW_RET</i_></a>(<w_>/*
+	<a href="/pp/arrow"><j_>XIEITE_ARROW_RET</j_></a>(<w_>/*
 		fn.template operator()&lt;0&gt;(args...),
 		fn.template operator()&lt;1&gt;(args...),
 		fn.template operator()&lt;???&gt;(args...),
@@ -38,7 +36,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Ts</t_>&gt;
 <k_>constexpr void</k_> <f_>repeat</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
-	<a href="/pp/arrow"><i_>XIEITE_ARROW_RET</i_></a>(<a href="#def-0"><m_>xieite</m_>::<f_>repeat</f_></a>&lt;<k_>sizeof...</k_>(<t_>Ts</t_>)&gt;(<a href="/pp/fwd"><i_>XIEITE_FWD</i_></a>(<v_>fn</v_>), <a href="/pp/fwd"><i_>XIEITE_FWD</i_></a>(<v_>args</v_>)...))</pre>
+	<a href="/pp/arrow"><j_>XIEITE_ARROW_RET</j_></a>(<a href="#def-0"><m_>xieite</m_>::<f_>repeat</f_></a>&lt;<k_>sizeof...</k_>(<t_>Ts</t_>)&gt;(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>fn</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...))</pre>
 			</blockquote>
 			Repeats for the number of types passed.<br/>
 			<br/>
@@ -46,7 +44,7 @@
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="#def"><m_>xieite</m_>::<f_>repeat</f_></a>&lt;<n_>5</n_>&gt;([]&lt;<k_>int</k_> <v_>i</v_>&gt; {
+	<a href="#def"><m_>xieite</m_>::<f_>repeat</f_></a>&lt;<n_>5</n_>&gt;([]&lt;<k_>int</k_> <v_>i</v_>&gt; <k_>static</k_> {
 		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>);
 	});
 }</pre>
@@ -59,7 +57,7 @@
 3
 4</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/3zxjMfjPq" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/1dPTxe6Gn" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

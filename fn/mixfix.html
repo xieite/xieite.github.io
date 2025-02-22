@@ -14,11 +14,9 @@
 		<iframe src="/fn/mixfix.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>mixfix</t_> {}</a></code></h2>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/mixfix.hpp" target="_blank"><code><s_>&lt;xieite/fn/mixfix.hpp&gt;</s_></code></a>
-			</small><br/>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/mixfix.hpp" target="_blank"><code><s_>&lt;xieite/fn/mixfix.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			%%DESCRIPTION%%<br/>
+			<E_>#</E_><br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definitions</h3></a>
@@ -31,8 +29,8 @@
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ret</t_>, <k_>typename</k_> <t_>Arg</t_>&gt;
-<k_>struct</k_> <t_>mixfix</t_>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt; : <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt; {
-	<k_>using</k_> <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt;::<f_>fn</f_>;
+<k_>struct</k_> <t_>mixfix</t_>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt; : <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt; {
+	<k_>using</k_> <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt;::<f_>fn</f_>;
 
 	<a href=""><span><k_>template</k_>&lt;<m_>std</m_>::<c_>convertible_to</c_>&lt;<t_>Arg</t_>&gt; <t_>ArgRef</t_>&gt;</span>
 	<span><k_>constexpr decltype</k_>(<k_>auto</k_>) <k_>operator</k_>-&gt;*(<k_>this auto&&</k_>, <t_>ArgRef</t_><k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>

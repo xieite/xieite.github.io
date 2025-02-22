@@ -11,10 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_FWD</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE</i_>()</code>, <code><i_>XIEITE_FWD_PRVALUE_LOCAL</i_>()</code></h2></a>
-			<small>
-				Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/fwd.hpp" target="_blank"><code><s_>&lt;xieite/pp/fwd.hpp&gt;</s_></code></a>
-			</small><br/>
+			<a href=""><h2><code><j_>XIEITE_FWD</j_>()</code>, <code><j_>XIEITE_FWD_PRVALUE</j_>()</code>, <code><j_>XIEITE_FWD_PRVALUE_LOCAL</j_>()</code></h2></a>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/fwd.hpp" target="_blank"><code><s_>&lt;xieite/pp/fwd.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Replacements for <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><code><m_>std</m_>::<f_>forward</f_>()</code></a>.<br/>
 			<br/>
@@ -22,23 +20,23 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-fwd" href="#def-fwd" class="g">#fwd</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FWD</i_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)</pre>
+<pre><p_>#define</p_> <j_>XIEITE_FWD</j_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)</pre>
 			</blockquote>
 			Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><code><m_>std</m_>::<f_>forward</f_>()</code></a> without requiring a template argument.<br/>
 			<br/>
 			<a id="def-fwd-prvalue" href="#def-fwd-prvalue" class="g">#fwd-prvalue</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE</i_>(<k_>...</k_>) <w_>/* ([]??? { ??? })() */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FWD_PRVALUE</j_>(<k_>...</k_>) <w_>/* ([]??? { ??? })() */</w_></pre>
 			</blockquote>
 			Based on <a href="#def-fwd" class="g">#fwd</a>, but includes special cases:<br/>
-			- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href="#def-fwd-prvalue"><i_>XIEITE_FWD_PRVALUE</i_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
+			- Does nothing with prvalues: <code><a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>decltype</k_>(<a href="#def-fwd-prvalue"><j_>XIEITE_FWD_PRVALUE</j_></a>(<n_>0</n_>)), <k_>int</k_>&gt;</code><br/>
 			- Avoids pessimization through temporary materialization (<a href="#ex">see example</a>)<br/>
-			- Does nothing with lambda expressions: <code><a href="#def-fwd-prvalue"><i_>XIEITE_FWD_PRVALUE</i_></a>([] {})</code><br/>
+			- Does nothing with lambda expressions: <code><a href="#def-fwd-prvalue"><j_>XIEITE_FWD_PRVALUE</j_></a>([] {})</code><br/>
 			Internally uses a lambda expression with no capture-default.<br/>
 			<br/>
 			<a id="def-fwd-prvalue-local" href="#def-fwd-prvalue-local" class="g">#fwd-prvalue-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_FWD_PRVALUE_LOCAL</i_>(<k_>...</k_>) <w_>/* ([&]??? { ??? })() */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FWD_PRVALUE_LOCAL</j_>(<k_>...</k_>) <w_>/* ([&]??? { ??? })() */</w_></pre>
 			</blockquote>
 			Same functionality as <a href="#def-fwd-prvalue" class="g">#fwd-prvalue</a>, but internally uses a lambda expression with a reference capture-default.<br/>
 			<br/>
@@ -55,9 +53,9 @@
 };
 
 <k_>int</k_> <f_>main</f_>() {
-	{ <t_>S</t_> <v_>s</v_> = <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><m_>std</m_>::<f_>forward</f_></a>&lt;<t_>S</t_>&gt;(<f_>S</f_>()); }
+	{ <t_>S</t_> <v_>s</v_> = <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><m_>std</m_>::<f_>forward</f_></a>&lt;<t_>S</t_>&gt;(<t_>S</t_>()); }
 	<m_>std</m_>::<f_>print</f_>(<s_>"====================<i_>\n</i_>"</s_>);
-	{ <t_>S</t_> <v_>s</v_> = <a href="#def-fwd-prvalue"><i_>XIEITE_FWD_PRVALUE</i_></a>(<f_>S</f_>()); }
+	{ <t_>S</t_> <v_>s</v_> = <a href="#def-fwd-prvalue"><j_>XIEITE_FWD_PRVALUE</j_></a>(<t_>S</t_>()); }
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
