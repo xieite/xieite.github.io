@@ -103,7 +103,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 	color: #afafaf;
 }
 
-a[href^="#"]:not(:has(h3)), a[href^="https://godbolt.org"], body:has(script) > pre > a > span, .g {
+/* a[href^="#"]:not(:has(h3)), a[href^="https://godbolt.org"], body:has(script) > pre > a > span, */ .g {
 	color: #afafaf;
 }
 

@@ -22,8 +22,7 @@
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>, <k_>typename</k_> <t_>F</t_>, <k_>typename...</k_> <t_>Args</t_>&gt;
 <k_>constexpr void</k_> <f_>distr_args</f_>(<t_>F</t_><k_>&&</k_> <v_>fn</v_>, <t_>Args</t_><k_>&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
-			Assumes that <code><v_>fn</v_></code> is invocable with <code><v_>arity</v_></code> number of <code><v_>args</v_></code> because checking this is a pain.<br/>
-			Likewise, does not specify <code><k_>noexcept</k_></code>.<br/>
+			Assumes that <code><v_>fn</v_></code> is invocable with <code><v_>arity</v_></code> number of <code><v_>args</v_></code>, because actually checking this is a pain. Likewise, the <code><k_>noexcept</k_></code> specifier is not specified.<br/>
 			Internally checks that arguments are evenly distributable across functor calls with <code><k_>static_assert</k_>()</code>.<br/>
 			<br/>
 			<br/>
