@@ -83,6 +83,7 @@ code, blockquote {
 blockquote {
 	margin: 5px;
 	padding: 10px;
+	/* width: fit-content; */
 }
 
 pre {
@@ -109,6 +110,21 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 
 ::-webkit-scrollbar {
 	display: none;
+}
+
+.blink {
+	animation: blink-animation 1s steps(2, start) infinite;
+	-webkit-animation: blink-animation 1s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+@-webkit-keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
 }
 
 @media (max-width: 1200px) {

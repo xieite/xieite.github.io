@@ -35,7 +35,7 @@
 
 <k_>int</k_> <f_>main</f_>() {
 	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}\n</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>));
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}\n</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>)); <w_>// `add` is not called again</w_>
+	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}\n</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>)); <w_>// `add(1, 2)` is not called again</w_>
 }</pre>
 			</blockquote>
 			<small>Output:</small>

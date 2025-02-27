@@ -11,7 +11,7 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h1>XIEITE</h1>
+			<a href=""><h1>XIEITE</h1></a>
 			C++ utility library<br/>
 			<br/>
 			This project extends the standard library without external dependencies and provides a somewhat organized collection of questionably useful tools for assisting in various shenanigans<br/>
@@ -25,20 +25,37 @@
 			<br/>
 			<h3>Requirements</h3>
 			- C++26 <small>(but most is C++23, and some parts support C89)</small><br/>
-			- GCC trunk <span class="g">or</span> Clang trunk <small>(still has major bugs)</small> <span class="g">or</span> MSVC latest <small>(not fully supported)</small><br/>
+			- GCC trunk <span class="g">or</span> Clang trunk <small>(should work)</small> <span class="g">or</span> MSVC latest <small>(not fully supported)</small><br/>
 			<br/>
 			<br/>
 			<br/>
-			This library is entirely contained within the '<code><m_>xieite</m_></code>' namespace.<br/>
-			All macros are prefixed with '<code><i_>XIEITE</i_></code>' to prevent naming collisions.<br/>
-			Internal identifiers within the library are prefixed with '<code><w_>XIEITE_DETAIL</w_></code>' and are not intended to be used directly.<br/>
+			<h3>Usage example</h3>
+			<blockquote>
+<pre><j_>cmake_minimum_required</j_>(<a_>VERSION</a_> <n_>3.25</n_>)
+
+<j_>project</j_>(<f_>myProject</f_>)
+
+<j_>include</j_>(<i_>FetchContent</i_>)
+
+<i_>FetchContent_Declare</i_>(<f_>xieite</f_> <a_>GIT_REPOSITORY</a_> <s_>"https://github.com/Eczbek/xieite"</s_> <a_>GIT_TAG</a_> <f_>main</f_>)
+<i_>FetchContent_MakeAvailable</i_>(<f_>xieite</f_>)
+
+<j_>target_link_libraries</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>xieite</f_>)
+<j_>target_compile_features</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>cxx_std_26</f_>)</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			All code in this library is contained within the '<code><m_>xieite</m_></code>' namespace.<br/>
+			Preprocessor macros are prefixed with '<code><i_>XIEITE</i_></code>' to prevent naming collisions.<br/>
+			Internal identifiers are prefixed with '<code><w_>XIEITE_DETAIL</w_></code>' and are not intended to be used directly.<br/>
 			<br/>
 			<br/>
 			<br/>
 			This documentation is currently incomplete.<br/>
 			<br/>
-			Key:<br/>
-			- <a href="" class="g">[Hyperlink]</a><br/>
+			<span id="key">Key:</span><br/>
+			- <a href="#key" class="g">[Hyperlink]</a><br/>
 			- <w_>Missing page</w_><br/>
 			- Outdated page <E_>#</E_><br/>
 			- <code><w_>// Comment</w_></code><br/>
@@ -51,6 +68,7 @@
 			- <code><v_>Variable</v_></code><br/>
 			- <code><v_>Variable template</v_>&lt;&gt;</code><br/>
 			- <code><o_>Callable variable</o_></code><br/>
+			- <code><o_>Callable variable template</o_>&lt;&gt;</code><br/>
 			- <code><c_>Concept</c_>&lt;&gt;</code><br/>
 			- <code><m_>Namespace</m_> {}</code><br/>
 			- <code><m_>Namespace alias</m_></code><br/>

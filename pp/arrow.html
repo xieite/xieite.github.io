@@ -22,19 +22,18 @@
 			<a id="def-arrow" href="#def-arrow" class="g">#arrow</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW</j_>(<k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
-	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
+	<k_>requires</k_>(<k_>requires</k_> { <v_>__VA_ARGS__</v_>; }) <i_>\</i_>
+	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
 			</blockquote>
-			<code><v_>__VA_ARGS__</v_></code> is wrapped in an extra set of parentheses to allow neater fold expressions: <code>[](<k_>auto...</k_> <v_>args</v_>) <a href="#def-arrow"><j_>XIEITE_ARROW</j_></a>(... + <v_>args</v_>)</code>.<br/>
 			<br/>
 			<a id="def-arrow-ret" href="#def-arrow-ret" class="g">#arrow-ret</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW_RET</j_>(<k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
-	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
+	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
+	<k_>requires</k_>(<k_>requires</k_> { <v_>__VA_ARGS__</v_>; }) <i_>\</i_>
+	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
 			</blockquote>
 			Same as <a href="#def-arrow" class="g">#arrow</a> but does not specify a trailing return type.<br/>
 			<br/>
@@ -49,10 +48,10 @@
 			<br/><a id="def-arrow-param" href="#def-arrow-param" class="g">#arrow-param</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW_PARAM</j_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>requires</k_> <v_>params_</v_> { <k_>requires</k_>(<k_>noexcept</k_>((<v_>__VA_ARGS__</v_>))); }) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>requires</k_> <v_>params_</v_> { <k_>requires</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)); }) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> <v_>params_</v_> { (<v_>__VA_ARGS__</v_>); }) <i_>\</i_>
-	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
+	<k_>requires</k_>(<k_>requires</k_> <v_>params_</v_> { <v_>__VA_ARGS__</v_>; }) <i_>\</i_>
+	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
 			</blockquote>
 			</div>
 			Compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) prevent lambdas outside the function body from capturing function parameters.<br/>

@@ -16,7 +16,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_> {}</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp" target="_blank"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A class for controlling standard I/O with toggleable "modes" and text styles. Only supports unix-like platforms.<br/>
+			A class for controlling standard I/O with toggleable "modes" and text styles. Currently only supports unix-like platforms.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
@@ -41,7 +41,137 @@
 
 	<a href="/io/term/proc"><k_>void</k_> <f_>proc</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/block"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_code</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</a>
+	<a href="/io/term/fg_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_code</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_code</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/fg"><span><k_>void</k_> <f_>fg</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>void</k_> <f_>fg</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/fg_reset_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_reset_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/fg_reset"><k_>void</k_> <f_>fg_reset</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/bg_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_code</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_code</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/bg"><span><k_>void</k_> <f_>bg</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>void</k_> <f_>bg</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/bg_reset_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_reset_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/bg_reset"><k_>void</k_> <f_>bg_reset</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/bold_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bold_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/bold"><k_>void</k_> <f_>bold</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/italic_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>italic_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/italic"><k_>void</k_> <f_>italic</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/underl_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>underl_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/underl"><k_>void</k_> <f_>underl</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/blink_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>blink_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/blink"><k_>void</k_> <f_>blink</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/invis_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>invis_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/invis"><k_>void</k_> <f_>invis</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/strike_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>strike_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/strike"><k_>void</k_> <f_>strike</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/invert_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>invert_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/invert"><k_>void</k_> <f_>invert</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/reset_style_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>reset_style_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/reset_style"><k_>void</k_> <f_>reset_style</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/reset_mode"><k_>void</k_> <f_>reset_mode</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/get_cursor"><m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt; <f_>get_cursor</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/set_cursor_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>set_cursor_code</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>set_cursor_code</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/set_cursor"><span><k_>void</k_> <f_>set_cursor</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>void</k_> <f_>set_cursor</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/mv_cursor_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>mv_cursor_code</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>mv_cursor_code</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/mv_cursor"><span><k_>void</k_> <f_>mv_cursor</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>void</k_> <f_>mv_cursor</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+
+	<a href="/io/term/cursor_invis_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_invis_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_invis"><k_>void</k_> <f_>cursor_invis</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_block_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_block_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_block"><k_>void</k_> <f_>cursor_block</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_undersc_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_undersc_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_undersc"><k_>void</k_> <f_>cursor_undersc</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_pipe_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_pipe_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_pipe"><k_>void</k_> <f_>cursor_pipe</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_alt_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_alt_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/cursor_alt"><k_>void</k_> <f_>cursor_alt</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/screen_alt_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>screen_alt_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/screen_alt"><k_>void</k_> <f_>screen_alt</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/screen_size"><m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt; <f_>screen_size</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_screen_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_screen"><k_>void</k_> <f_>clear_screen</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_screen_until_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_until_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_screen_until"><k_>void</k_> <f_>clear_screen_until</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_screen_from_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_from_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_screen_from"><k_>void</k_> <f_>clear_screen_from</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_line_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_line"><k_>void</k_> <f_>clear_line</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_line_until_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_until_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_line_until"><k_>void</k_> <f_>clear_line_until</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_line_from_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_from_code</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/clear_line_from"><k_>void</k_> <f_>clear_line_from</f_>() <k_>noexcept</k_>;</a>
+
+	<a href="/io/term/read_ch"><k_>int</k_> <f_>read_ch</f_>() <k_>noexcept</k_></a>;
+
+	<a href="/io/term/read_str"><m_>std</m_>::<t_>string</t_> <f_>read_str</f_>() <k_>noexcept</k_></a>;
+
+	<a href="/io/term/read_key"><m_>xieite</m_>::<t_>keys</t_> <f_>read_key</f_>() <k_>noexcept</k_></a>;
 };</pre>
 			</blockquote>
 			<br/>
@@ -49,15 +179,17 @@
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/io/read"><m_>xieite</m_>::<f_>read</f_></a>(<a href="#def"><m_>xieite</m_>::<t_>term</t_></a>(<s_>"echo Hello, world!"</s_>, <s_>"r"</s_>).<a href="/io/term/get"><f_>get</f_></a>()));
+	<a href="/io/term"><m_>xieite</m_>::<t_>term</t_></a> <v_>term</v_>;
+	<v_>term</v_>.<a href="/io/term/fg"><f_>fg</f_></a>(<n_>255</n_>, <n_>0</n_>, <n_>0</n_>);
+	<a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<s_>"Hello, world!"</s_>);
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
-<pre>Hello, world!
+<pre style="color: #FF0000">Hello, world!
 </pre>
 			</blockquote>
-			<small>(Demonstration in Compiler Explorer unavailable)</small>
+			<small><a href="https://godbolt.org/z/E1nGzWG8Y" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
