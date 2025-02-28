@@ -49,7 +49,7 @@
 
 	<span><k_>void</k_> <f_>fg</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
 
-	<a href="/io/term/fg_reset_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_reset_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/fg_reset_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_reset_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/fg_reset"><k_>void</k_> <f_>fg_reset</f_>() <k_>noexcept</k_>;</a>
 
@@ -61,7 +61,7 @@
 
 	<span><k_>void</k_> <f_>bg</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
 
-	<a href="/io/term/bg_reset_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_reset_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/bg_reset_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_reset_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/bg_reset"><k_>void</k_> <f_>bg_reset</f_>() <k_>noexcept</k_>;</a>
 
@@ -93,7 +93,7 @@
 
 	<a href="/io/term/invert"><k_>void</k_> <f_>invert</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/reset_style_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>reset_style_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/reset_style_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>reset_style_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/reset_style"><k_>void</k_> <f_>reset_style</f_>() <k_>noexcept</k_>;</a>
 
@@ -143,27 +143,27 @@
 
 	<a href="/io/term/screen_size"><m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt; <f_>screen_size</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/clear_screen_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/clear_screen_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_screen"><k_>void</k_> <f_>clear_screen</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/clear_screen_until_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_until_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/clear_screen_until_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_until_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_screen_until"><k_>void</k_> <f_>clear_screen_until</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/clear_screen_from_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_from_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/clear_screen_from_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_from_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_screen_from"><k_>void</k_> <f_>clear_screen_from</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/clear_line_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/clear_line_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_line"><k_>void</k_> <f_>clear_line</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/clear_line_until_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_until_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/clear_line_until_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_until_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_line_until"><k_>void</k_> <f_>clear_line_until</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/clear_line_from_code"><k_>static consteval</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_from_code</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/clear_line_from_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_line_from_code</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_line_from"><k_>void</k_> <f_>clear_line_from</f_>() <k_>noexcept</k_>;</a>
 
