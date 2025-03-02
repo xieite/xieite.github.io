@@ -215,7 +215,7 @@
 		<w_>fold&lt;&gt;
 		fwd_tuple()</w_>
 		<a href="/meta/group" target="_top"><t_>group</t_>&lt;&gt;</a>
-		<w_>make_constexpr()
+		<w_>make_cxpr()
 		make_seq&lt;&gt;
 		make_tuple()</w_>
 		<a href="/meta/name" target="_top"><f_>name</f_>()</a>
@@ -234,17 +234,18 @@
 		<w_>ANY()</w_>
 		<a href="/pp/arch" target="_top"><i_>ARCH</i_></a>
 		<a href="/pp/arrow" target="_top"><j_>ARROW</j_>()</a>
-		<w_>ASCII_SUPPORT
+		<w_>ASCII
+		ASSERT()
 		AT()
 		ATTR
 		BOOL()
+		CALL()
 		CAT()
 		CHECK()
 		CM()
-		COMMA()
-		COMPL()
-		COUNT()</w_>
-		<a href="/pp/cplr" target="_top"><i_>CPLR</i_></a>
+		COMMA()</w_>
+		<a href="/pp/compiler" target="_top"><i_>COMPILER</i_></a>
+		<w_>COUNT()</w_>
 		<a href="/pp/debug" target="_top"><i_>DEBUG</i_></a>
 		<w_>DEFER()
 		DEL()
@@ -262,26 +263,28 @@
 		HAS_DECLSPEC()
 		HAS_INCL()
 		IF()
-		IS_CXPR()</w_>
+		IS_CXPR()
+		keywords</w_>
 		<a href="/pp/lang" target="_top"><i_>LANG</i_></a>
 		<a href="/pp/lift" target="_top"><j_>LIFT</j_>()</a>
 		<w_>LOOPS()
-		NO_UNIX
-		NO_WINDOWS
+		no_unix
+		no_windows
+		NONE()
 		NOT()
 		OBJ()
 		OBSTRUCT()
-		OP_KW
 		PAREN()</w_>
-		<a href="/pp/pltf" target="_top"><i_>PLTF</i_></a>
+		<a href="/pp/platform" target="_top"><i_>PLATFORM</i_></a>
 		<w_>PRAGMA()
 		PROBE()
+		REPEAT()
 		RESTRICT
 		RET_STRUCT()
 		REVERSE()
 		REVIVE()
 		SCAN()
-		STATIC_ASSERT()</w_>
+		SEQ()</w_>
 		<a href="/pp/stdlib" target="_top"><i_>STDLIB</i_></a>
 		<w_>STR()
 		UNIX
@@ -290,19 +293,19 @@
 		<a href="/pp/unwrap" target="_top"><j_>UNWRAP</j_>()</a>
 		<a href="/pp/ver" target="_top"><i_>VER</i_></a>
 		<w_>WHEN()
-		WORD_BITS</w_>
+		WORD</w_>
 		<a href="/pp/wrap" target="_top"><j_>WRAP</j_>()</a>
+		<w_>WRAPPED()</w_>
 	sys
 		<w_>aligned_bzero()
 		aligned_memcpy()
 		aligned_memmove()
 		aligned_memset()
+		avail_mem()
 		detect_cosmic_ray()
 		exec()
 		exit {}
-		mem_avail()
-		mem_page_size()
-		mem_total()
+		page_mem()
 		proc_result {}
 		proc_status()</w_>
 		<a href="/sys/segfault" target="_top"><f_>segfault</f_>()</a>
@@ -312,7 +315,8 @@
 		thread_interval {}
 		thread_loop {}
 		thread_pool {}
-		thread_timeout {}</w_>
+		thread_timeout {}
+		total_mem()</w_>
 	trait
 		<w_>add_c&lt;&gt;
 		add_c_noex&lt;&gt;
@@ -615,12 +619,12 @@
 		is_polymorphic&lt;&gt;
 		is_ptr&lt;&gt;
 		is_ptr_interconv_base&lt;&gt;
-		is_ptr_interconv_deriv&lt;&gt;
+		is_ptr_interconv_derived&lt;&gt;
 		is_range&lt;&gt;
 		is_ratio&lt;&gt;
 		is_ref&lt;&gt;
-		is_ref_conv_from_temp&lt;&gt;
-		is_ref_ctor_from_temp&lt;&gt;
+		is_ref_conv_from_tmp&lt;&gt;
+		is_ref_ctor_from_tmp&lt;&gt;
 		is_ref_noex&lt;&gt;
 		is_ref_referent&lt;&gt;</w_>
 		<a href="/trait/is_rref" target="_top"><c_>is_rref</c_>&lt;&gt;</a>
