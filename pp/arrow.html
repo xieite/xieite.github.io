@@ -53,7 +53,7 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW_INIT</j_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> { <w_>/* ??? */</w_> }) <i_>\</i_>
+	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	: <w_>/* ??? */</w_></pre>
 			</blockquote>
 			Accepts a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
