@@ -19,7 +19,6 @@
 			which expands to something like:<br/>
 			&emsp;<code>[]&lt;<k_>typename...</k_>&gt;(<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
-			This collection of macros allows easily creating lambda expressions by automatically generating specifiers, constraints, bodies, template parameters, and function parameters for them.<br/>
 			The body of a shorthand lambda has access to a parameter pack <code><v_>$</v_></code> containing all arguments, a template parameter pack <code><t_>$$</t_></code> containing all template arguments, variables <code><v_>$0</v_></code> through <code><v_>$255</v_></code> which correspond to individual arguments, and types <code><t_>$$0</t_></code> through <code><t_>$$255</t_></code> which correspond to individual template arguments.<br/>
 			Accessing a variable or type which does not correspond to an argument passed to the lambda (when the number of arguments is not greater than the variable's index or the number of template arguments is not greater than the type's index) results in some ambiguously unusable value.<br/>
 			<br/>

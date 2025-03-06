@@ -14,7 +14,7 @@
 			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code></h2></a>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a single-statement template function.<br/>
+			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a template function consisting of a single expression.<br/>
 			(i.e. eliminates annoying typing when defining forwarding function templates.)<br/>
 			<br/>
 			<br/>
@@ -57,7 +57,7 @@
 	: <w_>/* ??? */</w_> <i_>\</i_>
 	{ <w_>/* ??? */</w_> }</pre>
 			</blockquote>
-			Accepts a single-expression constructor body (optionally wrapped in parentheses) followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
+			Accepts a constructor body consisting of, at most, one expression (optionally wrapped in parentheses), followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Examples</h3></a>
