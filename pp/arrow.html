@@ -11,7 +11,7 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_INIT</j_>()</code></h2></a>
+			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code></h2></a>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a single-statement template function.<br/>
@@ -49,15 +49,15 @@
 			Can be used as a workaround to compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) that prevent lambdas outside the function body from capturing function parameters:<br/>
 			&emsp;<code><k_>auto</k_> <f_>f</f_>(<k_>auto</k_> <v_>x</v_>) <a href="#def-arrow-decl"><j_>XIEITE_ARROW_DECL</j_></a>(<v_>x</v_>, [<k_>=</k_>] { <v_>x</v_>; }())</code><br/>
 			<br/>
-			<a id="def-arrow-init" href="#def-arrow-init" class="g">#arrow-init</a>
+			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="g">#arrow-ctor</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_CTNR</j_>(<v_>body_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_CTOR</j_>(<v_>body_</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	: <w_>/* ??? */</w_> <i_>\</i_>
 	{ <w_>/* ??? */</w_> }</pre>
 			</blockquote>
-			Accepts a constructor body (optionally wrapped in parentheses) followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
+			Accepts a single-expression constructor body (optionally wrapped in parentheses) followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Examples</h3></a>
@@ -89,7 +89,7 @@ false</pre>
 	<k_>int</k_> <v_>x</v_>[<n_>2</n_>];
 
 	<f_>X</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>, <k_>auto</k_> <v_>arg</v_>, <k_>auto...</k_> <v_>args</v_>)
-		<a href="#def-arrow-init"><j_>XIEITE_ARROW_INIT</j_></a>(, <v_>x</v_>, ({ <v_>a</v_>, <v_>b</v_> }), (<t_>T</t_>), ((<v_>arg</v_>)), ((<t_>Ts</t_>)), ((<v_>args</v_>...))) {}
+		<a href="#def-arrow-ctor"><j_>XIEITE_ARROW_CTOR</j_></a>(, <v_>x</v_>, ({ <v_>a</v_>, <v_>b</v_> }), (<t_>T</t_>), ((<v_>arg</v_>)), ((<t_>Ts</t_>)), ((<v_>args</v_>...)))
 	<w_>// : x { a, b }, T(arg), Ts(args...)... {}</w_>
 };
 
@@ -99,7 +99,7 @@ false</pre>
 <k_>static_assert</k_>(<k_>noexcept</k_>(<t_>X</t_>&lt;<t_>A</t_>, <t_>B</t_>, <t_>C</t_>&gt;(<n_>1</n_>, <n_>2</n_>, <n_>418</n_>, <n_>3.14159</n_>, <n_>6.28318</n_>)));
 <w_>// : x { 1, 2 }, A(418), B(3.14159, 6.28318), C(3.14159, 6.28318) {}</w_></pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/nxexbjTWv" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/bxr5KhMsY" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
