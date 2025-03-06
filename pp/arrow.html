@@ -51,12 +51,13 @@
 			<br/>
 			<a id="def-arrow-init" href="#def-arrow-init" class="g">#arrow-init</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_INIT</j_>(<k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_CTNR</j_>(<v_>body_</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
-	: <w_>/* ??? */</w_></pre>
+	: <w_>/* ??? */</w_> <i_>\</i_>
+	{ <w_>/* ??? */</w_> }</pre>
 			</blockquote>
-			Accepts a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
+			Accepts a constructor body (optionally wrapped in parentheses) followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Examples</h3></a>
@@ -88,15 +89,15 @@ false</pre>
 	<k_>int</k_> <v_>x</v_>[<n_>2</n_>];
 
 	<f_>X</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>, <k_>auto</k_> <v_>arg</v_>, <k_>auto...</k_> <v_>args</v_>)
-		<a href="#def-arrow-init"><j_>XIEITE_ARROW_INIT</j_></a>(<v_>x</v_>, ({ <v_>a</v_>, <v_>b</v_> }), (<t_>T</t_>), ((<v_>arg</v_>)), ((<t_>Ts</t_>)), ((<v_>args</v_>...))) {}
-	<w_>// : x { a, b }, T(arg), Ts(args...)...</w_>
+		<a href="#def-arrow-init"><j_>XIEITE_ARROW_INIT</j_></a>(, <v_>x</v_>, ({ <v_>a</v_>, <v_>b</v_> }), (<t_>T</t_>), ((<v_>arg</v_>)), ((<t_>Ts</t_>)), ((<v_>args</v_>...))) {}
+	<w_>// : x { a, b }, T(arg), Ts(args...)... {}</w_>
 };
 
 <k_>struct</k_> <t_>A</t_> { <k_>int</k_> <v_>a</v_>; };
 <k_>struct</k_> <t_>B</t_> { <k_>double</k_> <v_>b0</v_>, <v_>b1</v_>; };
 <k_>struct</k_> <t_>C</t_> { <k_>double</k_> <v_>c0</v_>, <v_>c1</v_>; };
 <k_>static_assert</k_>(<k_>noexcept</k_>(<t_>X</t_>&lt;<t_>A</t_>, <t_>B</t_>, <t_>C</t_>&gt;(<n_>1</n_>, <n_>2</n_>, <n_>418</n_>, <n_>3.14159</n_>, <n_>6.28318</n_>)));
-<w_>// : x { 1, 2 }, A(418), B(3.14159, 6.28318), C(3.14159, 6.28318)</w_></pre>
+<w_>// : x { 1, 2 }, A(418), B(3.14159, 6.28318), C(3.14159, 6.28318) {}</w_></pre>
 			</blockquote>
 			<small><a href="https://godbolt.org/z/nxexbjTWv" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>

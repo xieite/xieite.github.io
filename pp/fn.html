@@ -11,84 +11,70 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_FN</j_>()</code>, <code><j_>XIEITE_FN_LOCAL</j_>()</code>, <code><j_>XIEITE_FN_THIS</j_>()</code>, <code><j_>XIEITE_FN_MUT</j_>()</code></h2></a>
+			<a href=""><h2><code><j_>XIEITE_FN</j_>()</code>, <code><j_>XIEITE_FN_THIS</j_>()</code>, <code><j_>XIEITE_FN_LOCAL</j_>()</code>, <code><j_>XIEITE_FN_MUT</j_>()</code></h2></a>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/fn.hpp" target="_blank"><code><s_>&lt;xieite/pp/fn.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
-			&emsp;<code><a href="#def-fn"><j_>XIEITE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
+			&emsp;<code><a href="#def-fn"><j_>XIEITE_FN</j_></a>(<n_>2</n_>, <v_>$0</v_> + <v_>$1</v_>)</code><br/>
 			which expands to something like:<br/>
-			&emsp;<code>[](<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
+			&emsp;<code>[]&lt;<k_>typename...</k_>&gt;(<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
-			The body of a shorthand lambda has access to a parameter pack <code><v_>$</v_></code> containing all arguments, a template parameter pack <code><t_>$$</t_></code> containing all template arguments, variables <code><v_>$0</v_></code> through <code><v_>$255</v_></code> which correspond to individual arguments, and types <code><t_>$$0</t_></code> through <code><t_>$$255</t_></code> which correspond to individual template arguments.<br/>
+			This collection of macros allows easily creating lambda expressions by automatically generating <code><k_>noexcept</k_></code> specifiers, <code><k_>requires</k_></code> clauses, bodies, template parameters, and function parameters for them.<br/>
+			The body of a shorthand lambda has access to a parameter pack <code><v_>$</v_></code> containing all arguments, a template parameter pack <code><t_>$$</t_></code> containing all template arguments, variables <code><v_>$0</v_></code> through <code><v_>$n</v_></code> which correspond to individual arguments, and types <code><t_>$$0</t_></code> through <code><t_>$$n</t_></code> which correspond to individual template arguments, where <code><v_>n</v_></code> is an argument passed to the macro.<br/>
 			Accessing a variable or type which does not correspond to an argument passed to the lambda (when the number of arguments is not greater than the variable's index or the number of template arguments is not greater than the type's index) results in some ambiguously unusable value.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-fn" href="#def-fn" class="g">#fn</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FN</j_>(<v_>n_</v_>, <k_>...</k_>) <w_>/* ([](???) static ??? { ??? }) */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with no capture-default and a <code><k_>static</k_></code> specifier.<br/>
+			Expands to a lambda expression with no capture-default, a <code><k_>static</k_></code> specifier, <code><v_>n_</v_></code> number of template parameter aliases, and <code><v_>n_</v_></code> number of function parameter aliases.<br/>
 			<br/>
 			<a id="def-fn-this" href="#def-fn-this" class="g">#fn-this</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_THIS</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FN_THIS</j_>(<v_>n_</v_>, <k_>...</k_>) <w_>/* ([](this auto, ???) ??? { ??? }) */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with no captures and no specifiers, but provides the explicit <code><k_>this</k_></code> parameter through a variable named <code><v_>$this</v_></code> and its corresponding type <code><t_>$$this</t_></code>.<br/>
+			Expands to a lambda expression with no captures, no specifiers, an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>, <code><v_>n_</v_></code> number of template parameter aliases, and <code><v_>n_</v_></code> number of function parameter aliases.<br/>
 			<br/>
 			<a id="def-fn-local" href="#def-fn-local" class="g">#fn-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_LOCAL</j_>(<k_>...</k_>) <w_>/* [&]??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FN_LOCAL</j_>(<v_>captures_</v_>, <v_>n_</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) ??? { ??? }) */</w_></pre>
 			</blockquote>
-			Same as <a href="#def-fn-this" class="g">#fn-this</a> but with a reference capture-default.<br/>
+			Expands to a lambda expression with user-provided captures, no specifiers, an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>, <code><v_>n_</v_></code> number of template parameter aliases, and <code><v_>n_</v_></code> number of function parameter aliases. <code><v_>captures_</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
 			<br/>
 			<a id="def-fn-mut" href="#def-fn-mut" class="g">#fn-mut</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_MUT</j_>(<v_>captures_</v_>, <k_>...</k_>) <w_>/* [???]??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FN_MUT</j_>(<v_>captures_</v_>, <v_>n_</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) mutable ??? { ??? }) */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with user-provided captures and a <code><k_>mutable</k_></code> specifier.<br/>
+			Expands to a lambda expression with user-provided captures, a <code><k_>mutable</k_></code> specifier, an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>, <code><v_>n_</v_></code> number of template parameter aliases, and <code><v_>n_</v_></code> number of function parameter aliases. <code><v_>captures_</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Examples</h3></a>
 			<a id="ex-0" href="#ex-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<k_>auto</k_> <o_>add_two</o_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>);
-	<k_>auto</k_> <o_>add_all</o_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>((... + <v_>$</v_>));
-	<k_>auto</k_> <v_>cast</v_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(<k_>static_cast</k_>&lt;<t_>$$0</t_>&gt;(<v_>$0</v_>));
+	<k_>auto</k_> <o_>add_two</o_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(<n_>2</n_>, <v_>$0</v_> + <v_>$1</v_>);
+	<k_>auto</k_> <o_>add_all</o_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(, (... + <v_>$</v_>));
+	<k_>auto</k_> <v_>cast</v_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(<n_>1</n_>, <k_>static_cast</k_>&lt;<t_>$$0</t_>&gt;(<v_>$0</v_>));
 
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>add_two</o_>(<n_>1</n_>, <n_>2</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>add_two</o_>(<n_>3</n_>, <n_>4</n_>));
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>add_all</o_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>cast</v_>.<k_>operator</k_>()&lt;<k_>int</k_>&gt;(<n_>6.28318</n_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
-<pre>3
+<pre>7
 15
 6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/xvEaTMbW6" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
+			<small><a href="https://godbolt.org/z/WPPP7T77b" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
 			<br/>
 			<a id="ex-1" href="#ex-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<k_>int</k_> <v_>x</v_> = <n_>5</n_>;
-	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-local"><j_>XIEITE_FN_LOCAL</j_></a>(<v_>x</v_> * <v_>$0</v_>);
-
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>foo</o_>(<n_>2</n_>));
-}</pre>
-			</blockquote>
-			<small>Output:</small>
-			<blockquote>
-<pre>10</pre>
-			</blockquote>
-			<small><a href="https://godbolt.org/z/sarhbzaxM" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
-			<br/>
-			<a id="ex-2" href="#ex-2" class="g">#2</a>
-			<blockquote>
-<pre><k_>int</k_> <f_>main</f_>() {
-	<k_>struct</k_> : <k_>decltype</k_>(<a href="#def-fn-this"><j_>XIEITE_FN_THIS</j_></a>(<v_>$this</v_>.<v_>x</v_> + <v_>$0</v_>)) { <k_>int</k_> <v_>x</v_> = <n_>5</n_>; } <o_>foo</o_>;
+	<k_>struct</k_> : <k_>decltype</k_>(<a href="#def-fn-this"><j_>XIEITE_FN_THIS</j_></a>(<n_>1</n_>, <v_>$this</v_>.<v_>x</v_> + <v_>$0</v_>)) { <k_>int</k_> <v_>x</v_> = <n_>5</n_>; } <o_>foo</o_>;
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>foo</o_>(<n_>1</n_>));
 }</pre>
@@ -97,12 +83,27 @@
 			<blockquote>
 <pre>6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/hhKr8nsz5" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
+			<small><a href="https://godbolt.org/z/19Mc3GzqE" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
+			<br/>
+			<a id="ex-2" href="#ex-2" class="g">#2</a>
+			<blockquote>
+<pre><k_>int</k_> <f_>main</f_>() {
+	<k_>int</k_> <v_>x</v_> = <n_>5</n_>;
+	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-local"><j_>XIEITE_FN_LOCAL</j_></a>(<k_>=</k_>, <n_>1</n_>, <v_>x</v_> * <v_>$0</v_>);
+
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>foo</o_>(<n_>2</n_>));
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>10</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/PEnY7ezd5" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
 			<br/>
 			<a id="ex-3" href="#ex-3" class="g">#3</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-mut"><j_>XIEITE_FN_MUT</j_></a>(<v_>x</v_> = <n_>0</n_>, <v_>x</v_>++);
+	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-mut"><j_>XIEITE_FN_MUT</j_></a>(<v_>x</v_> = <n_>0</n_>,, <v_>x</v_>++);
 	<r_>for</r_> (<k_>int</k_> <v_>i</v_> : { <o_>foo</o_>(), <o_>foo</o_>(), <o_>foo</o_>() }) {
 		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>);
 	}
@@ -114,7 +115,7 @@
 1
 2</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/hj3nGe86x" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
+			<small><a href="https://godbolt.org/z/a6GYWo5sT" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
 		</main>
 	</body>
 </html>
