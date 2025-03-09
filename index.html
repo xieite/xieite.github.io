@@ -26,23 +26,23 @@
 			<br/>
 			<h3>Requirements</h3>
 			- C++26 <small>(but most is C++23, and some parts support C89)</small><br/>
-			- GCC trunk <span class="g">or</span> Clang trunk <small>(should work)</small> <span class="g">or</span> MSVC latest <small>(not fully supported)</small><br/>
+			- GCC trunk <span class="g">or</span> Clang trunk <small>(has bugs)</small> <span class="g">or</span> MSVC latest <small>(not fully supported)</small><br/>
 			<br/>
 			<br/>
 			<br/>
-			<h3>Usage example</h3>
+			<h3>Usage</h3>
 			<blockquote>
 <pre><j_>cmake_minimum_required</j_>(<a_>VERSION</a_> <n_>3.25</n_>)
 
 <j_>project</j_>(<f_>myProject</f_>)
-
 <j_>include</j_>(<i_>FetchContent</i_>)
+
+<w_># ...</w_>
+<j_>target_compile_features</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>cxx_std_26</f_>)
 
 <i_>FetchContent_Declare</i_>(<f_>xieite</f_> <a_>GIT_REPOSITORY</a_> <s_>"https://github.com/Eczbek/xieite"</s_> <a_>GIT_TAG</a_> <f_>main</f_>)
 <i_>FetchContent_MakeAvailable</i_>(<f_>xieite</f_>)
-
-<j_>target_link_libraries</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>xieite</f_>)
-<j_>target_compile_features</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>cxx_std_26</f_>)</pre>
+<j_>target_link_libraries</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>xieite</f_>)</pre>
 			</blockquote>
 			<br/>
 			<br/>
