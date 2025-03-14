@@ -15,7 +15,7 @@
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/fn.hpp" target="_blank"><code><s_>&lt;xieite/pp/fn.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
-			&emsp;<code><a href="#def-fn"><j_>XIEITE_FN</j_></a>(<n_>2</n_>, <v_>$0</v_> + <v_>$1</v_>)</code><br/>
+			&emsp;<code><a href="#def-fn"><j_>XIEITE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
 			which expands to something like:<br/>
 			&emsp;<code>[]&lt;<k_>typename...</k_>&gt;(<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
