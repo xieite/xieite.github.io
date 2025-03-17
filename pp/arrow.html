@@ -11,7 +11,7 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code></h2></a>
+			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_IF</j_>()</code>, <code><j_>XIEITE_ARROW_CHOOSE</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code>, <code><j_>XIEITE_ARROW_NEW</j_>()</code></h2></a>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp" target="_blank"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a template function consisting of a single expression.<br/>
@@ -78,6 +78,17 @@
 	{ <w_>/* ??? */</w_> }</pre>
 			</blockquote>
 			Accepts a constructor body consisting of, at most, one expression (optionally wrapped in parentheses), followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>
+			<br/>
+			<a id="def-arrow-new" href="#def-arrow-new" class="g">#arrow-new</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_NEW</j_>(<v_>vars_</v_>, <v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
+	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
+	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
+	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
+	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
+			</blockquote>
+			A temporary workaround for <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=119316" target="_blank" class="g">[a GCC bug]</a> to fix <code><k_>new</k_></code> expressions in the <code><k_>requires</k_></code> clause:<br/>
+			&emsp;<code>[]&lt;<k_>typename</k_> <t_>T</t_>&gt;(<k_>unsigned</k_> <v_>n</v_>) <a href="#def-arrow-new"><j_>XIEITE_ARROW_NEW</j_></a>(<v_>n</v_>,, <k_>new</k_> <t_>T</t_>[<v_>n</v_>])</code><br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Examples</h3></a>
