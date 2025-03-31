@@ -14,20 +14,20 @@
 			<h2><a href="">Non-static member function reference qualifier interactions</a></h2>
 			<br/>
 			These are arbitrary rules to define how non-static member function reference qualifiers behave when added to or removed from others.<br/>
-			This page somewhat extends C++ reference articles on <a href="https://en.cppreference.com/w/cpp/language/reference#Reference_collapsing" class="g">[Reference collapsing]</a> and <a href="https://en.cppreference.com/w/cpp/language/member_functions#Member_functions_with_ref-qualifier" class="g">[Member functions with ref-qualifier]</a>.<br/>
+			This page somewhat extends cppreference articles on <a href="https://en.cppreference.com/w/cpp/language/reference#Reference_collapsing" class="g">[Reference collapsing]</a> and <a href="https://en.cppreference.com/w/cpp/language/member_functions#Member_functions_with_ref-qualifier" class="g">[Member functions with ref-qualifier]</a>.<br/>
 			<br/>
 			<br/>
-			<a id="def" href="#def"><h3>Definitions</h3></a>
-			<a id="def-0" href="#def-0">0. Adding a reference qualifier to the same reference qualifier results in that same reference qualifier.</a><br/>
-			<a id="def-1" href="#def-1">1. Adding no reference qualifier to any reference qualifier results in the latter reference qualifier.</a><br/>
-			<a id="def-2" href="#def-2">2. Adding any reference qualifier to no reference qualifier results in the former reference qualifier.</a><br/>
-			<a id="def-3" href="#def-3">3. Adding an lvalue reference qualifier to an rvalue reference qualifier (or vice versa) results in no reference qualifier.</a><br/>
-			<a id="def-4" href="#def-4">4. Removing a reference qualifier from the same reference qualifier results in no reference qualifier.</a><br/>
-			<a id="def-5" href="#def-5">5. Removing no reference qualifier from any reference qualifier results in the latter reference qualifier.</a><br/>
-			<a id="def-6" href="#def-6">6. Removing an lvalue reference qualifier from no reference qualifier results in an rvalue reference qualifier.</a><br/>
-			<a id="def-7" href="#def-7">7. Removing an rvalue reference qualifier from no reference qualifier results in an lvalue reference qualifier.</a><br/>
-			<a id="def-8" href="#def-8">8. Removing an lvalue reference qualifier from an rvalue reference qualifier results in an rvalue reference qualifier.</a><br/>
-			<a id="def-9" href="#def-9">9. Removing an rvalue reference qualifier from an lvalue reference qualifier results in an lvalue reference qualifier.</a><br/>
+			<h3>Definitions</h3>
+			0. Adding a reference qualifier to the same reference qualifier results in that same reference qualifier.<br/>
+			1. Adding no reference qualifier to any reference qualifier results in the latter reference qualifier.<br/>
+			2. Adding any reference qualifier to no reference qualifier results in the former reference qualifier.<br/>
+			3. Adding an lvalue reference qualifier to an rvalue reference qualifier (or vice versa) results in no reference qualifier.<br/>
+			4. Removing a reference qualifier from the same reference qualifier results in no reference qualifier.<br/>
+			5. Removing no reference qualifier from any reference qualifier results in the latter reference qualifier.<br/>
+			6. Removing an lvalue reference qualifier from no reference qualifier results in an rvalue reference qualifier.<br/>
+			7. Removing an rvalue reference qualifier from no reference qualifier results in an lvalue reference qualifier.<br/>
+			8. Removing an lvalue reference qualifier from an rvalue reference qualifier results in an rvalue reference qualifier.<br/>
+			9. Removing an rvalue reference qualifier from an lvalue reference qualifier results in an lvalue reference qualifier.<br/>
 			<br/>
 			If you have a non-static member function with no reference qualifiers, it is callable on both lvalue and rvalue objects. Adding an lvalue or rvalue reference qualifier to it means that you want to restrict the non-static member function to only be callable on lvalue or rvalue objects, respectively. If you have an lvalue reference qualified non-static member function, adding an rvalue reference qualifier to it (or vice versa) means that you want the non-static member function to be callable on both lvalue and rvalue objects; thus, this would result in a non-static member function with no reference qualifiers. Conversely, if you have a non-static member function with no reference qualifiers and you want to remove an lvalue or rvalue reference qualifier from it, that means you don't want the non-static member function to be callable on lvalue or rvalue objects, respectively, so this results in an rvalue or lvalue reference qualified non-static member function, respectively.<br/>
 			<br/>
@@ -44,25 +44,25 @@
 <k_>using</k_> <t_>L</t_> = <k_>decltype</k_>(&<t_>S</t_>::<f_>lref</f_>);
 <k_>using</k_> <t_>R</t_> = <k_>decltype</k_>(&<t_>S</t_>::<f_>rref</f_>);
 
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>N</t_>, <t_>N</t_>&gt;, <t_>N</t_>&gt;>); <w_>// none + none = none</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>N</t_>, <t_>L</t_>&gt;, <t_>L</t_>&gt;>); <w_>// none + lref = lref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>N</t_>, <t_>R</t_>&gt;, <t_>R</t_>&gt;>); <w_>// none + rref = rref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>L</t_>, <t_>N</t_>&gt;, <t_>L</t_>&gt;>); <w_>// lref + none = lref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>L</t_>, <t_>L</t_>&gt;, <t_>L</t_>&gt;>); <w_>// lref + lref = lref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>L</t_>, <t_>R</t_>&gt;, <t_>N</t_>&gt;>); <w_>// lref + rref = none</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>R</t_>, <t_>N</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref + none = rref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>R</t_>, <t_>L</t_>&gt;, <t_>N</t_>&gt;>); <w_>// rref + lref = none</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref</t_>&lt;<t_>R</t_>, <t_>R</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref + rref = rref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>N</t_>, <t_>N</t_>&gt;, <t_>N</t_>&gt;>); <w_>// none + none = none</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>N</t_>, <t_>L</t_>&gt;, <t_>L</t_>&gt;>); <w_>// none + lref = lref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>N</t_>, <t_>R</t_>&gt;, <t_>R</t_>&gt;>); <w_>// none + rref = rref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>L</t_>, <t_>N</t_>&gt;, <t_>L</t_>&gt;>); <w_>// lref + none = lref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>L</t_>, <t_>L</t_>&gt;, <t_>L</t_>&gt;>); <w_>// lref + lref = lref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>L</t_>, <t_>R</t_>&gt;, <t_>N</t_>&gt;>); <w_>// lref + rref = none</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>R</t_>, <t_>N</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref + none = rref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>R</t_>, <t_>L</t_>&gt;, <t_>N</t_>&gt;>); <w_>// rref + lref = none</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>add_ref_referent</t_>&lt;<t_>R</t_>, <t_>R</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref + rref = rref</w_>
 
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>N</t_>, <t_>N</t_>&gt;, <t_>N</t_>&gt;>); <w_>// none - none = none</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>N</t_>, <t_>L</t_>&gt;, <t_>R</t_>&gt;>); <w_>// none - lref = rref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>N</t_>, <t_>R</t_>&gt;, <t_>L</t_>&gt;>); <w_>// none - rref = lref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>L</t_>, <t_>N</t_>&gt;, <t_>L</t_>&gt;>); <w_>// lref - none = lref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>L</t_>, <t_>L</t_>&gt;, <t_>N</t_>&gt;>); <w_>// lref - lref = none</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>L</t_>, <t_>R</t_>&gt;, <t_>R</t_>&gt;>); <w_>// lref - rref = lref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>R</t_>, <t_>N</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref - none = rref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>R</t_>, <t_>L</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref - lref = rref</w_>
-<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref</t_>&lt;<t_>R</t_>, <t_>R</t_>&gt;, <t_>N</t_>&gt;>); <w_>// rref - rref = none</w_></pre>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>N</t_>, <t_>N</t_>&gt;, <t_>N</t_>&gt;>); <w_>// none - none = none</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>N</t_>, <t_>L</t_>&gt;, <t_>R</t_>&gt;>); <w_>// none - lref = rref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>N</t_>, <t_>R</t_>&gt;, <t_>L</t_>&gt;>); <w_>// none - rref = lref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>L</t_>, <t_>N</t_>&gt;, <t_>L</t_>&gt;>); <w_>// lref - none = lref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>L</t_>, <t_>L</t_>&gt;, <t_>N</t_>&gt;>); <w_>// lref - lref = none</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>L</t_>, <t_>R</t_>&gt;, <t_>R</t_>&gt;>); <w_>// lref - rref = lref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>R</t_>, <t_>N</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref - none = rref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>R</t_>, <t_>L</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref - lref = rref</w_>
+<k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>R</t_>, <t_>R</t_>&gt;, <t_>N</t_>&gt;>); <w_>// rref - rref = none</w_></pre>
 			</blockquote>
 		</main>
 	</body>

@@ -20,7 +20,7 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-fwd" href="#def-fwd" class="g">#fwd</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FWD</j_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<i_>__VA_OPT__</i_>)<k_>&&</k_>&gt;(<i_>__VA_OPT__</i_>)</pre>
+<pre><p_>#define</p_> <j_>XIEITE_FWD</j_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<i_>__VA_ARGS__</i_>)<k_>&&</k_>&gt;(<i_>__VA_ARGS__</i_>)</pre>
 			</blockquote>
 			Functions exactly like <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><code><m_>std</m_>::<f_>forward</f_>()</code></a> without requiring a template argument.<br/>
 			<br/>

@@ -59,26 +59,29 @@
 		view_before()
 		view_betw()</w_>
 	fn
-		<w_>all_true()
+		<w_>_exp
+		_fstr
+		_num
+		_radix
+		_range
+		_unit
+		all_true()
 		also()
 		any_true()
 		apply_array()
 		apply_as_tuple()</w_>
 		<a href="/fn/as" target="_top"><o_>as</o_>&lt;&gt;</a>
 		<a href="/fn/cast" target="_top"><o_>cast</o_>&lt;&gt;</a>
+		<w_>discardable()</w_>
 		<a href="/fn/distr_args" target="_top"><f_>distr_args</f_>()</a>
-		<a href="/fn/distr_args_recurs" target="_top"><f_>distr_args_recurs</f_>()</a>
 		<w_>enum_op {}
-		exp_lit {}
-		fixed_str_lit {}
 		fn {}</w_>
 		<a href="/fn/memoize" target="_top"><f_>memoize</f_>()</a>
 		<a href="/fn/mixfix" target="_top"><t_>mixfix</t_> {}</a> <E_>#</E_>
-		<w_>num_lit {}
+		<w_>noex()
 		order_op {}
 		pipe_op {}
 		proc_guard {}
-		radix_lit {}
 		range_cmp_op {}</w_>
 		<a href="/fn/repeat" target="_top"><f_>repeat</f_>()</a>
 		<w_>reverse_args()
@@ -89,7 +92,7 @@
 		time()</w_>
 		<a href="/fn/tmp" target="_top"><f_>tmp</f_>()</a>
 		<w_>try_c_args()
-		unit_lit {}</w_>
+		try_opt()</w_>
 		<a href="/fn/unroll" target="_top"><f_>unroll</f_>()</a>
 		<a href="/fn/visitor" target="_top"><t_>visitor</t_> {}</a>
 	io
@@ -97,7 +100,8 @@
 		<w_>file {}</w_>
 		<a href="/io/file_pipe" target="_top"><t_>file_pipe</t_> {}</a>
 		<w_>keys {}
-		keys_ch()</w_>
+		keys_ch()
+		pos {}</w_>
 		<a href="/io/read" target="_top"><f_>read</f_>()</a>
 		<a href="/io/term" target="_top"><t_>term</t_> {}</a> <E_>#</E_>
 	math
@@ -309,6 +313,7 @@
 		detect_cosmic_ray()
 		exec()
 		exit {}
+		nproc()
 		page_mem()
 		proc_result {}
 		proc_status()</w_>
@@ -323,182 +328,58 @@
 		total_mem()</w_>
 	trait
 		<w_>add_c&lt;&gt;
-		add_c_noex&lt;&gt;
 		add_c_referent&lt;&gt;
 		add_clref&lt;&gt;
-		add_clref_noex&lt;&gt;
-		add_clref_referent&lt;&gt;
 		add_cref&lt;&gt;
-		add_cref_noex&lt;&gt;
-		add_cref_referent&lt;&gt;
 		add_crref&lt;&gt;
-		add_crref_noex&lt;&gt;
-		add_crref_referent&lt;&gt;
 		add_cv&lt;&gt;
-		add_cv_noex&lt;&gt;
-		add_cv_referent&lt;&gt;
 		add_cvlref&lt;&gt;
-		add_cvlref_noex&lt;&gt;
-		add_cvlref_referent&lt;&gt;
 		add_cvref&lt;&gt;
-		add_cvref_noex&lt;&gt;
-		add_cvref_referent&lt;&gt;
-		add_cvrref&lt;&gt;
-		add_cvrref_noex&lt;&gt;
-		add_cvrref_referent&lt;&gt;</w_>
+		add_cvrref&lt;&gt;</w_>
 		<a href="/trait/add_lref" target="_top"><t_>add_lref</t_>&lt;&gt;</a>
-		<w_>add_lref_noex&lt;&gt;
-		add_lref_referent&lt;&gt;
-		add_noex&lt;&gt;
+		<w_>add_lref_referent&lt;&gt;
+		add_noex_referent&lt;&gt;
 		add_ptr&lt;&gt;
 		add_ref&lt;&gt;
-		add_ref_noex&lt;&gt;
 		add_ref_referent&lt;&gt;</w_>
 		<a href="/trait/add_rref" target="_top"><t_>add_rref</t_>&lt;&gt;</a>
-		<w_>add_rref_noex&lt;&gt;
-		add_rref_referent&lt;&gt;
+		<w_>add_rref_referent&lt;&gt;
 		add_v&lt;&gt;
-		add_v_noex&lt;&gt;
 		add_v_referent&lt;&gt;
-		add_var&lt;&gt;
-		add_var_c&lt;&gt;
-		add_var_c_noex&lt;&gt;
-		add_var_clref&lt;&gt;
-		add_var_clref_noex&lt;&gt;
-		add_var_cref&lt;&gt;
-		add_var_cref_noex&lt;&gt;
-		add_var_crref&lt;&gt;
-		add_var_crref_noex&lt;&gt;
-		add_var_cv&lt;&gt;
-		add_var_cv_noex&lt;&gt;
-		add_var_cvlref&lt;&gt;
-		add_var_cvlref_noex&lt;&gt;
-		add_var_cvref&lt;&gt;
-		add_var_cvref_noex&lt;&gt;
-		add_var_cvrref&lt;&gt;
-		add_var_cvrref_noex&lt;&gt;
-		add_var_lref&lt;&gt;
-		add_var_lref_noex&lt;&gt;
-		add_var_ref&lt;&gt;
-		add_var_ref_noex&lt;&gt;
-		add_var_rref&lt;&gt;
-		add_var_rref_noex&lt;&gt;
-		add_var_v&lt;&gt;
-		add_var_v_noex&lt;&gt;
-		add_var_vlref&lt;&gt;
-		add_var_vlref_noex&lt;&gt;
-		add_var_vref&lt;&gt;
-		add_var_vref_noex&lt;&gt;
-		add_var_vrref&lt;&gt;
-		add_var_vrref_noex&lt;&gt;
+		add_variadic_referent&lt;&gt;
 		add_vlref&lt;&gt;
-		add_vlref_noex&lt;&gt;
-		add_vlref_referent&lt;&gt;
 		add_vref&lt;&gt;
-		add_vref_noex&lt;&gt;
-		add_vref_referent&lt;&gt;
 		add_vrref&lt;&gt;
-		add_vrref_noex&lt;&gt;
-		add_vrref_referent&lt;&gt;
-		as_c()
-		as_c_referent()
-		as_cv()
-		as_cv_referent()
-		as_not_c()
-		as_not_c_referent()
-		as_not_cv()
-		as_not_cv_referent()
-		as_not_v()
-		as_not_v_referent()
-		as_sign()
-		as_unsign()
-		as_v()
-		as_v_referent()
 		collapse_ref&lt;&gt;
 		cp_c&lt;&gt;
-		cp_c_noex&lt;&gt;
 		cp_c_referent&lt;&gt;
 		cp_clref&lt;&gt;
-		cp_clref_noex&lt;&gt;
-		cp_clref_referent&lt;&gt;
 		cp_cp_assign&lt;&gt;
 		cp_cp_ctor&lt;&gt;</w_>
 		<a href="/trait/cp_ref" target="_top"><t_>cp_ref</t_>&lt;&gt;</a>
-		<w_>cp_cref_noex&lt;&gt;
-		cp_cref_referent&lt;&gt;</w_>
 		<a href="/trait/cp_rref" target="_top"><t_>cp_rref</t_>&lt;&gt;</a>
-		<w_>cp_crref_noex&lt;&gt;
-		cp_crref_referent&lt;&gt;
-		cp_cv&lt;&gt;
-		cp_cv_noex&lt;&gt;
-		cp_cv_referent&lt;&gt;
+		<w_>cp_cv&lt;&gt;
 		cp_cvlref&lt;&gt;
-		cp_cvlref_noex&lt;&gt;
-		cp_cvlref_referent&lt;&gt;
 		cp_cvref&lt;&gt;
-		cp_cvref_noex&lt;&gt;
-		cp_cvref_referent&lt;&gt;
 		cp_cvrref&lt;&gt;
-		cp_cvrref_noex&lt;&gt;
-		cp_cvrref_referent&lt;&gt;
 		cp_default_ctor&lt;&gt;
 		cp_lref&lt;&gt;
-		cp_lref_noex&lt;&gt;
 		cp_lref_referent&lt;&gt;
 		cp_mv_assign&lt;&gt;
 		cp_mv_ctor&lt;&gt;
-		cp_noex&lt;&gt;
+		cp_noex_referent&lt;&gt;
 		cp_ptr&lt;&gt;
 		cp_ref&lt;&gt;
-		cp_ref_noex&lt;&gt;
 		cp_ref_referent&lt;&gt;
 		cp_rref&lt;&gt;
-		cp_rref_noex&lt;&gt;
 		cp_rref_referent&lt;&gt;
 		cp_v&lt;&gt;
 		cp_v_noex&lt;&gt;
 		cp_v_referent&lt;&gt;
-		cp_var&lt;&gt;
-		cp_var_c&lt;&gt;
-		cp_var_c_noex&lt;&gt;
-		cp_var_clref&lt;&gt;
-		cp_var_clref_noex&lt;&gt;
-		cp_var_cref&lt;&gt;
-		cp_var_cref_noex&lt;&gt;
-		cp_var_crref&lt;&gt;
-		cp_var_crref_noex&lt;&gt;
-		cp_var_cv&lt;&gt;
-		cp_var_cv_noex&lt;&gt;
-		cp_var_cvlref&lt;&gt;
-		cp_var_cvlref_noex&lt;&gt;
-		cp_var_cvref&lt;&gt;
-		cp_var_cvref_noex&lt;&gt;
-		cp_var_cvrref&lt;&gt;
-		cp_var_cvrref_noex&lt;&gt;
-		cp_var_lref&lt;&gt;
-		cp_var_lref_noex&lt;&gt;
-		cp_var_noex&lt;&gt;
-		cp_var_ref&lt;&gt;
-		cp_var_ref_noex&lt;&gt;
-		cp_var_rref&lt;&gt;
-		cp_var_rref_noex&lt;&gt;
-		cp_var_v&lt;&gt;
-		cp_var_v_noex&lt;&gt;
-		cp_var_vlref&lt;&gt;
-		cp_var_vlref_noex&lt;&gt;
-		cp_var_vref&lt;&gt;
-		cp_var_vref_noex&lt;&gt;
-		cp_var_vrref&lt;&gt;
-		cp_var_vrref_noex&lt;&gt;
+		cp_variadic_referent&lt;&gt;
 		cp_vlref&lt;&gt;
-		cp_vlref_noex&lt;&gt;
-		cp_vlref_referent&lt;&gt;
 		cp_vref&lt;&gt;
-		cp_vref_noex&lt;&gt;
-		cp_vref_referent&lt;&gt;
 		cp_vrref&lt;&gt;
-		cp_vrref_noex&lt;&gt;
-		cp_vrref_referent&lt;&gt;
 		get_fn_args&lt;&gt;
 		get_fn_ret&lt;&gt;
 		get_m_ptr_class&lt;&gt;
@@ -542,37 +423,22 @@
 		is_bool_testable&lt;&gt;
 		is_bounded_array&lt;&gt;
 		is_c&lt;&gt;
-		is_c_noex&lt;&gt;
 		is_c_referent&lt;&gt;</w_>
 		<a href="/trait/is_ch" target="_top"><c_>is_ch</c_>&lt;&gt;</a>
 		<w_>is_class&lt;&gt;
 		is_clock&lt;&gt;
 		is_clref&lt;&gt;
-		is_clref_noex&lt;&gt;
-		is_clref_referent&lt;&gt;
 		is_complete&lt;&gt;
 		is_conv_from&lt;&gt;
 		is_conv_from_any&lt;&gt;
 		is_conv_to&lt;&gt;
 		is_conv_to_any&lt;&gt;
 		is_cref&lt;&gt;
-		is_cref_noex&lt;&gt;
-		is_cref_referent&lt;&gt;
 		is_crref&lt;&gt;
-		is_crref_noex&lt;&gt;
-		is_crref_referent&lt;&gt;
 		is_cv&lt;&gt;
-		is_cv_noex&lt;&gt;
-		is_cv_referent&lt;&gt;
 		is_cvlref&lt;&gt;
-		is_cvlref_noex&lt;&gt;
-		is_cvlref_referent&lt;&gt;
 		is_cvref&lt;&gt;
-		is_cvref_noex&lt;&gt;
-		is_cvref_referent&lt;&gt;
 		is_cvrref&lt;&gt;
-		is_cvrref_noex&lt;&gt;
-		is_cvrref_referent&lt;&gt;
 		is_decayed&lt;&gt;
 		is_derivable&lt;&gt;
 		is_derived_from&lt;&gt;
@@ -601,12 +467,10 @@
 		is_istream&lt;&gt;
 		is_linear2d&lt;&gt;</w_>
 		<a href="/trait/is_lref" target="_top"><c_>is_lref</c_>&lt;&gt;</a>
-		<w_>is_lref_noex&lt;&gt;
-		is_lref_referent&lt;&gt;
+		<w_>is_lref_referent&lt;&gt;
 		is_m_fn_ptr&lt;&gt;
 		is_m_obj_ptr&lt;&gt;
 		is_narrow_ch&lt;&gt;
-		is_noex&lt;&gt;
 		is_noex_bool_testable&lt;&gt;
 		is_noex_conv&lt;&gt;
 		is_noex_conv_any&lt;&gt;
@@ -615,6 +479,7 @@
 		is_noex_invoc&lt;&gt;
 		is_noex_iter&lt;&gt;
 		is_noex_range&lt;&gt;
+		is_noex_referent&lt;&gt;
 		is_noex_sentinel&lt;&gt;
 		is_noex_swap&lt;&gt;
 		is_noex_swap_with&lt;&gt;
@@ -634,11 +499,9 @@
 		is_ref&lt;&gt;
 		is_ref_conv_from_tmp&lt;&gt;
 		is_ref_ctor_from_tmp&lt;&gt;
-		is_ref_noex&lt;&gt;
 		is_ref_referent&lt;&gt;</w_>
 		<a href="/trait/is_rref" target="_top"><c_>is_rref</c_>&lt;&gt;</a>
-		<w_>is_rref_noex&lt;&gt;
-		is_rref_referent&lt;&gt;</w_>
+		<w_>is_rref_referent&lt;&gt;</w_>
 		<a href="/trait/is_same" target="_top"><c_>is_same</c_>&lt;&gt;</a>
 		<a href="/trait/is_same_any" target="_top"><c_>is_same_any</c_>&lt;&gt;</a>
 		<w_>is_satisf&lt;&gt;
@@ -649,8 +512,8 @@
 		<w_>is_scalar&lt;&gt;
 		is_scoped_enum&lt;&gt;
 		is_sized_range&lt;&gt;
-		is_spec&lt;&gt;
-		is_spec_any&lt;&gt;
+		is_special&lt;&gt;
+		is_special_any&lt;&gt;
 		is_std_layout&lt;&gt;
 		is_stream&lt;&gt;
 		is_streamable_in&lt;&gt;
@@ -666,200 +529,66 @@
 		is_unscoped_enum&lt;&gt;
 		is_unsign&lt;&gt;
 		is_v&lt;&gt;
-		is_v_noex&lt;&gt;
 		is_v_referent&lt;&gt;
-		is_var&lt;&gt;
-		is_var_c&lt;&gt;
-		is_var_c_noex&lt;&gt;
-		is_var_clref&lt;&gt;
-		is_var_clref_noex&lt;&gt;
-		is_var_cref&lt;&gt;
-		is_var_cref_noex&lt;&gt;
-		is_var_crref&lt;&gt;
-		is_var_crref_noex&lt;&gt;
-		is_var_cv&lt;&gt;
-		is_var_cv_noex&lt;&gt;
-		is_var_cvlref&lt;&gt;
-		is_var_cvlref_noex&lt;&gt;
-		is_var_cvref&lt;&gt;
-		is_var_cvref_noex&lt;&gt;
-		is_var_cvrref&lt;&gt;
-		is_var_cvrref_noex&lt;&gt;
-		is_var_lref&lt;&gt;
-		is_var_lref_noex&lt;&gt;
-		is_var_noex&lt;&gt;
-		is_var_ref&lt;&gt;
-		is_var_ref_noex&lt;&gt;
-		is_var_rref&lt;&gt;
-		is_var_rref_noex&lt;&gt;
-		is_var_v&lt;&gt;
-		is_var_v_noex&lt;&gt;
-		is_var_vlref&lt;&gt;
-		is_var_vlref_noex&lt;&gt;
-		is_var_vref&lt;&gt;
-		is_var_vref_noex&lt;&gt;
-		is_var_vrref&lt;&gt;
-		is_var_vrref_noex&lt;&gt;
+		is_variadic_referent&lt;&gt;
 		is_vlref&lt;&gt;
-		is_vlref_noex&lt;&gt;
-		is_vlref_referent&lt;&gt;
 		is_void&lt;&gt;
 		is_vref&lt;&gt;
-		is_vref_noex&lt;&gt;
-		is_vref_referent&lt;&gt;
-		is_vrref&lt;&gt;
-		is_vrref_noex&lt;&gt;
-		is_vrref_referent&lt;&gt;</w_>
+		is_vrref&lt;&gt;</w_>
 		<a href="/trait/is_wide_ch" target="_top"><c_>is_wide_ch</c_>&lt;&gt;</a>
-		<w_>maybe_ref&lt;&gt;</w_>
+		<w_>maybe_base&lt;&gt;
+		maybe_ref&lt;&gt;</w_>
 		<a href="/trait/rm_c" target="_top"><t_>rm_c</t_>&lt;&gt;</a>
-		<w_>rm_c_noex&lt;&gt;
-		rm_c_referent&lt;&gt;
+		<w_>rm_c_referent&lt;&gt;
 		rm_clref&lt;&gt;
-		rm_clref_noex&lt;&gt;
-		rm_clref_referent&lt;&gt;
 		rm_cp_assign&lt;&gt;
 		rm_cp_ctor&lt;&gt;
 		rm_cref&lt;&gt;
-		rm_cref_noex&lt;&gt;
-		rm_cref_referent&lt;&gt;
-		rm_crref&lt;&gt;
-		rm_crref_noex&lt;&gt;
-		rm_crref_referent&lt;&gt;</w_>
+		rm_crref&lt;&gt;</w_>
 		<a href="/trait/rm_cv" target="_top"><t_>rm_cv</t_>&lt;&gt;</a>
-		<w_>rm_cv_noex&lt;&gt;
-		rm_cv_referent&lt;&gt;
-		rm_cvlref&lt;&gt;
-		rm_cvlref_noex&lt;&gt;
-		rm_cvlref_referent&lt;&gt;
+		<w_>rm_cvlref&lt;&gt;
 		rm_cvref&lt;&gt;
-		rm_cvref_noex&lt;&gt;
-		rm_cvref_referent&lt;&gt;
 		rm_cvrref&lt;&gt;
-		rm_cvrref_noex&lt;&gt;
-		rm_cvrref_referent&lt;&gt;
 		rm_default_ctor&lt;&gt;
 		rm_lref&lt;&gt;
-		rm_lref_noex&lt;&gt;
 		rm_lref_referent&lt;&gt;
 		rm_mv_assign&lt;&gt;
 		rm_mv_ctor&lt;&gt;
-		rm_noex&lt;&gt;</w_>
+		rm_noex_referent&lt;&gt;</w_>
 		<a href="/trait/rm_ptr" target="_top"><t_>rm_ptr</t_>&lt;&gt;</a>
 		<a href="/trait/rm_ref" target="_top"><t_>rm_ref</t_>&lt;&gt;</a>
-		<w_>rm_ref_noex&lt;&gt;
-		rm_ref_referent&lt;&gt;</w_>
+		<w_>rm_ref_referent&lt;&gt;</w_>
 		<a href="/trait/rm_rref" target="_top"><t_>rm_rref</t_>&lt;&gt;</a>
-		<w_>rm_rref_noex&lt;&gt;
-		rm_rref_referent&lt;&gt;</w_>
+		<w_>rm_rref_referent&lt;&gt;</w_>
 		<a href="/trait/rm_v" target="_top"><t_>rm_v</t_>&lt;&gt;</a>
-		<w_>rm_v_noex&lt;&gt;
-		rm_v_referent&lt;&gt;
-		rm_var&lt;&gt;
-		rm_var_c&lt;&gt;
-		rm_var_c_noex&lt;&gt;
-		rm_var_clref&lt;&gt;
-		rm_var_clref_noex&lt;&gt;
-		rm_var_cref&lt;&gt;
-		rm_var_cref_noex&lt;&gt;
-		rm_var_crref&lt;&gt;
-		rm_var_crref_noex&lt;&gt;
-		rm_var_cv&lt;&gt;
-		rm_var_cv_noex&lt;&gt;
-		rm_var_cvlref&lt;&gt;
-		rm_var_cvlref_noex&lt;&gt;
-		rm_var_cvref&lt;&gt;
-		rm_var_cvref_noex&lt;&gt;
-		rm_var_cvrref&lt;&gt;
-		rm_var_cvrref_noex&lt;&gt;
-		rm_var_lref&lt;&gt;
-		rm_var_lref_noex&lt;&gt;
-		rm_var_noex&lt;&gt;
-		rm_var_ref&lt;&gt;
-		rm_var_ref_noex&lt;&gt;
-		rm_var_rref&lt;&gt;
-		rm_var_rref_noex&lt;&gt;
-		rm_var_v&lt;&gt;
-		rm_var_v_noex&lt;&gt;
-		rm_var_vlref&lt;&gt;
-		rm_var_vlref_noex&lt;&gt;
-		rm_var_vref&lt;&gt;
-		rm_var_vref_noex&lt;&gt;
-		rm_var_vrref&lt;&gt;
-		rm_var_vrref_noex&lt;&gt;
+		<w_>rm_v_referent&lt;&gt;
+		rm_variadic_referent&lt;&gt;
 		rm_vlref&lt;&gt;
-		rm_vlref_noex&lt;&gt;
-		rm_vlref_referent&lt;&gt;
 		rm_vref&lt;&gt;
-		rm_vref_noex&lt;&gt;
-		rm_vref_referent&lt;&gt;
 		rm_vrref&lt;&gt;
-		rm_vrref_noex&lt;&gt;
-		rm_vrref_referent&lt;&gt;
 		set_c&lt;&gt;
-		set_c_noex&lt;&gt;
 		set_c_referent&lt;&gt;
 		set_clref&lt;&gt;
-		set_clref_noex&lt;&gt;
-		set_clref_referent&lt;&gt;
 		set_cp_assign&lt;&gt;
 		set_cp_ctor&lt;&gt;
 		set_crref&lt;&gt;
-		set_crref_noex&lt;&gt;
-		set_crref_referent&lt;&gt;
 		set_cv&lt;&gt;
-		set_cv_noex&lt;&gt;
-		set_cv_referent&lt;&gt;
 		set_cvlref&lt;&gt;
-		set_cvlref_noex&lt;&gt;
-		set_cvlref_referent&lt;&gt;
 		set_cvrref&lt;&gt;
-		set_cvrref_noex&lt;&gt;
-		set_cvrref_referent&lt;&gt;
 		set_default_ctor&lt;&gt;
 		set_lref&lt;&gt;
-		set_lref_noex&lt;&gt;
 		set_lref_referent&lt;&gt;
 		set_mv_assign&lt;&gt;
 		set_mv_ctor&lt;&gt;
-		set_noex&lt;&gt;
+		set_noex_referent&lt;&gt;
 		set_ptr&lt;&gt;</w_>
 		<a href="/trait/set_rref" target="_top"><t_>set_rref</t_>&lt;&gt;</a>
-		<w_>set_rref_noex&lt;&gt;
-		set_rref_referent&lt;&gt;
+		<w_>set_rref_referent&lt;&gt;
 		set_v&lt;&gt;
-		set_v_noex&lt;&gt;
 		set_v_referent&lt;&gt;
-		set_var&lt;&gt;
-		set_var_c&lt;&gt;
-		set_var_c_noex&lt;&gt;
-		set_var_clref&lt;&gt;
-		set_var_clref_noex&lt;&gt;
-		set_var_crref&lt;&gt;
-		set_var_crref_noex&lt;&gt;
-		set_var_cv&lt;&gt;
-		set_var_cv_noex&lt;&gt;
-		set_var_cvlref&lt;&gt;
-		set_var_cvlref_noex&lt;&gt;
-		set_var_cvrref&lt;&gt;
-		set_var_cvrref_noex&lt;&gt;
-		set_var_lref&lt;&gt;
-		set_var_lref_noex&lt;&gt;
-		set_var_noex&lt;&gt;
-		set_var_rref&lt;&gt;
-		set_var_rref_noex&lt;&gt;
-		set_var_v&lt;&gt;
-		set_var_v_noex&lt;&gt;
-		set_var_vlref&lt;&gt;
-		set_var_vlref_noex&lt;&gt;
-		set_var_vrref&lt;&gt;
-		set_var_vrref_noex&lt;&gt;
+		set_variadic_referent&lt;&gt;
 		set_vlref&lt;&gt;
-		set_vlref_noex&lt;&gt;
-		set_vlref_referent&lt;&gt;
-		set_vrref&lt;&gt;
-		set_vrref_noex&lt;&gt;
-		set_vrref_referent&lt;&gt;</w_>
+		set_vrref&lt;&gt;</w_>
 		<a href="/meta/try_sign" target="_top"><t_>try_sign</t_>&lt;&gt;</a>
 		<a href="/meta/try_unsign" target="_top"><t_>try_unsign</t_>&lt;&gt;</a>
 </pre>

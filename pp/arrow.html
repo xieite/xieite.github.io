@@ -23,19 +23,19 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW</j_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_> <j_>__VA_OPT__</j_>( <i_>\</i_>
-		(<k_>noexcept</k_>(<i_>__VA_OPT__</i_>)) <i_>\</i_>
+		(<k_>noexcept</k_>(<i_>__VA_ARGS__</i_>)) <i_>\</i_>
 		-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-		<k_>requires</k_>(<k_>requires</k_> { <i_>__VA_OPT__</i_>; }) <i_>\</i_>
-	) { <r_>return</r_> <i_>__VA_OPT__</i_>; }</pre>
+		<k_>requires</k_>(<k_>requires</k_> { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
+	) { <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
 			</blockquote>
 			<br/>
 			<a id="def-arrow-ret" href="#def-arrow-ret" class="g">#arrow-ret</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW_RET</j_>(<k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_> <j_>__VA_OPT__</j_>( <i_>\</i_>
-		(<k_>noexcept</k_>(<i_>__VA_OPT__</i_>)) <i_>\</i_>
-		<k_>requires</k_>(<k_>requires</k_> { <i_>__VA_OPT__</i_>; }) <i_>\</i_>
-	) { <r_>return</r_> <i_>__VA_OPT__</i_>; }</pre>
+		(<k_>noexcept</k_>(<i_>__VA_ARGS__</i_>)) <i_>\</i_>
+		<k_>requires</k_>(<k_>requires</k_> { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
+	) { <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
 			</blockquote>
 			Same as <a href="#def-arrow" class="g">#arrow</a> but does not specify a trailing return type. Useful for cast operators.<br/>
 			<br/>
@@ -72,10 +72,10 @@
 			<a id="def-arrow-decl" href="#def-arrow-decl" class="g">#arrow-decl</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW_DECL</j_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <k_>requires</k_>(<k_>noexcept</k_>(<i_>__VA_OPT__</i_>)); }) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <k_>requires</k_>(<k_>noexcept</k_>(<i_>__VA_ARGS__</i_>)); }) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <i_>__VA_OPT__</i_>; }) <i_>\</i_>
-	{ <r_>return</r_> <i_>__VA_OPT__</i_>; }</pre>
+	<k_>requires</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
+	{ <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
 			</blockquote>
 			<code><v_>params_</v_></code> may optionally be wrapped in parentheses if passing one variable, and must be wrapped in parentheses if passing multiple. Passing a variable within an additional set of parentheses designates it as a pack.<br/>
 			Can be used as a workaround to compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) that prevent lambdas outside the function body from capturing function parameters:<br/>
