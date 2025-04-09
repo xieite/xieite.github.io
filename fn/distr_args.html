@@ -14,15 +14,33 @@
 			<h2><code><a href=""><m_>xieite</m_>::<f_>distr_args</f_>()</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/distr_args.hpp" target="_blank"><code><s_>&lt;xieite/fn/distr_args.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Uniformly distributes arguments across multiple calls to a functor, possibly recursively.<br/>
+			Uniformly distributes arguments across multiple calls to a functor.<br/>
 			<br/>
 			<br/>
-			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declarations</h3></a>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>&gt;
+<k_>constexpr void</k_> <f_>distr_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
+	<j_>XIEITE_ARROW_RET</j_>(<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;(<k_>sizeof...</k_>(<v_>args</v_>) / <v_>arity</v_>)&gt;(
+		[]&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt;(<k_>const auto&</k_> <v_>fn</v_>, <k_>const auto&</k_> <v_>args_tuple</v_>) <k_>static</k_>
+			<j_>XIEITE_ARROW</j_>((..., (<k_>void</k_>)<a href="https://en.cppreference.com/w/cpp/utility/apply" target="_blank"><m_>std</m_>::<f_>apply</f_></a>(
+				<v_>fn</v_>,
+				<a href="/meta/subtuple"><m_>xieite</m_>::<f_>subtuple</f_></a>&lt;(<v_>i</v_> * <v_>arity</v_>), ((<v_>i</v_> + <n_>1</n_>) * <v_>arity</v_>)&gt;(<a href="https://en.cppreference.com/w/cpp/utility/move" target="_blank"><m_>std</m_>::<f_>move</f_></a>(<v_>args_tuple</v_>))
+			))),
+		<v_>fn</v_>,
+		<a href="https://en.cppreference.com/w/cpp/utility/tuple/forward_as_tuple" target="_blank"><m_>std</m_>::<f_>forward_as_tuple</f_></a>(<j_>XIEITE_FWD</j_>(<v_>args</v_>)...)
+	))</pre>
+			</blockquote>
+			<code><v_>arity</v_></code> dictates how many <code><v_>args</v_></code> are to be passed to <code><v_>fn</v_></code> at a time.<br/>
+			Assumes that <code><v_>args</v_></code> are evenly distributable across multiple calls to <code><v_>fn</v_></code>.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>prev</v_> = <n_>0</n_>&gt;
-<k_>constexpr decltype</k_>(<k_>auto</k_>) <f_>distr_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr decltype</k_>(<k_>auto</k_>) <f_>distr_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
-			<code><v_>arity</v_></code> dictates how many <code><v_>args</v_></code> are to be passed to <code><v_>fn</v_></code> at a time, and <code><v_>prev</v_></code> dictates how many of those arguments should be recursive calls to <code><v_>fn</v_></code> (if the remaining number of <code><v_>args</v_></code> allows it).<br/>
+			Similar to <a href="#def-0" class="g">#0</a>, but with <code><v_>prev</v_></code> which dictates how many of those arguments should be recursive calls to <code><v_>fn</v_></code> (if the remaining number of <code><v_>args</v_></code> allows it).<br/>
 			Assumes that <code><v_>args</v_></code> are evenly distributable across multiple (possibly recursive) calls to <code><v_>fn</v_></code>. Does not specify <code><k_>noexcept</k_></code>.<br/>
 			<br/>
 			<br/>

@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::term::%%MEMBER FUNCTION%%()</title>
+		<title>xieite::term::bg()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -13,41 +13,37 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<iframe src="/io/term.links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_>::<f_>%%MEMBER FUNCTION%%</f_>()</a></code></h2>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_>::<f_>bg</f_>()</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp" target="_blank"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			%%DESCRIPTION%%<br/>
+			Changes the background color of text.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
-			<a id="def-0" href="#def-0" class="g">#0</a> <!-- TODO: Remove if only one declaration -->
+			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre>%%DECLARATION%%</pre>
+<pre><k_>void</k_> <f_>bg</f_>(<a href="https://en.cppreference.com/w/cpp/header/cstdint#Types" target="_blank"><m_>std</m_>::<t_>uint8_t</t_></a> <v_>r</v_>, <a href="https://en.cppreference.com/w/cpp/header/cstdint#Types" target="_blank"><m_>std</m_>::<t_>uint8_t</t_></a> <v_>g</v_>, <a href="https://en.cppreference.com/w/cpp/header/cstdint#Types" target="_blank"><m_>std</m_>::<t_>uint8_t</t_></a> <v_>b</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre>%%DECLARATION%%</pre>
+<pre><k_>void</k_> <f_>bg</f_>(<k_>const</k_> <a href="/math/color3"><m_>xieite</m_>::<t_>color3</t_></a><k_>&</k_> <v_>color</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
-			<a id="ex" href="#ex" class="g"><h3>Example</h3></a>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}</i_>Hello, world!<i_>\x1B[0m\n</i_>"</s_>, <a href="#def-0"><m_>xieite</m_>::<t_>term</t_>::<f_>%%MEMBER FUNCTION%%</f_></a>());
-
 	<a href="/io/term"><m_>xieite</m_>::<t_>term</t_></a> <v_>term</v_>;
-	<v_>term</v_>.<a href="#def-0"><f_>%%MEMBER FUNCTION%%</f_></a>(<k_>true</k_>);
+	<v_>term</v_>.<a href="#def-0"><f_>bg</f_></a>(<n_>0</n_>, <n_>0</n_>, <n_>255</n_>);
 	<a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<s_>"Hello, world!"</s_>);
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
-<pre>Hello, world!
-</pre>
+<pre><span style="background-color: #0000FF">Hello, world!</span></pre>
 			</blockquote>
-			<small><a href="https://godbolt.org" target="_blank" class="g">[View in Compiler Explorer]</a></small>
-			<small>(Demonstration in Compiler Explorer unavailable)</small>
+			<small><a href="https://godbolt.org/z/e6En43sxP" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

@@ -44,7 +44,7 @@
 			<a id="def-3" href="#def-3" class="g">#3</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Ch</t_>, <k_>typename</k_> <t_>Traits</t_> = <a href="https://en.cppreference.com/w/cpp/string/char_traits" target="_blank"><m_>std</m_>::<t_>char_traits</t_></a>&lt;<t_>Ch</t_>&gt;, <k_>typename</k_> <t_>Alloc</t_> = <a href="https://en.cppreference.com/w/cpp/memory/allocator" target="_blank"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>Ch</t_>&gt;, <m_>std</m_>::<t_>size_t</t_> <v_>n</v_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>toupper</f_>(<k_>const</k_> <t_>Ch</t_>(<k_>&</k_> <v_>str</v_>)[<v_>n</v_>], <t_>Alloc</t_><k_>&&</k_> <v_>alloc</v_> = {})
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>toupper</f_>(<k_>const</k_> <a href="/meta/group"><m_>xieite</m_>::<t_>group</t_></a>&lt;<t_>Ch</t_>[<v_>n</v_>]&gt;<k_>&</k_> <v_>str</v_>, <t_>Alloc</t_><k_>&&</k_> <v_>alloc</v_> = {})
 	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="#1"><m_>xieite</m_>::<f_>toupper</f_></a>(<a href="/ctnr/str_view"><m_>xieite</m_>::<f_>str_view</f_></a>&lt;<t_>Ch</t_>, <t_>Traits</t_>&gt;(<v_>str</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>alloc</v_>)))</pre>
 			</blockquote>
 			Defers to <a href="#def-1" class="g">#1</a> after deducing <code><t_>Ch</t_></code> and possibly <code><t_>Alloc</t_></code>.<br/>

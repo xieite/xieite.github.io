@@ -36,7 +36,7 @@ iframe {
 	position: absolute;
 	top: 0;
 	border: 0;
-	width: 250px;
+	width: 350px;
 	height: 100%;
 }
 
@@ -46,7 +46,7 @@ iframe:nth-of-type(1) {
 }
 
 iframe:nth-of-type(2) {
-	left: calc(100% - 250px);
+	left: calc(100% - 350px);
 	z-index: 1000002;
 }
 
@@ -69,8 +69,8 @@ pre:has(a[target="_top"]) {
 main {
 	padding-top: 25px;
 	padding-bottom: 100px;
-	padding-left: 350px;
-	padding-right: 350px;
+	padding-left: 450px;
+	padding-right: 450px;
 	flex-grow: 1;
 
 	background-color: #111111;
@@ -127,18 +127,18 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
 	main {
-		padding-left: 300px;
-		padding-right: 50px;
+		padding-left: 400px;
+		padding-right: 150px;
 	}
 
 	body:has(iframe[src$=".links.html"]) > main {
-		padding-right: 300px;
+		padding-right: 400px;
 	}
 }
 
-@media (orientation: portrait) or (max-width: 700px) {
+@media (orientation: portrait) or (max-width: 1200px) {
 	input {
 		display: block;
 		width: 40px;
@@ -194,7 +194,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 }
 
 w_ { color: #6a6a6a; } /* comments */
-k_ { color: #4b92da; } /* keywords */
+k_ { color: #3d79ba; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
 t_ { color: #85bef7; } /* types */
 v_ { color: #c1edff; } /* variables */
