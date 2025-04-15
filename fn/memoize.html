@@ -29,13 +29,13 @@
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>x</v_>, <k_>int</k_> <v_>y</v_>) {
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"`add(<i_>{}</i_>, <i_>{}</i_>)` called<i_>\n</i_>"</s_>, <v_>x</v_>, <v_>y</v_>);
+	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"`add(<i_>{}</i_>, <i_>{}</i_>)` called<i_></i_>"</s_>, <v_>x</v_>, <v_>y</v_>);
 	<r_>return</r_> <v_>x</v_> + <v_>y</v_>;
 }
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}\n</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>));
-	<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}\n</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>)); <w_>// `add(1, 2)` is not called again</w_>
+	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>));
+	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>)); <w_>// `add(1, 2)` is not called again</w_>
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -44,7 +44,7 @@
 3
 3</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/zrYbTjPdn" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/zKrqsf889" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

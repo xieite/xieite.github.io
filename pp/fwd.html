@@ -44,17 +44,17 @@
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>S</t_> {
-	<f_>S</f_>() { <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
-	<f_>S</f_>(<k_>const</k_> <t_>S</t_><k_>&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
-	<f_>S</f_>(<t_>S</t_><k_>&&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
-	~<f_>S</f_>() { <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
-	<t_>S</t_><k_>& operator</k_>=(<k_>const</k_> <t_>S</t_><k_>&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); <r_>return</r_> *<k_>this</k_>; }
-	<t_>S</t_><k_>& operator</k_>=(<t_>S</t_><k_>&&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); <r_>return</r_> *<k_>this</k_>; }
+	<f_>S</f_>() { <a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
+	<f_>S</f_>(<k_>const</k_> <t_>S</t_><k_>&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
+	<f_>S</f_>(<t_>S</t_><k_>&&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
+	~<f_>S</f_>() { <a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); }
+	<t_>S</t_><k_>& operator</k_>=(<k_>const</k_> <t_>S</t_><k_>&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); <r_>return</r_> *<k_>this</k_>; }
+	<t_>S</t_><k_>& operator</k_>=(<t_>S</t_><k_>&&</k_>) { <a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<a href="https://gcc.gnu.org/onlinedocs/gcc/Function-Names.html" target="_blank"><i_>__PRETTY_FUNCTION__</i_></a>); <r_>return</r_> *<k_>this</k_>; }
 };
 
 <k_>int</k_> <f_>main</f_>() {
 	{ <t_>S</t_> <v_>s</v_> = <a href="https://en.cppreference.com/w/cpp/utility/forward" target="_blank"><m_>std</m_>::<f_>forward</f_></a>&lt;<t_>S</t_>&gt;(<t_>S</t_>()); }
-	<m_>std</m_>::<f_>print</f_>(<s_>"====================<i_>\n</i_>"</s_>);
+	<a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<s_>"===================="</s_>);
 	{ <t_>S</t_> <v_>s</v_> = <a href="#def-fwd-prvalue"><j_>XIEITE_FWD_PRVALUE</j_></a>(<t_>S</t_>()); }
 }</pre>
 			</blockquote>
@@ -68,7 +68,7 @@ S::~S()
 S::S()
 S::~S()</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/P77xh3bKK" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/cd4vn3GG5" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
