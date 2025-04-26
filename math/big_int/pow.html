@@ -13,22 +13,21 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<iframe src="/math/big_int.links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;::<f_>pow</f_>()</a></code></h2>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;::<f_>pow</f_>()</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/big_int.hpp" target="_blank"><code><s_>&lt;xieite/math/big_int.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Raises a <a href="/math/big_int"><code><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; {}</code></a> to an exponent. Raising zero to a negative exponent throws <a href="https://en.cppreference.com/w/cpp/error/out_of_range" target="_blank"><code><m_>std</m_>::<t_>out_of_range</t_> {}</code></a>.<br/>
+			Raises a <a href="/math/big_int"><code><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; {}</code></a> to an exponent. Raising zero to a negative exponent throws <a href="https://en.cppreference.com/w/cpp/error/out_of_range" target="_blank"><code><m_>std</m_>::<t_>out_of_range</t_> {}</code></a>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>pow</f_>(<a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <v_>exp</v_>) <k_>const</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>pow</f_>(<a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <v_>exp</v_>) <k_>const</k_>;</pre>
 			</blockquote>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>pow</f_>(<t_>U</t_> <v_>exp</v_>) <k_>const</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>pow</f_>(<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_> <k_>auto</k_> <v_>exp</v_>) <k_>const</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>

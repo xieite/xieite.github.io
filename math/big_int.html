@@ -21,168 +21,144 @@
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/unsigned_integral" target="_blank"><m_>std</m_>::<c_>unsigned_integral</c_></a> <t_>T</t_> = <a href="https://en.cppreference.com/w/cpp/header/cstdint" target="_blank"><m_>std</m_>::<t_>uint64_t</t_></a>&gt;
+<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/unsigned_integral" target="_blank"><m_>std</m_>::<c_>unsigned_integral</c_></a> <t_>UInt</t_> = <a href="https://en.cppreference.com/w/cpp/header/cstdint" target="_blank"><m_>std</m_>::<t_>uint64_t</t_></a>&gt;
 <k_>struct</k_> <t_>big_int</t_> {
-	<k_>using</k_> <t_>type</t_> = <t_>T</t_>;
+	<k_>using</k_> <t_>type</t_> = <t_>UInt</t_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_> = <k_>int</k_>&gt;
-	<k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>big_int</f_>(<t_>U</t_> = <n_>0</n_>) <k_>noexcept</k_>;
+	<k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>big_int</f_>(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_> = <n_>0</n_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<k_>typename</k_> <t_>U</t_>&gt;
-	<k_>explicit constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>U</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>template</k_>&lt;<k_>typename</k_> <t_>OtherUInt</t_>&gt;
+	<k_>explicit constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>OtherUInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>xieite</m_>::<c_>is_input_range</c_>&lt;[]&lt;<m_>std</m_>::<c_>same_as</c_>&lt;<t_>T</t_>&gt;&gt; {}&gt; <t_>R</t_>&gt;
-	<k_>explicit constexpr</k_> <f_>big_int</f_>(<t_>R</t_><k_>&&</k_>, <k_>bool</k_> = <k_>false</k_>) <k_>noexcept</k_>;
+	<k_>template</k_>&lt;<m_>std</m_>::<m_>ranges</m_>::<c_>input_range</c_> <t_>Range</t_>&gt;
+	<k_>requires</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<t_>UInt</t_>, <m_>std</m_>::<m_>ranges</m_>::<t_>range_value_t</t_>&lt;<t_>Range</t_>&gt;&gt;)
+	<k_>explicit constexpr</k_> <f_>big_int</f_>(<t_>Range</t_><k_>&&</k_>, <k_>bool</k_> = <k_>false</k_>) <k_>noexcept</k_>;
 
-	<k_>explicit constexpr</k_> <f_>big_int</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>xieite</m_>::<t_>ssize_t</t_> = <n_>10</n_>, <m_>xieite</m_>::<t_>num_str_config</t_> = {}) <k_>noexcept</k_>;
+	<k_>explicit constexpr</k_> <f_>big_int</f_>(<m_>std</m_>::<t_>string_view</t_>, <m_>xieite</m_>::<t_>ssize_t</t_> = <n_>10</n_>, <m_>xieite</m_>::<t_>number_str_config</t_> = {}) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>explicit constexpr operator</k_> <t_>U</t_>() <k_>const noexcept</k_>;
+	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>Int</t_>&gt;
+	<k_>explicit constexpr operator</k_> <t_>Int</t_>() <k_>const noexcept</k_>;
 
 	<k_>explicit</k_>(<k_>false</k_>) <k_>constexpr operator bool</k_>() <k_>const noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>std</m_>::<t_>strong_ordering</t_> <k_>operator</k_>&lt;=&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>std</m_>::<t_>strong_ordering</t_> <k_>operator</k_>&lt;=&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>std</m_>::<t_>strong_ordering</t_> <k_>operator</k_>&lt;=&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>std</m_>::<t_>strong_ordering</t_> <k_>operator</k_>&lt;=&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <k_>bool operator</k_>==(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <k_>bool operator</k_>==(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <k_>bool operator</k_>==(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <k_>bool operator</k_>==(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>+() <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>+() <k_>const noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>+(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>+(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>+(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>+(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>+=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>+=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>+=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>+=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_> <k_>operator</k_>++() <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_> <k_>operator</k_>++() <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_> <k_>operator</k_>++(<k_>int</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_> <k_>operator</k_>++(<k_>int</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>-() <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>-() <k_>const noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>-(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>-(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>-(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>-(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>-=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>-=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>-=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>-=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_> <k_>operator</k_>--() <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_> <k_>operator</k_>--() <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_> <k_>operator</k_>--(<k_>int</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_> <k_>operator</k_>--(<k_>int</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>*(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>*(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>*(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>*(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>*=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>*=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>*=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>*=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>/(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>/(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>/(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>/(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>/=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>/=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>/=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>/=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>%(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>%(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>%(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>%(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>%=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>%=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>%=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>%=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>~() <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>~() <k_>const noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>&(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>&(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>&(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>&(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>&=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>&=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>&=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>&=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>|(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>|(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>|(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>|(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>|=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>|=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>|=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>|=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>^(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>^(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>^(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>^(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>^=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>^=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>^=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>^=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>&lt;&lt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>&lt;&lt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>&lt;&lt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>&lt;&lt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>&lt;&lt;=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>&lt;&lt;=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>&lt;&lt;=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>&lt;&lt;=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>&gt;&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>&gt;&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator</k_>&gt;&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <t_>U</t_>) <k_>noexcept</k_>;
+	<k_>friend constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <k_>operator</k_>&gt;&gt;(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>, <m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>&gt;&gt;=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>&gt;&gt;=(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator</k_>&gt;&gt;=(<t_>U</t_>) <k_>noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>& operator</k_>&gt;&gt;=(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>abs</f_>() <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>abs</f_>() <k_>const noexcept</k_>;
 
-	<a href="/math/big_int/pow"><span><k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>pow</f_>(<m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>const noexcept</k_>;</span>
+	<a href="/math/big_int/pow"><span><k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>pow</f_>(<m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;) <k_>const noexcept</k_>;</span>
 
-	<span><k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;</span>
-	<span><k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>pow</f_>(<t_>U</t_>) <k_>const noexcept</k_>;</span></a>
+	<span><k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>Int</t_>&gt;</span>
+	<span><k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>pow</f_>(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>const noexcept</k_>;</span></a>
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>root</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>root</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>root</f_>(<t_>U</t_>) <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>root</f_>(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>const noexcept</k_>;
 
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>log</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>log</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>;
 
-	<k_>template</k_>&lt;<m_>std</m_>::<c_>integral</c_> <t_>U</t_>&gt;
-	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>log</f_>(<t_>U</t_>) <k_>const noexcept</k_>;
+	<k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>log</f_>(<m_>std</m_>::<c_>integral</c_> <k_>auto</k_>) <k_>const noexcept</k_>;
 
-	<a href="/math/big_int/pow"><k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>str</f_>(<m_>xieite</m_>::<t_>ssize_t</t_> = <n_>10</n_>, <m_>xieite</m_>::<t_>num_str_config</t_> = {}) <k_>const noexcept</k_>;</a>
+	<a href="/math/big_int/pow"><k_>constexpr</k_> <m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; <f_>str</f_>(<m_>xieite</m_>::<t_>ssize_t</t_> = <n_>10</n_>, <m_>xieite</m_>::<t_>number_str_config</t_> = {}) <k_>const noexcept</k_>;</a>
 };</pre>
 			</blockquote>
 			<br/>

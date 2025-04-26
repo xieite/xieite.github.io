@@ -49,10 +49,6 @@
 
 	<span><k_>void</k_> <f_>fg</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
 
-	<a href="/io/term/fg_reset_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>fg_reset_code</f_>() <k_>noexcept</k_>;</a>
-
-	<a href="/io/term/fg_reset"><k_>void</k_> <f_>fg_reset</f_>() <k_>noexcept</k_>;</a>
-
 	<a href="/io/term/bg_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_code</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</span>
 
 	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_code</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
@@ -60,10 +56,6 @@
 	<a href="/io/term/bg"><span><k_>void</k_> <f_>bg</f_>(<m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>, <m_>std</m_>::<t_>uint8_t</t_>) <k_>noexcept</k_>;</span>
 
 	<span><k_>void</k_> <f_>bg</f_>(<k_>const</k_> <m_>xieite</m_>::<t_>color3</t_><k_>&</k_>) <k_>noexcept</k_>;</span></a>
-
-	<a href="/io/term/bg_reset_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bg_reset_code</f_>() <k_>noexcept</k_>;</a>
-
-	<a href="/io/term/bg_reset"><k_>void</k_> <f_>bg_reset</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/bold_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>bold_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
@@ -73,9 +65,9 @@
 
 	<a href="/io/term/italic"><k_>void</k_> <f_>italic</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/underln_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>underln_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+	<a href="/io/term/underline_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>underline_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/underln"><k_>void</k_> <f_>underln</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+	<a href="/io/term/underline"><k_>void</k_> <f_>underline</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/blink_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>blink_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
@@ -125,9 +117,9 @@
 
 	<a href="/io/term/cursor_block"><k_>void</k_> <f_>cursor_block</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/cursor_undersc_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_undersc_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+	<a href="/io/term/cursor_underscore_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_underscore_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/cursor_undersc"><k_>void</k_> <f_>cursor_undersc</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
+	<a href="/io/term/cursor_underscore"><k_>void</k_> <f_>cursor_underscore</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/cursor_pipe_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_pipe_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
@@ -167,7 +159,7 @@
 
 	<a href="/io/term/clear_line_from"><k_>void</k_> <f_>clear_line_from</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/read_ch"><k_>int</k_> <f_>read_ch</f_>() <k_>noexcept</k_></a>;
+	<a href="/io/term/read_char"><k_>int</k_> <f_>read_char</f_>() <k_>noexcept</k_></a>;
 
 	<a href="/io/term/read_str"><m_>std</m_>::<t_>string</t_> <f_>read_str</f_>() <k_>noexcept</k_></a>;
 

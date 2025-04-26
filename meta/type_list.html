@@ -16,7 +16,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<t_>type_list</t_> {}</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/type_list.hpp" target="_blank"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A metaprogramming utility for storing and manipulating a list of types. Does not use recursion at all!<br/>
+			A metaprogramming utility for storing and manipulating a list of types. Entirely non-recursive.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
@@ -52,8 +52,8 @@
 	<a href="/meta/type_list/apply"><span><k_>static constexpr auto</k_> <f_>apply</f_>(<k_>auto&&</k_>, <k_>auto&&...</k_>)</span>
 		<span><j_>XIEITE_ARROW</j_>(<w_>/* ??? */</w_>)</span></a>
 
-	<a href="/meta/type_list/satisf"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>fn</v_>&gt;</span>
-	<span><k_>static constexpr bool</k_> <v_>satisf</v_> = <m_>xieite</m_>::<c_>is_satisfd</c_>&lt;<v_>fn</v_>, <t_>Ts</t_>...&gt;;</span></a>
+	<a href="/meta/type_list/satisfies"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>fn</v_>&gt;</span>
+	<span><k_>static constexpr bool</k_> <v_>satisfies</v_> = <m_>xieite</m_>::<c_>is_satisfied</c_>&lt;<v_>fn</v_>, <t_>Ts</t_>...&gt;;</span></a>
 
 	<a href="/meta/type_list/to"><span><k_>template</k_>&lt;<k_>template</k_>&lt;<k_>typename...</k_>&gt; <k_>typename</k_> <t_>M</t_>&gt;</span>
 	<span><k_>using</k_> <t_>to</t_> = <t_>M</t_>&lt;<t_>Ts</t_>...&gt;;</span></a>
@@ -115,13 +115,13 @@
 	<a href="/meta/type_list/repeat"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>n</v_>&gt;</span>
 	<span><k_>using</k_> <t_>repeat</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/xform"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
+	<a href="/meta/type_list/transform"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
 	<span><k_>requires</k_>(!(<k_>sizeof...</k_>(<t_>Ts</t_>) % <v_>arity</v_>))</span>
-	<span><k_>using</k_> <t_>xform</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
+	<span><k_>using</k_> <t_>transform</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/xform_flat"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
+	<a href="/meta/type_list/transform_flat"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>arity</v_>, <k_>auto</k_> <v_>fn</v_>&gt;</span>
 	<span><k_>requires</k_>(!(<k_>sizeof...</k_>(<t_>Ts</t_>) % <v_>arity</v_>))</span>
-	<span><k_>using</k_> <t_>xform_flat</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
+	<span><k_>using</k_> <t_>transform_flat</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
 	<a href="/meta/type_list/zip"><span><k_>template</k_>&lt;<k_>typename...</k_> <t_>Us</t_>&gt;</span>
 	<span><k_>requires</k_>(<k_>sizeof...</k_>(<t_>Ts</t_>) == <k_>sizeof...</k_>(<t_>Us</t_>))</span>

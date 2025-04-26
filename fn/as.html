@@ -14,11 +14,10 @@
 			<h2><code><a href=""><m_>xieite</m_>::<o_>as</o_>&lt;&gt;</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/as.hpp" target="_blank"><code><s_>&lt;xieite/fn/as.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A functor for casting something implicitly, adding or removing qualifiers, or changing signedness.<br/>
+			A functor for casting something implicitly.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declarations</h3></a>
-			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
 <k_>constexpr auto</k_> <o_>as</o_> = [][[<a_>nodiscard</a_>]](<a href="https://en.cppreference.com/w/cpp/types/type_identity#Helper_types" target="_blank"><m_>std</m_>::<t_>type_identity_t</t_></a>&lt;<t_>T</t_>&gt; <v_>x</v_>) <k_>static noexcept</k_> {
@@ -27,76 +26,12 @@
 			</blockquote>
 			Implicitly casts something to another type.<br/>
 			<br/>
-			<a id="def-1" href="#def-1" class="g">#1</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_c</o_> = []&lt;<k_>typename</k_> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_><k_>&&</k_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>const_cast</k_>&lt;<a href="/trait/add_c"><m_>xieite</m_>::<t_>add_c</t_></a>&lt;<t_>T</t_><k_>&&</k_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something <code><k_>const</k_></code>-qualified.<br/>
-			<br/>
-			<a id="def-2" href="#def-2" class="g">#2</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_v</o_> = []&lt;<k_>typename</k_> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_><k_>&&</k_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>const_cast</k_>&lt;<a href="/trait/add_v"><m_>xieite</m_>::<t_>add_v</t_></a>&lt;<t_>T</t_><k_>&&</k_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something <code><k_>volatile</k_></code>-qualified.<br/>
-			<br/>
-			<a id="def-3" href="#def-3" class="g">#3</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_cv</o_> = []&lt;<k_>typename</k_> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_><k_>&&</k_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>const_cast</k_>&lt;<a href="/trait/add_cv"><m_>xieite</m_>::<t_>add_cv</t_></a>&lt;<t_>T</t_><k_>&&</k_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something <code><k_>const volatile</k_></code>-qualified.<br/>
-			<br/>
-			<a id="def-4" href="#def-4" class="g">#4</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_not_c</o_> = []&lt;<k_>typename</k_> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_><k_>&&</k_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>const_cast</k_>&lt;<a href="/trait/rm_c"><m_>xieite</m_>::<t_>rm_c</t_></a>&lt;<t_>T</t_><k_>&&</k_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something non-<code><k_>const</k_></code>-qualified.<br/>
-			<br/>
-			<a id="def-5" href="#def-5" class="g">#5</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_not_v</o_> = []&lt;<k_>typename</k_> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_><k_>&&</k_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>const_cast</k_>&lt;<a href="/trait/rm_v"><m_>xieite</m_>::<t_>rm_v</t_></a>&lt;<t_>T</t_><k_>&&</k_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something non-<code><k_>volatile</k_></code>-qualified.<br/>
-			<br/>
-			<a id="def-6" href="#def-6" class="g">#6</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_not_cv</o_> = []&lt;<k_>typename</k_> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_><k_>&&</k_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>const_cast</k_>&lt;<a href="/trait/rm_cv"><m_>xieite</m_>::<t_>rm_cv</t_></a>&lt;<t_>T</t_><k_>&&</k_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something non-<code><k_>const volatile</k_></code>-qualified.<br/>
-			<br/>
-			<a id="def-7" href="#def-7" class="g">#7</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_unsign</o_> = []&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>static_cast</k_>&lt;<a href="/trait/try_unsign"><m_>xieite</m_>::<t_>try_unsign</t_></a>&lt;<t_>T</t_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something arithmetic possibly unsigned.<br/>
-			<br/>
-			<a id="def-8" href="#def-8" class="g">#8</a>
-			<blockquote>
-<pre><k_>inline constexpr auto</k_> <o_>as_sign</o_> = []&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>T</t_>&gt;[[<a_>nodiscard</a_>]](<t_>T</t_> <v_>x</v_>) <k_>static noexcept</k_> {
-	<r_>return</r_> <k_>static_cast</k_>&lt;<a href="/trait/try_sign"><m_>xieite</m_>::<t_>try_sign</t_></a>&lt;<t_>T</t_>&gt;&gt;(<v_>x</v_>);
-};</pre>
-			</blockquote>
-			Makes something arithmetic possibly signed.<br/>
-			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>int</k_> <v_>x</v_> = <n_>5</n_>;
-	<k_>auto</k_> <v_>y</v_> = <a href="#def-0"><m_>xieite</m_>::<o_>as</o_></a>&lt;<k_>double</k_>&gt;(<v_>x</v_>);
+	<k_>auto</k_> <v_>y</v_> = <a href="#def"><m_>xieite</m_>::<o_>as</o_></a>&lt;<k_>double</k_>&gt;(<v_>x</v_>);
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>y</v_>);
 }</pre>
 			</blockquote>

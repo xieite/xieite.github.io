@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::number_str_config {}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/data/number_str_config.links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>number_str_config</t_> {}</a></code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/number_str_config.hpp" target="_blank"><code><s_>&lt;xieite/data/number_str_config.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Stores options for stringifying and parsing numbers.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definition</h3></a>
+			<blockquote>
+<pre><k_>struct</k_> <t_>number_str_config</t_> {
+	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>digits</v_> = <a href="/data/chars#def-alphanumeric"><m_>xieite</m_>::<m_>chars</m_>::<v_>alphanumeric</v_></a>;
+	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>minus</v_> = <s_>"-"</s_>;
+	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>plus</v_> = <s_>"+"</s_>;
+	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>point</v_> = <s_>"."</s_>;
+	<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>exp</v_> = <s_>"EePp"</s_>;
+	<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>precision</v_> = <n_>50</n_>;
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>int</k_> <f_>main</f_>() {
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/math/str_number"><m_>xieite</m_>::<f_>str_number</f_></a>(<n_>1024</n_>, <n_>10</n_>, <a href="#def"><m_>xieite</m_>::<t_>number_str_config</t_></a>(<s_>")!@#$%^&*("</s_>)));
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>!)@$</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/ca4nczaY9" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

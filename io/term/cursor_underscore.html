@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::term::underln()</title>
+		<title>xieite::term::cursor_underscore()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -13,15 +13,15 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<iframe src="/io/term.links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_>::<f_>underln</f_>()</a></code></h2>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_>::<f_>cursor_underscore</f_>()</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp" target="_blank"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Enables or disables underlined text.<br/>
+			Makes the cursor appear as an underscore.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre><k_>void</k_> <f_>underln</f_>(<k_>bool</k_> <v_>x</v_>) <k_>noexcept</k_>;</pre>
+<pre><k_>void</k_> <f_>cursor_underscore</f_>(<k_>bool</k_> <v_>blink</v_> = <k_>false</k_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -29,15 +29,10 @@
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
 	<a href="/io/term"><m_>xieite</m_>::<t_>term</t_></a> <v_>term</v_>;
-	<v_>term</v_>.<a href="#def"><f_>underln</f_></a>(<k_>true</k_>);
-	<a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<s_>"Hello, world!"</s_>);
+	<v_>term</v_>.<a href="#def"><f_>cursor_underscore</f_></a>();
 }</pre>
 			</blockquote>
-			<small>Possible output:</small>
-			<blockquote>
-<pre><u>Hello, world!</u></pre>
-			</blockquote>
-			<small><a href="https://godbolt.org/z/MarfEd78n" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<!-- no demo -->
 		</main>
 	</body>
 </html>

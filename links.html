@@ -8,8 +8,8 @@
 	<body>
 		<script src="/script.js" defer></script>
 <pre><a href="/" target="_top"><m_>xieite</m_> {}</a>
-	ctnr
-		<a href="/ctnr/ch" target="_top"><m_>ch</m_> {}</a>
+	data
+		<a href="/data/chars" target="_top"><m_>chars</m_> {}</a>
 		<w_>cmp_ignore_case()
 		find_most_consec()
 		find_most_consec_if()
@@ -17,25 +17,25 @@
 		find_occur_if()
 		fixed_array {}
 		fixed_map {}
-		fixed_md_ctnr&lt;&gt;
+		fixed_md_container&lt;&gt;
 		fixed_set {}
 		fixed_str {}
 		iters {}
 		make_array()
 		make_ptr()
 		make_sparse_array()
-		md_ctnr&lt;&gt;</w_>
-		<a href="/ctnr/num_str_config" target="_top"><t_>num_str_config</t_> {}</a>
+		md_container&lt;&gt;</w_>
+		<a href="/data/number_str_config" target="_top"><t_>number_str_config</t_> {}</a>
 		<w_>pad()
 		pad_back()
 		pad_front()
 		palindrome()
 		partial_reverse()
 		ptr {}
-		quot()
+		quote()
 		ref {}
 		rotated()
-		static_str
+		static_str&lt;&gt;
 		str_after()
 		str_before()
 		str_betw()
@@ -43,29 +43,23 @@
 		str_repeat()
 		str_replace()
 		str_split()
-		str_trunc()
+		str_truncate()
 		str_view()</w_>
-		<a href="/ctnr/strlen" target="_top"><f_>strlen</f_>()</a>
+		<a href="/data/strlen" target="_top"><f_>strlen</f_>()</a>
 		<w_>substr()</w_>
-		<a href="/ctnr/tolower" target="_top"><f_>tolower</f_>()</a>
-		<a href="/ctnr/toupper" target="_top"><f_>toupper</f_>()</a>
+		<a href="/data/tolower" target="_top"><f_>tolower</f_>()</a>
+		<a href="/data/toupper" target="_top"><f_>toupper</f_>()</a>
 		<w_>trim()
 		trim_back()
 		trim_front()
 		tuple_map {}
 		tuple_set {}
-		unquot()
+		unquote()
 		view_after()
 		view_before()
 		view_betw()</w_>
 	fn
-		<w_>_exp
-		_fstr
-		_num
-		_radix
-		_range
-		_unit
-		all_true()
+		<w_>all_true()
 		also()
 		any_true()
 		apply_array()
@@ -73,26 +67,32 @@
 		<a href="/fn/as" target="_top"><o_>as</o_>&lt;&gt;</a>
 		<a href="/fn/cast" target="_top"><o_>cast</o_>&lt;&gt;</a>
 		<w_>discardable()</w_>
-		<a href="/fn/distr_args" target="_top"><f_>distr_args</f_>()</a>
+		<a href="/fn/distribute_args" target="_top"><f_>distribute_args</f_>()</a>
 		<w_>enum_op {}
-		fn {}</w_>
+		exp_udl {}
+		fn {}
+		fstr_udl {}</w_>
 		<a href="/fn/memoize" target="_top"><f_>memoize</f_>()</a>
 		<a href="/fn/mixfix" target="_top"><t_>mixfix</t_> {}</a> <E_>#</E_>
 		<w_>noex()
+		number_udl {}
 		order_op {}
 		pipe_op {}
-		proc_guard {}
-		range_cmp_op {}</w_>
+		process_guard {}
+		radix_udl {}
+		range_cmp_op {}
+		range_udl {}</w_>
 		<a href="/fn/repeat" target="_top"><f_>repeat</f_>()</a>
 		<w_>reverse_args()
-		rot_args()</w_>
-		<a href="/fn/rot_swap" target="_top"><f_>rot_swap</f_>()</a>
+		rotate_args()</w_>
+		<a href="/fn/rotate_swap" target="_top"><f_>rotate_swap</f_>()</a>
 		<w_>scope_guard {}
-		synth_three_way
+		synth_three_way()
 		time()</w_>
 		<a href="/fn/tmp" target="_top"><f_>tmp</f_>()</a>
 		<w_>try_c_args()
-		try_opt()</w_>
+		try_opt()
+		unit_udl {}</w_>
 		<a href="/fn/unroll" target="_top"><f_>unroll</f_>()</a>
 		<a href="/fn/visitor" target="_top"><t_>visitor</t_> {}</a>
 	io
@@ -100,18 +100,18 @@
 		<w_>file {}</w_>
 		<a href="/io/file_pipe" target="_top"><t_>file_pipe</t_> {}</a>
 		<w_>keys {}
-		keys_ch()
+		keys_char()
 		pos {}</w_>
 		<a href="/io/read" target="_top"><f_>read</f_>()</a>
 		<a href="/io/term" target="_top"><t_>term</t_> {}</a> <E_>#</E_>
 	math
 		<a href="/math/abs" target="_top"><f_>abs</f_>()</a>
 		<a href="/math/add_overflow" target="_top"><f_>add_overflow</f_>()</a>
-		<w_>almost_eq()
-		almost_eq_slope()
+		<w_>almost_equal()
+		almost_equal_slope()
 		avg()
-		betw()
-		betw_magn()
+		between()
+		between_magnitude()
 		big_endify()</w_>
 		<a href="/math/big_int" target="_top"><t_>big_int</t_> {}</a>
 		<w_>bit_field {}
@@ -121,20 +121,21 @@
 		ceil_half()
 		closest()
 		color3 {}
-		conv_dur()
+		color4 {}
 		cos()
-		dbl_mul()
-		dbl_uint {}
-		diff()
-		div_ceil()
+		double_uint {}
+		diff()</w_>
+		<a href="/math/digits" target="_top"><f_>digits</f_>()</a>
+		<w_>div_ceil()
 		div_ceil_half()
 		div_floor()
 		div_floor_half()
 		div_magnify()
 		div_magnify_half()
-		div_trunc()
-		div_trunc_half()
+		div_truncate()
+		div_truncate_half()
 		djb2()
+		duration_cast()
 		exp {}
 		exp_overflow()
 		exp_search()
@@ -142,23 +143,23 @@
 		<a href="/math/factorial" target="_top"><v_>factorial</v_>&lt;&gt;</a>
 		<w_>farthest()</w_>
 		<a href="/math/fib" target="_top"><v_>fib</v_>&lt;&gt;</a>
-		<w_>find_num()
+		<w_>find_number()
 		floor()
 		floor_half()
 		from_roman()
 		hash_combine()
-		hash_dist()
+		hash_distribute()
 		int128_t
 		interval {}
-		intxn2d()
+		intersection2d()
 		isdigit()
 		join_bits()
 		least_int&lt;&gt;
 		least_uint&lt;&gt;
+		left_shift()
 		line2d {}
 		little_endify()
 		log()
-		lshift()
 		magnify()
 		magnify_half()
 		mash_bits()
@@ -167,51 +168,49 @@
 		median()
 		merge_intervals()
 		minmax()
-		minmax_magn()
+		minmax_magnitude()
 		mod()
 		modes()
 		mul_overflow()</w_>
 		<a href="/math/neg" target="_top"><f_>neg</f_>()</a>
-		<w_>num {}</w_>
-		<a href="/math/num_digits" target="_top"><f_>num_digits</f_>()</a>
-		<w_>parse_num()
+		<w_>number {}
+		parse_number()
 		pi
-		poly2d {}
+		point2d {}
+		polygon2d {}
 		pow()
 		prime()
-		pt2d {}
-		range&lt;&gt;
 		ray2d {}
-		refl2d()
+		reflect2d()
 		rem()
 		reverse_bits()
-		reverse_num()
-		rot2d()
-		rshift()
+		reverse_number()
+		right_shift()
+		rotate2d()
 		scale2d()
-		segm2d {}
+		segment2d {}
 		sign()
 		sign_cast()
 		sin()
 		split_bool()</w_>
 		<a href="/math/ssize_t" target="_top"><t_>ssize_t</t_></a>
-		<a href="/math/str_num" target="_top"><f_>str_num</f_>()</a>
+		<a href="/math/str_number" target="_top"><f_>str_number</f_>()</a>
 		<w_>sub_overflow()
 		tan()
 		tau
 		to_roman()
-		trunc()
-		trunc_half()
-		uniform_distr {}
-		uniform_interrupt_distr {}
+		translate2d()
+		truncate()
+		truncate_half()
+		uniform_distribution {}
+		uniform_interruptable_distribution {}
 		unit {}
 		unjoin_bits()
 		unmash_bits()
-		vec2 {}
+		vector2 {}
 		version {}</w_>
 		<a href="/math/wrap" target="_top"><f_>wrap</f_>()</a>
-		<w_>xlat2d()
-		xor_shift()</w_>
+		<w_>xor_shift()</w_>
 	meta	
 		<a href="/meta/any" target="_top"><t_>any</t_> {}</a>
 		<a href="/meta/arity" target="_top"><v_>arity</v_>&lt;&gt;</a>
@@ -221,12 +220,12 @@
 		demangle()</w_>
 		<a href="/meta/end" target="_top"><c_>end</c_>&lt;&gt;</a>
 		<a href="/meta/fold" target="_top"><t_>fold</t_>&lt;&gt;</a>
-		<w_>fwd_tuple()</w_>
-		<a href="/meta/group" target="_top"><t_>group</t_>&lt;&gt;</a>
-		<w_>make_cxpr()
+		<w_>fwd_tuple()
+		make_cxpr()
 		make_seq&lt;&gt;
 		make_tuple()</w_>
 		<a href="/meta/name" target="_top"><f_>name</f_>()</a>
+		<a href="/meta/paren" target="_top"><t_>paren</t_>&lt;&gt;</a>
 		<w_>reverse_tuple()
 		seq&lt;&gt;
 		seq_for&lt;&gt;
@@ -241,9 +240,7 @@
 		<w_>ANY()</w_>
 		<a href="/pp/arch" target="_top"><i_>ARCH</i_></a>
 		<a href="/pp/arrow" target="_top"><j_>ARROW</j_>()</a>
-		<w_>ASCII
-		ASSERT()
-		AT()
+		<w_>AT()
 		ATTR
 		BOOL()
 		CALL()
@@ -259,6 +256,7 @@
 		DIAG()</w_>
 		<a href="/pp/each" target="_top"><j_>EACH</j_>()</a>
 		<w_>EAT()
+		ENCODING
 		ENDIAN
 		EVAL()
 		FEAT</w_>
@@ -271,17 +269,18 @@
 		HAS_INCL()
 		IF()
 		IS_CXPR()
-		keywords</w_>
+		/* keywords */</w_>
 		<a href="/pp/lang" target="_top"><i_>LANG</i_></a>
 		<a href="/pp/lift" target="_top"><j_>LIFT</j_>()</a>
 		<w_>LOOPS()
-		no_unix
-		no_windows
+		/* no_unix */
+		/* no_windows */
 		NONE()
 		NOT()
 		OBJ()
 		OBSTRUCT()
 		OPT()
+		OUT()
 		PAREN()</w_>
 		<a href="/pp/platform" target="_top"><i_>PLATFORM</i_></a>
 		<w_>PRAGMA()
@@ -292,9 +291,11 @@
 		REVERSE()
 		REVIVE()
 		SCAN()
-		SEQ()</w_>
+		SEQ()
+		STATIC_ASSERT()</w_>
 		<a href="/pp/stdlib" target="_top"><i_>STDLIB</i_></a>
 		<w_>STR()
+		TYPEOF()
 		UNIX
 		UNREACH()
 		UNTIL()</w_>
@@ -309,7 +310,7 @@
 		aligned_memcpy()
 		aligned_memmove()
 		aligned_memset()
-		avail_mem()
+		available_mem()
 		detect_cosmic_ray()
 		exec()
 		exit {}
@@ -350,6 +351,12 @@
 		add_vlref&lt;&gt;
 		add_vref&lt;&gt;
 		add_vrref&lt;&gt;
+		as_c()
+		as_cv()
+		as_not_c()
+		as_not_cv()
+		as_not_v()
+		as_v()
 		collapse_ref&lt;&gt;
 		cp_c&lt;&gt;
 		cp_c_referent&lt;&gt;
@@ -359,6 +366,8 @@
 		<a href="/trait/cp_ref" target="_top"><t_>cp_ref</t_>&lt;&gt;</a>
 		<a href="/trait/cp_rref" target="_top"><t_>cp_rref</t_>&lt;&gt;</a>
 		<w_>cp_cv&lt;&gt;
+		cp_cref&lt;&gt;
+		cp_crref&lt;&gt;
 		cp_cvlref&lt;&gt;
 		cp_cvref&lt;&gt;
 		cp_cvrref&lt;&gt;
@@ -374,7 +383,6 @@
 		cp_rref&lt;&gt;
 		cp_rref_referent&lt;&gt;
 		cp_v&lt;&gt;
-		cp_v_noex&lt;&gt;
 		cp_v_referent&lt;&gt;
 		cp_variadic_referent&lt;&gt;
 		cp_vlref&lt;&gt;
@@ -382,9 +390,9 @@
 		cp_vrref&lt;&gt;
 		get_fn_args&lt;&gt;
 		get_fn_ret&lt;&gt;
-		get_m_ptr_class&lt;&gt;
+		get_member_ptr_class&lt;&gt;
 		get_ptr&lt;&gt;
-		has_brace_init&lt;&gt;
+		has_brace_ctor&lt;&gt;
 		has_cp_assign&lt;&gt;
 		has_cp_ctor&lt;&gt;
 		has_ctor&lt;&gt;
@@ -393,7 +401,7 @@
 		has_mv_assign&lt;&gt;
 		has_mv_ctor&lt;&gt;
 		has_noex_assign&lt;&gt;
-		has_noex_brace_init&lt;&gt;
+		has_noex_brace_ctor&lt;&gt;
 		has_noex_cp_assign&lt;&gt;
 		has_noex_cp_ctor&lt;&gt;
 		has_noex_ctor&lt;&gt;
@@ -413,7 +421,7 @@
 		has_unique_obj_repr&lt;&gt;
 		has_virtual_dtor&lt;&gt;
 		is_abstract&lt;&gt;
-		is_aggr&lt;&gt;</w_>
+		is_aggregate&lt;&gt;</w_>
 		<a href="/trait/is_arith" target="_top"><c_>is_arith</c_>&lt;&gt;</a>
 		<w_>is_array&lt;&gt;
 		is_assign_to&lt;&gt;
@@ -424,7 +432,7 @@
 		is_bounded_array&lt;&gt;
 		is_c&lt;&gt;
 		is_c_referent&lt;&gt;</w_>
-		<a href="/trait/is_ch" target="_top"><c_>is_ch</c_>&lt;&gt;</a>
+		<a href="/trait/is_char" target="_top"><c_>is_char</c_>&lt;&gt;</a>
 		<w_>is_class&lt;&gt;
 		is_clock&lt;&gt;
 		is_clref&lt;&gt;
@@ -443,12 +451,12 @@
 		is_derivable&lt;&gt;
 		is_derived_from&lt;&gt;
 		is_derived_from_any&lt;&gt;
-		is_dsatisf&lt;&gt;
-		is_dsatisf_any&lt;&gt;
-		is_dsatisfd&lt;&gt;
-		is_dsatisfd_all&lt;&gt;
-		is_dsatisfd_any&lt;&gt;
-		is_dur&lt;&gt;
+		is_dissatisfies&lt;&gt;
+		is_dissatisfies_any&lt;&gt;
+		is_dissatisfied&lt;&gt;
+		is_dissatisfied_all&lt;&gt;
+		is_dissatisfied_any&lt;&gt;
+		is_duration&lt;&gt;
 		is_empty&lt;&gt;
 		is_enum&lt;&gt;
 		is_final&lt;&gt;
@@ -470,7 +478,7 @@
 		<w_>is_lref_referent&lt;&gt;
 		is_m_fn_ptr&lt;&gt;
 		is_m_obj_ptr&lt;&gt;
-		is_narrow_ch&lt;&gt;
+		is_narrow_char&lt;&gt;
 		is_noex_bool_testable&lt;&gt;
 		is_noex_conv&lt;&gt;
 		is_noex_conv_any&lt;&gt;
@@ -487,7 +495,7 @@
 		is_numeric&lt;&gt;
 		is_obj&lt;&gt;
 		is_order&lt;&gt;
-		is_ordinary_ch&lt;&gt;
+		is_ordinary_char&lt;&gt;
 		is_ostream&lt;&gt;
 		is_pair_like&lt;&gt;
 		is_polymorphic&lt;&gt;
@@ -499,16 +507,17 @@
 		is_ref&lt;&gt;
 		is_ref_conv_from_tmp&lt;&gt;
 		is_ref_ctor_from_tmp&lt;&gt;
-		is_ref_referent&lt;&gt;</w_>
+		is_ref_referent&lt;&gt;
+		is_ref_to&lt;&gt;</w_>
 		<a href="/trait/is_rref" target="_top"><c_>is_rref</c_>&lt;&gt;</a>
 		<w_>is_rref_referent&lt;&gt;</w_>
 		<a href="/trait/is_same" target="_top"><c_>is_same</c_>&lt;&gt;</a>
 		<a href="/trait/is_same_any" target="_top"><c_>is_same_any</c_>&lt;&gt;</a>
-		<w_>is_satisf&lt;&gt;
-		is_satisf_any&lt;&gt;</w_>
-		<a href="/trait/is_satisfd" target="_top"><c_>is_satisfd</c_>&lt;&gt;</a>
-		<a href="/trait/is_satisfd_all" target="_top"><c_>is_satisfd_all</c_>&lt;&gt;</a>
-		<a href="/trait/is_satisfd_any" target="_top"><c_>is_satisfd_any</c_>&lt;&gt;</a>
+		<w_>is_satisfies&lt;&gt;
+		is_satisfies_any&lt;&gt;</w_>
+		<a href="/trait/is_satisfied" target="_top"><c_>is_satisfied</c_>&lt;&gt;</a>
+		<a href="/trait/is_satisfied_all" target="_top"><c_>is_satisfied_all</c_>&lt;&gt;</a>
+		<a href="/trait/is_satisfied_any" target="_top"><c_>is_satisfied_any</c_>&lt;&gt;</a>
 		<w_>is_scalar&lt;&gt;
 		is_scoped_enum&lt;&gt;
 		is_sized_range&lt;&gt;
@@ -518,12 +527,12 @@
 		is_stream&lt;&gt;
 		is_streamable_in&lt;&gt;
 		is_streamable_out&lt;&gt;
-		is_swap&lt;&gt;
-		is_swap_with&lt;&gt;
+		is_swappable&lt;&gt;
+		is_swappable_with&lt;&gt;
 		is_template&lt;&gt;
 		is_template_any&lt;&gt;
 		is_tuple_like&lt;&gt;
-		is_uint&lt;&gt;
+		is_unsign&lt;&gt;
 		is_unbounded_array&lt;&gt;
 		is_union&lt;&gt;
 		is_unscoped_enum&lt;&gt;
@@ -535,7 +544,7 @@
 		is_void&lt;&gt;
 		is_vref&lt;&gt;
 		is_vrref&lt;&gt;</w_>
-		<a href="/trait/is_wide_ch" target="_top"><c_>is_wide_ch</c_>&lt;&gt;</a>
+		<a href="/trait/is_wide_char" target="_top"><c_>is_wide_char</c_>&lt;&gt;</a>
 		<w_>maybe_base&lt;&gt;
 		maybe_ref&lt;&gt;</w_>
 		<a href="/trait/rm_c" target="_top"><t_>rm_c</t_>&lt;&gt;</a>

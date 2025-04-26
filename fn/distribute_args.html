@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::distr_args()</title>
+		<title>xieite::distribute_args()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,8 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<f_>distr_args</f_>()</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/distr_args.hpp" target="_blank"><code><s_>&lt;xieite/fn/distr_args.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xieite</m_>::<f_>distribute_args</f_>()</a></code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/distribute_args.hpp" target="_blank"><code><s_>&lt;xieite/fn/distribute_args.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Uniformly distributes arguments across multiple calls to a functor.<br/>
 			<br/>
@@ -21,7 +21,7 @@
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>&gt;
-<k_>constexpr void</k_> <f_>distr_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
+<k_>constexpr void</k_> <f_>distribute_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
 	<j_>XIEITE_ARROW_RET</j_>(<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;(<k_>sizeof...</k_>(<v_>args</v_>) / <v_>arity</v_>)&gt;(
 		[]&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt;(<k_>const auto&</k_> <v_>fn</v_>, <k_>const auto&</k_> <v_>args_tuple</v_>) <k_>static</k_>
 			<j_>XIEITE_ARROW</j_>((..., (<k_>void</k_>)<a href="https://en.cppreference.com/w/cpp/utility/apply" target="_blank"><m_>std</m_>::<f_>apply</f_></a>(
@@ -38,7 +38,7 @@
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>prev</v_> = <n_>0</n_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr decltype</k_>(<k_>auto</k_>) <f_>distr_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr decltype</k_>(<k_>auto</k_>) <f_>distribute_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
 			Similar to <a href="#def-0" class="g">#0</a>, but with <code><v_>prev</v_></code> which dictates how many of those arguments should be recursive calls to <code><v_>fn</v_></code> (if the remaining number of <code><v_>args</v_></code> allows it).<br/>
 			Assumes that <code><v_>args</v_></code> are evenly distributable across multiple (possibly recursive) calls to <code><v_>fn</v_></code>. Does not specify <code><k_>noexcept</k_></code>.<br/>
@@ -48,7 +48,7 @@
 			<a id="ex-0" href="#ex-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="#def"><m_>xieite</m_>::<f_>distr_args</f_></a>&lt;<n_>2</n_>&gt;(<a href="/pp/lift"><j_>XIEITE_LIFT</j_></a>(<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>), <n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>, <n_>6</n_>);
+	<a href="#def"><m_>xieite</m_>::<f_>distribute_args</f_></a>&lt;<n_>2</n_>&gt;(<a href="/pp/lift"><j_>XIEITE_LIFT</j_></a>(<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>), <n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>, <n_>6</n_>);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -57,7 +57,7 @@
 3 4
 5 6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/TGdWKdKsT" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
+			<small><a href="https://godbolt.org/z/eaWo4h7E9" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
 			<br/>
 			<a id="ex-1" href="#ex-1" class="g">#1</a>
 			<blockquote>
@@ -67,7 +67,7 @@
 		<r_>return</r_> <v_>a</v_> + <v_>b</v_>;
 	};
 
-	<k_>int</k_> <v_>sum</v_> = <a href="#def"><m_>xieite</m_>::<f_>distr_args</f_></a>&lt;<n_>2</n_>, <n_>1</n_>&gt;(<o_>fn</o_>, <n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>);
+	<k_>int</k_> <v_>sum</v_> = <a href="#def"><m_>xieite</m_>::<f_>distribute_args</f_></a>&lt;<n_>2</n_>, <n_>1</n_>&gt;(<o_>fn</o_>, <n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>);
 
 	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"sum: <i_>{}</i_>"</s_>, <v_>sum</v_>);
 }</pre>
@@ -80,7 +80,7 @@
 10 + 5
 sum: 15</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/fGvjKK3xM" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/nv17j6313" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

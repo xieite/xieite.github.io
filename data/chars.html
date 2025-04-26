@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::ch {}</title>
+		<title>xieite::chars {}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,8 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<m_>ch</m_> {}</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/ctnr/ch.hpp" target="_blank"><code><s_>&lt;xieite/ctnr/ch.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xieite</m_>::<m_>chars</m_> {}</a></code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/chars.hpp" target="_blank"><code><s_>&lt;xieite/data/chars.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			A namespace providing collections of characters.<br/>
 			<br/>
@@ -28,13 +28,13 @@
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>upper</v_> = <s_>"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</s_>;</pre>
 			</blockquote>
-			The English alphabet in uppercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
+			The English alphabet in uppercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>chars</m_>::<v_>alphabet_size</v_></code></a>.<br/>
 			<br/>
 			<a id="def-lower" href="#def-lower" class="g">#lower</a>
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>lower</v_> = <s_>"abcdefghijklmnopqrstuvwxyz"</s_>;</pre>
 			</blockquote>
-			The English alphabet in lowercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>ch</m_>::<v_>alphabet_size</v_></code></a>.<br/>
+			The English alphabet in lowercase. Its size is guaranteed to be <a href="#def-0"><code><m_>xieite</m_>::<m_>chars</m_>::<v_>alphabet_size</v_></code></a>.<br/>
 			<br/>
 			<a id="def-digits" href="#def-digits" class="g">#digits</a>
 			<blockquote>
@@ -42,15 +42,15 @@
 			</blockquote>
 			Digits <code>0</code> through <code>9</code> in ascending order.<br/>
 			<br/>
-			<a id="def-whitesp" href="#def-whitesp" class="g">#whitesp</a>
+			<a id="def-whitespace" href="#def-whitespace" class="g">#whitespace</a>
 			<blockquote>
-<pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>whitesp</v_> = <s_>" <i_>\t\n\v\f\r</i_>"</s_>;</pre>
+<pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>whitespace</v_> = <s_>" <i_>\t\n\v\f\r</i_>"</s_>;</pre>
 			</blockquote>
 			Whitespace characters.</br>
 			<br/>
-			<a id="def-alphanum" href="#def-alphanum" class="g">#alphanum</a>
+			<a id="def-alphanumeric" href="#def-alphanumeric" class="g">#alphanumeric</a>
 			<blockquote>
-<pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>alphanum</v_> = <s_>"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"</s_>;</pre>
+<pre><k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a> <v_>alphanumeric</v_> = <s_>"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"</s_>;</pre>
 			</blockquote>
 			All alphanumeric characters. Consists of digits, followed by the uppercase English alphabet, followed by the lowercase English alphabet.</br>
 			<br/>
@@ -71,7 +71,7 @@
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
 	<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<n_>16uz</n_>&gt;([]&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt; {
-		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def-alphanum"><m_>xieite</m_>::<m_>ch</m_>::<v_>alphanum</v_></a>[<v_>i</v_>]...);
+		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def-alphanumeric"><m_>xieite</m_>::<m_>chars</m_>::<v_>alphanumeric</v_></a>[<v_>i</v_>]...);
 	});
 }</pre>
 			</blockquote>
@@ -79,7 +79,7 @@
 			<blockquote>
 <pre>0 1 2 3 4 5 6 7 8 9 A B C D E F</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/qa6Ta4WMn" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/WGME5fxnv" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

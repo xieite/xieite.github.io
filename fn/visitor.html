@@ -21,13 +21,13 @@
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Fs</t_>&gt;
-<k_>struct</k_> <t_>visitor</t_> : <t_>Fs</t_>... {
-	<k_>using</k_> <t_>Fs</t_>::<k_>operator</k_>()...;
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Fns</t_>&gt;
+<k_>struct</k_> <t_>visitor</t_> : <t_>Fns</t_>... {
+	<k_>using</k_> <t_>Fns</t_>::<k_>operator</k_>()...;
 };
 
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Fs</t_>&gt;
-<t_>visitor</t_>(<t_>Fs</t_>...) -> <t_>visitor</t_>&lt;<t_>Fs</t_>...&gt;;</pre>
+<k_>template</k_>&lt;<k_>typename...</k_> <t_>Fns</t_>&gt;
+<t_>visitor</t_>(<t_>Fns</t_>...) -> <t_>visitor</t_>&lt;<t_>Fns</t_>...&gt;;</pre>
 			</blockquote>
 			<br/>
 			<br/>

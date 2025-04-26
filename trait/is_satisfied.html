@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::is_satisfd&lt;&gt;</title>
+		<title>xieite::is_satisfied&lt;&gt;</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,8 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<c_>is_satisfd</c_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/is_satisfd.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_satisfd.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xieite</m_>::<c_>is_satisfied</c_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/is_satisfied.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_satisfied.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Specifies that a functor is satisfied by some template arguments.<br/>
 			<br/>
@@ -20,7 +20,7 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>auto</k_> <v_>fn</v_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
-<k_>concept</k_> <c_>is_satisfd</c_> = <k_>requires</k_> { <v_>fn</v_>.<k_>template operator</k_>()&lt;<t_>Ts</t_>...&gt;(); };</pre>
+<k_>concept</k_> <c_>is_satisfied</c_> = <k_>requires</k_> { <v_>fn</v_>.<k_>template operator</k_>()&lt;<t_>Ts</t_>...&gt;(); };</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -29,8 +29,8 @@
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>static constexpr auto</k_> <v_>same</v_> = []&lt;<k_>typename</k_> <t_>T</t_>, <m_>std</m_>::<c_>same_as</c_>&lt;<t_>T</t_>&gt;&gt; {};
 
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfd</c_></a>&lt;<v_>same</v_>, <k_>int</k_>, <k_>int</k_>&gt;);
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfd</c_></a>&lt;<v_>same</v_>, <k_>int</k_>, <k_>char</k_>&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfied</c_></a>&lt;<v_>same</v_>, <k_>int</k_>, <k_>int</k_>&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfied</c_></a>&lt;<v_>same</v_>, <k_>int</k_>, <k_>char</k_>&gt;);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -38,7 +38,7 @@
 <pre>true
 false</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/W8jb5bsE4" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/6xq7qjbvr" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

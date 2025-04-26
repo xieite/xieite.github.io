@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::is_satisfd_any&lt;&gt;</title>
+		<title>xieite::is_satisfied_any&lt;&gt;</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,8 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<c_>is_satisfd_any</c_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/is_satisfd_any.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_satisfd_any.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xieite</m_>::<c_>is_satisfied_any</c_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/is_satisfied_any.hpp" target="_blank"><code><s_>&lt;xieite/trait/is_satisfied_any.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Specifies that a functor is satisfied by at least one of several template arguments.<br/>
 			<br/>
@@ -20,7 +20,7 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>auto</k_> <v_>fn</v_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
-<k_>concept</k_> <c_>is_satisfd_any</c_> = (... || <a href="/trait/is_satisfd"><m_>xieite</m_>::<c_>is_satisfd</c_></a>&lt;<v_>fn</v_>, <t_>Ts</t_>&gt;);</pre>
+<k_>concept</k_> <c_>is_satisfied_any</c_> = (... || <a href="/trait/is_satisfd"><m_>xieite</m_>::<c_>is_satisfd</c_></a>&lt;<v_>fn</v_>, <t_>Ts</t_>&gt;);</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -29,8 +29,8 @@
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>static constexpr auto</k_> <v_>fn</v_> = []&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a>&gt; {};
 
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfd_any</c_></a>&lt;<v_>fn</v_>, <k_>int</k_>, <k_>float</k_>, <k_>short</k_>&gt;);
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfd_any</c_></a>&lt;<v_>fn</v_>, <k_>void*</k_>, <k_>double</k_>, <m_>std</m_>::<t_>nullptr_t</t_>&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfied_any</c_></a>&lt;<v_>fn</v_>, <k_>int</k_>, <k_>float</k_>, <k_>short</k_>&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<c_>is_satisfied_any</c_></a>&lt;<v_>fn</v_>, <k_>void*</k_>, <k_>double</k_>, <m_>std</m_>::<t_>nullptr_t</t_>&gt;);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -38,7 +38,7 @@
 <pre>true
 false</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/9PWWP5KE1" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a href="https://godbolt.org/z/rvnMaoc1x" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
