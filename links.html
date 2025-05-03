@@ -37,8 +37,10 @@
 		rotated()
 		static_str&lt;&gt;
 		str_after()
+		str_after_last()
 		str_before()
-		str_betw()
+		str_before_last()
+		str_between()
 		str_join()
 		str_repeat()
 		str_replace()
@@ -57,7 +59,7 @@
 		unquote()
 		view_after()
 		view_before()
-		view_betw()</w_>
+		view_between()</w_>
 	fn
 		<w_>all_true()
 		also()
@@ -148,9 +150,9 @@
 		floor_half()
 		from_roman()
 		hash_combine()
-		hash_distribute()
-		int128_t
-		interval {}
+		hash_distribute()</w_>
+		<a href="/math/int128_t" target="_top"><t_>int128_t</t_></a>
+		<w_>interval {}
 		intersection2d()
 		isdigit()
 		join_bits()
@@ -219,12 +221,15 @@
 		decay_as_tuple()
 		demangle()</w_>
 		<a href="/meta/end" target="_top"><c_>end</c_>&lt;&gt;</a>
+		<w_>enum_size&lt;&gt;</w_>
 		<a href="/meta/fold" target="_top"><t_>fold</t_>&lt;&gt;</a>
-		<w_>fwd_tuple()
+		<w_>fold_for&lt;&gt;
+		fwd_tuple()
 		make_cxpr()
 		make_seq&lt;&gt;
-		make_tuple()</w_>
-		<a href="/meta/name" target="_top"><f_>name</f_>()</a>
+		make_tuple()
+		member_obj_name&lt;&gt;</w_>
+		<a href="/meta/obj_name" target="_top"><v_>obj_name</v_>&lt;&gt;</a>
 		<a href="/meta/paren" target="_top"><t_>paren</t_>&lt;&gt;</a>
 		<w_>reverse_tuple()
 		seq&lt;&gt;
@@ -234,6 +239,7 @@
 		subtuple()
 		tuple_size&lt;&gt;
 		type_id&lt;&gt;</w_>
+		<a href="/meta/type_name" target="_top"><v_>type_name</v_>&lt;&gt;</a>
 		<a href="/meta/type_list" target="_top"><t_>type_list</t_> {}</a>
 		<a href="/meta/value" target="_top"><t_>value</t_>&lt;&gt;</a>
 	pp
@@ -253,7 +259,7 @@
 		<a href="/pp/debug" target="_top"><i_>DEBUG</i_></a>
 		<w_>DEFER()
 		DEL()
-		DIAG()</w_>
+		DIAGNOSTIC()</w_>
 		<a href="/pp/each" target="_top"><j_>EACH</j_>()</a>
 		<w_>EAT()
 		ENCODING
@@ -459,6 +465,7 @@
 		is_duration&lt;&gt;
 		is_empty&lt;&gt;
 		is_enum&lt;&gt;
+		is_enum_value&lt;&gt;
 		is_final&lt;&gt;
 		is_fn&lt;&gt;
 		is_fundamental&lt;&gt;
