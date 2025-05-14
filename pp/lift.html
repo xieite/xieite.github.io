@@ -11,7 +11,7 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_LIFT</j_>()</code>, <code><j_>XIEITE_LIFT_LOCAL</j_>()</code>, <code><j_>XIEITE_LIFT_M</j_>()</code>, <code><j_>XIEITE_LIFT_M_PTR</j_>()</code></h2></a>
+			<a href=""><h2><code><j_>XIEITE_LIFT</j_>()</code>, <code><j_>XIEITE_LIFT_LOCAL</j_>()</code>, <code><j_>XIEITE_LIFT_MEMBER</j_>()</code></h2></a>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/lift.hpp" target="_blank"><code><s_>&lt;xieite/pp/lift.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Wraps a function in a lambda object.<br/>
@@ -30,17 +30,11 @@
 			</blockquote>
 			Expands to a lambda expression with a reference capture-default and variadic forwaring reference parameters.<br/>
 			<br/>
-			<a id="def-lift-m" href="#def-lift-m" class="g">#lift-m</a>
+			<a id="def-lift-member" href="#def-lift-member" class="g">#lift-member</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_LIFT_M</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_LIFT_MEMBER</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
 			</blockquote>
-			Same as <a href="#def-lift" class="g">#lift</a> but calls a member of its first parameter with the rest of its parameters.<br/>
-			<br/>
-			<a id="def-lift-m-ptr" href="#def-lift-m-ptr" class="g">#lift-m-ptr</a>
-			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_LIFT_M_PTR</j_>(<k_>...</k_>) <w_>/* []??? { ??? } */</w_></pre>
-			</blockquote>
-			Same as <a href="#def-lift-m" class="g">#lift-m</a> but accesses a member through <code><k_>operator</k_>->()</code>.<br/>
+			Same as <a href="#def-lift" class="g">#lift</a> but calls a member of its first parameter with the rest of its parameters. Expects the user to provide <code>.</code> or <code>-></code>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>

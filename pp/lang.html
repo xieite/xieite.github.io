@@ -27,23 +27,11 @@
 			</blockquote>
 			Use with <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_C$/&type=code" target="_blank"><code><i_>C</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_CPP$/&type=code" target="_blank"><code><i_>CPP</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_CPP_CLI$/&type=code" target="_blank"><code><i_>CPP_CLI</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_CPP_CX$/&type=code" target="_blank"><code><i_>CPP_CX</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_CPP_EMBEDDED$/&type=code" target="_blank"><code><i_>CPP_EMBEDDED</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_CPP_WINRT$/&type=code" target="_blank"><code><i_>CPP_WINRT</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_CUDA$/&type=code" target="_blank"><code><i_>CUDA</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_GLSL$/&type=code" target="_blank"><code><i_>GLSL</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_HLSL$/&type=code" target="_blank"><code><i_>HLSL</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_METAL$/&type=code" target="_blank"><code><i_>METAL</i_></code></a>, <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_OBJECTIVE_C$/&type=code" target="_blank"><code><i_>OBJECTIVE_C</i_></code></a>, or <a href="https://github.com/search?q=repo:Eczbek/xieite path:include/xieite/pp/lang.hpp /XIEITE_LANG_TYPE_PSSL$/&type=code" target="_blank"><code><i_>PSSL</i_></code></a>. <a href="#ex">See example</a>.<br/>
 			<br/>
-			<a id="def-eq" href="#def-eq" class="g">#eq</a>
+			<a id="def-ver" href="#def-ver" class="g">#ver</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_LANG_EQ</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_LANG_VER</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
-			Allows two optional arguments for the minor and patch version numbers. Expands to an expression checking whether a language is in use and its version is equal to some value.<br/>
-			<br/>
-			<a id="def-least" href="#def-least" class="g">#least</a>
-			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_LANG_LEAST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
-			</blockquote>
-			Expands to an expression checking whether a language is in use and its version is equal to or greater than some value.<br/>
-			<br/>
-			<a id="def-most" href="#def-most" class="g">#most</a>
-			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_LANG_MOST</j_>(<v_>type</v_>, <v_>major</v_>, <k_>...</k_><w_>/* minor, patch */</w_>) <w_>/* boolean expression */</w_></pre>
-			</blockquote>
-			Expands to an expression checking whether a language is in use and its version is equal to or less than some value.<br/>
+			Allows up to two additional arguments for the minor and patch versions. Expands to an expression checking whether a language is present and the comparison of its version to the provided arguments.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>

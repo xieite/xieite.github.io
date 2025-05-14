@@ -200,6 +200,7 @@ k_ { color: #3d79ba; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
 t_ { color: #85bef7; } /* types */
 v_ { color: #c1edff; } /* variables */
+o_ { color: #99ffb1; } /* callable object */
 c_ { color: #a099ff; } /* concepts */
 m_ { color: #63d2c8; } /* namespaces */
 f_ { color: #ffeca1; } /* functions */
@@ -210,7 +211,6 @@ p_ { color: #ff48ce; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
 E_ { color: #ff0000; } /* ERROR */
 j_ { color: #ff8026; } /* function-like macro */
-o_ { color: #99ffb1; } /* callable object */
 
 /* TODO: Light mode
 @media (prefers-color-scheme: light) {
