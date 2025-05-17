@@ -16,7 +16,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<t_>mixfix</t_> {}</a></code></h2>
 			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/mixfix.hpp" target="_blank"><code><s_>&lt;xieite/fn/mixfix.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			<E_>#</E_><br/>
+			A helper class for invoking a functor via operators other than <code><k_>operator</k_>()</code>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definitions</h3></a>
@@ -30,7 +30,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ret</t_>, <k_>typename</k_> <t_>Arg</t_>&gt;
 <k_>struct</k_> <t_>mixfix</t_>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt; : <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt; {
-	<k_>using</k_> <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt;::<f_>fn</f_>;
+	<k_>using</k_> <a href="/fn/fn/fn"><m_>xieite</m_>::<t_>fn</t_>&lt;<t_>Ret</t_>(<t_>Arg</t_>)&gt;::<f_>fn</f_></a>;
 
 	<a href=""><span><k_>template</k_>&lt;<m_>std</m_>::<c_>convertible_to</c_>&lt;<t_>Arg</t_>&gt; <t_>ArgRef</t_>&gt;</span>
 	<span><k_>constexpr decltype</k_>(<k_>auto</k_>) <k_>operator</k_>-&gt;*(<k_>this auto&&</k_>, <t_>ArgRef</t_><k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
@@ -218,7 +218,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ret</t_>, <k_>typename</k_> <t_>Arg0</t_>, <k_>typename</k_> <t_>Arg1</t_>&gt;
 <k_>struct</k_> <t_>mixfix</t_>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt; : <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt; {
-	<k_>using</k_> <a href="/fn/fn"><m_>xieite</m_>::<t_>fn</t_></a>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt;::<f_>fn</f_>;
+	<k_>using</k_> <a href="/fn/fn/fn"><m_>xieite</m_>::<t_>fn</t_>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt;::<f_>fn</f_></a>;
 
 	<a href=""><span><k_>template</k_>&lt;<m_>std</m_>::<c_>convertible_to</c_>&lt;<t_>Arg0</t_>&gt; <t_>ArgRef0</t_>&gt;</span>
 	<span><k_>friend constexpr decltype</k_>(<k_>auto</k_>) <k_>operator</k_>-&gt;*(<t_>ArgRef0</t_><k_>&&</k_>, <k_>const</k_> <m_>xieite</m_>::<t_>mixfix</t_>&lt;<t_>Ret</t_>(<t_>Arg0</t_>, <t_>Arg1</t_>)&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
@@ -313,15 +313,21 @@
 			</blockquote>
 			<br/>
 			<br/>
-			<a id="ex" href="#ex"><h3>Example <E_>#</E_></h3></a>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre></pre>
+<pre><k_>int</k_> <f_>main</f_>() {
+	<a href="#def-2"><m_>xieite</m_>::<t_>mixfix</t_></a>&lt;<k_>int</k_>(<k_>int</k_>, <k_>int</k_>)&gt; <o_>mul</o_> = [](<k_>int</k_> <v_>lhs</v_>, <k_>int</k_> <v_>rhs</v_>) {
+		<r_>return</r_> <v_>lhs</v_> * <v_>rhs</v_>;
+	};
+
+	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <n_>2</n_> &lt;<o_>mul</o_>&gt; <n_>3</n_>);
+}</pre>
 			</blockquote>
-			<small>Output: <E_>#</E_></small>
+			<small>Output:</small>
 			<blockquote>
-<pre></pre>
+<pre>6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org" target="_blank" class="g">[View in Compiler Explorer]</a> <E_>#</E_></small>
+			<small><a href="https://godbolt.org/z/j8cWebjKh" target="_blank" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
