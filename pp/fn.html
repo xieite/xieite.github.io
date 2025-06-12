@@ -38,15 +38,15 @@
 			<br/>
 			<a id="def-fn-local" href="#def-fn-local" class="g">#fn-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_LOCAL</j_>(<v_>captures_</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) ??? { ??? }) */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FN_LOCAL</j_>(<v_>_captures</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) ??? { ??? }) */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with user-provided captures, no specifiers, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>. <code><v_>captures_</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
+			Expands to a lambda expression with user-provided captures, no specifiers, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>. <code><v_>_captures</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
 			<br/>
 			<a id="def-fn-mut" href="#def-fn-mut" class="g">#fn-mut</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_MUT</j_>(<v_>captures_</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) mutable ??? { ??? }) */</w_></pre>
+<pre><p_>#define</p_> <j_>XIEITE_FN_MUT</j_>(<v_>_captures</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) mutable ??? { ??? }) */</w_></pre>
 			</blockquote>
-			Expands to a lambda expression with user-provided captures, a <code><k_>mutable</k_></code> specifier, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>. <code><v_>captures_</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
+			Expands to a lambda expression with user-provided captures, a <code><k_>mutable</k_></code> specifier, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>. <code><v_>_captures</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Examples</h3></a>

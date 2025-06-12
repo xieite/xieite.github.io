@@ -200,7 +200,7 @@ k_ { color: #3d79ba; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
 t_ { color: #85bef7; } /* types */
 v_ { color: #c1edff; } /* variables */
-o_ { color: #99ffb1; } /* callable object */
+o_ { color: #c1edff; } /* callable object // alt color: #99ffb1 */
 c_ { color: #a099ff; } /* concepts */
 m_ { color: #63d2c8; } /* namespaces */
 f_ { color: #ffeca1; } /* functions */

@@ -41,49 +41,49 @@
 			<br/>
 			<a id="def-arrow-if" href="#def-arrow-if" class="g">#arrow-if</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_IF</j_>(<v_>cond_</v_>, <v_>then_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_IF</j_>(<v_>_cond</v_>, <v_>_then</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
-	{ <w_>if constexpr (cond_) { (then_); } return __VA_ARGS__;</w_> }</pre>
+	{ <w_>if constexpr (_cond) { (_then); } return __VA_ARGS__;</w_> }</pre>
 			</blockquote>
-			<code><v_>cond_</v_></code> is explicitly cast to <code><k_>bool</k_></code>.<br/>
+			<code><v_>_cond</v_></code> is explicitly cast to <code><k_>bool</k_></code>.<br/>
 			<br/>
 			<a id="def-arrow-choose" href="#def-arrow-choose" class="g">#arrow-choose</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_CHOOSE</j_>(<v_>cond_</v_>, <v_>then_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_CHOOSE</j_>(<v_>_cond</v_>, <v_>_then</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
-	{ <w_>if constexpr (cond_) { return then_; } else { return __VA_ARGS__; }</w_> }</pre>
+	{ <w_>if constexpr (_cond) { return _then; } else { return __VA_ARGS__; }</w_> }</pre>
 			</blockquote>
-			<code><v_>cond_</v_></code> is explicitly cast to <code><k_>bool</k_></code>. <code><v_>then_</v_></code> may optionally be wrapped in parentheses.<br/>
+			<code><v_>_cond</v_></code> is explicitly cast to <code><k_>bool</k_></code>. <code><v_>_then</v_></code> may optionally be wrapped in parentheses.<br/>
 			<br/>
 			<a id="def-arrow-try" href="#def-arrow-try" class="g">#arrow-try</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_TRY</j_>(<v_>body_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_TRY</j_>(<v_>_body</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> { <v_>body_</v_>; <w_>/* ??? */</w_> }) <i_>\</i_>
-	{ <w_>/* try { return body_; } catch (???) { return ???; } ??? */</w_> }</pre>
+	<k_>requires</k_>(<k_>requires</k_> { <v_>_body</v_>; <w_>/* ??? */</w_> }) <i_>\</i_>
+	{ <w_>/* try { return _body; } catch (???) { return ???; } ??? */</w_> }</pre>
 			</blockquote>
 			Accepts a <code><r_>try</r_></code> body followed by a list of <code><r_>catch</r_></code> parameters and their bodies, respectively, in alternating order. All arguments may optionally be wrapped in parentheses. All parameters must be named, and empty parameters are replaced with <code>...</code>.<br/>
 			<br/>
 			<a id="def-arrow-decl" href="#def-arrow-decl" class="g">#arrow-decl</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_DECL</j_>(<v_>params_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_DECL</j_>(<v_>_params</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <k_>requires</k_>(<k_>noexcept</k_>(<i_>__VA_ARGS__</i_>)); }) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
 	{ <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
 			</blockquote>
-			<code><v_>params_</v_></code> may optionally be wrapped in parentheses if passing one variable, and must be wrapped in parentheses if passing multiple. Passing a variable within an additional set of parentheses designates it as a pack.<br/>
+			<code><v_>_params</v_></code> may optionally be wrapped in parentheses if passing one variable, and must be wrapped in parentheses if passing multiple. Passing a variable within an additional set of parentheses designates it as a pack.<br/>
 			Can be used as a workaround to compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) that prevent lambdas outside the function body from capturing function parameters:<br/>
 			&emsp;<code><k_>auto</k_> <f_>f</f_>(<k_>auto</k_> <v_>x</v_>) <a href="#def-arrow-decl"><j_>XIEITE_ARROW_DECL</j_></a>(<v_>x</v_>, [<k_>=</k_>] { <v_>x</v_>; }())</code><br/>
 			<br/>
 			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="g">#arrow-ctor</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_ARROW_CTOR</j_>(<v_>body_</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_CTOR</j_>(<v_>_body</v_>, <k_>...</k_>) <i_>\</i_>
 	<k_>noexcept</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	<k_>requires</k_>(<w_>/* ??? */</w_>) <i_>\</i_>
 	: <w_>/* ??? */</w_> <i_>\</i_>
