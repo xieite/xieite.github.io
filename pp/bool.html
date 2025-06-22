@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>XIEITE_BOOL()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<a href=""><h2><code><j_>XIEITE_BOOL</j_>()</code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/bool.hpp" target="_blank"><code><s_>&lt;xieite/pp/bool.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Expands to <code><n_>0</n_></code> if <code><n_>0</n_></code> is passed, otherwise expands to <code><n_>1</n_></code>.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definition</h3></a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XIEITE_BOOL</j_>(<v_>_x</v_>) <a href="/pp/compl"><j_>XIEITE_COMPL</j_></a>(<a href="/pp/not"><j_>XIEITE_NOT</j_></a>(<v_>_x</v_>))</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><a href="#def"><j_>XIEITE_BOOL</j_></a>(<n_>0</n_>)
+<a href="#def"><j_>XIEITE_BOOL</j_></a>()
+<a href="#def"><j_>XIEITE_BOOL</j_></a>(abcdef)</pre>
+			</blockquote>
+			<small>Preprocessor output:</small>
+			<blockquote>
+<pre><n_>0</n_>
+<n_>1</n_>
+<n_>1</n_></pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/3WeGx3szq" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

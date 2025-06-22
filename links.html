@@ -70,19 +70,16 @@
 		<a href="/fn/cast" target="_top"><o_>cast</o_>&lt;&gt;</a>
 		<w_>discardable()</w_>
 		<a href="/fn/distribute_args" target="_top"><f_>distribute_args</f_>()</a>
-		<w_>enum_op {}
-		exp_udl {}
+		<w_>exp_udl {}
 		fn {}
 		fstr_udl {}</w_>
 		<a href="/fn/memoize" target="_top"><f_>memoize</f_>()</a>
 		<a href="/fn/mixfix" target="_top"><t_>mixfix</t_> {}</a>
 		<w_>noex()
 		number_udl {}
-		order_op {}
-		pipe_op {}
 		process_guard {}
 		radix_udl {}
-		range_cmp_op {}
+		range_cmp()
 		range_udl {}</w_>
 		<a href="/fn/repeat" target="_top"><f_>repeat</f_>()</a>
 		<w_>reverse_args()
@@ -239,23 +236,26 @@
 		state {}
 		subtuple()
 		tuple_size&lt;&gt;</w_>
+		<a href="/meta/type" target="_top"><t_>type</t_>&lt;&gt;</a>
 		<a href="/meta/type_id" target="_top"><v_>type_id</v_>&lt;&gt;</a>
 		<a href="/meta/type_name" target="_top"><v_>type_name</v_>&lt;&gt;</a>
 		<a href="/meta/type_list" target="_top"><t_>type_list</t_> {}</a>
 		<a href="/meta/value" target="_top"><t_>value</t_>&lt;&gt;</a>
 	pp
-		<w_>ANY()</w_>
+		<w_>AND()</w_>
+		<a href="/pp/any" target="_top"><j_>ANY</j_>()</a>
 		<a href="/pp/arch" target="_top"><i_>ARCH</i_></a>
 		<a href="/pp/arrow" target="_top"><j_>ARROW</j_>()</a>
 		<w_>AT()
-		ATTR
-		BOOL()
-		CALL()
+		ATTR</w_>
+		<a href="/pp/bool" target="_top"><j_>BOOL</j_>()</a>
+		<w_>CALL()
 		CAT()
 		CHECK()
 		CM()
 		COMMA()</w_>
 		<a href="/pp/compiler" target="_top"><i_>COMPILER</i_></a>
+		<a href="/pp/compl" target="_top"><j_>COMPL</j_>()</a>
 		<w_>COUNT()</w_>
 		<a href="/pp/debug" target="_top"><i_>DEBUG</i_></a>
 		<w_>DEFER()
@@ -273,19 +273,20 @@
 		<a href="/pp/fwd" target="_top"><j_>FWD</j_>()</a>
 		<w_>HAS_ATTR()
 		HAS_DECLSPEC()
-		HAS_INCL()
-		IF()
-		IS_CXPR()
+		HAS_INCL()</w_>
+		<a href="/pp/if" target="_top"><j_>IF</j_>()</a>
+		<w_>IS_CXPR()
 		/* keywords */</w_>
 		<a href="/pp/lang" target="_top"><i_>LANG</i_></a>
 		<a href="/pp/lift" target="_top"><j_>LIFT</j_>()</a>
 		<w_>/* no_unix */
-		/* no_windows */
-		NONE()
-		NOT()
+		/* no_windows */</w_>
+		<a href="/pp/none" target="_top"><j_>NONE</j_>()</a>
+		<w_>NOT()
 		OBJ()
 		OBSTRUCT()
 		OPT()
+		OR()
 		OUT()
 		PAREN()</w_>
 		<a href="/pp/platform" target="_top"><i_>PLATFORM</i_></a>
