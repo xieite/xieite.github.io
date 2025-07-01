@@ -13,15 +13,48 @@
 		<main>
 			<a href=""><h1>XIEITE</h1></a>
 			General-purpose C++ utility library<br/>
-			<small>(with a slight focus on metaprogramming)</small><br/>
 			<br/>
 			This project extends the standard library without external dependencies and provides a somewhat organized collection of questionably useful tools for assisting in various shenanigans<br/>
 			<br/>
-			Features:<br/>
+			<a id="feat" href="#feat">Some features:</a><br/>
+			- <code><k_>constexpr</k_></code> string manipulation functions<br/>
+			- An iterator iterator<br/>
+			- Modern analog literals, up to three dimensions<br/>
+			- Type conversion functor objects<br/>
+			- Argument manipulation functions<br/>
+			- Units, conversions thereof, and corresponding literal suffixes<br/>
+			- <code><m_>std</m_>::<t_>FILE</t_><k_>*</k_></code> wrappers<br/>
+			- A standard streams handle for advanced terminal manipulation<br/>
+			- 2D geometrical elements and operations<br/>
 			- Integer division rounding functions<br/>
+			- A big-integer class<br/>
+			- Factorial and Fibonacci lookup tables, generated at compile-time<br/>
+			- Cross-platform 128-bit integer type aliases<br/>
+			- Bit joining and splitting functions<br/>
+			- <code><k_>constexpr</k_></code> string hashing functions<br/>
+			- Wrappers for numbers and bit-fields<br/>
+			- An integer casting function with consideration for signedness<br/>
+			- Integer overflow detection functions<br/>
+			- An interruptable uniform random number distribution<br/>
+			- Aggregate class arity getter<br/>
+			- A tuple constructor from any aggregate class<br/>
+			- A <code><k_>typeid</k_></code> name demanger<br/>
+			- Continuous enumeration size getter<br/>
+			- Type, value, and member variable name stringification constants<br/>
+			- Tuple manipulation functions<br/>
 			- A non-recursive type list<br/>
-			- The largest collection of compiler and platform detection macros on the internet<br/>
-			- Big integer class<br/>
+			- The most complete collection of compiler, standard library, platform, architecture, word size, endianness, encoding, language, and feature detection macros on the internet<br/>
+			- Logical operations and other utilities for preprocessor metaprogramming<br/>
+			- Cross-platform diagnostic pragma macros<br/>
+			- Cross-platform attribute wrapper macros<br/>
+			- Various C++ utility macros<br/>
+			- Aligned memory manipulation functions<br/>
+			- A cosmic ray detector<br/>
+			- A cross-platform process executor function<br/>
+			- Named common process exit codes<br/>
+			- A thread pool<br/>
+			- <code><k_>concept</k_></code> wrappers for all standard type trait classes<br/>
+			- Utilities for checking, adding, removing, replacing, and combining <code><k_>const</k_></code>, <code><k_>volatile</k_></code>, and reference qualifiers and non-static member function qualifiers<br/>
 			<br/>
 			<br/>
 			<br/>
@@ -30,13 +63,13 @@
 			<br/>
 			<br/>
 			<br/>
-			<h3>Requirements</h3>
-			- C++26 <small>(but most is C++23, and some parts support C89)</small><br/>
-			- GCC trunk <span class="g">or</span> Clang trunk <small>(has bugs)</small> <span class="g">or</span> MSVC latest <small>(not fully supported)</small><br/>
+			<a id="req" href="#req"><h3>Requirements</h3></a>
+			- C++26<br/>
+			- Latest compiler of choice (preferrably GCC)<br/>
 			<br/>
 			<br/>
 			<br/>
-			<h3>Usage</h3>
+			<a id="ex" href="#ex"><h3>Usage</h3></a>
 			<blockquote>
 <pre><j_>cmake_minimum_required</j_>(<a_>VERSION</a_> <n_>3.25</n_>)
 
