@@ -72,13 +72,12 @@
 			<a id="def-arrow-decl" href="#def-arrow-decl" class="g">#arrow-decl</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XIEITE_ARROW_DECL</j_>(<v_>_params</v_>, <k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <k_>requires</k_>(<k_>noexcept</k_>(<i_>__VA_ARGS__</i_>)); }) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>requires</k_>(<w_>/* ??? */</w_>) { <k_>requires</k_>(<k_>noexcept</k_>(<i_>__VA_ARGS__</i_>)); }) <i_>\</i_>
 	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> (<w_>/* ??? */</w_>) { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
+	<k_>requires</k_>(<k_>requires</k_>(<w_>/* ??? */</w_>) { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
 	{ <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
 			</blockquote>
 			<code><v_>_params</v_></code> may optionally be wrapped in parentheses if passing one variable, and must be wrapped in parentheses if passing multiple. Passing a variable within an additional set of parentheses designates it as a pack.<br/>
-			Can be used as a workaround to compiler bugs (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=117061" class="g">GCC</a>, <a href="https://github.com/llvm/llvm-project/issues/111840" class="g">Clang</a>) that prevent lambdas outside the function body from capturing function parameters:<br/>
 			&emsp;<code><k_>auto</k_> <f_>f</f_>(<k_>auto</k_> <v_>x</v_>) <a href="#def-arrow-decl"><j_>XIEITE_ARROW_DECL</j_></a>(<v_>x</v_>, [<k_>=</k_>] { <v_>x</v_>; }())</code><br/>
 			<br/>
 			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="g">#arrow-ctor</a>
