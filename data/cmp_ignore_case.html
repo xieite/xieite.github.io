@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::cmp_ignore_case()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<f_>cmp_ignore_case</f_>()</a></code></h2>
+			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/cmp_ignore_case.hpp" target="_blank"><code><s_>&lt;xieite/data/cmp_ignore_case.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Compares two strings, ignoring case. Avoids allocation.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/utility/compare/strong_ordering" target="_blank"><m_>std</m_>::<t_>strong_ordering</t_></a> <f_>cmp_ignore_case</f_>(<a href="/trait/is_fwd_input_range"><m_>xieite</m_>::<c_>is_fwd_input_range</c_></a>&lt;[]&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a>&gt; {}&gt; <k_>auto&&</k_> <v_>lhs</v_>, <a href="/trait/is_fwd_input_range"><m_>xieite</m_>::<c_>is_fwd_input_range</c_></a>&lt;[]&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a>&gt; {}&gt; <k_>auto&&</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/utility/compare/named_comparison_functions" target="_blank"><m_>std</m_>::<f_>is_eq</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>cmp_ignore_case</f_></a>(<s_>"HELLO"</s_>, <s_>"hello"</s_>)));</pre>
+			</blockquote>
+			<small><a href="https://godbolt.org/z/sz7e7e1xG" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
