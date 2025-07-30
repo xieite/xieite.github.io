@@ -14,7 +14,7 @@
 		<iframe src="/io/term.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_> {}</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp" target="_blank"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			A class for controlling standard I/O with toggleable "modes" and text styles. Currently only supports unix-like platforms.<br/>
 			<br/>
@@ -22,8 +22,8 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>struct</k_> <t_>term</t_> {
-	<a href="https://en.cppreference.com/w/cpp/io/c/FILE" target="_blank"><m_>std</m_>::<t_>FILE</t_><k_>*</k_></a> <v_>in</v_>;
-	<a href="https://en.cppreference.com/w/cpp/io/c/FILE" target="_blank"><m_>std</m_>::<t_>FILE</t_><k_>*</k_></a> <v_>out</v_>;
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_><k_>*</k_></a> <v_>in</v_>;
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_><k_>*</k_></a> <v_>out</v_>;
 
 	<a href="/io/term/term"><span><f_>term</f_>(<m_>std</m_>::<t_>FILE</t_><k_>*</k_> = <i_>stdin</i_>, <m_>std</m_>::<t_>FILE</t_><k_>*</k_> = <i_>stdout</i_>) <k_>noexcept</k_>;</span>
 
@@ -173,14 +173,14 @@
 <pre><k_>int</k_> <f_>main</f_>() {
 	<a href="/io/term"><m_>xieite</m_>::<t_>term</t_></a> <v_>term</v_>;
 	<v_>term</v_>.<a href="/io/term/fg"><f_>fg</f_></a>(<n_>255</n_>, <n_>0</n_>, <n_>0</n_>);
-	<a href="https://en.cppreference.com/w/cpp/io/c/puts" target="_blank"><m_>std</m_>::<f_>puts</f_></a>(<s_>"Hello, world!"</s_>);
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/puts"><m_>std</m_>::<f_>puts</f_></a>(<s_>"Hello, world!"</s_>);
 }</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
 <pre style="color: #FF0000">Hello, world!</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/E1nGzWG8Y" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/E1nGzWG8Y" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

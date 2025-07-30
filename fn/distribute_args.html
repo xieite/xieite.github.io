@@ -12,7 +12,7 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>distribute_args</f_>()</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/distribute_args.hpp" target="_blank"><code><s_>&lt;xieite/fn/distribute_args.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/distribute_args.hpp"><code><s_>&lt;xieite/fn/distribute_args.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Uniformly distributes arguments across multiple calls to a functor.<br/>
 			<br/>
@@ -20,16 +20,16 @@
 			<a id="def" href="#def"><h3>Declarations</h3></a>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>&gt;
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>&gt;
 <k_>constexpr void</k_> <f_>distribute_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
 	<a href="/pp/arrow"><j_>XIEITE_ARROW_RET</j_></a>(<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;(<k_>sizeof...</k_>(<v_>args</v_>) / <v_>arity</v_>)&gt;(
-		[]&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt;(<k_>const auto&</k_> <v_>fn</v_>, <k_>const auto&</k_> <v_>args_tuple</v_>) <k_>static</k_>
-			<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>((..., (<k_>void</k_>)<a href="https://en.cppreference.com/w/cpp/utility/apply" target="_blank"><m_>std</m_>::<f_>apply</f_></a>(
+		[]&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt;(<k_>const auto&</k_> <v_>fn</v_>, <k_>const auto&</k_> <v_>args_tuple</v_>) <k_>static</k_>
+			<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>((..., (<k_>void</k_>)<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/apply"><m_>std</m_>::<f_>apply</f_></a>(
 				<v_>fn</v_>,
-				<a href="/meta/subtuple"><m_>xieite</m_>::<f_>subtuple</f_></a>&lt;(<v_>i</v_> * <v_>arity</v_>), ((<v_>i</v_> + <n_>1</n_>) * <v_>arity</v_>)&gt;(<a href="https://en.cppreference.com/w/cpp/utility/move" target="_blank"><m_>std</m_>::<f_>move</f_></a>(<v_>args_tuple</v_>))
+				<a href="/meta/subtuple"><m_>xieite</m_>::<f_>subtuple</f_></a>&lt;(<v_>i</v_> * <v_>arity</v_>), ((<v_>i</v_> + <n_>1</n_>) * <v_>arity</v_>)&gt;(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/move"><m_>std</m_>::<f_>move</f_></a>(<v_>args_tuple</v_>))
 			))),
 		<v_>fn</v_>,
-		<a href="https://en.cppreference.com/w/cpp/utility/tuple/forward_as_tuple" target="_blank"><m_>std</m_>::<f_>forward_as_tuple</f_></a>(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...)
+		<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/tuple/forward_as_tuple"><m_>std</m_>::<f_>forward_as_tuple</f_></a>(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...)
 	))</pre>
 			</blockquote>
 			<code><v_>arity</v_></code> dictates how many <code><v_>args</v_></code> are to be passed to <code><v_>fn</v_></code> at a time.<br/>
@@ -37,7 +37,7 @@
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>prev</v_> = <n_>0</n_>&gt;
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>arity</v_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>prev</v_> = <n_>0</n_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr decltype</k_>(<k_>auto</k_>) <f_>distribute_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
 			Similar to <a href="#def-0" class="g">#0</a>, but with <code><v_>prev</v_></code> which dictates how many of those arguments should be recursive calls to <code><v_>fn</v_></code> (if the remaining number of <code><v_>args</v_></code> allows it).<br/>
@@ -57,19 +57,19 @@
 3 4
 5 6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/eaWo4h7E9" target="_blank" class="g">[View in Compiler Explorer]</a></small><br/>
+			<small><a target="_blank" href="https://godbolt.org/z/eaWo4h7E9" class="g">[View in Compiler Explorer]</a></small><br/>
 			<br/>
 			<a id="ex-1" href="#ex-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>auto</k_> <o_>fn</o_> = [](<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {
-		<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_> + <i_>{}</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
+		<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_> + <i_>{}</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
 		<r_>return</r_> <v_>a</v_> + <v_>b</v_>;
 	};
 
 	<k_>int</k_> <v_>sum</v_> = <a href="#def"><m_>xieite</m_>::<f_>distribute_args</f_></a>&lt;<n_>2</n_>, <n_>1</n_>&gt;(<o_>fn</o_>, <n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>);
 
-	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"sum: <i_>{}</i_>"</s_>, <v_>sum</v_>);
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"sum: <i_>{}</i_>"</s_>, <v_>sum</v_>);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -80,7 +80,7 @@
 10 + 5
 sum: 15</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/nv17j6313" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/nv17j6313" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

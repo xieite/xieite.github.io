@@ -12,7 +12,7 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>add_overflow</f_>()</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/add_overflow.hpp" target="_blank"><code><s_>&lt;xieite/math/add_overflow.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/add_overflow.hpp"><code><s_>&lt;xieite/math/add_overflow.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Checks whether the addition of two or more integers would overflow or underflow their type.<br/>
 			Can be used to catch undefined behavior before it is invoked (such as when the addition of two signed integers would overflow).<br/>
@@ -20,7 +20,7 @@
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>Arith</t_>, <a href="https://en.cppreference.com/w/cpp/concepts/convertible_to" target="_blank"><m_>std</m_>::<c_>convertible_to</c_></a>&lt;<t_>Arith</t_>&gt;<k_>...</k_> <t_>Ariths</t_>&gt;
+<pre><k_>template</k_>&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>Arith</t_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/convertible_to"><m_>std</m_>::<c_>convertible_to</c_></a>&lt;<t_>Arith</t_>&gt;<k_>...</k_> <t_>Ariths</t_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>add_overflow</f_>(<t_>Arith</t_> <v_>first</v_>, <t_>Ariths</t_><k_>...</k_> <v_>rest</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
@@ -28,14 +28,14 @@
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>add_overflow</f_></a>&lt;<a href="https://en.cppreference.com/w/cpp/types/integer" target="_blank"><m_>std</m_>::<t_>int8_t</t_></a>&gt;(<n_>127</n_>, <n_>1</n_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>add_overflow</f_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/integer"><m_>std</m_>::<t_>int8_t</t_></a>&gt;(<n_>127</n_>, <n_>1</n_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
 <pre>true</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/YK4YWvbr6" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/YK4YWvbr6" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

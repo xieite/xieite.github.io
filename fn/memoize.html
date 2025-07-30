@@ -12,7 +12,7 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>memoize</f_>()</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/memoize.hpp" target="_blank"><code><s_>&lt;xieite/fn/memoize.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/memoize.hpp"><code><s_>&lt;xieite/fn/memoize.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Memoizes a function call to immediately return its result when called with the same arguments again. This can be used to avoid repeating expensive calculations.<br/>
 			<br/>
@@ -20,22 +20,22 @@
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>F</t_>, <k_>typename...</k_> <t_>Args</t_>&gt;
-<k_>requires</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/invocable" target="_blank"><m_>std</m_>::<c_>invocable</c_></a>&lt;<t_>F</t_>, <t_>Args</t_>...&gt;)
-<a href="https://en.cppreference.com/w/cpp/types/result_of#Helper_types" target="_blank"><m_>std</m_>::<t_>invoke_result_t</t_></a>&lt;<t_>F</t_>, <t_>Args</t_>...&gt; <f_>memoize</f_>(<t_>F</t_> <v_>fn</v_>, <k_>const</k_> <t_>Args</t_><k_>&...</k_> <v_>args</v_>)
-<k_>noexcept</k_>(<a href="https://en.cppreference.com/w/cpp/types/is_invocable#Helper_variable_templates" target="_blank"><m_>std</m_>::<v_>is_nothrow_invocable_v</v_></a>&lt;<t_>F</t_>, <t_>Args</t_>...&gt;);</pre>
+<k_>requires</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/invocable"><m_>std</m_>::<c_>invocable</c_></a>&lt;<t_>F</t_>, <t_>Args</t_>...&gt;)
+<a target="_blank" href="https://en.cppreference.com/w/cpp/types/result_of#Helper_types"><m_>std</m_>::<t_>invoke_result_t</t_></a>&lt;<t_>F</t_>, <t_>Args</t_>...&gt; <f_>memoize</f_>(<t_>F</t_> <v_>fn</v_>, <k_>const</k_> <t_>Args</t_><k_>&...</k_> <v_>args</v_>)
+<k_>noexcept</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/types/is_invocable#Helper_variable_templates"><m_>std</m_>::<v_>is_nothrow_invocable_v</v_></a>&lt;<t_>F</t_>, <t_>Args</t_>...&gt;);</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>x</v_>, <k_>int</k_> <v_>y</v_>) {
-	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"`add(<i_>{}</i_>, <i_>{}</i_>)` called<i_></i_>"</s_>, <v_>x</v_>, <v_>y</v_>);
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"`add(<i_>{}</i_>, <i_>{}</i_>)` called<i_></i_>"</s_>, <v_>x</v_>, <v_>y</v_>);
 	<r_>return</r_> <v_>x</v_> + <v_>y</v_>;
 }
 
 <k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>));
-	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>)); <w_>// `add(1, 2)` is not called again</w_>
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>));
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def"><m_>xieite</m_>::<f_>memoize</f_></a>(<f_>add</f_>, <n_>1</n_>, <n_>2</n_>)); <w_>// `add(1, 2)` is not called again</w_>
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -44,7 +44,7 @@
 3
 3</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/zKrqsf889" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/zKrqsf889" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

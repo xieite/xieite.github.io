@@ -12,43 +12,43 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<f_>strlen</f_>()</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/strlen.hpp" target="_blank"><code><s_>&lt;xieite/data/strlen.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/strlen.hpp"><code><s_>&lt;xieite/data/strlen.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A <code><k_>constexpr</k_></code> (and slightly more general) replacement for <a href="https://en.cppreference.com/w/cpp/string/byte/strlen" target="_blank"><code><m_>std</m_>::<f_>strlen</f_>()</code></a>.<br/>
+			A <code><k_>constexpr</k_></code> (and slightly more general) replacement for <a target="_blank" href="https://en.cppreference.com/w/cpp/string/byte/strlen"><code><m_>std</m_>::<f_>strlen</f_>()</code></a>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Char</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>basic_string_view</t_></a>&lt;<t_>Char</t_>&gt; <v_>strv</v_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string_view"><m_>std</m_>::<t_>basic_string_view</t_></a>&lt;<t_>Char</t_>&gt; <v_>strv</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Char</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Char</t_>&gt;<k_>&</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Char</t_>&gt;<k_>&</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<a id="def-2" href="#def-2" class="g">#2</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>length</v_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a href="/meta/paren"><m_>xieite</m_>::<t_>paren</t_></a>&lt;<t_>Char</t_>[<v_>length</v_>]&gt;<k_>&</k_>) <k_>noexcept</k_>;</pre>
+<pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>length</v_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a href="/meta/paren"><m_>xieite</m_>::<t_>paren</t_></a>&lt;<t_>Char</t_>[<v_>length</v_>]&gt;<k_>&</k_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			Returns <code><v_>length</v_> - !!<v_>length</v_></code>. The compiler should prefer this overload for string literals.<br/>
 			<br/>
 			<a id="def-3" href="#def-3" class="g">#3</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Str</t_>&gt;
-<k_>requires</k_>(<a href="/trait/is_ptr"><m_>xieite</m_>::<c_>is_ptr</c_></a>&lt;<t_>Str</t_>&gt; && <a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a>&lt;<a href="https://en.cppreference.com/w/cpp/types/remove_pointer#Helper_types" target="_blank"><m_>std</m_>::<t_>remove_pointer_t</t_></a>&lt;<t_>Str</t_>&gt;&gt;)
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Str</t_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
+<k_>requires</k_>(<a href="/trait/is_ptr"><m_>xieite</m_>::<c_>is_ptr</c_></a>&lt;<t_>Str</t_>&gt; && <a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/remove_pointer#Helper_types"><m_>std</m_>::<t_>remove_pointer_t</t_></a>&lt;<t_>Str</t_>&gt;&gt;)
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Str</t_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			Invokes undefined behavior if the passed string is not null-terminated.<br/>
 			<br/>
 			<a id="def-4" href="#def-4" class="g">#4</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Char</t_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<t_>Char</t_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			Always returns <code><n_>1</n_></code>.<br/>
 			<br/>
@@ -63,7 +63,7 @@
 			<blockquote>
 <pre>6</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/WW1a6bGj9" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/WW1a6bGj9" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

@@ -12,7 +12,7 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>value_id</t_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/value_id.hpp" target="_blank"><code><s_>&lt;xieite/meta/value_id.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/value_id.hpp"><code><s_>&lt;xieite/meta/value_id.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			A NTTP wrapper.<br/>
 			<br/>
@@ -28,20 +28,20 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>idx</v_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
-<k_>using</k_> <t_>at</t_> = <k_>decltype</k_>(<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<t_>Ts</t_>...&gt;([]&lt;<a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt; <k_>static</k_> {
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>idx</v_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
+<k_>using</k_> <t_>at</t_> = <k_>decltype</k_>(<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<t_>Ts</t_>...&gt;([]&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt; <k_>static</k_> {
 	<r_>return</r_> <a href="/fn/visitor"><m_>xieite</m_>::<t_>visitor</t_></a>(
 		[](<a href="#def"><m_>xieite</m_>::<t_>value_id</t_></a>&lt;<v_>i</v_>&gt;) <k_>static</k_> {
-			<r_>return</r_> <a href="https://en.cppreference.com/w/cpp/types/type_identity" target="_blank"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<t_>Ts</t_>&gt;();
+			<r_>return</r_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<t_>Ts</t_>&gt;();
 		}...
 	)(<a href="#def"><m_>xieite</m_>::<t_>value_id</t_></a>&lt;<v_>idx</v_>&gt;());
-}))::<a href="https://en.cppreference.com/w/cpp/types/type_identity#Member_types" target="_blank"><t_>type</t_></a>;
+}))::<a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity#Member_types"><t_>type</t_></a>;
 
-<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<t_>at</t_>&lt;<n_>1</n_>, <k_>int</k_>, <k_>char</k_>, <k_>void</k_>&gt;, <k_>char</k_>&gt;);
+<k_>static_assert</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<t_>at</t_>&lt;<n_>1</n_>, <k_>int</k_>, <k_>char</k_>, <k_>void</k_>&gt;, <k_>char</k_>&gt;);
 
 <k_>int</k_> <f_>main</f_>() {}</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/GoP6WMK34" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/GoP6WMK34" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

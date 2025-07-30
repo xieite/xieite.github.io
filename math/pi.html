@@ -12,36 +12,36 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<v_>pi</v_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/pi.hpp" target="_blank"><code><s_>&lt;xieite/math/pi.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/pi.hpp"><code><s_>&lt;xieite/math/pi.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			<code><a href="https://en.cppreference.com/w/cpp/numeric/constants" target="_blank"><m_>std</m_>::<m_>numbers</m_>::<v_>pi_v</v_>&lt;&gt;</a></code> but also accepts integer types.<br/>
+			<code><a target="_blank" href="https://en.cppreference.com/w/cpp/numeric/constants"><m_>std</m_>::<m_>numbers</m_>::<v_>pi_v</v_>&lt;&gt;</a></code> but also accepts integer types.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>Arith</t_> = <k_>double</k_>&gt;
-<k_>constexpr</k_> <t_>Arith</t_> <v_>pi</v_>&lt;<t_>Arith</t_>&gt; = <a href="https://en.cppreference.com/w/cpp/numeric/constants" target="_blank"><m_>std</m_>::<m_>numbers</m_>::<v_>pi_v</v_></a>&lt;<t_>Arith</t_>&gt;;</pre>
+<k_>constexpr</k_> <t_>Arith</t_> <v_>pi</v_>&lt;<t_>Arith</t_>&gt; = <a target="_blank" href="https://en.cppreference.com/w/cpp/numeric/constants"><m_>std</m_>::<m_>numbers</m_>::<v_>pi_v</v_></a>&lt;<t_>Arith</t_>&gt;;</pre>
 			</blockquote>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/integral" target="_blank"><m_>std</m_>::<c_>integral</c_></a> <t_>Int</t_>&gt;
-<k_>constexpr</k_> <t_>Int</t_> <v_>pi</v_>&lt;<t_>Int</t_>&gt; = <k_>static_cast</k_>&lt;<t_>Int</t_>&gt;(<a href="https://en.cppreference.com/w/cpp/numeric/constants" target="_blank"><m_>std</m_>::<m_>numbers</m_>::<v_>pi</v_></a>);</pre>
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/integral"><m_>std</m_>::<c_>integral</c_></a> <t_>Int</t_>&gt;
+<k_>constexpr</k_> <t_>Int</t_> <v_>pi</v_>&lt;<t_>Int</t_>&gt; = <k_>static_cast</k_>&lt;<t_>Int</t_>&gt;(<a target="_blank" href="https://en.cppreference.com/w/cpp/numeric/constants"><m_>std</m_>::<m_>numbers</m_>::<v_>pi</v_></a>);</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="https://en.cppreference.com/w/cpp/io/println" target="_blank"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def-1"><m_>xieite</m_>::<v_>pi</v_></a>&lt;<k_>int</k_>&gt;);
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"<i_>{}</i_>"</s_>, <a href="#def-1"><m_>xieite</m_>::<v_>pi</v_></a>&lt;<k_>int</k_>&gt;);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
 <pre>3</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/frqjK6of4" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/frqjK6of4" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

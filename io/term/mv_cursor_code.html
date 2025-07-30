@@ -14,7 +14,7 @@
 		<iframe src="/io/term.links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>term</t_>::<f_>mv_cursor_code</f_>()</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp" target="_blank"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/term.hpp"><code><s_>&lt;xieite/io/term.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Moves the cursor by some offset.<br/>
 			<br/>
@@ -22,20 +22,20 @@
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>static constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>string</t_></a> <f_>mv_cursor_code</f_>(<a href="/math/ssize_t"><m_>xieite</m_>::<t_>ssize_t</t_></a> <v_>row</v_>, <a href="/math/ssize_t"><m_>xieite</m_>::<t_>ssize_t</t_></a> <v_>col</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>static constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string"><m_>std</m_>::<t_>string</t_></a> <f_>mv_cursor_code</f_>(<a href="/math/ssize_t"><m_>xieite</m_>::<t_>ssize_t</t_></a> <v_>row</v_>, <a href="/math/ssize_t"><m_>xieite</m_>::<t_>ssize_t</t_></a> <v_>col</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>static constexpr</k_> <a href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank"><m_>std</m_>::<t_>string</t_></a> <f_>mv_cursor_code</f_>(<a href="/io/pos"><m_>xieite</m_>::<t_>pos</t_></a> <v_>diff</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>static constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string"><m_>std</m_>::<t_>string</t_></a> <f_>mv_cursor_code</f_>(<a href="/io/pos"><m_>xieite</m_>::<t_>pos</t_></a> <v_>diff</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<r_>for</r_> (<k_>char</k_> <v_>c</v_> : <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" target="_blank"><m_>std</m_>::<t_>string_view</t_></a>(<s_>"Hello, world!"</s_>)) {
-		<a href="https://en.cppreference.com/w/cpp/io/print" target="_blank"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}{}</i_>"</s_>, <v_>c</v_>, <a href="#def-0"><m_>xieite</m_>::<t_>term</t_>::<f_>mv_cursor_code</f_></a>(<n_>1</n_>, <n_>0</n_>));
+	<r_>for</r_> (<k_>char</k_> <v_>c</v_> : <a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string_view"><m_>std</m_>::<t_>string_view</t_></a>(<s_>"Hello, world!"</s_>)) {
+		<a target="_blank" href="https://en.cppreference.com/w/cpp/io/print"><m_>std</m_>::<f_>print</f_></a>(<s_>"<i_>{}{}</i_>"</s_>, <v_>c</v_>, <a href="#def-0"><m_>xieite</m_>::<t_>term</t_>::<f_>mv_cursor_code</f_></a>(<n_>1</n_>, <n_>0</n_>));
 	}
 }</pre>
 			</blockquote>

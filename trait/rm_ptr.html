@@ -12,25 +12,25 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>rm_ptr</t_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/rm_ptr.hpp" target="_blank"><code><s_>&lt;xieite/trait/rm_ptr.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/trait/rm_ptr.hpp"><code><s_>&lt;xieite/trait/rm_ptr.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Removes pointiness from a type, up to a specified depth.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank"><m_>std</m_>::<t_>size_t</t_></a> <v_>n</v_> = <n_>1</n_>&gt;
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>n</v_> = <n_>1</n_>&gt;
 <k_>using</k_> <t_>rm_ptr</t_> = <w_>/* ??? */</w_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<k_>int*</k_>&gt;, <k_>int</k_>&gt;);
-<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<k_>int***</k_>&gt;, <k_>int**</k_>&gt;);
-<k_>static_assert</k_>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<k_>int***</k_>, <n_>5</n_>&gt;, <k_>int</k_>&gt;);</pre>
+<pre><k_>static_assert</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<k_>int*</k_>&gt;, <k_>int</k_>&gt;);
+<k_>static_assert</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<k_>int***</k_>&gt;, <k_>int**</k_>&gt;);
+<k_>static_assert</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>rm_ptr</t_></a>&lt;<k_>int***</k_>, <n_>5</n_>&gt;, <k_>int</k_>&gt;);</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/Gv5v9f661" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/Gv5v9f661" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

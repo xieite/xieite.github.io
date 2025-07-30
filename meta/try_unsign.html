@@ -12,7 +12,7 @@
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
 			<h2><code><a href=""><m_>xieite</m_>::<t_>try_unsign</t_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/try_unsign.hpp" target="_blank"><code><s_>&lt;xieite/meta/try_unsign.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/try_unsign.hpp"><code><s_>&lt;xieite/meta/try_unsign.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			If a type is a signed integer, evaluates to its unsigned counterpart.<br/>
 			Otherwise, leaves the type unchanged.<br/>
@@ -21,15 +21,15 @@
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
-<k_>using</k_> <t_>try_unsign</t_> = <a href="https://en.cppreference.com/w/cpp/types/conditional" target="_blank"><m_>std</m_>::<t_>conditional_t</t_></a>&lt;<a href="https://en.cppreference.com/w/cpp/concepts/signed_integral" target="_blank"><m_>std</m_>::<t_>signed_integral</t_></a>&lt;<t_>T</t_>&gt;, <a href="https://en.cppreference.com/w/cpp/types/make_unsigned" target="_blank"><m_>std</m_>::<t_>make_unsigned</t_></a>&lt;<t_>T</t_>&gt;, <a href="https://en.cppreference.com/w/cpp/types/type_identity" target="_blank"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<t_>T</t_>&gt;&gt;::<a href="https://en.cppreference.com/w/cpp/types/conditional#Member_types" target="_blank"><t_>type</t_></a>;</pre>
+<k_>using</k_> <t_>try_unsign</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/types/conditional"><m_>std</m_>::<t_>conditional_t</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/signed_integral"><m_>std</m_>::<t_>signed_integral</t_></a>&lt;<t_>T</t_>&gt;, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/make_unsigned"><m_>std</m_>::<t_>make_unsigned</t_></a>&lt;<t_>T</t_>&gt;, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<t_>T</t_>&gt;&gt;::<a target="_blank" href="https://en.cppreference.com/w/cpp/types/conditional#Member_types"><t_>type</t_></a>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>unsigned int</k_>, <a href="#def"><m_>xieite</m_>::<t_>try_unsign</t_></a>&lt;<k_>int</k_>&gt;&gt;);
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="https://en.cppreference.com/w/cpp/concepts/same_as" target="_blank"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>double</k_>, <a href="#def"><m_>xieite</m_>::<t_>try_unsign</t_></a>&lt;<k_>double</k_>&gt;&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>unsigned int</k_>, <a href="#def"><m_>xieite</m_>::<t_>try_unsign</t_></a>&lt;<k_>int</k_>&gt;&gt;);
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<k_>double</k_>, <a href="#def"><m_>xieite</m_>::<t_>try_unsign</t_></a>&lt;<k_>double</k_>&gt;&gt;);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
@@ -37,7 +37,7 @@
 <pre>true
 true</pre>
 			</blockquote>
-			<small><a href="https://godbolt.org/z/WaooMf59x" target="_blank" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/WaooMf59x" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

@@ -14,7 +14,7 @@
 			<h2><a href="">Non-static member function reference qualifier interactions</a></h2>
 			<br/>
 			These are arbitrary rules to define how non-static member function reference qualifiers behave when added to or removed from others.<br/>
-			This page somewhat extends cppreference articles on <a href="https://en.cppreference.com/w/cpp/language/reference#Reference_collapsing" class="g">[Reference collapsing]</a> and <a href="https://en.cppreference.com/w/cpp/language/member_functions#Member_functions_with_ref-qualifier" class="g">[Member functions with ref-qualifier]</a>.<br/>
+			This page somewhat extends cppreference articles on <a target="_blank" href="https://en.cppreference.com/w/cpp/language/reference#Reference_collapsing" class="g">[Reference collapsing]</a> and <a target="_blank" href="https://en.cppreference.com/w/cpp/language/member_functions#Member_functions_with_ref-qualifier" class="g">[Member functions with ref-qualifier]</a>.<br/>
 			<br/>
 			<br/>
 			<h3>Definitions</h3>
@@ -64,6 +64,7 @@
 <k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>R</t_>, <t_>L</t_>&gt;, <t_>R</t_>&gt;>); <w_>// rref - lref = rref</w_>
 <k_>static_assert</k_>(<m_>std</m_>::<c_>same_as</c_>&lt;<m_>xieite</m_>::<t_>rm_ref_referent</t_>&lt;<t_>R</t_>, <t_>R</t_>&gt;, <t_>N</t_>&gt;>); <w_>// rref - rref = none</w_></pre>
 			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/qsac76E4T" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
