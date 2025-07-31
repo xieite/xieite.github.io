@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::min_args()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<f_>min_args</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/fn/min_args.hpp"><code><s_>&lt;xieite/fn/min_args.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Invokes a functor with the minimum number of arguments that it allows.<br/>
+			This is intended for functors with default parameters.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>min_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
+	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="/pp/lift"><j_>XIEITE_LIFT</j_></a>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/apply"><m_>std</m_>::<f_>apply</f_></a>)(
+		<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>fn</v_>),
+		<a href="/meta/subtuple"><m_>xieite</m_>::<f_>subtuple</f_></a>&lt;<n_>0</n_>, <w_>/*???*/</w_>&gt;(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/tuple/make_tuple"><m_>std</m_>::<f_>make_tuple</f_></a>(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...))
+	))</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre>
+<k_>void</k_> <f_>foo</f_>(<k_>int</k_> <v_>x</v_>, <k_>int</k_> <v_>y</v_> = <n_>999</n_>) {
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>x</v_>, <v_>y</v_>);
+};
+
+<k_>int</k_> <f_>main</f_>() {
+	<a href="#def"><m_>xieite</m_>::<f_>min_args</f_></a>(<f_>foo</f_>, <n_>1</n_>, <n_>2</n_>);
+}</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>1 999</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/7YMn3x95G" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
