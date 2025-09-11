@@ -91,23 +91,23 @@
 
 	<a href="/io/term/reset_mode"><k_>void</k_> <f_>reset_mode</f_>() <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/get_cursor"><m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt; <f_>get_cursor</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/get_cursor"><m_>xieite</m_>::<t_>pos</t_> <f_>get_cursor</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/set_cursor_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>set_cursor_code</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
 
-	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>set_cursor_code</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>set_cursor_code</f_>(<m_>xieite</m_>::<t_>pos</t_>) <k_>noexcept</k_>;</span></a>
 
 	<a href="/io/term/set_cursor"><span><k_>void</k_> <f_>set_cursor</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
 
-	<span><k_>void</k_> <f_>set_cursor</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+	<span><k_>void</k_> <f_>set_cursor</f_>(<m_>xieite</m_>::<t_>pos</t_>) <k_>noexcept</k_>;</span></a>
 
 	<a href="/io/term/mv_cursor_code"><span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>mv_cursor_code</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
 
-	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>mv_cursor_code</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>mv_cursor_code</f_>(<m_>xieite</m_>::<t_>pos</t_>) <k_>noexcept</k_>;</span></a>
 
 	<a href="/io/term/mv_cursor"><span><k_>void</k_> <f_>mv_cursor</f_>(<k_>int</k_>, <k_>int</k_>) <k_>noexcept</k_>;</span>
 
-	<span><k_>void</k_> <f_>mv_cursor</f_>(<m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt;) <k_>noexcept</k_>;</span></a>
+	<span><k_>void</k_> <f_>mv_cursor</f_>(<m_>xieite</m_>::<t_>pos</t_>) <k_>noexcept</k_>;</span></a>
 
 	<a href="/io/term/cursor_invis_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>cursor_invis_code</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
@@ -133,7 +133,7 @@
 
 	<a href="/io/term/screen_alt"><k_>void</k_> <f_>screen_alt</f_>(<k_>bool</k_>) <k_>noexcept</k_>;</a>
 
-	<a href="/io/term/screen_size"><m_>xieite</m_>::<t_>vec2</t_>&lt;<k_>int</k_>&gt; <f_>screen_size</f_>() <k_>noexcept</k_>;</a>
+	<a href="/io/term/screen_size"><m_>xieite</m_>::<t_>pos</t_> <f_>screen_size</f_>() <k_>noexcept</k_>;</a>
 
 	<a href="/io/term/clear_screen_code"><k_>static constexpr</k_> <m_>std</m_>::<t_>string</t_> <f_>clear_screen_code</f_>() <k_>noexcept</k_>;</a>
 
