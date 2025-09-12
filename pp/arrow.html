@@ -11,7 +11,7 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_IF</j_>()</code>, <code><j_>XIEITE_ARROW_CHOOSE</j_>()</code>, <code><j_>XIEITE_ARROW_TRY</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code></h2></a>
+			<a href=""><h2><code><j_>XIEITE_ARROW</j_>()</code>, <code><j_>XIEITE_ARROW_RET</j_>()</code>, <code><j_>XIEITE_ARROW_NOEX</j_>()</code>, <code><j_>XIEITE_ARROW_IF</j_>()</code>, <code><j_>XIEITE_ARROW_CHOOSE</j_>()</code>, <code><j_>XIEITE_ARROW_TRY</j_>()</code>, <code><j_>XIEITE_ARROW_DECL</j_>()</code>, <code><j_>XIEITE_ARROW_CTOR</j_>()</code></h2></a>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/arrow.hpp"><code><s_>&lt;xieite/pp/arrow.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Deduplicates the repetition required for defining the body, <code><k_>noexcept</k_></code> specifier, and <code><k_>requires</k_></code> clause of a template function consisting of a single expression.<br/>
@@ -38,6 +38,16 @@
 	) { <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
 			</blockquote>
 			Same as <a href="#def-arrow" class="g">#arrow</a> but does not specify a trailing return type. Useful for cast operators.<br/>
+			<br/>
+			<a id="def-arrow-noex" href="#def-arrow-noex" class="g">#arrow-noex</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XIEITE_ARROW_NOEX</j_>(<k_>...</k_>) <i_>\</i_>
+	<k_>noexcept</k_> <j_>__VA_OPT__</j_>( <i_>\</i_>
+		-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
+		<k_>requires</k_>(<k_>requires</k_> { <i_>__VA_ARGS__</i_>; }) <i_>\</i_>
+	) { <r_>return</r_> <i_>__VA_ARGS__</i_>; }</pre>
+			</blockquote>
+			Same as <a href="#def-arrow" class="g">#arrow</a> but always sets the <code><k_>noexcept</k_></code> specifier.<br/>
 			<br/>
 			<a id="def-arrow-if" href="#def-arrow-if" class="g">#arrow-if</a>
 			<blockquote>

@@ -41,6 +41,7 @@
 		make_array()
 		make_ptr()
 		make_sparse_array()
+		make_make_str_view()
 		md_container&lt;&gt;</w_>
 		<a target="_top" href="/data/number_str_config"><t_>number_str_config</t_> {}</a>
 		<w_>pad()
@@ -62,8 +63,7 @@
 		str_repeat()</w_>
 		<a target="_top" href="/data/str_replace"><f_>str_replace</f_>()</a>
 		<w_>str_split()
-		str_truncate()
-		str_view()</w_>
+		str_truncate()</w_>
 		<a target="_top" href="/data/strlen"><f_>strlen</f_>()</a>
 		<w_>substr()</w_>
 		<a target="_top" href="/data/tolower"><f_>tolower</f_>()</a>
@@ -116,8 +116,9 @@
 		<a target="_top" href="/io/dump"><f_>dump</f_>()</a>
 		<w_>file {}</w_>
 		<a target="_top" href="/io/file_pipe"><t_>file_pipe</t_> {}</a>
-		<w_>keys {}
-		keys_char()
+		<w_>keys {}</w_>
+		<a target="_top" href="/io/log"><m_>log</m_> {}</a>
+		<w_>keys_char()
 		pos {}</w_>
 		<a target="_top" href="/io/read"><f_>read</f_>()</a>
 		<a target="_top" href="/io/term"><t_>term</t_> {}</a>
@@ -458,8 +459,10 @@
 		is_assign_to&lt;&gt;
 		is_base&lt;&gt;
 		is_base_any&lt;&gt;
+		is_bidirect_range&lt;&gt;
 		is_bitset_ref&lt;&gt;
 		is_bool_testable&lt;&gt;
+		is_borrowed_range&lt;&gt;
 		is_bounded_array&lt;&gt;
 		is_c&lt;&gt;
 		is_c_referent&lt;&gt;</w_>
@@ -467,7 +470,9 @@
 		<w_>is_class&lt;&gt;
 		is_clock&lt;&gt;
 		is_clref&lt;&gt;
+		is_common_range&lt;&gt;
 		is_complete&lt;&gt;
+		is_contig_range&lt;&gt;
 		is_conv_from&lt;&gt;
 		is_conv_from_any&lt;&gt;
 		is_conv_to&lt;&gt;
@@ -494,8 +499,6 @@
 		is_final&lt;&gt;
 		is_fn&lt;&gt;
 		is_fundamental&lt;&gt;
-		is_fwd_input_range&lt;&gt;
-		is_fwd_input_sized_range&lt;&gt;
 		is_fwd_range&lt;&gt;
 		is_fwd_sized_range&lt;&gt;
 		is_hashable&lt;&gt;
@@ -534,8 +537,10 @@
 		is_ptr&lt;&gt;
 		is_ptr_interconv_base&lt;&gt;
 		is_ptr_interconv_derived&lt;&gt;
+		is_random_access_range&lt;&gt;
 		is_range&lt;&gt;
 		is_ratio&lt;&gt;
+		is_read_only_range&lt;&gt;
 		is_ref&lt;&gt;
 		is_ref_conv_from_tmp&lt;&gt;
 		is_ref_ctor_from_tmp&lt;&gt;
@@ -572,6 +577,8 @@
 		is_v&lt;&gt;
 		is_v_referent&lt;&gt;
 		is_variadic_referent&lt;&gt;
+		is_view&lt;&gt;
+		is_viewable_range&lt;&gt;
 		is_vlref&lt;&gt;
 		is_void&lt;&gt;
 		is_vref&lt;&gt;

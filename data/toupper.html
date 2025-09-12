@@ -37,7 +37,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Char</t_>, <k_>typename</k_> <t_>Traits</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/string/char_traits"><m_>std</m_>::<t_>char_traits</t_></a>&lt;<t_>Char</t_>&gt;, <k_>typename</k_> <t_>Alloc</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/memory/allocator"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>Char</t_>&gt;&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>toupper</f_>(<k_>const</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string"><m_>std</m_>::<t_>basic_string</t_></a>&lt;<t_>Char</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt;<k_>&</k_> <v_>str</v_>, <t_>Alloc</t_><k_>&&</k_> <v_>alloc</v_> = {})
-	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="#1"><m_>xieite</m_>::<f_>toupper</f_></a>(<a href="/data/str_view"><m_>xieite</m_>::<f_>str_view</f_></a>(<v_>str</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>alloc</v_>)))</pre>
+	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="#1"><m_>xieite</m_>::<f_>toupper</f_></a>(<a href="/data/make_str_view"><m_>xieite</m_>::<f_>make_str_view</f_></a>(<v_>str</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>alloc</v_>)))</pre>
 			</blockquote>
 			Defers to <a href="#def-1" class="g">#1</a> after deducing <code><t_>Char</t_></code>, <code><t_>Traits</t_></code>, and <code><t_>Alloc</t_></code>.<br/>
 			<br/>
@@ -45,7 +45,7 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_ch"><m_>xieite</m_>::<c_>is_ch</c_></a> <t_>Char</t_>, <k_>typename</k_> <t_>Traits</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/string/char_traits"><m_>std</m_>::<t_>char_traits</t_></a>&lt;<t_>Char</t_>&gt;, <k_>typename</k_> <t_>Alloc</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/memory/allocator"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>Char</t_>&gt;, <m_>std</m_>::<t_>size_t</t_> <v_>length</v_>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>toupper</f_>(<k_>const</k_> <a href="/meta/group"><m_>xieite</m_>::<t_>group</t_></a>&lt;<t_>Char</t_>[<v_>length</v_>]&gt;<k_>&</k_> <v_>str</v_>, <t_>Alloc</t_><k_>&&</k_> <v_>alloc</v_> = {})
-	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="#1"><m_>xieite</m_>::<f_>toupper</f_></a>(<a href="/data/str_view"><m_>xieite</m_>::<f_>str_view</f_></a>&lt;<t_>Char</t_>, <t_>Traits</t_>&gt;(<v_>str</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>alloc</v_>)))</pre>
+	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="#1"><m_>xieite</m_>::<f_>toupper</f_></a>(<a href="/data/make_str_view"><m_>xieite</m_>::<f_>make_str_view</f_></a>&lt;<t_>Char</t_>, <t_>Traits</t_>&gt;(<v_>str</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>alloc</v_>)))</pre>
 			</blockquote>
 			Defers to <a href="#def-1" class="g">#1</a> after deducing <code><t_>Char</t_></code> and possibly <code><t_>Alloc</t_></code>.<br/>
 			<br/>
