@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::isgraph()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<f_>isgraph</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/isgraph.hpp"><code><s_>&lt;xieite/data/isgraph.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			An improved replacement and extension of <code><a target="_blank" href="https://en.cppreference.com/w/cpp/string/byte/isgraph"><m_>std</m_>::<f_>isgraph</f_>()</a></code>.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declarations</h3></a>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>isgraph</f_>(<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <k_>auto</k_> <v_>c</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Checks if a single character has a graphical representation.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>, <k_>typename</k_> <t_>Traits</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>isgraph</f_>(<a target="_blank" href="https://cppreference.net/cpp/string/basic_string_view"><m_>std</m_>::<t_>basic_string_view</t_>&lt;<t_>Char</t_>, <t_>Traits</t_>&gt; <v_>strv</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Checks if a string consists only of graphical characters.<br/>
+			<br/>
+			<a id="def-2" href="#def-2" class="g">#2</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>, <k_>typename</k_> <t_>Traits</t_>, <k_>typename</k_> <t_>Alloc</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>isgraph</f_>(<k_>const</k_> <a target="_blank" href="https://cppreference.net/cpp/string/basic_string"><m_>std</m_>::<t_>basic_string_view</t_>&lt;<t_>Char</t_>, <t_>Traits</t_>, <t_>Alloc</t_>&gt;<k_>&</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Defers to <a href="#def-1" class="g">#1</a> after deducing <code><t_>Char</t_></code>.<br/>
+			<br/>
+			<a id="def-2" href="#def-2" class="g">#2</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>length</v_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>isgraph</f_>(<k_>const</k_> <a href="/meta/paren"><m_>xieite</m_>::<t_>paren</t_>&lt;<t_>Char</t_>[<v_>length</v_>]&gt;<k_>&</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Defers to <a href="#def-1" class="g">#1</a> after deducing <code><t_>Char</t_></code>.<br/>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xieite</m_>::<f_>isgraph</f_></a>(<s_>'a'</s_>));
+<k_>static_assert</k_>(<a href="#def"><m_>xieite</m_>::<f_>isgraph</f_></a>(<s_>'0'</s_>));
+<k_>static_assert</k_>(<a href="#def"><m_>xieite</m_>::<f_>isgraph</f_></a>(<s_>'!'</s_>));
+<k_>static_assert</k_>(<k_>not</k_> <a href="#def"><m_>xieite</m_>::<f_>isgraph</f_></a>(<s_>' '</s_>));</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/sax5srz9Y" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

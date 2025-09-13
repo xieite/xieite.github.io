@@ -14,7 +14,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<f_>strlen</f_>()</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/strlen.hpp"><code><s_>&lt;xieite/data/strlen.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A <code><k_>constexpr</k_></code> (and slightly more general) replacement for <a target="_blank" href="https://en.cppreference.com/w/cpp/string/byte/strlen"><code><m_>std</m_>::<f_>strlen</f_>()</code></a>.<br/>
+			An improved replacement and extension of <a target="_blank" href="https://en.cppreference.com/w/cpp/string/byte/strlen"><code><m_>std</m_>::<f_>strlen</f_>()</code></a>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
@@ -33,9 +33,9 @@
 			<a id="def-2" href="#def-2" class="g">#2</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_char"><m_>xieite</m_>::<c_>is_char</c_></a> <t_>Char</t_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>length</v_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a href="/meta/paren"><m_>xieite</m_>::<t_>paren</t_></a>&lt;<t_>Char</t_>[<v_>length</v_>]&gt;<k_>&</k_>) <k_>noexcept</k_>;</pre>
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <f_>strlen</f_>(<k_>const</k_> <a href="/meta/paren"><m_>xieite</m_>::<t_>paren</t_></a>&lt;<t_>Char</t_>[<v_>length</v_>]&gt;<k_>&</k_> <v_>str</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Returns <code><v_>length</v_> - !!<v_>length</v_></code>. The compiler should prefer this overload for string literals.<br/>
+			The compiler should prefer this overload for string literals.<br/>
 			<br/>
 			<a id="def-3" href="#def-3" class="g">#3</a>
 			<blockquote>
