@@ -14,7 +14,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<m_>log</m_> {}</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/log.hpp"><code><s_>&lt;xieite/io/log.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Logging utilities. Only outputs colored text when writing to <code><k_>stdout</k_></code> (default) or <code><k_>stderr</k_></code>.<br/>
+			Logging utilities. Only outputs colored text when writing to <a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/std_streams"><code><k_>stdout</k_></code></a> (default) or <a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/std_streams"><code><k_>stderr</k_></code></a>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Contents</h3></a>
@@ -27,7 +27,7 @@
 <t_>info</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;
 
 <k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>info</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;</pre>
+<t_>info</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;</pre>
 			</blockquote>
 			Uses an '<code>INFO</code>' prefix.<br/>
 			<br/>
@@ -40,7 +40,7 @@
 <t_>warn</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>warn</t_>&lt;<t_>Args</t_>...&gt;;
 
 <k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>warn</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>warn</t_>&lt;<t_>Args</t_>...&gt;;</pre>
+<t_>warn</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>warn</t_>&lt;<t_>Args</t_>...&gt;;</pre>
 			</blockquote>
 			Uses a '<code style="color: #ffaf00">WARN</code>' prefix.<br/>
 			<br/>
@@ -53,7 +53,7 @@
 <t_>error</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>error</t_>&lt;<t_>Args</t_>...&gt;;
 
 <k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>error</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>error</t_>&lt;<t_>Args</t_>...&gt;;</pre>
+<t_>error</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>error</t_>&lt;<t_>Args</t_>...&gt;;</pre>
 			</blockquote>
 			Uses an '<code style="color: #ff0000">ERROR</code>' prefix.<br/>
 			<br/>
