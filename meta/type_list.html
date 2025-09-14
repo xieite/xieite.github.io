@@ -31,8 +31,8 @@
 	<a href="/meta/type_list/any"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>static constexpr bool</k_> <v_>any</v_> = <m_>xieite</m_>::<c_>is_satisfd_any</c_>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;;</span></a>
 
-	<a href="/meta/type_list/has"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
-	<span><k_>static constexpr bool</k_> <v_>has</v_> = (... || <m_>xieite</m_>::<c_>is_satisfd</c_>&lt;<v_>cmp</v_>, <t_>T</t_>, <t_>Ts</t_>&gt;);</span></a>
+	<a href="/meta/type_list/has"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>auto</k_> <v_>pred</v_> = <w_>/* []??? {} */</w_>&gt;</span>
+	<span><k_>static constexpr bool</k_> <v_>has</v_> = (... || <m_>xieite</m_>::<c_>is_satisfd</c_>&lt;<v_>pred</v_>, <t_>T</t_>, <t_>Ts</t_>&gt;);</span></a>
 
 	<a href="/meta/type_list/at"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>idx</v_>&gt;</span>
 	<span><k_>using</k_> <t_>at</t_> = <w_>/* Ts...[idx] */</w_>;</span></a>
@@ -41,8 +41,8 @@
 	<span><k_>requires</k_>(<m_>xieite</m_>::<c_>is_satisfd_any</c_>&lt;<v_>cond</v_>, <t_>Ts</t_>...&gt;)</span>
 	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>size_t</t_> <v_>find_idx</v_> = <w_>/* ??? */</w_>;</span></a>
 
-	<a href="/meta/type_list/idx_of"><span><k_>template</k_>&lt;<k_>typename</k_> <v_>T</v_>, <k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
-	<span><k_>requires</k_>(<m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<v_>has</v_>&lt;<t_>T</t_>, <v_>cmp</v_>&gt;)</span>
+	<a href="/meta/type_list/idx_of"><span><k_>template</k_>&lt;<k_>typename</k_> <v_>T</v_>, <k_>auto</k_> <v_>pred</v_> = <w_>/* []??? {} */</w_>&gt;</span>
+	<span><k_>requires</k_>(<m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<v_>has</v_>&lt;<t_>T</t_>, <v_>pred</v_>&gt;)</span>
 	<span><k_>static constexpr</k_> <m_>std</m_>::<t_>size_t</t_> <v_>idx_of</v_> = <w_>/* ??? */</w_>;</span></a>
 
 	<a href="/meta/type_list/find"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
@@ -109,7 +109,7 @@
 	<a href="/meta/type_list/filter"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cond</v_>&gt;</span>
 	<span><k_>using</k_> <t_>filter</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
-	<a href="/meta/type_list/dedup"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>cmp</v_> = <w_>/* []??? {} */</w_>&gt;</span>
+	<a href="/meta/type_list/dedup"><span><k_>template</k_>&lt;<k_>auto</k_> <v_>pred</v_> = <w_>/* []??? {} */</w_>&gt;</span>
 	<span><k_>using</k_> <t_>dedup</t_> = <w_>/* xieite::type_list&lt;???&gt; */</w_>;</span></a>
 
 	<a href="/meta/type_list/repeat"><span><k_>template</k_>&lt;<m_>std</m_>::<t_>size_t</t_> <v_>n</v_>&gt;</span>
