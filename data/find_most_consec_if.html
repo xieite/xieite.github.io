@@ -14,12 +14,21 @@
 			<h2><code><a href=""><m_>xieite</m_>::<f_>find_most_consec_if</f_>()</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/data/find_most_consec_if.hpp"><code><s_>&lt;xieite/data/find_most_consec_if.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Returns a view to the longest consecutive subrange for which a callback returns <code><k_>true</k_></code>.<br/>
+			Returns a view to the longest consecutive subrange for which a predicate functor returns <code><k_>true</k_></code>.<br/>
 			<br/>
 			<br/>
-			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Declarations</h3></a>
+			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/trait/is_fwd_sized_range"><m_>xieite</m_>::<c_>is_fwd_sized_range</c_></a> <t_>Range</t_>, <a href="/trait/is_invoc"><m_>xieite</m_>::<c_>is_invoc</c_></a>&lt;<k_>bool</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/range_reference_t"><m_>std</m_>::<m_>ranges</m_>::<t_>range_common_reference_t</t_></a>&lt;<t_>Range</t_>&gt;)&gt; <t_>Pred</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/functional/identity"><m_>std</m_>::<t_>identity</t_></a>&gt;
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/forward_range"><m_>std</m_>::<m_>ranges</m_>::<c_>forward_range</c_></a> <t_>Range</t_>, <a href="/trait/is_lref_invoc"><m_>xieite</m_>::<c_>is_lref_invoc</c_></a>&lt;<k_>bool</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/subrange"><m_>std</m_>::<m_>ranges</m_>::<t_>subrange</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/iterator_t"><m_>std</m_>::<m_>ranges</m_>::<t_>iterator_t</t_></a>&lt;<t_>Range</t_>&gt;&gt;)&gt; <t_>Pred</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/subrange"><m_>std</m_>::<m_>ranges</m_>::<t_>subrange</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/iterator_t"><m_>std</m_>::<m_>ranges</m_>::<t_>iterator_t</t_></a>&lt;<t_>Range</t_>&gt;&gt; <f_>find_most_consec_if</f_>(<t_>Range</t_><k_>&</k_> <v_>range</v_>, <a target="_blank" href="https://cppreference.patrickfasano.com/en/cpp/ranges/iterator_t"><m_>std</m_>::<m_>ranges</m_>::<t_>range_size_t</t_></a>&lt;<t_>Range</t_>&gt; <v_>subrange_size</v_>, <t_>Pred</t_><k_>&&</k_> <v_>pred</v_> = {})
+<k_>noexcept</k_>(<a href="/trait/is_noex_range"><m_>xieite</m_>::<c_>is_noex_range</c_></a>&lt;<t_>Range</t_>&gt; && <a href="/trait/is_noex_invoc"><m_>xieite</m_>::<c_>is_noex_invoc</c_></a>&lt;<t_>Pred</t_>, <k_>bool</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/subrange"><m_>std</m_>::<m_>ranges</m_>::<t_>subrange</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/iterator_t"><m_>std</m_>::<m_>ranges</m_>::<t_>iterator_t</t_></a>&lt;<t_>Range</t_>&gt;&gt;)&gt;);</pre>
+			</blockquote>
+			Looks for non-overlapping subranges.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/forward_range"><m_>std</m_>::<m_>ranges</m_>::<c_>forward_range</c_></a> <t_>Range</t_>, <a href="/trait/is_lref_invoc"><m_>xieite</m_>::<c_>is_lref_invoc</c_></a>&lt;<k_>bool</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/range_reference_t"><m_>std</m_>::<m_>ranges</m_>::<t_>range_common_reference_t</t_></a>&lt;<t_>Range</t_>&gt;)&gt; <t_>Pred</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/functional/identity"><m_>std</m_>::<t_>identity</t_></a>&gt;
 [[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/subrange"><m_>std</m_>::<m_>ranges</m_>::<t_>subrange</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/iterator_t"><m_>std</m_>::<m_>ranges</m_>::<t_>iterator_t</t_></a>&lt;<t_>Range</t_>&gt;&gt; <f_>find_most_consec_if</f_>(<t_>Range</t_><k_>&</k_> <v_>range</v_>, <t_>Pred</t_><k_>&&</k_> <v_>pred</v_> = {})
 <k_>noexcept</k_>(<a href="/trait/is_noex_range"><m_>xieite</m_>::<c_>is_noex_range</c_></a>&lt;<t_>Range</t_>&gt; && <a href="/trait/is_noex_invoc"><m_>xieite</m_>::<c_>is_noex_invoc</c_></a>&lt;<t_>Pred</t_>, <k_>bool</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/range_reference_t"><m_>std</m_>::<m_>ranges</m_>::<t_>range_common_reference_t</t_></a>&lt;<t_>Range</t_>&gt;)&gt;);</pre>
 			</blockquote>
@@ -30,7 +39,7 @@
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>int</k_> <v_>array</v_><k_>[]</k_> = { <n_>0</n_>, <n_>0</n_>, <n_>2</n_>, <n_>1</n_>, <n_>0</n_>, <n_>0</n_>, <n_>0</n_>, <n_>4</n_>, <n_>0</n_> };
 
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>find_most_consec_if</f_>(<v_>array</v_>));
+	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>find_most_consec_if</f_></a>(<v_>array</v_>));
 }</pre>
 			</blockquote>
 			<small>Output:</small>
