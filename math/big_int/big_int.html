@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xieite::big_int::big_int()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/math/big_int.links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>Uint</t_>&gt;::<f_>big_int</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/big_int.hpp"><code><s_>&lt;xieite/big_int.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Constructs a <a href="/math/big_int"><code><m_>xieite</m_>::<t_>big_int</t_>&lt;<t_>UInt</t_>&gt; {}</code></a>.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/integral"><m_>std</m_>::<c_>integral</c_></a> <t_>Int</t_> = <t_>UInt</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>big_int</f_>(<t_>Int</t_> <v_>x</v_> = <n_>0</n_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>OtherUInt</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>explicit constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <a href="/math/big_int"><m_>xieite</m_>::<t_>big_int</t_></a>&lt;<t_>OtherUInt</t_>&gt;<k_>&</k_> <v_>x</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-2" href="#def-2" class="g">#2</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/input_range"><m_>std</m_>::<m_>ranges</m_>::<c_>input_range</c_></a> <t_>Range</t_>&gt;
+<k_>requires</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<t_>UInt</t_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/range_size_t"><m_>std</m_>::<m_>ranges</m_>::<t_>range_value_t</t_></a>&lt;<t_>Range</t_>&gt;&gt;)
+[[<a_>nodiscard</a_>]] <k_>explicit constexpr</k_> <f_>big_int</f_>(<t_>Range</t_><k_>&&</k_> <v_>range</v_>, <k_>bool</k_> <v_>neg</v_> = <k_>false</k_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-3" href="#def-3" class="g">#3</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>explicit constexpr</k_> <f_>big_int</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/string/basic_string_view"><m_>std</m_>::<t_>string_view</t_></a> <v_>strv</v_>, <a href="/math/ssize_t"><m_>xieite</m_>::<t_>ssize_t</t_></a> <v_>radix</v_> = <n_>10</n_>, <k_>const</k_> <a href="/data/number_str_config"><m_>xieite</m_>::<t_>number_str_config</t_></a><k_>&</k_> <v_>config</v_> = {}) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def-3"><m_>xieite</m_>::<t_>big_int</t_></a>(<s_>"FF"</s_>, <n_>16</n_>) == <n_>255</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/EMM9P9x4G" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
