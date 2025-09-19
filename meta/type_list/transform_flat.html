@@ -16,7 +16,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<t_>type_list</t_>&lt;<t_>Ts</t_>...&gt;::<t_>transform_flat</t_>&lt;&gt;</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/type_list.hpp"><code><s_>&lt;xieite/meta/type_list.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Instantiates another template with the elements of a <a href="/meta/type_list"><code><m_>xieite</m_>::<t_>type_list</t_> {}</code></a> as the arguments.<br/>
+			Repeatedly instantiates another template with a subrange of <code><t_>Ts</t_></code> as the arguments. <a href="#ex">See example.</a><br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
@@ -34,7 +34,7 @@
 
 	<w_>// Swap every 2 elements</w_>
 	<k_>using</k_> <t_>Bar</t_> = <t_>Foo</t_>::<a href="#def"><t_>transform_flat</t_></a>&lt;<n_>2</n_>, []&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename</k_> <t_>U</t_>&gt; {
-		<r_>return</r_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/pair"><m_>std</m_>::<t_>pair</t_></a>&lt;<t_>U</t_>, <t_>T</t_>&gt;&gt;();
+		<r_>return</r_> <a href="/meta/type_id"><m_>xieite</m_>::<t_>type_id</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/pair"><m_>std</m_>::<t_>pair</t_></a>&lt;<t_>U</t_>, <t_>T</t_>&gt;&gt;();
 	}>;
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="/meta/type_name"><m_>xieite</m_>::<v_>type_name</v_></a>&lt;<t_>Bar</t_>&gt;);
@@ -44,7 +44,7 @@
 			<blockquote>
 <pre>xieite::type_list&lt;char, int, double, float, bool, void&gt;</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/Kzo6b6G56" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/s6G93P4qz" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

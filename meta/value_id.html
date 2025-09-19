@@ -32,7 +32,7 @@
 <k_>using</k_> <t_>at</t_> = <k_>decltype</k_>(<a href="/fn/unroll"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<t_>Ts</t_>...&gt;([]&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a><k_>...</k_> <v_>i</v_>&gt; <k_>static</k_> {
 	<r_>return</r_> <a href="/fn/visitor"><m_>xieite</m_>::<t_>visitor</t_></a>(
 		[](<a href="#def"><m_>xieite</m_>::<t_>value_id</t_></a>&lt;<v_>i</v_>&gt;) <k_>static</k_> {
-			<r_>return</r_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><m_>std</m_>::<t_>type_identity</t_></a>&lt;<t_>Ts</t_>&gt;();
+			<r_>return</r_> <a href="/meta/type_id"><m_>xieite</m_>::<t_>type_id</t_></a>&lt;<t_>Ts</t_>&gt;();
 		}...
 	)(<a href="#def"><m_>xieite</m_>::<t_>value_id</t_></a>&lt;<v_>idx</v_>&gt;());
 }))::<a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity#Member_types"><t_>type</t_></a>;
