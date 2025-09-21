@@ -16,7 +16,7 @@
 			<h2><code><a href=""><m_>xieite</m_>::<t_>any</t_>::<k_>operator</k_> <w_>/*???*/</w_>()</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/any.hpp"><code><s_>&lt;xieite/meta/any.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A declared cast operator of <a href="/meta/any"><code><m_>xieite</m_>::<t_>any</t_> {}</code></a> to any other type. Must be used in unevaluated context, as it is not actually implemented.<br/>
+			A declared implicit cast operator to any type. Must be used in unevaluated context, as it is not actually implemented.<br/>
 			<br/>
 			This is not marked <code><k_>constexpr</k_></code> because it would otherwise have to be <a target="_blank" href="https://timsong-cpp.github.io/cppwp/n4950/temp.inst#4" class="g">[implicitly instantiated if the existence of its definition affects the semantics of the program]</a> if it is <a target="_blank" href="https://timsong-cpp.github.io/cppwp/n4950/temp.inst#8" class="g">[needed for constant evaluation (even if not required)]</a> if this function is <a target="_blank" href="https://timsong-cpp.github.io/cppwp/n4950/expr.const#29.6" class="g">[named by an expression that is potentially constant evaluated]</a> if the expression is <a target="_blank" href="https://timsong-cpp.github.io/cppwp/n4950/expr.const#29.3" class="g">[an immediate subexpression of a brace initializer list]</a>.<br/>
 			Basically, this function would behave differently in a case like <code><k_>int</k_> { <a href="/meta/any"><m_>xieite</m_>::<t_>any</t_></a>() }</code>.
