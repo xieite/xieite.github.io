@@ -22,16 +22,18 @@
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/integral"><m_>std</m_>::<c_>integral</c_></a> <k_>auto</k_> <v_>n</v_>&gt;
-<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
-	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<w_>/* <a href="/pp/fwd">XIEITE_FWD</a>(fn).template operator()&lt;0, 1, ..., (n - 1)&gt;(<a href="/pp/fwd">XIEITE_FWD</a>(args)...) */</w_>)</pre>
+<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<w_>/*
+	<a href="/pp/fwd">XIEITE_FWD</a>(fn).template operator()&lt;0, 1, ..., (n - 1)&gt;(<a href="/pp/fwd">XIEITE_FWD</a>(args)...)
+*/</w_>)</pre>
 			</blockquote>
 			Unrolls for some constant integer.<br/>
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Ts</t_>&gt;
-<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
-	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="#def-0"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<k_>sizeof...</k_>(<t_>Ts</t_>)&gt;(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>fn</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...))</pre>
+<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(
+	<a href="#def-0"><m_>xieite</m_>::<f_>unroll</f_></a>&lt;<k_>sizeof...</k_>(<t_>Ts</t_>)&gt;(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>fn</v_>), <a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...)
+)</pre>
 			</blockquote>
 			Unrolls for the number of types passed.<br/>
 			<br/>

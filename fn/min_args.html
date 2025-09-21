@@ -20,11 +20,12 @@
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>min_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>)
-	<a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(<a href="/pp/lift"><j_>XIEITE_LIFT</j_></a>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/apply"><m_>std</m_>::<f_>apply</f_></a>)(
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <k_>auto</k_> <f_>min_args</f_>(<k_>auto&&</k_> <v_>fn</v_>, <k_>auto&&...</k_> <v_>args</v_>) <a href="/pp/arrow"><j_>XIEITE_ARROW</j_></a>(
+	<a href="/pp/lift"><j_>XIEITE_LIFT</j_></a>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/apply"><m_>std</m_>::<f_>apply</f_></a>)(
 		<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>fn</v_>),
 		<a href="/meta/subtuple"><m_>xieite</m_>::<f_>subtuple</f_></a>&lt;<n_>0</n_>, <w_>/*???*/</w_>&gt;(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/tuple/make_tuple"><m_>std</m_>::<f_>make_tuple</f_></a>(<a href="/pp/fwd"><j_>XIEITE_FWD</j_></a>(<v_>args</v_>)...))
-	))</pre>
+	)
+)</pre>
 			</blockquote>
 			<br/>
 			<br/>
