@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>XIEITE_DEBUG</title>
+		<title>XTE_DEBUG</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,22 +11,22 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><i_>XIEITE_DEBUG</i_></code></h2></a>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/debug.hpp"><code><s_>&lt;xieite/pp/debug.hpp&gt;</s_></code></a></small><br/>
+			<a href=""><h2><code><i_>XTE_DEBUG</i_></code></h2></a>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/preproc/debug.hpp"><code><s_>&lt;xieite/preproc/debug.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Detects the presence of platform-specific macros indicating debug mode: <code><i_>DEBUG</i_></code>, <code><i_>NDEBUG</i_></code>, <code><i_>_DEBUG</i_></code>, and <code><i_>QT_DEBUG</i_></code>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XIEITE_DEBUG</i_> <w_>/* boolean integer literal */</w_></pre>
+<pre><p_>#define</p_> <i_>XTE_DEBUG</i_> <w_>/* boolean integer literal */</w_></pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
 <pre><k_>int</k_> <f_>add</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>) {
-	<r_>if constexpr</r_> (<a href="#def"><i_>XIEITE_DEBUG</i_></a>) {
+	<r_>if constexpr</r_> (<a href="#def"><i_>XTE_DEBUG</i_></a>) {
 		<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"DEBUG: <i_>{}</i_> + <i_>{}</i_>"</s_>, <v_>a</v_>, <v_>b</v_>);
 	}
 	<r_>return</r_> <v_>a</v_> + <v_>b</v_>;

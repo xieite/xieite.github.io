@@ -14,21 +14,22 @@
 			<h2><code><a href=""><m_>xieite</m_>::<v_>type_counter</v_>&lt;&gt;</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/type_counter.hpp"><code><s_>&lt;xieite/meta/type_counter.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Stores unique identifiers for all types. Does not work between multiple translation units.<br/>
+			Stores unique identifiers for all types. Does not work between translation units.<br/>
 			<br/>
 			<br/>
-			<a id="def" href="#def"><h3>Declaration</h3></a>
+			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_>&gt;
-<k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>type_counter</v_> = <w_>/* ??? */</w_>;</pre>
+<k_>constexpr</k_> <a href="/util/types"><m_>xte</m_>::<t_>uz</t_></a> <v_>type_counter</v_> = <w_>/* ??? */</w_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>constexpr</k_> <a target="_blank" href="https://en.cppreference.com/w/cpp/types/size_t"><m_>std</m_>::<t_>size_t</t_></a> <v_>x</v_> = <a href="/meta/type_counter"><m_>xieite</m_>::<v_>type_counter</v_></a>&lt;<k_>int</k_>&gt;;
-<k_>static_assert</k_>(<a href="/meta/type_counter"><m_>xieite</m_>::<v_>type_counter</v_></a>&lt;<k_>int</k_>&gt; == <v_>x</v_>);
-<k_>static_assert</k_>(<a href="/meta/type_counter"><m_>xieite</m_>::<v_>type_counter</v_></a>&lt;<k_>char</k_>&gt; != <v_>x</v_>);</pre>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<v_>type_counter</v_>&lt;<k_>int</k_>&gt; == <n_>0</n_>);
+<k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<v_>type_counter</v_>&lt;<k_>char</k_>&gt; == <n_>1</n_>);
+<k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<v_>type_counter</v_>&lt;<k_>void</k_>&gt; == <n_>2</n_>);
+<k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<v_>type_counter</v_>&lt;<k_>int</k_>&gt; == <n_>0</n_>);</pre>
 			</blockquote>
 			<small><a target="_blank" href="https://godbolt.org/z/nefa9Wb5e" class="g">[View in Compiler Explorer]</a></small>
 		</main>

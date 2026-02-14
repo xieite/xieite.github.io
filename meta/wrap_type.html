@@ -3,18 +3,20 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::wrap_type&lt;&gt;</title>
+		<title>xte::wrap_type&lt;&gt;</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<input type="checkbox"/>
+		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
+		<iframe src="/meta/wrap_type.links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<t_>wrap_type</t_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/wrap_type.hpp"><code><s_>&lt;xieite/meta/wrap_type.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xte</m_>::<t_>wrap_type</t_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/wrap_type.hpp"><code><s_>&lt;xte/meta/wrap_type.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			A type wrapper. This exists because <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><code><m_>std</m_>::<t_>type_identity</t_> {}</code></a> isn't guaranteed to be default-constructible.<br/>
+			This exists because <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><code><m_>std</m_>::<t_>type_identity</t_> {}</code></a> isn't guaranteed to be default-constructible.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Definition</h3></a>
@@ -28,11 +30,9 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>static_assert</k_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<a href="#def"><m_>xieite</m_>::<t_>wrap_type</t_>&lt;<k_>int</k_>&gt;::<t_>wrap_type</t_>, <k_>int</k_>&gt;);
-
-<k_>int</k_> <f_>main</f_>() {}</pre>
+<pre><k_>static_assert</k_>(<a href="/trait/is_same"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<k_>int</k_>, <a href="#def"><m_>xte</m_>::<t_>wrap_type</t_></a>&lt;<k_>int</k_>&gt;::<t_>type</t_>&gt;);</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/r3W5bYv73" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/YqYboan5n" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>XIEITE_FN()</title>
+		<title>XTE_FN()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,11 +11,11 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_FN</j_>()</code>, <code><j_>XIEITE_FN_THIS</j_>()</code>, <code><j_>XIEITE_FN_LOCAL</j_>()</code>, <code><j_>XIEITE_FN_MUT</j_>()</code></h2></a>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/fn.hpp"><code><s_>&lt;xieite/pp/fn.hpp&gt;</s_></code></a></small><br/>
+			<a href=""><h2><code><j_>XTE_FN</j_>()</code>, <code><j_>XTE_FN_THIS</j_>()</code>, <code><j_>XTE_FN_LOCAL</j_>()</code>, <code><j_>XTE_FN_MUT</j_>()</code></h2></a>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/preproc/fn.hpp"><code><s_>&lt;xieite/preproc/fn.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Allows a shorthand lambda syntax:<br/>
-			&emsp;<code><a href="#def-fn"><j_>XIEITE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
+			&emsp;<code><a href="#def-fn"><j_>XTE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>)</code><br/>
 			which expands to something like:<br/>
 			&emsp;<code>[]&lt;<k_>typename...</k_>&gt;(<k_>auto&&</k_> <v_>a</v_>, <k_>auto&&</k_> <v_>b</v_>) <k_>noexcept</k_>(<k_>noexcept</k_>(<v_>a</v_> + <v_>b</v_>)) -> <k_>decltype</k_>(<k_>auto</k_>) <k_>requires</k_>(<k_>requires</k_> { <v_>a</v_> + <v_>b</v_>; }) { <r_>return</r_> <v_>a</v_> + <v_>b</v_>; }</code><br/>
 			<br/>
@@ -26,25 +26,25 @@
 			<a id="def" href="#def"><h3>Definitions</h3></a>
 			<a id="def-fn" href="#def-fn" class="g">#fn</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN</j_>(<k_>...</k_>) <w_>/* ([](???) static ??? { ??? }) */</w_></pre>
+<pre><p_>#define</p_> <j_>XTE_FN</j_>(<k_>...</k_>) <w_>/* ([](???) static ??? { ??? }) */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with no capture-default and a <code><k_>static</k_></code> specifier.<br/>
 			<br/>
 			<a id="def-fn-this" href="#def-fn-this" class="g">#fn-this</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_THIS</j_>(<k_>...</k_>) <w_>/* ([](this auto, ???) ??? { ??? }) */</w_></pre>
+<pre><p_>#define</p_> <j_>XTE_FN_THIS</j_>(<k_>...</k_>) <w_>/* ([](this auto, ???) ??? { ??? }) */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with no captures, no specifiers, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>.<br/>
 			<br/>
 			<a id="def-fn-local" href="#def-fn-local" class="g">#fn-local</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_LOCAL</j_>(<v_>_captures</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) ??? { ??? }) */</w_></pre>
+<pre><p_>#define</p_> <j_>XTE_FN_LOCAL</j_>(<v_>_captures</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) ??? { ??? }) */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with user-provided captures, no specifiers, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>. <code><v_>_captures</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
 			<br/>
 			<a id="def-fn-mut" href="#def-fn-mut" class="g">#fn-mut</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_FN_MUT</j_>(<v_>_captures</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) mutable ??? { ??? }) */</w_></pre>
+<pre><p_>#define</p_> <j_>XTE_FN_MUT</j_>(<v_>_captures</v_>, <k_>...</k_>) <w_>/* ([???](this auto, ???) mutable ??? { ??? }) */</w_></pre>
 			</blockquote>
 			Expands to a lambda expression with user-provided captures, a <code><k_>mutable</k_></code> specifier, and an explicit <code><k_>this</k_></code> parameter through variable <code><v_>$this</v_></code> of type <code><t_>$$this</t_></code>. <code><v_>_captures</v_></code> must be wrapped in parentheses if more than one capture item is passed, otherwise parentheses are optional.<br/>
 			<br/>
@@ -53,9 +53,9 @@
 			<a id="ex-0" href="#ex-0" class="g">#0</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<k_>auto</k_> <o_>add_two</o_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>);
-	<k_>auto</k_> <o_>add_all</o_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>((... + <v_>$</v_>));
-	<k_>auto</k_> <v_>cast</v_> = <a href="#def-fn"><j_>XIEITE_FN</j_></a>(<k_>static_cast</k_>&lt;<t_>$$0</t_>&gt;(<v_>$0</v_>));
+	<k_>auto</k_> <o_>add_two</o_> = <a href="#def-fn"><j_>XTE_FN</j_></a>(<v_>$0</v_> + <v_>$1</v_>);
+	<k_>auto</k_> <o_>add_all</o_> = <a href="#def-fn"><j_>XTE_FN</j_></a>((... + <v_>$</v_>));
+	<k_>auto</k_> <v_>cast</v_> = <a href="#def-fn"><j_>XTE_FN</j_></a>(<k_>static_cast</k_>&lt;<t_>$$0</t_>&gt;(<v_>$0</v_>));
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>add_two</o_>(<n_>3</n_>, <n_>4</n_>));
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>add_all</o_>(<n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_>));
@@ -73,7 +73,7 @@
 			<a id="ex-1" href="#ex-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<k_>struct</k_> : <k_>decltype</k_>(<a href="#def-fn-this"><j_>XIEITE_FN_THIS</j_></a>(<v_>$this</v_>.<v_>x</v_> + <v_>$0</v_>)) { <k_>int</k_> <v_>x</v_> = <n_>5</n_>; } <o_>foo</o_>;
+	<k_>struct</k_> : <k_>decltype</k_>(<a href="#def-fn-this"><j_>XTE_FN_THIS</j_></a>(<v_>$this</v_>.<v_>x</v_> + <v_>$0</v_>)) { <k_>int</k_> <v_>x</v_> = <n_>5</n_>; } <o_>foo</o_>;
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>foo</o_>(<n_>1</n_>));
 }</pre>
@@ -88,7 +88,7 @@
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
 	<k_>int</k_> <v_>x</v_> = <n_>5</n_>;
-	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-local"><j_>XIEITE_FN_LOCAL</j_></a>(<k_>=</k_>, <v_>x</v_> * <v_>$0</v_>);
+	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-local"><j_>XTE_FN_LOCAL</j_></a>(<k_>=</k_>, <v_>x</v_> * <v_>$0</v_>);
 
 	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<o_>foo</o_>(<n_>2</n_>));
 }</pre>
@@ -102,7 +102,7 @@
 			<a id="ex-3" href="#ex-3" class="g">#3</a>
 			<blockquote>
 <pre><k_>int</k_> <f_>main</f_>() {
-	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-mut"><j_>XIEITE_FN_MUT</j_></a>(<v_>x</v_> = <n_>0</n_>, <v_>x</v_>++);
+	<k_>auto</k_> <o_>foo</o_> = <a href="#def-fn-mut"><j_>XTE_FN_MUT</j_></a>(<v_>x</v_> = <n_>0</n_>, <v_>x</v_>++);
 	<r_>for</r_> (<k_>int</k_> <v_>i</v_> : { <o_>foo</o_>(), <o_>foo</o_>(), <o_>foo</o_>() }) {
 		<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<v_>i</v_>);
 	}

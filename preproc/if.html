@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>XIEITE_IF()</title>
+		<title>XTE_IF()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,8 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<a href=""><h2><code><j_>XIEITE_IF</j_>()</code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/pp/if.hpp"><code><s_>&lt;xieite/pp/if.hpp&gt;</s_></code></a></small><br/>
+			<a href=""><h2><code><j_>XTE_IF</j_>()</code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/if.hpp"><code><s_>&lt;xte/preproc/if.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Called in three parts (condition, then, else). If the first argument expands to <code><n_>1</n_></code>, expands to the second argument, otherwise expands to the third argument.<br/>
 			<br/>
@@ -20,26 +20,26 @@
 			<a id="def" href="#def"><h3>Definition</h3></a>
 			<a id="def-if" href="#def-if" class="g">#if</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_IF</j_>(<v_>_x</v_>) <a href="#def-iif"><j_>XIEITE_IIF</j_></a>(<a href="/pp/bool"><j_>XIEITE_BOOL</j_></a>(<v_>_x</v_>))</pre>
+<pre><p_>#define</p_> <j_>XTE_IF</j_>(<v_>_x</v_>) <a href="#def-iif"><j_>XTE_IIF</j_></a>(<a href="/preproc/bool"><j_>XTE_BOOL</j_></a>(<v_>_x</v_>))</pre>
 			</blockquote>
 			<br/>
 			<a id="def-iif" href="#def-iif" class="g">#iif</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XIEITE_IIF</j_>(<v_>_b</v_>) <w_>/* ??? */</w_></pre>
+<pre><p_>#define</p_> <j_>XTE_IIF</j_>(<v_>_b</v_>) <w_>/* ??? */</w_></pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><a href="#def-if"><j_>XIEITE_IF</j_></a>(<n_>1</n_>)(<s_>'a'</s_>)(<s_>'b'</s_>)
-<a href="#def-if"><j_>XIEITE_IF</j_></a>(<n_>0</n_>)(<s_>'a'</s_>)(<s_>'b'</s_>)</pre>
+<pre><a href="#def-if"><j_>XTE_IF</j_></a>(<n_>1</n_>)(<s_>'a'</s_>)(<s_>'b'</s_>)
+<a href="#def-if"><j_>XTE_IF</j_></a>(<n_>0</n_>)(<s_>'a'</s_>)(<s_>'b'</s_>)</pre>
 			</blockquote>
 			<small>Preprocessor output:</small>
 			<blockquote>
 <pre><s_>'a'</s_>
 <s_>'b'</s_></pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/oMfhbY9zd" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/cz99ezecK" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

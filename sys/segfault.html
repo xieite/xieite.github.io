@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::segfault()</title>
+		<title>xte::segfault()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,8 +11,8 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<f_>segfault</f_>()</a></code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/sys/segfault.hpp"><code><s_>&lt;xieite/sys/segfault.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xte</m_>::<f_>segfault</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/sys/segfault.hpp"><code><s_>&lt;xte/sys/segfault.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Dereferences <code><k_>nullptr</k_></code> to cause a segmentation fault, though whether it's handled at all is entirely up to the operating system.<br/>
 			Why would you use this?<br/>
@@ -20,22 +20,20 @@
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre><k_>void</k_> <f_>segfault</f_>() <k_>noexcept</k_>;</pre>
+<pre><k_>inline void</k_> <f_>segfault</f_>() <k_>noexcept</k_>;</pre>
 			</blockquote>
 			This isn't even marked <code>[[<a_>noreturn</a_>]]</code>.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>int</k_> <f_>main</f_>() {
-	<a href="#def"><m_>xieite</m_>::<f_>segfault</f_></a>();
-}</pre>
+<pre><a href="#def"><m_>xte</m_>::<f_>segfault</f_></a>();</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
 <pre>Segmentation fault (code dumped)</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/7xP9zhWc9" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/YKe6b3fvM" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

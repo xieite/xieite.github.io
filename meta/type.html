@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::type&lt;&gt;</title>
+		<title>xte::type&lt;&gt;</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,10 +11,10 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<t_>type</t_>&lt;&gt;</a></code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/meta/type.hpp"><code><s_>&lt;xieite/meta/type.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xte</m_>::<t_>type</t_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/type.hpp"><code><s_>&lt;xte/meta/type.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			"Groups" some types into singular "things". Especially useful for declaring parameters which are C-style arrays, function pointers, or function references.<br/>
+			Turns a type into a "simple" type. Useful for declaring C-style array or function parameters.<br/>
 			Differs from <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity#Helper_types"><code><m_>std</m_>::<t_>type_identity_t</t_>&lt;&gt;</code></a> in that this does not prevent template parameter deduction <a href="#ex">(see example)</a>.<br/>
 			<br/>
 			<br/>
@@ -27,32 +27,32 @@
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Ret</t_>&gt;
-<k_>void</k_> <f_>foo</f_>(<a href="#def"><m_>xieite</m_>::<t_>type</t_></a>&lt;<t_>Ret</t_>(&)()&gt; <v_>fn</v_>) {
-	<v_>fn</v_>();
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Return</t_>&gt;
+<k_>void</k_> <f_>foo</f_>(<a href="#def"><m_>xte</m_>::<t_>type</t_></a>&lt;<t_>Return</t_>()&gt;<k_>&</k_> <v_>func</v_>) {
+	<v_>func</v_>();
 }
 
 <k_>int</k_> <f_>bar</f_>() {
-	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/puts"><m_>std</m_>::<f_>puts</f_></a>(<s_>"bar"</s_>);
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"bar"</s_>);
 	<r_>return</r_> <n_>0</n_>;
 }
 
-<k_>float</k_> <f_>baz</f_>() {
-	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/puts"><m_>std</m_>::<f_>puts</f_></a>(<s_>"baz"</s_>);
-	<r_>return</r_> <n_>0.0f</n_>;
+<k_>double</k_> <f_>qux</f_>() {
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"qux"</s_>);
+	<r_>return</r_> <n_>0.0</n_>;
 }
 
 <k_>int</k_> <f_>main</f_>() {
 	<f_>foo</f_>(<f_>bar</f_>);
-	<f_>foo</f_>(<f_>baz</f_>);
+	<f_>foo</f_>(<f_>qux</f_>);
 }</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
 <pre>bar
-baz</pre>
+qux</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/f6nrP876c" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/KM3To6o5o" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
