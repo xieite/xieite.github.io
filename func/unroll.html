@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xte::unroll()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xte</m_>::<f_>unroll</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/func/unroll.hpp"><code><s_>&lt;xte/func/unroll.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Repeatedly passes an incrementing index, up to a given limit, as a template argument to a given functor.<br/>
+			Allows passing additional function arguments.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definition</h3></a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/util/types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>func</v_>, <k_>auto&&...</k_> <v_>args</v_>) <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<w_>/*
+	func.template operator()&lt;0&gt;(args...),
+	func.template operator()&lt;1&gt;(args...),
+	...,
+	func.template operator()&lt;(n - 1)&gt;(args...)
+*/</w_>)</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><a href="#def"><m_>xte</m_>::<f_>unroll</f_></a>&lt;<n_>5</n_>&gt;([]&lt;<k_>auto</k_> <v_>i</v_>&gt; {
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>i</v_>);
+});</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>0
+1
+2
+3
+4</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/sxMExPoba" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xte::literal::analog {}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xte</m_>::<m_>literal</m_>::<m_>analog</m_> {}</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/literal/analog.hpp"><code><s_>&lt;xte/literal/analog.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			A namespace providing collections of characters.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definition</h3></a>
+			<blockquote>
+<pre><k_>namespace</k_> <m_>literal</m_>::<m_>analog</m_> {
+	<k_>inline constexpr</k_> <w_>/* struct {
+		static constexpr <a href="/util/types">xte::uz</a> width = ???;
+		static constexpr <a href="/util/types">xte::uz</a> height = ???;
+		static constexpr <a href="/util/types">xte::uz</a> length = ???;
+		static constexpr <a href="/util/types">xte::uz</a> area = ???;
+		static constexpr <a href="/util/types">xte::uz</a> volume = ???;
+	} */</w_> <v_>x</v_>;
+}</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><k_>using namespace</k_> <a href="#def"><m_>xte</m_>::<m_>literal</m_>::<m_>analog</m_></a>;
+
+<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, (<v_>x</v_> - - - +
+                    !*       *
+                    ! *       *
+                    !  *       *
+                    +   + - - - +
+                     *  !       !
+                      * !       !
+                       *!       !
+                        + - - - <v_>x</v_>).<v_>volume</v_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>27</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/zz4aEhba3" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::neg()</title>
+		<title>xte::neg()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,31 +11,28 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<f_>neg</f_>()</a></code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/math/neg.hpp"><code><s_>&lt;xieite/math/neg.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xte</m_>::<f_>neg</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/neg.hpp"><code><s_>&lt;xte/math/neg.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Checks whether a number is negative. Uses <a target="_blank" href="https://en.cppreference.com/w/cpp/numeric/math/signbit"><code><m_>std</m_>::<f_>signbit</f_>()</code></a> for floating-point types, and always returns <code><k_>false</k_></code> for unsigned types.<br/>
+			Checks whether a number is negative. Uses <a target="_blank" href="https://en.cppreference.com/w/cpp/numeric/math/signbit"><code><m_>std</m_>::<f_>signbit</f_>()</code></a> for floating-point types.<br/>
 			Can be used to avoid warnings enabled by <a target="_blank" href="https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits"><code>-Wtype-limits</code></a>.<br/>
 			<br/>
 			<br/>
 			<a id="def" href="#def"><h3>Declaration</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/trait/is_arith"><m_>xieite</m_>::<c_>is_arith</c_></a> <t_>Arith</t_>&gt;
-[[<a_>nodiscard</a_>]] <k_>constexpr bool</k_> <f_>neg</f_>(<t_>Arith</t_> <v_>n</v_>) <k_>noexcept</k_>;</pre>
+<pre><k_>inline constexpr auto</k_> <f_>neg</f_> = [][[<a_>nodiscard</a_>]](<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>x</v_>) <k_>static noexcept</k_> -&gt; <k_>bool</k_> { <w_>/* ??? */</w_> };</pre>
 			</blockquote>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>int</k_> <f_>main</f_>() {
-	<a href="/io/dump"><m_>xieite</m_>::<f_>dump</f_></a>(<a href="#def"><m_>xieite</m_>::<f_>neg</f_></a>(<n_>5u</n_>));
-}</pre>
+<pre><a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <a href="#def"><m_>xte</m_>::<f_>neg</f_></a>(<n_>-5</n_>));</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
-<pre>false</pre>
+<pre>true</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/K5ETj5Poj" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/qMxf5Ed9e" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

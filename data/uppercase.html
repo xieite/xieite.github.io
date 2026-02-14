@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> body { background: #000000; } </style>
+		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
+		<title>xte::uppercase()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link href="/style.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html" frameborder="0"></iframe>
+		<main>
+			<h2><code><a href=""><m_>xte</m_>::<f_>uppercase</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/uppercase.hpp"><code><s_>&lt;xte/data/uppercase.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Converts a single character or every character of a range to its uppercase representation.<br/>
+			Only handles the English alphabet.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definition</h3></a>
+			<blockquote>
+<pre><k_>inline constexpr auto</k_> <v_>uppercase</v_> = <a href="/func/visitor"><m_>xte</m_>::<t_>visitor</t_></a> {
+	[][[<a_>nodiscard</a_>]](<k_>char</k_> <v_>c</v_>) <k_>static noexcept</k_> -> <k_>char</k_> { <w_>/* ... */</w_> },
+
+	[]&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/input_range"><m_>std</m_>::<m_>range</m_>::<c_>input_range</c_></a> <t_>Range</t_>&gt;[[<a_>nodiscard</a_>]](<t_>Range</t_> <v_>range</v_>) <k_>static noexcept</k_>(<a href="/trait/is_noex_range"><m_>xte</m_>::<c_>is_noex_range</c_></a>&lt;<t_>Range</t_>&gt;) -> <t_>Range</t_> <k_>requires</k_>(<a href="/trait/is_same"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/ranges/range_size_t"><m_>std</m_>::<m_>ranges</m_>::<t_>range_value_t</t_></a>&lt;<t_>Range</t_>&gt;, <k_>char</k_>&gt;) { <w_>/* ... */</w_> }
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<a id="ex" href="#ex"><h3>Example</h3></a>
+			<blockquote>
+<pre><a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <a href="#def"><m_>xte</m_>::<f_>uppercase</f_></a>(<s_>"HeLlO, wOrLd!"s</s_>));</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>HELLO, WORLD!</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/9K1aTzna8" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

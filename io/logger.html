@@ -3,7 +3,7 @@
 	<head>
 		<style> body { background: #000000; } </style>
 		<link href="/icon.png" rel="shortcut icon" type="image/png"/>
-		<title>xieite::logger {}</title>
+		<title>xte::logger {}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="/style.css" rel="stylesheet"/>
 	</head>
@@ -11,68 +11,45 @@
 		<input type="checkbox"/>
 		<iframe src="/links.html" frameborder="0"></iframe>
 		<main>
-			<h2><code><a href=""><m_>xieite</m_>::<m_>logger</m_> {}</a></code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xieite/io/logger.hpp"><code><s_>&lt;xieite/io/logger.hpp&gt;</s_></code></a></small><br/>
+			<h2><code><a href=""><m_>xte</m_>::<m_>logger</m_> {}</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/io/logger.hpp"><code><s_>&lt;xte/io/logger.hpp&gt;</s_></code></a></small><br/>
 			<br/>
 			Logging utilities. Text is only colored when printing to a TTY.<br/>
 			<br/>
 			<br/>
-			<a id="def" href="#def"><h3>Contents</h3></a>
-			<a id="def-info" href="#def-info" class="g">#info</a>
+			<a id="def" href="#def"><h3>Definition</h3></a>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<k_>struct</k_> <t_>info</t_> { <w_>/* ??? */</w_> };
+<pre><k_>namespace</k_> <m_>logger</m_> {
+	<k_>template</k_>&lt;<w_>/* ??? */</w_>&gt;
+	<k_>struct</k_> <t_>info</t_> { <w_>/* ??? */</w_> };
 
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>info</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;
+	<k_>template</k_>&lt;<w_>/* ??? */</w_>&gt;
+	<k_>struct</k_> <t_>debug</t_> { <w_>/* ??? */</w_> };
 
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>info</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;</pre>
+	<k_>template</k_>&lt;<w_>/* ??? */</w_>&gt;
+	<k_>struct</k_> <t_>warn</t_> { <w_>/* ??? */</w_> };
+
+	<k_>template</k_>&lt;<w_>/* ??? */</w_>&gt;
+	<k_>struct</k_> <t_>error</t_> { <w_>/* ??? */</w_> };
+}</pre>
 			</blockquote>
-			Uses an '<code>INFO</code>' prefix.<br/>
-			<br/>
-			<a id="def-warn" href="#def-warn" class="g">#warn</a>
-			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<k_>struct</k_> <t_>warn</t_> { <w_>/* ??? */</w_> };
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>warn</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>warn</t_>&lt;<t_>Args</t_>...&gt;;
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>warn</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>warn</t_>&lt;<t_>Args</t_>...&gt;;</pre>
-			</blockquote>
-			Uses a '<code style="color: #ffaf00">WARN</code>' prefix.<br/>
-			<br/>
-			<a id="def-error" href="#def-error" class="g">#error</a>
-			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<k_>struct</k_> <t_>error</t_> { <w_>/* ??? */</w_> };
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>error</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>error</t_>&lt;<t_>Args</t_>...&gt;;
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<t_>error</t_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>error</t_>&lt;<t_>Args</t_>...&gt;;</pre>
-			</blockquote>
-			Uses an '<code style="color: #ff0000">ERROR</code>' prefix.<br/>
 			<br/>
 			<br/>
 			<a id="ex" href="#ex"><h3>Example</h3></a>
 			<blockquote>
-<pre><k_>int</k_> <f_>main</f_>() {
-	<a href="#def-info"><m_>xieite</m_>::<m_>logger</m_>::<t_>info</t_></a>(<s_>"Hello, world!"</s_>);
-	<a href="#def-warn"><m_>xieite</m_>::<m_>logger</m_>::<t_>warn</t_></a>(<s_>"Hello, world!"</s_>);
-	<a href="#def-error"><m_>xieite</m_>::<m_>logger</m_>::<t_>error</t_></a>(<s_>"Hello, world!"</s_>);
-}</pre>
+<pre><a href="#def"><m_>xte</m_>::<m_>logger</m_>::<t_>info</t_></a>(<s_>"Hello, world!"</s_>);
+<a href="#def"><m_>xte</m_>::<m_>logger</m_>::<t_>debug</t_></a>(<s_>"Hello, world!"</s_>);
+<a href="#def"><m_>xte</m_>::<m_>logger</m_>::<t_>warn</t_></a>(<s_>"Hello, world!"</s_>);
+<a href="#def"><m_>xte</m_>::<m_>logger</m_>::<t_>error</t_></a>(<s_>"Hello, world!"</s_>);</pre>
 			</blockquote>
 			<small>Possible output:</small>
 			<blockquote>
-<pre>INFO  [1969-12-31 23:59:59] main.cpp:int main():417: Hello, world!
+<pre>INFO  [1970-01-01 00:00:00] main.cpp:int main():416: Hello, world!
+<span style="color: #ff3fff">DEBUG [1970-01-01 00:00:00] main.cpp:int:main():417: Hello, world!</span>
 <span style="color: #ffaf00">WARN  [1970-01-01 00:00:00] main.cpp:int main():418: Hello, world!</span>
-<span style="color: #ff0000">ERROR [1970-01-01 00:00:01] main.cpp:int main():419: Hello, world!</span></pre>
+<span style="color: #ff0000">ERROR [1970-01-01 00:00:00] main.cpp:int main():419: Hello, world!</span></pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/b9G3ToWz3" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/vo8xP95da" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
