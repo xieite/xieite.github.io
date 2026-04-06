@@ -142,8 +142,8 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 }
 
 @media (orientation: portrait) or (max-width: 1200px) {
-	:root {
-		font-size: 200%;
+	body:has(script) > pre {
+		font-size: 100%;
 	}
 
 	body {
@@ -152,8 +152,8 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 
 	input {
 		display: block;
-		width: 75px;
-		height: 75px;
+		width: 50px;
+		height: 50px;
 		/* width: 10%;
 		height: 10%; */
 
@@ -178,7 +178,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 
 	main {
 		margin: 0;
-		padding-top: 125px;
+		padding-top: 100px;
 		padding-bottom: 100px;
 		padding-left: 25px;
 		padding-right: 25px;
