@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style> body { background: #000000; } </style>
-		<link href="icon.png" rel="shortcut icon" type="image/png"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
 		<title>XIEITE</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link href="/style.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<input type="checkbox"/>
-		<iframe src="/links.html" frameborder="0"></iframe>
+		<object data="/links.html"></object>
 		<main>
 			<a href=""><h1>XIEITE</h1></a>
 			General-purpose C++ utility library<br/>
@@ -17,36 +15,30 @@
 			<br/>
 			<br/>
 			<a target="_blank" href="https://github.com/Eczbek/xieite" class="g">[Source code]</a><br/>
-			<small>This library is currently header-only.</small><br/>
 			<br/>
 			<br/>
 			<br/>
-			<h3>Requirements</h3>
-			- C++26<br/>
+			<h3><a id="req" href="#req">Requirements</a></h3>
 			- GCC trunk<br/>
+			- C++26<br/>
+			- Reflection
 			<br/>
 			<br/>
 			<br/>
-			<h3>Usage</h3>
+			<h3><a id="usage" href="#usage">Usage</a></h3>
 			<blockquote>
 <pre><j_>cmake_minimum_required</j_>(<a_>VERSION</a_> <n_>3.25</n_>)
 
 <j_>project</j_>(<f_>myProject</f_>)
 <j_>include</j_>(<i_>FetchContent</i_>)
 
-<a href="/~/pepper"><w_># ...</w_></a>
+<w_># ...</w_>
 <j_>target_compile_features</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>cxx_std_26</f_>)
 
 <i_>FetchContent_Declare</i_>(<f_>xieite</f_> <a_>GIT_REPOSITORY</a_> <s_>"https://github.com/Eczbek/xieite"</s_> <a_>GIT_TAG</a_> <f_>main</f_>)
 <i_>FetchContent_MakeAvailable</i_>(<f_>xieite</f_>)
 <j_>target_link_libraries</j_>(<f_>myProject</f_> <a_>PRIVATE</a_> <f_>xieite</f_>)</pre>
 			</blockquote>
-			<br/>
-			<br/>
-			<br/>
-			All code in this library is contained within the '<code><m_>xte</m_></code>' namespace.<br/>
-			Preprocessor macros are prefixed with '<code><i_>XTE</i_></code>' to prevent naming collisions.<br/>
-			Internal identifiers are prefixed with '<code><w_>DETAIL_XTE</w_></code>' and are not intended to be used directly.<br/>
 		</main>
 	</body>
 </html>
