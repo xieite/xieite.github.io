@@ -9,26 +9,26 @@
 		<script src="/script.js" defer></script>
 <pre><a target="_top" href="/"><m_>xieite</m_> {}</a>
 	data
-		<w_>array {}
-		fixed_array {}
-		fixed_string {}</w_>
+		<w_>array
+		fixed_array
+		fixed_string
+		init_list&lt;&gt;</w_>
 		<a target="_top" href="/data/lowercase"><f_>lowercase</f_>()</a>
 		<w_>null
 		opt {}
 		ptr {}
 		range_cmp()
-		string
-		string_view</w_>
+		string {}
+		string_view {}</w_>
 		<a target="_top" href="/data/uppercase"><f_>uppercase</f_>()</a>
 
 	func
 		<w_>all()
-		any_true()
+		any()
 		defer {}
 		func {}
 		gen()
-		nop()
-		synth_three_way()</w_>
+		nop()</w_>
 		<a target="_top" href="/func/unfold"><f_>unfold</f_>()</a>
 		<a target="_top" href="/func/unroll"><f_>unroll</f_>()</a>
 		<a target="_top" href="/func/visitor"><t_>visitor</t_> {}</a>
@@ -36,7 +36,10 @@
 		with_result()</w_>
 
 	io
+		<w_>eof
+		file {}</w_>
 		<a target="_top" href="/io/logger"><m_>logger</m_> {}</a>
+		<w_>std {}</w_>
 
 	literal
 		<a target="_top" href="/literal/analog"><m_>analog</m_> {}</a>
@@ -51,10 +54,10 @@
 		add_checked()
 		almost_equal()
 		almost_equal_slope()
-		as_sign()
 		as_signed()
 		as_unsigned()
 		between()
+		big_int {}
 		bit_at()
 		bit_ceil()
 		bit_floor()
@@ -70,6 +73,8 @@
 		is_finite()
 		is_infinite()
 		is_nan()
+		<a target="_top" href="/math/is_neg"><f_>is_neg</f_>()</a>
+		is_single_bit()
 		leading_zeros()
 		lshift()
 		max()
@@ -78,21 +83,19 @@
 		mod()
 		mod_checked()
 		mul()
-		mul_checked()</w_>
-		<a target="_top" href="/math/neg"><f_>neg</f_>()</a>
-		<w_>number {}
+		mul_checked()
+		number {}
 		number_format_config {}
 		parse_number()
 		rem()
 		rem_checked()
 		rshift()
 		sign()
-		sigle_bit()
+		sign_cast()
+		stringify_number()
 		sub()
 		sub_checked()
 		trailing_zeros()
-		try_signed&lt;&gt;
-		try_unsigned&lt;&gt;
 		wide_uint {}
 		width&lt;&gt;</w_>
 
@@ -150,9 +153,9 @@
 		PLATFORM_<w_>/*???*/</w_>
 		PRAGMA()
 		QUOTE()
-		REMOVE_EMPTY()
-		SCAN()
-		STATIC_ASSERT()
+		REMOVE_EMPTY()</w_>
+		<a target="_top" href="/preproc/scan"><j_>SCAN</j_>()</a>
+		<w_>STATIC_ASSERT()
 		STDLIB_<w_>/*???*/</w_>
 		TEMPLATE</w_>
 		<a target="_top" href="/preproc/unwrap"><j_>UNWRAP</j_>()</a>
@@ -167,7 +170,145 @@
 		<a target="_top" href="/sys/segfault"><f_>segfault</f_>()</a>
 
 	trait
-		<E_>// TODO //</E_>
+		<w_>add_c&lt;&gt;
+		add_clref&lt;&gt;
+		add_crref&lt;&gt;
+		add_cv&lt;&gt;
+		add_cvlref&lt;&gt;
+		add_cvrref&lt;&gt;
+		add_lref&lt;&gt;
+		add_ptr&lt;&gt;
+		add_rref&lt;&gt;
+		add_v&lt;&gt;
+		add_vlref&lt;&gt;
+		add_vrref&lt;&gt;
+		copy_c&lt;&gt;
+		copy_clref&lt;&gt;
+		copy_cref&lt;&gt;
+		copy_crref&lt;&gt;
+		copy_cv&lt;&gt;
+		copy_cvlref&lt;&gt;
+		copy_cvref&lt;&gt;
+		copy_cvrref&lt;&gt;
+		copy_lref&lt;&gt;
+		copy_ref&lt;&gt;
+		copy_rref&lt;&gt;
+		copy_v&lt;&gt;
+		copy_vlref&lt;&gt;
+		copy_vref&lt;&gt;
+		copy_vrref&lt;&gt;
+		is_assignable&lt;&gt;
+		is_assignable_to&lt;&gt;
+		is_bool_testable&lt;&gt;
+		is_brace_constructible&lt;&gt;
+		is_c&lt;&gt;
+		is_callable&lt;&gt;
+		is_castable&lt;&gt;
+		is_constructible&lt;&gt;
+		is_contiguous_input_range&lt;&gt;
+		is_copy_assignable&lt;&gt;
+		is_copy_constructible&lt;&gt;
+		is_cv&lt;&gt;
+		is_default_constructible&lt;&gt;
+		is_derived_from&lt;&gt;
+		is_derived_from_instance_of&lt;&gt;
+		is_float&lt;&gt;
+		is_implicit_castable&lt;&gt;
+		is_implicit_castable_any&lt;&gt;
+		is_implicit_constructible&lt;&gt;
+		is_implicit_default_constructible&lt;&gt;
+		is_implicit_move_constructible&lt;&gt;
+		is_input_range&lt;&gt;
+		is_input_sized_range&lt;&gt;
+		is_instance_of&lt;&gt;
+		is_int&lt;&gt;
+		is_invocable&lt;&gt;
+		is_invocable_lref&lt;&gt;
+		is_lref&lt;&gt;
+		is_move_assignable&lt;&gt;
+		is_move_constructible&lt;&gt;
+		is_noex_assignable&lt;&gt;
+		is_noex_assignable_to&lt;&gt;
+		is_noex_bool_testable&lt;&gt;
+		is_noex_brace_constructible&lt;&gt;
+		is_noex_constructible&lt;&gt;
+		is_noex_copy_assignable&lt;&gt;
+		is_noex_copy_constructible&lt;&gt;
+		is_noex_dtor&lt;&gt;
+		is_noex_implicit_castable&lt;&gt;
+		is_noex_implicit_constructible&lt;&gt;
+		is_noex_implicit_default_constructible&lt;&gt;
+		is_noex_implicit_move_constructible&lt;&gt;
+		is_noex_iter&lt;&gt;
+		is_noex_move_assignable&lt;&gt;
+		is_noex_move_constructible&lt;&gt;
+		is_noex_range&lt;&gt;
+		is_noex_sentinel&lt;&gt;
+		is_noex_swappable&lt;&gt;
+		is_number&lt;&gt;
+		is_order&lt;&gt;
+		is_privately_derived_from&lt;&gt;
+		is_ptr&lt;&gt;
+		is_range&lt;&gt;
+		is_ref&lt;&gt;
+		is_rref&lt;&gt;
+		is_same&lt;&gt;
+		is_same_any&lt;&gt;
+		is_same_any_ignore_cv&lt;&gt;
+		is_same_any_ignore_cvref&lt;&gt;
+		is_same_ignore_cv&lt;&gt;
+		is_same_ignore_cvref&lt;&gt;
+		is_same_with&lt;&gt;
+		is_satisfied&lt;&gt;
+		is_satisfies&lt;&gt;
+		is_signed&lt;&gt;
+		is_sized_range&lt;&gt;
+		is_unsigned&lt;&gt;
+		is_v&lt;&gt;
+		is_variadic&lt;&gt;
+		is_void&lt;&gt;
+		non_copyable&lt;&gt;
+		non_movable&lt;&gt;
+		remove_c&lt;&gt;
+		remove_clref&lt;&gt;
+		remove_crref&lt;&gt;
+		remove_cv&lt;&gt;
+		remove_cvlref&lt;&gt;
+		remove_cvref&lt;&gt;
+		remove_cvrref&lt;&gt;
+		remove_lref&lt;&gt;
+		remove_ptr&lt;&gt;
+		remove_ref&lt;&gt;
+		remove_rref&lt;&gt;
+		remove_v&lt;&gt;
+		remove_vlref&lt;&gt;
+		remove_vrref&lt;&gt;
+		req&lt;&gt;
+		try_signed&lt;&gt;
+		try_unsigned&lt;&gt;</w_>
+
+	util
+		<w_>address()
+		as_c()
+		as_cv()
+		as_not_c()
+		as_not_v()
+		as_v()
+		assign()
+		at()
+		cast()
+		construct()
+		destroy()
+		error {}
+		exchange()
+		implicitly()
+		like()
+		lvalue()
+		prvalue()
+		reconstruct()
+		synth_three_way()
+		types {}
+		xvalue()</w_>
 </pre>
 	</body>
 </html>

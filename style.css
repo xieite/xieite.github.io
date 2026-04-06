@@ -34,7 +34,7 @@ input {
 	display: none;
 }
 
-iframe {
+object {
 	position: absolute;
 	top: 0;
 	border: 0;
@@ -42,12 +42,12 @@ iframe {
 	height: 100%;
 }
 
-iframe:nth-of-type(1) {
+object:nth-of-type(1) {
 	left: 0;
 	z-index: 1000000;
 }
 
-iframe:nth-of-type(2) {
+object:nth-of-type(2) {
 	left: calc(100% - var(--sidebar-width));
 	z-index: 1000002;
 }
@@ -209,7 +209,6 @@ s_ { color: #fc582a; } /* strings */
 n_ { color: #d6ffa1; } /* numbers */
 p_ { color: #ff48ce; } /* preprocessor */
 i_ { color: #ffae00; } /* special */
-E_ { color: #ff0000; } /* ERROR */
 j_ { color: #ff8026; } /* function-like macro */
 
 /* TODO: Light mode
