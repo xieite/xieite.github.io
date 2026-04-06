@@ -34,7 +34,7 @@ input {
 	display: none;
 }
 
-object {
+iframe {
 	position: absolute;
 	top: 0;
 	border: 0;
@@ -42,12 +42,12 @@ object {
 	height: 100%;
 }
 
-object:nth-of-type(1) {
+iframe:nth-of-type(1) {
 	left: 0;
 	z-index: 1000000;
 }
 
-object:nth-of-type(2) {
+iframe:nth-of-type(2) {
 	left: calc(100% - var(--sidebar-width));
 	z-index: 1000002;
 }
@@ -135,7 +135,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 		padding-right: 150px;
 	}
 
-	body:has(object[data$=".links.html"]) > main {
+	body:has(iframe[src$=".links.html"]) > main {
 		padding-right: calc(var(--sidebar-width) + 50px);
 	}
 }
@@ -160,8 +160,9 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 		z-index: 1000003;
 	}
 
-	object {
+	iframe {
 		display: none;
+		border: none;
 	}
 
 	main {
@@ -182,12 +183,12 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 		display: none;
 	}
 
-	input:nth-of-type(1):checked ~ object:nth-of-type(1) {
+	input:nth-of-type(1):checked ~ iframe:nth-of-type(1) {
 		display: block;
 		width: 100%;
 	}
 
-	input:nth-of-type(2):checked ~ object:nth-of-type(2) {
+	input:nth-of-type(2):checked ~ iframe:nth-of-type(2) {
 		display: block;
 		width: 100%;
 
@@ -200,7 +201,7 @@ k_ { color: #3d79ba; } /* keywords */
 r_ { color: #ca78e3; } /* control flow */
 t_ { color: #85bef7; } /* types */
 v_ { color: #c1edff; } /* variables */
-o_ { color: #c1edff; } /* callable object // alt color: #99ffb1 */
+o_ { color: #c1edff; } /* callable iframe // alt color: #99ffb1 */
 c_ { color: #a099ff; } /* concepts */
 m_ { color: #63d2c8; } /* namespaces */
 f_ { color: #ffeca1; } /* functions */
