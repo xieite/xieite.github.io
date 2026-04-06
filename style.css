@@ -146,13 +146,19 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 		font-size: 200%;
 	}
 
+	body {
+		display: flex;
+	}
+
 	input {
 		display: block;
-		width: 10%;
-		height: 10%;
+		width: 75px;
+		height: 75px;
+		/* width: 10%;
+		height: 10%; */
 
 		position: absolute;
-		/* padding-left: 25px; */
+		top: 25px;
 	}
 
 	input:nth-of-type(1) {
@@ -172,7 +178,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 
 	main {
 		margin: 0;
-		padding-top: 75px;
+		padding-top: 125px;
 		padding-bottom: 100px;
 		padding-left: 25px;
 		padding-right: 25px;
