@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::logger::info {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/io/logger.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/io/logger"><m_>logger</m_></a>::<a href=""><t_>info</t_> {}</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/io/logger.hpp"><code><s_>&lt;xte/io/logger.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Prints a message with an 'INFO' prefix. The object is intended to be discarded after construction.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
+<k_>struct</k_> <t_>info</t_> {
+	<a href="/io/logger/info/info"><span><k_>explicit</k_> <f_>info</f_>(<m_>std</m_>::<t_>format_string</t_>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>explicit</k_> <f_>info</f_>(<m_>std</m_>::<t_>FILE</t_><k_>*</k_>, <m_>std</m_>::<t_>format_string</t_>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+};
+
+<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
+<f_>info</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;
+
+<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
+<f_>info</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>info</t_>&lt;<t_>Args</t_>...&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="#def"><m_>xte</m_>::<m_>logger</m_>::<t_>info</t_></a>(<s_>"Hello, world!"</s_>);</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>INFO  [2026-04-13 20:04:35] main.cpp:int main():4: Hello, world!</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/hrn3a14Mc" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

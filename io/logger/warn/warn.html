@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::logger::warn&lt;Args...&gt;::warn()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/io/logger.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/io/logger"><m_>logger</m_></a>::<a href="/io/logger/warn"><t_>warn</t_>&lt;<t_>Args</t_>...&gt;</a>::<a href=""><f_>warn</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/io/logger.hpp"><code><s_>&lt;xte/io/logger.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Formats arguments according to the format string, and prints the results to a stream.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>explicit</k_> <f_>warn</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt; <v_>fmt</v_>, <t_>Args</t_><k_>&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Prints to <code><a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/std_streams"><k_>stdout</k_></a></code>.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>explicit</k_> <f_>warn</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_> <v_>stream</v_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt; <v_>fmt</v_>, <t_>Args</t_><k_>&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Prints to <code><v_>stream</v_></code>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="#def"><m_>xte</m_>::<m_>logger</m_>::<t_>warn</t_></a>(<s_>"Hello, world!"</s_>);</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre><span style="color: #ffaf00">WARN  [2026-04-13 20:13:40] main.cpp:int main():4: Hello, world!</span></pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/Weds74W1P" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
