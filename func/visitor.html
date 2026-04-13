@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::visitor {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/func/visitor.links.html"></iframe>
+		<main>
+			<h2><a href=""><code><m_>xte</m_>::<t_>visitor</t_> {}</code></a></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/func/visitor.hpp"><code><s_>&lt;xte/func/visitor.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Derives from multiple functors and inherits their call operators.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Fns</t_>&gt;
+<k_>struct</k_> <t_>visitor</t_> : <t_>Fns</t_>... {
+	<k_>using</k_> <t_>Fns</t_>::<k_>operator</k_>()...;
+};
+
+<k_>template</k_>&lt;<k_>typename...</k_> <t_>Fns</t_>&gt;
+<t_>visitor</t_>(<t_>Fns</t_>...) -> <t_>visitor</t_>&lt;<t_>Fns</t_>...&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>auto</k_> <v_>f</v_> = <a href="#def"><m_>xte</m_>::<t_>visitor</t_></a> {
+	[](<k_>int</k_>) { <a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"int"</s_>); },
+	[](<k_>double</k_>) { <a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"double"</s_>); },
+	[](<k_>bool</k_>) { <a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"bool"</s_>); }
+};
+
+<v_>f</v_>(<n_>3.14159</n_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>double</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/8YoEG7b3G" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

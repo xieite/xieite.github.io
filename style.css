@@ -72,8 +72,8 @@ pre:has(a[target="_top"]) {
 main {
 	padding-top: 25px;
 	padding-bottom: 100px;
-	padding-left: calc(var(--sidebar-width) + 100px);
-	padding-right: calc(var(--sidebar-width) + 100px);
+	padding-left: calc(var(--sidebar-width) + 10%);
+	padding-right: calc(var(--sidebar-width) + 10%);
 	flex-grow: 1;
 
 	background-color: #111111;
@@ -98,6 +98,14 @@ pre {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.desktop {
+	padding-right: 0;
+}
+
+.mobile {
+	display: none;
 }
 
 /* TODO: Remove `g` class */
@@ -130,7 +138,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 	}
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
 	main {
 		padding-left: calc(var(--sidebar-width) + 50px);
 		padding-right: 150px;
@@ -141,7 +149,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 	}
 }
 
-@media (orientation: portrait) or (max-width: 1200px) {
+@media (orientation: portrait) or (max-width: 1000px) {
 	body:has(script) > pre {
 		font-size: 100%;
 	}
@@ -204,6 +212,14 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 		width: 100%;
 
 		left: 0;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
 	}
 }
 
