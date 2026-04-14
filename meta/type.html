@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::type&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>type</t_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/type.hpp"><s_>&lt;xte/meta/type.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			A type alias for creating a <a target="_blank" href="https://eel.is/c++draft/dcl.type.simple#nt:simple-type-specifier" class="g"><i>simple-type-specifier</i></a>.<br/>
+			Does not obstruct template parameter deduction, unlike <code><a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity#Helper_types"><m_>std</m_>::<t_>type_identity_t</t_>&lt;&gt;</a></code>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>using</k_> <t_>type</t_> = <t_>T</t_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>int</k_> <f_>foo</f_>(<k_>const</k_> <a href="#def"><m_>xte</m_>::<t_>type</t_></a>&lt;<t_>T</t_>[<v_>n</v_>]&gt;<k_>&</k_>);
+
+<k_>static_assert</k_>(<k_>requires</k_> { <f_>foo</f_>({ <n_>1</n_>, <n_>2</n_>, <n_>3</n_> }); });</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/P95e8rT9K" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

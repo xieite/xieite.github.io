@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::wrap_type {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/meta/wrap_type.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>wrap_type</t_> {}</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/wrap_type.hpp"><s_>&lt;xte/meta/wrap_type.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Wraps a type. This exists because <a target="_blank" href="https://en.cppreference.com/w/cpp/types/type_identity"><code><m_>std</m_>::<t_>type_identity</t_> {}</code></a> isn't guaranteed to be default-constructible.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>struct</k_> <t_>wrap_type</t_> {
+	<k_>using</k_> <t_>type</t_> = <t_>T</t_>;
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="/trait/is_same"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<k_>int</k_>, <a href="#def"><m_>xte</m_>::<t_>wrap_type</t_></a>&lt;<k_>int</k_>&gt;::<t_>type</t_>&gt;);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>double</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/xcev3fr9r" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

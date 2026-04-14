@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::fold&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><v_>fold</v_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/fold.hpp"><s_>&lt;xte/meta/fold.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Recursively calls a functor, additionally passing an index, using a fold expression.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>decltype</k_>(<k_>auto</k_>) <v_>func</v_>, <k_>decltype</k_>(<k_>auto</k_>) <v_>x</v_>, <a href="/util/types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>constexpr decltype</k_>(<k_>auto</k_>) <v_>fold</v_> = <w_>/*
+	func.operator()&lt;
+		func.operator()&lt;
+			func.operator()&lt;
+				func.operator()&lt;
+					x,
+					0
+				&gt;(),
+				1
+			&gt;(),
+			...
+		&gt;(),
+		(n - 1)
+	&gt;()
+*/</w_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>constexpr auto</k_> <f_>add_ptr</f_> = []&lt;<k_>auto</k_> <v_>x</v_>, <k_>auto</k_>&gt; { <r_>return</r_> ^^<k_>typename</k_>[:<v_>x</v_>:]<k_>*</k_>; };
+
+<k_>static_assert</k_>(^^<k_>int***</k_> == <a href="#def"><m_>xte</m_>::<v_>fold</v_></a>&lt;<f_>add_ptr</f_>, ^^<k_>int</k_>, <n_>3</n_>&gt;);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/efhMcnnrb" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

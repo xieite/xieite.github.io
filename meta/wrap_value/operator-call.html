@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::wrap_value::operator()()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/meta/wrap_value.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/meta/wrap_value"><t_>wrap_value</t_>&lt;<v_>x</v_>&gt;</a>::<a href=""><k_>operator()</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/wrap_value.hpp"><s_>&lt;xte/meta/wrap_value.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Returns <code><v_>x</v_></code>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr decltype</k_>(<k_>auto</k_>) <k_>operator</k_>()() <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>constexpr auto</k_> <v_>x</v_> = <a href="/meta/wrap_value"><m_>xte</m_>::<t_>wrap_value</t_></a>&lt;<n_>0</n_>&gt;();
+
+<k_>static_assert</k_>(<v_>x</v_>() == <n_>0</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/sGqb6zT74" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

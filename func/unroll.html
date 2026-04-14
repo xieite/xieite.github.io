@@ -11,7 +11,7 @@
 		<iframe src="/links.html"></iframe>
 		<main>
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>unroll</f_>()</a></code></h2>
-			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/func/unroll.hpp"><code><s_>&lt;xte/func/unroll.hpp&gt;</s_></code></a></small><br/>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/func/unroll.hpp"><s_>&lt;xte/func/unroll.hpp&gt;</s_></a></code></small><br/>
 			<br/>
 			Repeatedly passes an incrementing index, up to a given limit, as a template argument to a given functor. Allows passing additional function arguments.<br/>
 			<br/>
@@ -20,10 +20,10 @@
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/util/types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
 <k_>constexpr auto</k_> <f_>unroll</f_>(<k_>auto&&</k_> <v_>func</v_>, <k_>auto&&...</k_> <v_>args</v_>) <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<w_>/*
-	func.template operator()&lt;0&gt;(args...),
-	func.template operator()&lt;1&gt;(args...),
+	func.operator()&lt;0&gt;(args...),
+	func.operator()&lt;1&gt;(args...),
 	...,
-	func.template operator()&lt;(n - 1)&gt;(args...)
+	func.operator()&lt;(n - 1)&gt;(args...)
 */</w_>)</pre>
 			</blockquote>
 			<br/>

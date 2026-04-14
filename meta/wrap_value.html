@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::wrap_value {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/meta/wrap_value.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>wrap_value</t_> {}</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/wrap_value.hpp"><s_>&lt;xte/meta/wrap_value.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Wraps a constant value.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>decltype</k_>(<k_>auto</k_>) <v_>x</v_>&gt;
+<k_>struct</k_> <t_>wrap_value</t_> {
+	<k_>static constexpr decltype</k_>(<k_>auto</k_>) <v_>value</v_> = <v_>x</v_>;
+
+	<a href="/meta/wrap_value/operator-cast"><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr operator decltype</k_>(<v_>x</v_>)() <k_>const noexcept</k_>;</a>
+
+	<a href="/meta/wrap_value/operator-call"><k_>static constexpr decltype</k_>(<k_>auto</k_>) <k_>operator()</k_>() <k_>noexcept</k_>;</a>
+
+	<a href="/meta/wrap_value/operator-cmp"><span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>x</v_>&gt;, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ??? */</w_>)</span>
+
+	<span><k_>friend constexpr auto operator==</k_>(<m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>x</v_>&gt;, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ??? */</w_>)</span></a>
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href=/util/types"><m_>xte</m_>::<t_>uz</t_></a> <v_>length</v_>&gt;
+<k_>struct</k_> <t_>fixed_array</t_> {
+	<k_>static constexpr auto</k_> <o_>size</o_> = <a href="#def"><m_>xte</m_>::<t_>wrap_value</t_></a>&lt;<v_>length</v_>&gt;();
+
+	<a href="/meta/type"><m_>xte</m_>::<t_>type</t_></a>&lt;<t_>T</t_>[<v_>length</v_>]&gt; <v_>data</v_>;
+};
+
+<k_>static_assert</k_>(<t_>fixed_array</t_>&lt;<k_>int</k_>, <n_>5</n_>&gt;::<o_>size</o_> == <n_>5</n_>);
+
+<k_>static_assert</k_>(<t_>fixed_array</t_>&lt;<k_>int</k_>, <n_>5</n_>&gt;().<o_>size</o_>() == <n_>5</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/xcev3fr9r" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

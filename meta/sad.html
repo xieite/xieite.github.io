@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::sad&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><c_>sad</c_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/meta/sad.hpp"><s_>&lt;xte/meta/sad.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Marks the end of a parameter list.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_>&gt;
+<k_>concept</k_> <c_>sad</c_> = <w_>/* false */</w_>;</pre>
+			</blockquote>
+			Cannot be satisfied by any argument.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre>[]&lt;<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>b</v_>, <a href="#def"><m_>xte</m_>::<c_>sad</c_></a><k_>...</k_>, <k_>int</k_> <v_>c</v_> = <v_>a</v_> + <v_>b</v_>&gt; {
+	<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>c</v_>);
+}.<k_>operator()</k_>&lt;<n_>1</n_>, <n_>2</n_>&gt;();</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/1K1dWcrEn" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
