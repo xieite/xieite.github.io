@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_EACH()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><j_>XTE</j_></a><j_>_</j_><a href=""><j_>EACH</j_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/each.hpp"><s_>&lt;xte/preproc/each.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Expands a given function-like macro for every argument passed.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<a id="def-each" href="#def-each" class="g">#each</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_EACH</j_>(<v_>_func</v_>, <k_>...</k_>) <w_>/* ... */</w_></pre>
+			</blockquote>
+			Separates expanded expressions with commas.<br/>
+			<br/>
+			<a id="def-delim" href="#def-delim" class="g">#delim</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_EACH_DELIM</j_>(<v_>_func</v_>, <v_>_delim</v_>, <k_>...</k_>) <w_>/* ... */</w_></pre>
+			</blockquote>
+			Separates expanded expressions with the provided delimeter.<br/>
+			If no callback is passed, does not wrap arguments in parentheses.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#define</p_> <j_>M</j_>(<v_>x</v_>) <v_>x</v_>##<n_>0</n_>
+
+<a href="#def-delim"><j_>XTE_EACH_DELIM</j_></a>(<j_>M</j_>, +, <n_>1</n_>, <n_>2</n_>, <n_>3</n_>)</pre>
+			</blockquote>
+			<small>Preprocessor output:</small>
+			<blockquote>
+<pre><n_>10</n_> + <n_>20</n_> + <n_>30</n_></pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/zveKbx6jG" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

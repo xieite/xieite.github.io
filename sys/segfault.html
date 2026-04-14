@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::segfault()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>segfault</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/sys/segfault.hpp"><s_>&lt;xte/sys/segfault.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Dereferences <code><k_>nullptr</k_></code> to cause a segmentation fault, though whether it's handled at all is entirely up to the operating system.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>inline void</k_> <f_>segfault</f_>() <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Why would you use this?<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="#def"><m_>xte</m_>::<f_>segfault</f_></a>();</pre>
+			</blockquote>
+			<small>Possible output:</small>
+			<blockquote>
+<pre>Segmentation fault (code dumped)</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/K9K86s3r9" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_FWD()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><j_>XTE</j_></a><j_>_</j_><a href=""><j_>FWD</j_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/fwd.hpp"><s_>&lt;xte/preproc/fwd.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Replaces <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/forward"><code><m_>std</m_>::<f_>forward</f_>()</code></a>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_FWD</j_>(<k_>...</k_>) <k_>static_cast</k_>&lt;<k_>decltype</k_>(<v_>__VA_ARGS__</v_>)<k_>&&</k_>&gt;(<v_>__VA_ARGS__</v_>)</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>void</k_> <f_>foo</f_>(<k_>int&&</k_>) {}
+
+<k_>void</k_> <f_>bar</f_>(<k_>auto&&</k_> <v_>x</v_>) {
+	<f_>foo</f_>(<j_>XTE_FWD</j_>(<v_>x</v_>));
+}
+
+<k_>int</k_> <f_>main</f_>() {
+	<f_>bar</f_>(<n_>0</n_>);
+}</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/zsbdEGe8v" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_SCAN()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><j_>XTE</j_></a><j_>_</j_><a href=""><j_>SCAN</j_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/scan.hpp"><s_>&lt;xte/preproc/scan.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Expands the given expression.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_SCAN</j_>(<k_>...</k_>) <v_>__VA_ARGS__</v_></pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#define</p_> <j_>FOO</j_>() <n_>0</n_>
+<p_>#define</p_> <i_>NOTHING</i_>
+
+<j_>FOO</j_> <i_>NOTHING</i_>()
+<j_>XTE_SCAN</j_>(<j_>FOO</j_> <i_>NOTHING</i_>())</pre>
+			</blockquote>
+			<small>Preprocessor output:</small>
+			<blockquote>
+<pre><j_>FOO</j_>()
+<n_>0</n_></pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/n46KaY91Y" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_VERSION_...</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>VERSION</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/version.hpp"><s_>&lt;xte/preproc/version.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros defining the current version of this library.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-major" href="#def-major" class="g">#major</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_VERSION_MAJOR</i_> <n_>0</n_></pre>
+			</blockquote>
+			<br/>
+			<a id="def-minor" href="#def-minor" class="g">#minor</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_VERSION_MINOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Incremented for new features or breaking changes.<br/>
+			<br/>
+			<a id="def-patch" href="#def-patch" class="g">#patch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_VERSION_PATCH</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Incremented for bug fixes or internal changes.<br/>
+			<br/>
+			<a id="def-version" href="#def-version" class="g">#version</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_VERSION</j_>(<v_>_operator</v_>, <v_>_major</v_>, <k_>...</k_><w_>/* _minor, _patch */</w_>) <w_>/* boolean expression */</w_></pre>
+			</blockquote>
+			Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing XIEITE's version to the provided arguments.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def-version"><j_>XTE_VERSION</j_></a>(&gt;=, <n_>0</n_>,<n_>158</n_>,<n_>4</n_>)
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/sox5xvz95" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
