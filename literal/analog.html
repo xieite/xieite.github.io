@@ -15,8 +15,7 @@
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><m_>literal</m_>::<m_>analog</m_> {}</a></code></h2>
 			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/literal/analog.hpp"><code><s_>&lt;xte/literal/analog.hpp&gt;</s_></code></a></small><br/>
 			<br/>
-			Allows expressing integers visually as lines, rectangles, and rectangular prisms.<br/>
-			Inspired by <a href="http://eelis.net/C++/analogliterals.xhtml" class="g">http://eelis.net/C++/analogliterals.xhtml</a>.<br/>
+			Allows expressing integers visually as lines, rectangles, and rectangular prismsInspired by <a href="http://eelis.net/C++/analogliterals.xhtml" class="g">http://eelis.net/C++/analogliterals.xhtml</a>.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
@@ -32,9 +31,37 @@
 	} <v_>x</v_>;
 }</pre>
 			</blockquote>
+			The length of each side of a shape is determined by the number of connecting characters between its vertices, not counting characters representing vertices.<br/>
+			Lines set <code><v_>length</v_></code>, rectangles set <code><v_>width</v_></code> and <code><v_>height</v_></code>, and rectangular prisms set <code><v_>width</v_></code>, <code><v_>height</v_></code>, and <code><v_>length</v_></code>.<br/>
+			Rectangles set <code><v_>area</v_></code> to <code><v_>width</v_> * <v_>height</v_></code>, and rectangular prisms set <code><v_>area</v_></code> to the sum of the areas of all six sides.<br/>
+			Rectangular prisms set <code><v_>volume</v_></code> to <code><v_>width</v_> * <v_>height</v_> * <v_>length</v_></code>.<br/>
 			<br/>
 			<br/>
-			<h3><a id="ex" href="#ex">Example</a></h3>
+			<br/>
+			<h3><a id="ex" href="#ex">Examples</a></h3>
+			<a id="ex-0" href="#ex-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>using namespace</k_> <a href="#def"><m_>xte</m_>::<m_>literal</m_>::<m_>analog</m_></a>;
+
+<k_>static_assert</k_>((<v_>x</v_> - - - <v_>x</v_>).<v_>length</v_> == <n_>3</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/Kj4zqG4nr" class="g">[View in Compiler Explorer]</a></small><br/>
+			<br/>
+			<br/>
+			<a id="ex-1" href="#ex-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>using namespace</k_> <a href="#def"><m_>xte</m_>::<m_>literal</m_>::<m_>analog</m_></a>;
+
+<k_>static_assert</k_>((<v_>x</v_> - - - +
+               !       !
+               !       !
+               !       !
+               + - - - <v_>x</v_>).<v_>area</v_> == <n_>9</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/8M6Erc63o" class="g">[View in Compiler Explorer]</a></small><br/>
+			<br/>
+			<br/>
+			<a id="ex-2" href="#ex-2" class="g">#2</a>
 			<blockquote>
 <pre><k_>using namespace</k_> <a href="#def"><m_>xte</m_>::<m_>literal</m_>::<m_>analog</m_></a>;
 
@@ -48,7 +75,7 @@
                   *!       !
                    + - - - <v_>x</v_>).<v_>volume</v_> == <n_>27</n_>);</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/chhn5ab49" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/EWjzWfYv9" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
