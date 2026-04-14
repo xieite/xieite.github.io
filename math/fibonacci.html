@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::fibonacci&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><v_>fibonacci</v_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/fibonacci.hpp"><code><s_>&lt;xte/math/fibonacci.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			A lookup table containing all representable values of the Fibonacci sequence for a given integer or floating-point type.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <t_>T</t_>&gt;
+<k_>constexpr auto</k_> <v_>fibonacci</v_> = <a target="_blank" href="https://eel.is/c++draft/meta.define.static"><m_>std</m_>::<f_>define_static_array</t_></a>(<w_>/* ??? */</w_>);</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<v_>fibonacci</v_></a>&lt;<k_>int</k_>&gt;[<n_>19</n_>] == <n_>4181</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/ejz3c4en8" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

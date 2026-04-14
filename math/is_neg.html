@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::is_neg()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>is_neg</f_>()</a></code></h2>
+			<small>Defined in header <a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/is_neg.hpp"><code><s_>&lt;xte/math/is_neg.hpp&gt;</s_></code></a></small><br/>
+			<br/>
+			Checks whether a number is negative. Uses <a target="_blank" href="https://en.cppreference.com/w/cpp/numeric/math/signbit"><code><m_>std</m_>::<f_>signbit</f_>()</code></a> for floating-point types.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>inline constexpr auto</k_> <f_>is_neg</f_> = [][[<a_>nodiscard</a_>]](<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>x</v_>) <k_>static noexcept</k_> -&gt; <k_>bool</k_> { <w_>/* ... */</w_> };</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<f_>is_neg</f_></a>(<n_>-5</n_>));
+<k_>static_assert</k_>(!<a href="#def"><m_>xte</m_>::<f_>is_neg</f_></a>(<n_>0.0</n_>));</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/6bzxx9e9M" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
