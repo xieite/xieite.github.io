@@ -65,7 +65,7 @@ body:has(script) {
 }
 
 pre:has(a[target="_top"]) {
-	tab-size: 4;
+	tab-size: 2;
 	/* white-space: pre; */
 }
 
