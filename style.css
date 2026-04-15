@@ -65,8 +65,8 @@ body:has(script) {
 }
 
 pre:has(a[target="_top"]) {
-	tab-size: 2;
-	white-space: pre;
+	tab-size: 4;
+	/* white-space: pre; */
 }
 
 main {
@@ -87,12 +87,15 @@ blockquote {
 	margin: 5px;
 	padding: 10px;
 	/* width: fit-content; */
+	/* word-break: break-all; */
+	/* overflow-wrap: break-word; */
 }
 
 pre {
 	tab-size: 4;
 	white-space: pre-wrap;
-	word-break: break-all;
+	word-break: break-word;
+	/* overflow-wrap: break-word; */
 }
 
 a {
@@ -100,7 +103,7 @@ a {
 	color: inherit;
 }
 
-.desktop {
+.pepper {
 	padding-right: 0;
 }
 
@@ -218,7 +221,7 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 		left: 0;
 	}
 
-	.desktop {
+	.pepper {
 		display: none;
 	}
 
