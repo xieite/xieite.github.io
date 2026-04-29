@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::array {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/data/array.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>array</t_> {}</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			A dynamic array.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>struct</k_> <t_>array</t_> {
+	<k_>using</k_> <t_>value_type</t_> = <t_>T</t_>;
+	<k_>using</k_> <t_>allocator_type</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/memory/allocator"><m_>std</m_>::<t_>allocator</t_></a>&lt;<t_>T</t_>&gt;;
+	<k_>using</k_> <t_>size_type</t_> = <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a>;
+	<k_>using</k_> <t_>difference_type</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/types/ptrdiff_t"><m_>std</m_>::<t_>ptrdiff_t</t_></a>;
+	<k_>using</k_> <t_>reference</t_> = <t_>T</t_><k_>&</k_>;
+	<k_>using</k_> <t_>const_reference</t_> = <k_>const</k_> <t_>T</t_><k_>&</k_>;
+	<k_>using</k_> <t_>pointer</t_> = <t_>T</t_><k_>*</k_>;
+	<k_>using</k_> <t_>const_pointer</t_> = <k_>const</k_> <t_>T</t_><k_>*</k_>;
+	<k_>using</k_> <t_>iterator</t_> = <t_>T</t_><k_>*</k_>;
+	<k_>using</k_> <t_>const_iterator</t_> = <k_>const</k_> <t_>T</t_><k_>*</k_>;
+	<k_>using</k_> <t_>reverse_iterator</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/iterator/reverse_iterator"><m_>std</m_>::<t_>reverse_iterator</t_></a>&lt;<t_>T</t_><k_>*</k_>&gt;;
+	<k_>using</k_> <t_>const_reverse_iterator</t_> = <a target="_blank" href="https://en.cppreference.com/w/cpp/iterator/reverse_iterator"><m_>std</m_>::<t_>reverse_iterator</t_></a>&lt;<k_>const</k_> <t_>T</t_><k_>*</k_>&gt;;
+
+	<a href="/data/array/array"><span><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>array</f_>() <k_>noexcept</k_> = <k_>default</k_>;</span>
+	
+	<span><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>array</f_>(<k_>const</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* ... */</w_>);</span>
+
+	<span><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>array</f_>(<m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>array</f_>(<m_>xte</m_>::<t_>init_list</t_>&lt;<t_>T</t_>&gt;) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>template</k_>&lt;<m_>std</m_>::<m_>ranges</m_>::<c_>input_range</c_> <t_>Range</t_>&gt;</span>
+	<span><k_>explicit constexpr</k_> <f_>array</f_>(<m_>std</m_>::<t_>from_range_t</t_>, <t_>Range</t_><k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* ... */</w_>);</span>
+
+	<span><k_>template</k_>&lt;<m_>std</m_>::<c_>input_iterator</c_> <t_>Iter</t_>&gt;</span>
+	<span><k_>constexpr</k_> <f_>array</f_>(<t_>Iter</t_>, <m_>std</m_>::<c_>sentinel_for</c_>&lt;<t_>Iter</t_>&gt; <k_>auto</k_>) <j_>XTE_ARROW_CTOR</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>explicit constexpr</k_> <f_>array</f_>(<m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <f_>array</f_>(<m_>xte</m_>::<t_>uz</t_>, <k_>const</k_> <t_>T</t_><k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/data/array/~array"><k_>constexpr</k_> <f_>~array</f_>();</a>
+
+	<a href="/data/array/operator-assign"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>& operator=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* ... */</w_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>& operator=</k_>(<m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>& noexcept</k_>;</span>
+
+	<span><k_>template</k_>&lt;<m_>std</m_>::<m_>ranges</m_>::<c_>input_range</c_> <t_>Range</t_>&gt;</span>
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>& operator=</k_>(<t_>Range</t_><k_>&&</k_>) <k_>& noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* ... */</w_>);</span></a>
+
+	<a href="/data/array/data"><k_>constexpr auto*</k_> <f_>data</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/array/size"><k_>constexpr</k_> <m_>xte</m_>::<t_>uz</t_> <f_>size</f_>() <k_>const noexcept</k_>;</a>
+
+	<a href="/data/array/capacity"><k_>constexpr</k_> <m_>xte</m_>::<t_>uz</t_> <f_>capacity</f_>() <k_>const noexcept</k_>;</a>
+
+	<a href="/data/array/operator-cmp"><span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<k_>const</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>friend constexpr auto operator==</k_>(<k_>const</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+
+	<a href="/data/array/begin"><span><k_>constexpr auto*</k_> <f_>begin</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+	
+	<span><k_>constexpr const</k_> <t_>T</t_><k_>*</k_> <f_>cbegin</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/array/end"><span><k_>constexpr auto*</k_> <f_>end</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+	
+	<span><k_>constexpr const</k_> <t_>T</t_><k_>*</k_> <f_>cend</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/array/rbegin"><span><k_>constexpr auto</k_> <f_>rbegin</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>constexpr auto</k_> <f_>crbegin</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/array/rend"><span><k_>constexpr auto</k_> <f_>rend</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>constexpr auto</k_> <f_>crend</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/array/front"><k_>constexpr auto&&</k_> <f_>front</f_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/array/back"><k_>constexpr auto&&</k_> <f_>back</f_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/array/operator-index"><k_>constexpr auto&& operator[]</k_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/array/slice"><k_>constexpr</k_> <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt; <f_>slice</f_>(<m_>xte</m_>::<t_>uz</t_>, <m_>xte</m_>::<t_>uz</t_>) <k_>const noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/data/array/reset"><k_>constexpr void</k_> <f_>reset</f_>() <k_>& noexcept</k_>;</a>
+
+	<a href="/data/array/resize"><span><k_>constexpr void</k_> <f_>resize</f_>(<m_>xte</m_>::<t_>uz</t_>) <k_>& noexcept</k_>(<k_>false</k_>);</span>
+	
+	<span><k_>constexpr void</k_> <f_>resize</f_>(<m_>xte</m_>::<t_>uz</t_>, <k_>const</k_> <t_>T</t_><k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/data/array/reserve"><k_>constexpr void</k_> <f_>reserve</f_>(<m_>xte</m_>::<t_>uz</t_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/data/array/reserve_total"><k_>constexpr void</k_> <f_>reserve_total</f_>(<m_>xte</m_>::<t_>uz</t_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/data/array/shrink"><k_>constexpr void</k_> <f_>shrink</f_>() <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/data/array/insert_uninit"><k_>constexpr void</k_> <f_>insert_uninit</f_>(<m_>xte</m_>::<t_>uz</t_>, <m_>xte</m_>::<t_>uz</t_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/data/array/insert"><span><k_>constexpr void</k_> <f_>insert</f_>(<m_>xte</m_>::<t_>uz</t_>) <k_>& noexcept</k_>(<k_>false</k_>);</span>
+	
+	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>U</t_> = <t_>T</t_>&gt;</span>
+	<span><k_>constexpr void</k_> <f_>insert</f_>(<m_>xte</m_>::<t_>uz</t_>, <t_>U</t_><k_>&&</k_>, <k_>auto&&...</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/data/array/insert_range"><span><k_>template</k_>&lt;<m_>std</m_>::<m_>ranges</m_>::<c_>input_range</c_> <t_>Range</t_> = <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt;</span>
+	<span><k_>constexpr void</k_> <f_>insert_range</f_>(<m_>xte</m_>::<t_>uz</t_>, <t_>Range</t_><k_>&&</k_>) <k_>& noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* ... */</w_>);</span></a>
+
+	<a href="/data/array/erase"><k_>constexpr void</k_> <f_>erase</f_>(<m_>xte</m_>::<t_>uz</t_>, <m_>xte</m_>::<t_>uz</t_>) <k_>& noexcept</k_>;</a>
+
+	<a href="/data/array/push"><span><k_>constexpr auto</k_> <f_>push</f_>(<m_>xte</m_>::<t_>uz</t_>, <m_>xte</m_>::<t_>uz</t_>) <k_>&</k_> <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+	
+	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>U</t_> = <t_>T</t_>&gt;</span>
+	<span><k_>constexpr auto</k_> <f_>push</f_>(<t_>U</t_><k_>&&</k_>, <k_>auto&&...</k_>) <k_>&</k_> <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+
+	<a href="/data/array/push_range"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>Range</t_> = <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt;</span>
+	<span><k_>constexpr auto</k_> <f_>push_range</f_>(<t_>Range</t_><k_>&&</k_>) <k_>&</k_> <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+
+	<a href="/data/array/pop"><k_>constexpr</k_> <t_>T</t_> <f_>pop</f_>() <k_>& noexcept</k_>(<m_>xte</m_>::<c_>is_noex_move_constructible</c_>&lt;<t_>T</t_>&gt;);</a>
+
+	<a href="/data/array/operator-add"><span><k_>friend constexpr auto operator+</k_>(<m_>xte</m_>::<c_>is_derived_from</c_>&lt;<m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt; <k_>auto&&</k_>, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>Lhs</t_>&gt;</span>
+	<span><k_>requires</k_>(!<m_>xte</m_>::<c_>is_derived_from</c_>&lt;<t_>Lhs</t_>, <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt;)</span>
+	<span><k_>friend constexpr auto operator+</k_>(<t_>Lhs</t_><k_>&&</k_>, <m_>xte</m_>::<c_>is_derived_from</c_>&lt;<m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt; <k_>auto</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+
+	<a href="/data/array/operator-add-assign"><k_>constexpr auto operator+=</k_>(<k_>this auto&&</k_>, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</a>
+};
+
+<k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
+<t_>array</t_>(<t_>T</t_><k_>&</k_>, <t_>Ts</t_><k_>&&...</k_>) -> <t_>array</t_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/common_type.html#Helper_types"><m_>std</m_>::<t_>common_type_t</t_></a>&lt;<t_>T</t_>, <t_>Ts</t_>...&gt;&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="#def"><m_>xte</m_>::<t_>array</t_></a> <v_>a</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
+
+<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>a</v_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>[1, 2, 3]</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/oj7Mdr1aY" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

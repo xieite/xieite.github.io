@@ -9,14 +9,15 @@
 		<script src="/script.js" defer></script>
 <pre><a target="_top" href="/"><m_>xieite</m_> {}</a>
 	data
-		<w_>array {}
-		fixed_array {}
+		<a target="_top" href="/data/array"><t_>array</t_> {}</a>
+		<w_>fixed_array {}
 		fixed_string {}
 		init_list&lt;&gt;</w_>
 		<a target="_top" href="/data/lowercase"><f_>lowercase</f_>()</a>
 		<w_>null
 		opt {}
 		ptr {}
+		ptr_diff()
 		range_cmp()
 		string {}
 		string_view {}</w_>
@@ -44,8 +45,8 @@
 	literal
 		<a target="_top" href="/literal/analog"><m_>analog</m_> {}</a>
 		<w_>dedent {}
-		fixed_int {}
 		fmt {}
+		numbers {}
 		radix {}</w_>
 
 	math
@@ -56,6 +57,7 @@
 		almost_equal_slope()
 		as_signed()
 		as_unsigned()
+		avg()
 		between()
 		big_int {}
 		bit_at()
@@ -66,7 +68,14 @@
 		div()
 		div_ceil()
 		div_ceil_half()
-		div_checked()</w_>
+		div_checked()
+		div_floor()
+		div_floor_half()
+		div_magnify()
+		div_magnify_half()
+		div_trunc()
+		div_trunc_half()
+		exp_search()</w_>
 		<a target="_top" href="/math/factorial"><v_>factorial</v_>&lt;&gt;</a>
 		<a target="_top" href="/math/fibonacci"><v_>fibonacci</v_>&lt;&gt;</a>
 		<w_>floor()
@@ -76,6 +85,7 @@
 		<a target="_top" href="/math/is_neg"><f_>is_neg</f_>()</a>
 		<w_>is_single_bit()
 		leading_zeros()
+		less()
 		lshift()
 		max()
 		min()
@@ -98,21 +108,21 @@
 		sub_checked()
 		trailing_zeros()
 		wide_uint {}
-		width&lt;&gt;</w_>
+		width&lt;&gt;
+		wrap()</w_>
 
 	meta
 		<w_>fake()</w_>
+		<a target="_top" href="/meta/end"><c_>end</c_>&lt;&gt;</a>
 		<a target="_top" href="/meta/fold"><t_>fold</t_>&lt;&gt;</a>
-		<w_>list {}
-		make_seq&lt;&gt;
+		<w_>make_seq&lt;&gt;
 		ptr_depth&lt;&gt;
 		refl {}
 		req&lt;&gt;
 		req_any&lt;&gt;
-		req_none&lt;&gt;
-		req_some&lt;&gt;</w_>
-		<a target="_top" href="/meta/sad"><c_>sad</c_>&lt;&gt;</a>
-		<w_>seq {}
+		req_not&lt;&gt;
+		req_some&lt;&gt;
+		seq {}
 		sloc {}
 		state&lt;&gt;</w_>
 		<a target="_top" href="/meta/type"><t_>type</t_>&lt;&gt;</a>
@@ -147,6 +157,7 @@
 		<w_>HAS_ATTR()
 		HAS_BUILTIN()
 		IF()
+		IS_NOEX()
 		LAMBDA()
 		LANG
 		LIFT()
@@ -204,6 +215,7 @@
 		is_brace_constructible&lt;&gt;
 		is_c&lt;&gt;
 		is_callable&lt;&gt;
+		is_callable_lref&lt;&gt;
 		is_castable&lt;&gt;
 		is_constructible&lt;&gt;
 		is_copy_assignable&lt;&gt;
@@ -231,6 +243,8 @@
 		is_noex_assignable_to&lt;&gt;
 		is_noex_bool_testable&lt;&gt;
 		is_noex_brace_constructible&lt;&gt;
+		is_noex_callable&lt;&gt;
+		is_noex_castable&lt;&gt;
 		is_noex_constructible&lt;&gt;
 		is_noex_copy_assignable&lt;&gt;
 		is_noex_copy_constructible&lt;&gt;
@@ -304,10 +318,10 @@
 		implicitly()
 		like()
 		lvalue()
+		numbers {}
 		prvalue()
 		reconstruct()
 		synth_three_way()
-		types {}
 		xvalue()</w_>
 </pre>
 	</body>
