@@ -27,7 +27,7 @@
 			<blockquote>
 <pre><k_>constexpr</k_> <a href="/data/array"><m_>xte</m_>::<t_>array</t_></a>&lt;<t_>T</t_>&gt;<k_>& operator=</k_>(<a href="/data/array"><m_>xte</m_>::<t_>array</t_></a>&lt;<t_>T</t_>&gt;<k_>&&</k_> <v_>other</v_>) <k_>& noexcept</k_>;</pre>
 			</blockquote>
-			Steals the underlying data from <code><v_>other</v_></code>, effectively calling <code><a href="/data/array/reset">.<f_>reset</f_>()</a></code> on it.<br/>
+			Takes ownership of the underlying data from <code><v_>other</v_></code>, effectively calling <code><a href="/data/array/reset">.<f_>reset</f_>()</a></code> on it.<br/>
 			<br/>
 			<a id="def-2" href="#def-2" class="g">#2</a>
 			<blockquote>

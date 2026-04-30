@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::array::operator[]()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/data/array.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><k_>operator[]</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto&& operator[]</k_>(<k_>this auto&&</k_> <v_>self</v_>, <a href="/util/numbers#uz"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			Accesses the element at a given index, copying qualifiers from <code><v_>self</v_></code>.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
+<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>[<n_>1</n_>]);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>2</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/Kff491r3v" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
