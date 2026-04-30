@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::array::resize()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/data/array.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>resize</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr void</k_> <f_>resize</f_>(<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>size</v_>) <k_>& noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* See below */</w_>);</pre>
+			</blockquote>
+			Default-constructs elements at the end while <code><a href="/data/array/size">.<f_>size</f_>()</a></code> is less than <code><v_>size</v_></code>. Destroys elements at the end while <code><a href="/data/array/size">.<f_>size</f_>()</a></code> is greater than <code><v_>size</v_></code>. Requires that <code><t_>T</t_></code> is default-constructible.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr void</k_> <f_>resize</f_>(<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>size</v_>, <k_>const</k_> <t_>T</t_><k_>&</k_> <v_>fill</v_>) <k_>& noexcept</k_>(<k_>false</k_>) <k_>requires</k_>(<w_>/* See below */</w_>);</pre>
+			</blockquote>
+			Same as <a href="#def-0" class="g">#0</a> but copy-constructs elements at the end from <code><v_>fill</v_></code>. Requires that <code><t_>T</t_></code> is copy-constructible.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<<blockquote>
+<pre><a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
+<v_>array</v_>.<a href="#def-0"><f_>resize</f_></a>(<n_>5</n_>);
+<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>);
+<v_>array</v_>.<a href="#def-0"><f_>resize</f_></a>(<n_>2</n_>);
+<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>[1, 2, 3, 0, 0]
+[1, 2]</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/qTxhbjr8T" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

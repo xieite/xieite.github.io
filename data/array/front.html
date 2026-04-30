@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" href="/style.css"/>
 		<link rel="shortcut icon" href="/icon.png"/>
-		<title>xte::array::capacity()</title>
+		<title>xte::array::front()</title>
 	</head>
 	<body>
 		<input type="checkbox"/>
@@ -12,28 +12,28 @@
 		<iframe src="/links.html"></iframe>
 		<iframe src="/data/array.links.html"></iframe>
 		<main>
-			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>capacity</f_>()</a></code></h2>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>front</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <f_>capacity</f_>() <k_>const noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto&&</k_> <f_>front</f_>(<k_>this auto&&</k_> <v_>self</v_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_> = <n_>0</n_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
-			Returns the number of elements that can be stored before reallocation is required to hold more.<br/>
+			Accesses an element at the given index, copying qualifiers from <code><v_>self</v_></code>.<br/>
 			<br/>
 			<br/>
 			<br/>
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
 <pre><a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
-<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>.<a href="#def"><f_>capacity</f_></a>());</pre>
+<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>.<a href="#def"><f_>front</f_></a>());</pre>
 			</blockquote>
-			<small>Possible output:</small>
+			<small>Output:</small>
 			<blockquote>
-<pre>16</pre>
+<pre>1</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/cq43s9xvP" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/1GT9zbY53" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

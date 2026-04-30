@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::array::slice()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<iframe src="/data/array.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>slice</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/data/array"><m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;</a> <f_>slice</f_>(<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>size</v_> = <n_>-1uz</n_>) <k_>const noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Returns the number of stored elements.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_>, <n_>4</n_>, <n_>5</n_> };
+<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>.<a href="#def"><f_>slice</f_></a>(<n_>1</n_>, <n_>3</n_>));</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>[2, 3, 4]</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/a44j5cenM" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
