@@ -9,8 +9,8 @@
 	<body>
 		<input type="checkbox"/>
 		<input type="checkbox"/>
-		<iframe src="/links.html"></iframe>
-		<iframe src="/data/array.links.html"></iframe>
+		<iframe src="/links.html#data/array"></iframe>
+		<iframe src="/data/array.links.html#pop"></iframe>
 		<main>
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>pop</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
@@ -18,11 +18,11 @@
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <t_>T</t_> <f_>pop</f_>() <k_>&
+<pre><k_>constexpr</k_> <t_>T</t_> <f_>pop</f_>() <k_>&
 noexcept</k_>(<a href="/trait/is_noex_move_constructible"><m_>xte</m_>::<c_>is_noex_move_constructible</c_></a>&lt;<t_>T</t_>&gt;)
 <k_>requires</k_>(<a href="/trait/is_move_constructible"><m_>xte</m_>::<c_>is_move_constructible</c_></a>&lt;<t_>T</t_>&gt;);</pre>
 			</blockquote>
-			Erases the last element from the array and returns it.<br/>
+			Erases the last element from the array and returns it, but the result may be discarded.<br/>
 			<br/>
 			<br/>
 			<br/>

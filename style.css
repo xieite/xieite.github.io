@@ -53,7 +53,7 @@ iframe:nth-of-type(2) {
 	z-index: 1000002;
 }
 
-body:has(script) {
+body:has(a[target='_top']) {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	padding-left: 25px;
@@ -141,6 +141,14 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 	}
 }
 
+a[target='_top']:target {
+	scroll-margin-top: 40vh;
+}
+
+:target, :target:focus, :target:active {
+	outline: none;
+}
+
 @media (max-width: 1600px) {
 	main {
 		padding-left: calc(var(--sidebar-width) + 50px);
@@ -153,9 +161,9 @@ a:not(:has(span:not(.g))):hover, a:not(:has(span:not(.g))):hover *, a:has(span:n
 }
 
 @media (orientation: portrait) or (max-width: 1000px) {
-	body:has(script) > pre {
+	/* body:has(script) > pre {
 		font-size: 100%;
-	}
+	} */
 
 	body {
 		display: flex;
