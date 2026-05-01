@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_LIFT()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><j_>XTE</j_></a><j_>_</j_><a href=""><j_>LIFT</j_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/lift.hpp"><s_>&lt;xte/preproc/lift.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Wraps something callable in a lambda object. Automatically includes a <code><k_>noexcept</k_></code> specifier and a <code><k_>requires</k_></code> clause.<br/>
+			<br/>
+			<br/>
+			<a id="def" href="#def"><h3>Definitions</h3></a>
+			<a id="def-lift" href="#def-lift" class="g">#lift</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LIFT</j_>(<k_>...</k_>)                                                   <i_>\</i_>
+	[](<k_>auto&&...</k_> <v_>args</v_>) <k_>static noexcept</k_>(<w_>/* ... */</w_>) <k_>requires</k_>(<w_>/* ... */</w_>) { <i_>\</i_>
+		<r_>return</r_> <f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>args</v_>...));                           <i_>\</i_>
+	}</pre>
+			</blockquote>
+			<br/>
+			<a id="def-unary" href="#def-unary" class="g">#unary</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LIFT_UNARY</j_>(<k_>...</k_>)                                         <i_>\</i_>
+	[](<k_>auto&&</k_> <v_>arg</v_>) <k_>static noexcept</k_>(<w_>/* ... */</w_>) <k_>requires</k_>(<w_>/* ... */</w_>) { <i_>\</i_>
+		<r_>return</r_> <f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>arg</v_>));                           <i_>\</i_>
+	}</pre>
+			</blockquote>
+			<br/>
+			<a id="def-local" href="#def-local" class="g">#local</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LIFT_LOCAL</j_>(<k_>...</k_>)                                       <i_>\</i_>
+	[<k_>&</k_>](<k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept</k_>(<w_>/* ... */</w_>) <k_>requires</k_>(<w_>/* ... */</w_>) { <i_>\</i_>
+		<r_>return</r_> <f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>args</v_>...));                     <i_>\</i_>
+	}</pre>
+			</blockquote>
+			<br/>
+			<a id="def-infix" href="#def-infix" class="g">#infix</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LIFT_INFIX</j_>(<k_>...</k_>)                                                     <i_>\</i_>
+	[](<k_>auto&&</k_> <v_>lhs</v_>, <k_>auto&&</k_> <v_>rhs</v_>) <k_>static noexcept</k_>(<w_>/* ... */</w_>) <k_>requires</k_>(<w_>/* ... */</w_>) { <i_>\</i_>
+		<r_>return</r_> <a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>lhs</v_>) <v_>__VA_ARGS__</v_> (<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>rhs</v_>));                         <i_>\</i_>
+	}</pre>
+			</blockquote>
+			<br/>
+			<a id="def-member" href="#def-member" class="g">#member</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LIFT_MEMBER</j_>(<k_>...</k_>)                                                        <i_>\</i_>
+	[](<k_>auto&&</k_> <v_>obj</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>static noexcept</k_>(<w_>/* ... */</w_>) <k_>requires</k_>(<w_>/* ... */</w_>) { <i_>\</i_>
+		<r_>return</r_> <a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>obj</v_>)<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>args</v_>)...);                           <i_>\</i_>
+	}</pre>
+			</blockquote>
+			<br/>
+			<a id="def-var" href="#def-var" class="g">#var</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LIFT_VAR</j_>(<k_>...</k_>)               <i_>\</i_>
+	[](<k_>auto&&</k_> <v_>obj</v_>) <k_>static noexcept</k_> {    <i_>\</i_>
+		<r_>return</r_> <a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>obj</v_>)<v_>__VA_ARGS__</v_>; <i_>\</i_>
+	}</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>void</k_> <f_>templated</f_>(<t_>T</t_> <v_>arg</v_>) {
+	<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>arg</v_>);
+}
+
+<k_>void</k_> <f_>call</f_>(<k_>auto</k_> <v_>func</v_>) {
+	<v_>func</v_>(<n_>5</n_>);
+}
+
+<f_>call</f_>(<a href="#def-lift"><j_>XTE_LIFT</j_></a>(<f_>templated</f_>));</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>5</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/Eco3M46Yc" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
