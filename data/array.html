@@ -128,12 +128,12 @@
 	<a href="/data/array/push_range"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>Range</t_> = <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt;</span>
 	<span><k_>constexpr auto</k_> <f_>push_range</f_>(<t_>Range</t_><k_>&&</k_>) <k_>&</k_> <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
 
-	<a href="/data/array/pop"><k_>constexpr</k_> <t_>T</t_> <f_>pop</f_>() <k_>& noexcept</k_>(<m_>xte</m_>::<c_>is_noex_move_constructible</c_>&lt;<t_>T</t_>&gt;);</a>
+	<a href="/data/array/pop"><k_>constexpr</k_> <t_>T</t_> <f_>pop</f_>() <k_>& noexcept</k_>(<w_>/* ... */</w_>) <k_>requires</k_>(<w_>/* ... */</w_>);</a>
 
 	<a href="/data/array/operator-add"><span><k_>friend constexpr auto operator+</k_>(<m_>xte</m_>::<c_>is_derived_from</c_>&lt;<m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt; <k_>auto&&</k_>, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
 
 	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>Lhs</t_>&gt;</span>
-	<span><k_>requires</k_>(!<m_>xte</m_>::<c_>is_derived_from</c_>&lt;<t_>Lhs</t_>, <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt;)</span>
+	<span><k_>requires</k_>(<w_>/* ... */</w_>)</span>
 	<span><k_>friend constexpr auto operator+</k_>(<t_>Lhs</t_><k_>&&</k_>, <m_>xte</m_>::<c_>is_derived_from</c_>&lt;<m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt; <k_>auto</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
 
 	<a href="/data/array/operator-add-assign"><k_>constexpr auto operator+=</k_>(<k_>this auto&&</k_>, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</a>

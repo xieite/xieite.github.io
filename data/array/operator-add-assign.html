@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" href="/style.css"/>
 		<link rel="shortcut icon" href="/icon.png"/>
-		<title>xte::array::erase()</title>
+		<title>xte::array::operator+=()</title>
 	</head>
 	<body>
 		<input type="checkbox"/>
@@ -12,29 +12,29 @@
 		<iframe src="/links.html"></iframe>
 		<iframe src="/data/array.links.html"></iframe>
 		<main>
-			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>erase</f_>()</a></code></h2>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><k_>operator+=</k_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre><k_>constexpr void</k_> <f_>erase</f_>(<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>count</v_> = <n_>1</n_>) <k_>& noexcept</k_>;</pre>
+<pre><k_>constexpr auto operator+=</k_>(<k_>this auto&</k_> <v_>lhs</v_>, <k_>auto&&</k_> <v_>rhs</v_>) <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<w_>/* ... */</w_>)</pre>
 			</blockquote>
-			Starting at the given index, destroys the given number of elements, in order.<br/>
+			Appends elements to the end of the array with <code><a href="/data/array/push_range">.<f_>push_range</f_>()</a></code>.<br/>
 			<br/>
 			<br/>
 			<br/>
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
 <pre><a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
-<v_>array</v_>.<a href="#def"><f_>erase</f_></a>(<n_>1</n_>);
+<v_>array</v_> += <a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> { <n_>4</n_>, <n_>5</n_>, <n_>6</n_> };
 <a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>array</v_>);</pre>
 			</blockquote>
 			<small>Output:</small>
 			<blockquote>
-<pre>[1, 3]</pre>
+<pre>[1, 2, 3, 4, 5, 6]</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/zsjsEK5eo" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/YEKz6f5q6" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
