@@ -24,8 +24,13 @@
 <k_>struct</k_> <t_>visitor</t_> : <t_>Fns</t_>... {
 	<k_>using</k_> <t_>Fns</t_>::<k_>operator</k_>()...;
 };
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Fns</t_>&gt;
+</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h4><a id="deduction-guide" href="#deduction-guide">Deduction guide</a></h4>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Fns</t_>&gt;
 <t_>visitor</t_>(<t_>Fns</t_>...) -> <t_>visitor</t_>&lt;<t_>Fns</t_>...&gt;;</pre>
 			</blockquote>
 			<br/>

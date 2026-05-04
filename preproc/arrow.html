@@ -20,9 +20,9 @@
 			<h3><a id="def" href="#def">Definitions</a></h3>
 			<a id="def-arrow" href="#def-arrow" class="g">#arrow</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XTE_ARROW</j_>(<k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
-	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XTE_ARROW</j_>(<k_>...</k_>)                  <i_>\</i_>
+	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>))     <i_>\</i_>
+	-> <k_>decltype</k_>(<k_>auto</k_>)                   <i_>\</i_>
 	<k_>requires</k_>(<k_>requires</k_> { <v_>__VA_ARGS__</v_>; }) <i_>\</i_>
 	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
 			</blockquote>
@@ -30,9 +30,9 @@
 			<a id="def-arrow-if" href="#def-arrow-if" class="g">#arrow-if</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_ARROW_IF</j_>(<v_>_cond</v_>, <v_>_then</v_>, <k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<w_>/* ... */</w_>) <i_>\</i_>
-	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<w_>/* ... */</w_>) <i_>\</i_>
+	<k_>noexcept</k_>(<w_>/* ... */</w_>)                 <i_>\</i_>
+	-> <k_>decltype</k_>(<k_>auto</k_>)                   <i_>\</i_>
+	<k_>requires</k_>(<w_>/* ... */</w_>)                 <i_>\</i_>
 	{ <w_>/* if constexpr (_cond) { (_then); } return __VA_ARGS__; */</w_> }</pre>
 			</blockquote>
 			<code><v_>_cond</v_></code> is explicitly cast to <code><k_>bool</k_></code>.<br/>
@@ -40,19 +40,19 @@
 			<a id="def-arrow-choose" href="#def-arrow-choose" class="g">#arrow-choose</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_ARROW_CHOOSE</j_>(<v_>_cond</v_>, <v_>_then</v_>, <k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<w_>/* ... */</w_>) <i_>\</i_>
-	-> <k_>decltype</k_>(<k_>auto</k_>) <i_>\</i_>
-	<k_>requires</k_>(<w_>/* ... */</w_>) <i_>\</i_>
+	<k_>noexcept</k_>(<w_>/* ... */</w_>)                     <i_>\</i_>
+	-> <k_>decltype</k_>(<k_>auto</k_>)                       <i_>\</i_>
+	<k_>requires</k_>(<w_>/* ... */</w_>)                     <i_>\</i_>
 	{ <w_>/* if constexpr (_cond) { return _then; } else { return __VA_ARGS__; } */</w_> }</pre>
 			</blockquote>
 			<code><v_>_cond</v_></code> is explicitly cast to <code><k_>bool</k_></code>. <code><v_>_then</v_></code> may optionally be wrapped in parentheses.<br/>
 			<br/>
 			<a id="def-arrow-cast" href="#def-arrow-cast" class="g">#arrow-cast</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XTE_ARROW_CAST</j_>(<v_>_attr_spec</v_>, <v_>_arg</v_>, <k_>...</k_>) <i_>\</i_>
+<pre><p_>#define</p_> <j_>XTE_ARROW_CAST</j_>(<v_>_attr_spec</v_>, <v_>_arg</v_>, <k_>...</k_>)          <i_>\</i_>
 	<v_>_attr_spec</v_> <k_>operator decltype</k_>(<w_>/* ... */</w_>)(<k_>this</k_> <v_>_arg</v_>) <i_>\</i_>
-	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>)) <i_>\</i_>
-	<k_>requires</k_>(<k_>requires</k_> { <v_>__VA_ARGS__</v_>; }) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>))                    <i_>\</i_>
+	<k_>requires</k_>(<k_>requires</k_> { <v_>__VA_ARGS__</v_>; })                <i_>\</i_>
 	{ <r_>return</r_> <v_>__VA_ARGS__</v_>; }</pre>
 			</blockquote>
 			Defines a cast operator. <code><v_>_attr_spec</v_></code> and <code><v_>_arg</v_></code> may optionally be wrapped in parentheses.<br/>
@@ -60,9 +60,9 @@
 			<a id="def-arrow-ctor" href="#def-arrow-ctor" class="g">#arrow-ctor</a>
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_ARROW_CTOR</j_>(<v_>_body</v_>, <k_>...</k_>) <i_>\</i_>
-	<k_>noexcept</k_>(<w_>/* ... */</w_>) <i_>\</i_>
-	<k_>requires</k_>(<w_>/* ... */</w_>) <i_>\</i_>
-	: <w_>/* ... */</w_> <i_>\</i_>
+	<k_>noexcept</k_>(<w_>/* ... */</w_>)            <i_>\</i_>
+	<k_>requires</k_>(<w_>/* ... */</w_>)            <i_>\</i_>
+	: <w_>/* ... */</w_>                    <i_>\</i_>
 	{ <v_>_body</v_>; }</pre>
 			</blockquote>
 			Accepts a constructor body consisting of an expression optionally wrapped in parentheses, followed by a list of things to initialize and what to initialize them with, respectively, in alternating order. Values must be wrapped in two sets of parentheses, unless the intention is to brace-initialize, in which case they must be wrapped in one outer set of parentheses and one inner set of brackets. Wrapping the thing to initialize in one set of parentheses designates it as a base class type, and wrapping it in two sets of parentheses designates it as a pack of base class types. See <a href="#ex-1" class="g">[Example #1]</a>.<br/>

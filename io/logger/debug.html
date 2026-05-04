@@ -25,12 +25,20 @@
 	<a href="/io/logger/debug/debug"><span><k_>explicit</k_> <f_>debug</f_>(<m_>std</m_>::<t_>format_string</t_>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
 
 	<span><k_>explicit</k_> <f_>debug</f_>(<m_>std</m_>::<t_>FILE</t_><k_>*</k_>, <m_>std</m_>::<t_>format_string</t_>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
-};
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
-<f_>debug</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>debug</t_>&lt;<t_>Args</t_>...&gt;;
-
-<k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h4><a id="deduction-guide" href="#deduction-guide">Deduction guides</a></h4>
+			<a id="deduct-0" href="#deduct-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
+<f_>debug</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>debug</t_>&lt;<t_>Args</t_>...&gt;;</pre>
+			</blockquote>
+			<br/>
+			<a id="deduct-1" href="#deduct-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename...</k_> <t_>Args</t_>&gt;
 <f_>debug</f_>(<a target="_blank" href="https://en.cppreference.com/w/cpp/io/c/FILE"><m_>std</m_>::<t_>FILE</t_></a><k_>*</k_>, <a target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/basic_format_string"><m_>std</m_>::<t_>format_string</t_></a>&lt;<t_>Args</t_>...&gt;, <t_>Args</t_><k_>&&...</k_>) -> <t_>debug</t_>&lt;<t_>Args</t_>...&gt;;</pre>
 			</blockquote>
 			<br/>
