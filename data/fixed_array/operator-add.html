@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::fixed_array::operator+()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#data/fixed_array"></iframe>
+		<iframe src="/data/fixed_array.links.html#operator+"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/fixed_array"><t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;</a>::<a href=""><k_>operator+</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/fixed_array.hpp"><s_>&lt;xte/data/fixed_array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>Rhs</t_>&gt;
+<k_>requires</k_>(<a href="/trait/is_derived_from_instance_of"><m_>xte</m_>::<c_>is_derived_from_instance_of</c_></a>&lt;<a href="/trait/remove_cvref"><m_>xte</m_>::<t_>remove_cvref</t_></a>&lt;<t_>Rhs</t_>&gt;, ^^<a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a>&gt;
+	&& <a href="/trait/is_same"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<t_>T</t_>, <k_>typename</k_> <t_>Rhs</t_>::<t_>value_type</t_>&gt;)
+[[<a_>nodiscard</a_>]] <k_>constexpr auto operator+</k_>(<k_>this auto&&</k_> <v_>lhs</v_>, <t_>Rhs</t_><k_>&&</k_> <v_>rhs</v_>) <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<w_>/* ... */</w_>)</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> { <n_>1</n_>, <n_>2</n_> } + <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> { <n_>3</n_>, <n_>4</n_> });</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>[1, 2, 3, 4]</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/javsqzdsf" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

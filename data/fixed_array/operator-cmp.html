@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::fixed_array::operator&lt;=&gt;()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#data/fixed_array"></iframe>
+		<iframe src="/data/fixed_array.links.html#operator<=>"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/fixed_array"><t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;</a>::<a href=""><k_>operator&lt;=&gt;</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/fixed_array.hpp"><s_>&lt;xte/data/fixed_array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-three-way" href="#def-three-way" class="g">#three-way</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>m</v_>&gt;
+[[<a_>nodiscard</a_>]] <k_>friend constexpr auto operator&lt;=&gt;</k_>(<k_>const</k_> <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <k_>const</k_> <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_> <v_>rhs</v_>) <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(
+	<a href="/data/range_cmp"><m_>xte</m_>::<f_>range_cmp</f_></a>(<v_>lhs</v_>, <v_>rhs</v_>)
+)</pre>
+			</blockquote>
+			Compares elements lexicographically.<br/>
+			<br/>
+			<a id="def-equal" href="#def-equal" class="g">#equal</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>m</v_>&gt;
+[[<a_>nodiscard</a_>]] <k_>friend constexpr auto operator==</k_>(<k_>const</k_> <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <k_>const</k_> <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_> <v_>rhs</v_>) <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<w_>/* See below */</w_>)</pre>
+			</blockquote>
+			Short-circuits if the arrays' sizes are different, otherwise delegates to <code><a href="#def-three-way"><k_>operator&lt;=&gt;</k_>()</a></code>.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> } &lt; <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> { <n_>1</n_>, <n_>2</n_>, <n_>4</n_> });</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/Y4W1jPY6Y" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

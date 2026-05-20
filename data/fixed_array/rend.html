@@ -4,16 +4,16 @@
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" href="/style.css"/>
 		<link rel="shortcut icon" href="/icon.png"/>
-		<title>xte::array::rend()</title>
+		<title>xte::fixed_array::rend()</title>
 	</head>
 	<body>
 		<input type="checkbox"/>
 		<input type="checkbox"/>
-		<iframe src="/links.html#data/array"></iframe>
-		<iframe src="/data/array.links.html#rend"></iframe>
+		<iframe src="/links.html#data/fixed_array"></iframe>
+		<iframe src="/data/fixed_array.links.html#rend"></iframe>
 		<main>
-			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/array"><t_>array</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>rend</f_>()</a></code></h2>
-			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/array.hpp"><s_>&lt;xte/data/array.hpp&gt;</s_></a></code></small><br/>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/fixed_array"><t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;</a>::<a href=""><f_>rend</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/fixed_array.hpp"><s_>&lt;xte/data/fixed_array.hpp&gt;</s_></a></code></small><br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definitions</a></h3>
@@ -33,8 +33,8 @@
 			<br/>
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
-<pre><a href="/data/array"><m_>xte</m_>::<t_>array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
-<r_>for</r_> (<k_>auto</k_> <v_>iter</v_> = <v_>array</v_>.<a href="/data/array/begin"><f_>rbegin</f_></a>(); <v_>iter</v_> != <v_>array</v_>.<a href="#def-0"><f_>rend</f_></a>(); ++<v_>iter</v_>) {
+<pre><a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
+<r_>for</r_> (<k_>auto</k_> <v_>iter</v_> = <v_>array</v_>.<a href="/data/fixed_array/begin"><f_>rbegin</f_></a>(); <v_>iter</v_> != <v_>array</v_>.<a href="#def-0"><f_>rend</f_></a>(); ++<v_>iter</v_>) {
 	<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, *<v_>iter</v_>);
 }</pre>
 			</blockquote>
@@ -44,7 +44,7 @@
 2
 1</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/5KK3zYa55" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/vMej76dsT" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

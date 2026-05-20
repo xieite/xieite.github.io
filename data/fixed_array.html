@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::fixed_array {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#data/fixed_array"></iframe>
+		<iframe src="/data/fixed_array.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>fixed_array</t_> {}</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/fixed_array.hpp"><s_>&lt;xte/data/fixed_array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			A fixed-size array.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>struct</k_> <t_>fixed_array</t_> {
+	<a href="/data/array/size_type"><span><k_>using</k_> <t_>size_type</t_> = <m_>xte</m_>::<t_>uz</t_>;</span>
+	<span><k_>using</k_> <t_>difference_type</t_> = <m_>xte</m_>::<t_>iptrdiff</t_>;</span></a>
+	<a href="/data/array/value_type"><span><k_>using</k_> <t_>value_type</t_> = <t_>T</t_>;</span>
+	<span><k_>using</k_> <t_>reference</t_> = <t_>T</t_><k_>&</k_>;</span>
+	<span><k_>using</k_> <t_>const_reference</t_> = <k_>const</k_> <t_>T</t_><k_>&</k_>;</span>
+	<span><k_>using</k_> <t_>pointer</t_> = <t_>T</t_><k_>*</k_>;</span>
+	<span><k_>using</k_> <t_>const_pointer</t_> = <k_>const</k_> <t_>T</t_><k_>*</k_>;</span></a>
+	<a href="/data/array/iterator"><span><k_>using</k_> <t_>iterator</t_> = <t_>T</t_><k_>*</k_>;</span>
+	<span><k_>using</k_> <t_>const_iterator</t_> = <k_>const</k_> <t_>T</t_><k_>*</k_>;</span>
+	<span><k_>using</k_> <t_>reverse_iterator</t_> = <m_>std</m_>::<t_>reverse_iterator</t_>&lt;<t_>T</t_><k_>*</k_>&gt;;</span>
+	<span><k_>using</k_> <t_>const_reverse_iterator</t_> = <m_>std</m_>::<t_>reverse_iterator</t_>&lt;<k_>const</k_> <t_>T</t_><k_>*</k_>&gt;;</span></a>
+
+	<a href="/data/fixed_array/_data"><w_>/* [:^^T[n]:] _data; */</w_></a>
+
+	<a href="/data/fixed_array/data"><k_>constexpr auto*</k_> <f_>data</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/fixed_array/size"><k_>static constexpr auto</k_> <v_>size</v_> = <m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>n</v_>&gt;();</a>
+
+	<a href="/data/fixed_array/operator-cmp"><span><k_>template</k_>&lt;<m_>xte</m_>::<t_>uz</t_> <v_>m</v_>&gt;</span>
+	<span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>template</k_>&lt;<m_>xte</m_>::<t_>uz</t_> <v_>m</v_>&gt;</span>
+	<span><k_>friend constexpr auto operator==</k_>(<k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+
+	<a href="/data/fixed_array/begin"><span><k_>constexpr auto*</k_> <f_>begin</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+	
+	<span><k_>constexpr const</k_> <t_>T</t_><k_>*</k_> <f_>cbegin</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/fixed_array/end"><span><k_>constexpr auto*</k_> <f_>end</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+	
+	<span><k_>constexpr const</k_> <t_>T</t_><k_>*</k_> <f_>cend</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/fixed_array/rbegin"><span><k_>constexpr auto</k_> <f_>rbegin</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>constexpr auto</k_> <f_>crbegin</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/fixed_array/rend"><span><k_>constexpr auto</k_> <f_>rend</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>constexpr auto</k_> <f_>crend</f_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/data/fixed_array/front"><k_>constexpr auto&&</k_> <f_>front</f_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/fixed_array/back"><k_>constexpr auto&&</k_> <f_>back</f_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/fixed_array/operator-index"><k_>constexpr auto&& operator[]</k_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>uz</t_>) <k_>noexcept</k_>;</a>
+
+	<a href="/data/fixed_array/get"><span><k_>template</k_>&lt;<m_>xte</m_>::<t_>uz</t_> <v_>index</v_>&gt;</span>
+	<span><k_>constexpr auto&&</k_> <f_>get</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span></a>
+
+	<a href="/data/fixed_array/operator-add"><span><k_>friend constexpr auto operator+</k_>(<m_>xte</m_>::<c_>is_derived_from</c_>&lt;<m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>&gt;&gt; <k_>auto&&</k_>, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>Lhs</t_>&gt;</span>
+	<span><k_>requires</k_>(<w_>/* ... */</w_>)</span>
+	<span><k_>friend constexpr auto operator+</k_>(<t_>Lhs</t_><k_>&&</k_>, <m_>xte</m_>::<c_>is_derived_from</c_>&lt;<m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>&gt;&gt; <k_>auto</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h4><a id="deduction-guide" href="#deduction-guide">Deduction guide</a></h4>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
+<t_>fixed_array</t_>(<t_>T</t_><k_>&</k_>, <t_>Ts</t_><k_>&&...</k_>) -> <t_>fixed_array</t_>&lt;<a target="_blank" href="https://en.cppreference.com/w/cpp/types/common_type.html#Helper_types"><m_>std</m_>::<t_>common_type_t</t_></a>&lt;<t_>T</t_>, <t_>Ts</t_>...&gt;, -~<k_>sizeof...</k_>(<t_>Ts</t_>)&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h4><a id=#structured-binding" href="#structured-binding">Specializations for structured binding</a></h4>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>struct</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/tuple_size"><m_>std</m_>::<t_>tuple_size</t_></a>&lt;<a href="#def"><m_>xte</m_>::<t_>fixed_array</t_></a>&lt;<t_>T</t_>, <v_>n</v_>&gt;&gt;;
+
+<k_>template</k_>&lt;<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>, <k_>typename</k_> <t_>T</t_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>struct</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/tuple_element"><m_>std</m_>::<t_>tuple_element</t_></a>&lt;<v_>index</v_>, <a href="#def"><m_>xte</m_>::<t_>fixed_array</t_></a>&lt;<t_>T</t_>, <v_>n</v_>&gt;&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="#def"><m_>xte</m_>::<t_>fixed_array</t_></a> <v_>a</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
+
+<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>a</v_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>[1, 2, 3]</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/oj7Mdr1aY" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

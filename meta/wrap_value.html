@@ -42,7 +42,7 @@
 <k_>struct</k_> <t_>fixed_array</t_> {
 	<k_>static constexpr auto</k_> <o_>size</o_> = <a href="#def"><m_>xte</m_>::<t_>wrap_value</t_></a>&lt;<v_>length</v_>&gt;();
 
-	<a href="/meta/type"><m_>xte</m_>::<t_>type</t_></a>&lt;<t_>T</t_>[<v_>length</v_>]&gt; <v_>data</v_>;
+	<a href="/meta/type"><m_>xte</m_>::<t_>type</t_></a>&lt;<t_>T</t_>[<v_>length</v_>]&gt; <v_>data</v_>; <!-- Wrote `xte::type<>` instead of reflection syntax, just for an excuse to have this link -->
 };
 
 <k_>static_assert</k_>(<t_>fixed_array</t_>&lt;<k_>int</k_>, <n_>5</n_>&gt;::<o_>size</o_> == <n_>5</n_>);

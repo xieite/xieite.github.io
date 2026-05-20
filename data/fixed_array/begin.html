@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::fixed_array::begin()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#data/fixed_array"></iframe>
+		<iframe src="/data/fixed_array.links.html#begin"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/data/fixed_array"><t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;</a>::<a href=""><f_>begin</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/fixed_array.hpp"><s_>&lt;xte/data/fixed_array.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto*</k_> <f_>begin</f_>(<k_>this auto&&</k_> <v_>self</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			With the same qualifiers as <code><v_>self</v_></code>, returns an iterator pointing to the first element or <code><a href="/data/fixed_array/end">.<f_>end</f_>()</a></code> if there are none.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr const</k_> <t_>T</t_><k_>*</k_> <f_>cbegin</f_>() <k_>const noexcept</k_>;</pre>
+			</blockquote>
+			Same as <a href="#def-0" class="g">#0</a> but <code><k_>const</k_></code>-qualified.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> <v_>array</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
+<a target="_blank" href="https://en.cppreference.com/cpp/io/print"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, *<v_>array</v_>.<a href="#def-0"><f_>begin</f_></a>());</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>1</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/eGGdM7j3o" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
