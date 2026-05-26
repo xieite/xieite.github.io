@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_ENDIAN</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/endian"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>ENDIAN</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/endian.hpp"><s_>&lt;xte/preproc/endian.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros for detecting the current endianness. Definitions are compiler-dependent and not mutually exclusive (e.g. for mixed-endianness).<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-big" href="#def-big" class="g">#big</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ENDIAN_BIG</i_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects big-endianness (ABCD).<br/>
+			<br/>
+			<a id="def-little" href="#def-little" class="g">#little</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ENDIAN_LITTLE</i_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects big-endianness (DCBA).<br/>
+			<br/>
+			<a id="def-big-word" href="#def-big-word" class="g">#big-word</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ENDIAN_BIG_WORD</i_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects word-swapped big-endianness (CDAB), like Honeywell 316.<br/> <!-- http://www.series16.adrianwise.co.uk/documentation/download/bitsavers/h316/130071585C_H316PRM_May69.pdf -->
+			<br/>
+			<a id="def-little-word" href="#def-little-word" class="g">#little-word</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ENDIAN_LITTLE_WORD</i_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects word-swapped little-endianness (BADC), like PDP-11.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def-big"><i_>XTE_ENDIAN_BIG</i_></a>
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Possible preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/rdjYh75ds" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

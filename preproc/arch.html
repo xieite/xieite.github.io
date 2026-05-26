@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_ARCH</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/arch"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>ARCH</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/arch.hpp"><s_>&lt;xte/preproc/arch.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros for detecting the current architecture. Definitions are compiler-dependent and not mutually exclusive.<br/>
+			<br/>
+			Replace <code><E_>NAME</E_></code> with one of: <i_>AARCH32</i_>, <i_>AARCH64</i_>, <i_>ALPHA</i_>, <i_>AM29000</i_>, <i_>ATMEL_AVR</i_>, <i_>BLACKFIN</i_>, <i_>COMPACTRISC</i_>, <i_>CONVEX</i_>, <i_>CRAY</i_>, <i_>CRAY_T3D</i_>, <i_>CRAY_T3E</i_>, <i_>CSKY</i_>, <i_>D10V</i_>, <i_>D30V</i_>, <i_>EPIPHANY</i_>, <i_>ELBRUS_2000</i_>, <i_>FUJITSU_FR_V</i_>, <i_>FR30</i_>, <i_>FT32</i_>, <i_>H8300</i_>, <i_>HEXAGON</i_>, <i_>HP_800</i_>, <i_>HP_9000</i_>, <i_>I960</i_>, <i_>IA64</i_>, <i_>IBM_SYSTEM_32</i_>, <i_>IBM_SYSTEM_370</i_>, <i_>IBM_SYSTEM_390</i_>, <i_>IBM_Z</i_>, <i_>IP2000</i_>, <i_>IQ2000</i_>, <i_>LATTICEMICO32</i_>, <i_>LOONGARCH</i_>, <i_>M_CORE</i_>, <i_>M32C</i_>, <i_>M32R</i_>, <i_>MIPS</i_>, <i_>MMIX</i_>, <i_>MN10200</i_>, <i_>MN10300</i_>, <i_>MOTOROLA_68000</i_>, <i_>MOTOROLA_88000</i_>, <i_>MOTOROLA_HC11</i_>, <i_>MOTOROLA_M_CORE</i_>, <i_>MOXIE</i_>, <i_>MSP430</i_>, <i_>NDS32</i_>, <i_>NEC_SX_AURORA_TSUBASA</i_>, <i_>NIOS_II</i_>, <i_>OPENRISC</i_>, <i_>PA_RISC</i_>, <i_>PDP_11</i_>, <i_>PNACL</i_>, <i_>POWERPC</i_>, <i_>PTX</i_>, <i_>PYRAMID_9810</i_>, <i_>RENESAS_RX</i_>, <i_>RISC_V</i_>, <i_>RL78</i_>, <i_>RS_6000</i_>, <i_>SPARC</i_>, <i_>SUPERH</i_>, <i_>SYNOPSYS_ARC</i_>, <i_>TAHOE</i_>, <i_>TIC_80</i_>, <i_>TILERA_TILEPRO64</i_>, <i_>TILERA_TILE_GX</i_>, <i_>TMS320</i_>, <i_>TMS470</i_>, <i_>V850</i_>, <i_>VAX</i_>, <i_>WASM</i_>, <i_>WDC_65C02</i_>, <i_>X80</i_>, <i_>X86_32</i_>, <i_>X86_64</i_>, <i_>XENON</i_>, <i_>XSTORMY16</i_>, <i_>XTENSA</i_>, <i_>ZILOG_Z8000</i_>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-arch" href="#def-arch" class="g">#arch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ARCH_</i_><E_>NAME</E_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects the presence of an architecture.<br/>
+			<br/>
+			<a id="def-major" href="#def-major" class="g">#major</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ARCH_</i_><E_>NAME</E_><i_>_MAJOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the major version of an architecture.<br/>
+			<br/>
+			<a id="def-minor" href="#def-minor" class="g">#minor</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ARCH_</i_><E_>NAME</E_><i_>_MINOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the minor version of an architecture.<br/>
+			<br/>
+			<a id="def-patch" href="#def-patch" class="g">#patch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ARCH_</i_><E_>NAME</E_><i_>_PATCH</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the patch version of an architecture.<br/>
+			<br/>
+			<a id="def-version" href="#def-version" class="g">#version</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_ARCH</j_>(<E_>NAME</E_>, <v_>OP</v_>, <v_>MAJOR</v_>, <w_>/* MINOR, PATCH */</w_><k_>...</k_>) <w_>/* boolean expression */</w_></pre>
+			</blockquote>
+			<code><v_>OP</v_></code> must be <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, or <code>!=</code>. Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing an architecture's version to the provided arguments.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def-arch"><i_>XTE_ARCH_X86_64</i_></a>
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Possible preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/TcxY6PrbY" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_COMPILER</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/compiler"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>COMPILER</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/compiler.hpp"><s_>&lt;xte/preproc/compiler.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros for detecting the current compiler. Definitions are compiler-dependent and not mutually exclusive.<br/>
+			<br/>
+			Replace <code><E_>NAME</E_></code> with one of: <i_>ACK</i_>, <i_>ADSP</i_>, <i_>AHCC</i_>, <i_>ALTIUM_C_TO_HARDWARE</i_>, <i_>ALTIUM_MICROBLAZE_C</i_>, <i_>AOCC</i_>, <i_>ARMCC</i_>, <i_>AZTEC_C</i_>, <i_>BCC</i_>, <i_>BORLAND</i_>, <i_>C2</i_>, <i_>CASTXML</i_>, <i_>CC65</i_>, <i_>CILLY</i_>, <i_>CIRCLE</i_>, <i_>CLANG</i_>, <i_>COMEAU</i_>, <i_>COMPAQ_C</i_>, <i_>COMPAQ_CPP</i_>, <i_>COMPCERT</i_>, <i_>CONVEX_C</i_>, <i_>COVERITY_STATIC_ANALYZER</i_>, <i_>CRAY_C</i_>, <i_>CRAY_F90</i_>, <i_>DIGITAL_MARS</i_>, <i_>DICE_C</i_>, <i_>DIGNUS_SYSTEMS_CPP</i_>, <i_>DJGPP</i_>, <i_>EDG</i_>, <i_>EKOPATH</i_>, <i_>ELLCC</i_>, <i_>F2C</i_>, <i_>FLANG</i_>, <i_>FUJITSU_CPP</i_>, <i_>GCC</i_>, <i_>GCCXML</i_>, <i_>GNU_F95</i_>, <i_>GREEN_HILLS</i_>, <i_>HEXAGON</i_>, <i_>HIPCC</i_>, <i_>HPUX_C</i_>, <i_>HPUX_CPP</i_>, <i_>HSC</i_>, <i_>IAR</i_>, <i_>ICC</i_>, <i_>ICX</i_>, <i_>IMAGECRAFT_C</i_>, <i_>KCC</i_>, <i_>KEIL_C166</i_>, <i_>KEIL_C51</i_>, <i_>KEIL_CARM</i_>, <i_>KICKC</i_>, <i_>LATTICE_C</i_>, <i_>LCC</i_>, <i_>LIGHTSPEED_C</i_>, <i_>LLVM</i_>, <i_>MCST_LLC</i_>, <i_>METAWARE_HIGH</i_>, <i_>METROWERKS_CODEWARRIOR</i_>, <i_>MICROTEC</i_>, <i_>MICROWAY_NDP_C</i_>, <i_>MINGW32</i_>, <i_>MINGW_W64</i_>, <i_>MIPSPRO</i_>, <i_>MIRACLE_C</i_>, <i_>MPW</i_>, <i_>MSVC</i_>, <i_>NCC</i_>, <i_>NORCROFT_C</i_>, <i_>NVIDIA_HPC</i_>, <i_>NVCC</i_>, <i_>NWCC</i_>, <i_>OCC</i_>, <i_>OPEN64</i_>, <i_>OPENACC</i_>, <i_>OPENSERVER</i_>, <i_>ORANGE_C</i_>, <i_>PACIFIC_C</i_>, <i_>PALM</i_>, <i_>PCC</i_>, <i_>PELLES_C</i_>, <i_>PGI</i_>, <i_>PUREC</i_>, <i_>PRO_C</i_>, <i_>PW32</i_>, <i_>QUICKC</i_>, <i_>RENESAS</i_>, <i_>SDCC</i_>, <i_>SHARC</i_>, <i_>SNC</i_>, <i_>SOZOBON</i_>, <i_>STRATUS_VOS_C</i_>, <i_>SUNPRO_C</i_>, <i_>SUNPRO_CPP</i_>, <i_>SYMANTEC_CPP</i_>, <i_>TCC</i_>, <i_>TENDRA</i_>, <i_>TI_CGT</i_>, <i_>TI_CL430</i_>, <i_>TOPSPEED_C</i_>, <i_>TURBO</i_>, <i_>ULTIMATE</i_>, <i_>USL_C</i_>, <i_>VBCC</i_>, <i_>VCM</i_>, <i_>WATCOM</i_>, <i_>WIND_RIVER_DIAB</i_>, <i_>XC8</i_>, <i_>XC16</i_>, <i_>XC32</i_>, <i_>XC_DSC</i_>, <i_>XL</i_>, <i_>ZORTECH_CPP</i_>, <i_>Z88DK</i_>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-compiler" href="#def-compiler" class="g">#compiler</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_COMPILER_</i_><E_>NAME</E_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects the presence of an compiler.<br/>
+			<br/>
+			<a id="def-major" href="#def-major" class="g">#major</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_COMPILER_</i_><E_>NAME</E_><i_>_MAJOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the major version of a compiler.<br/>
+			<br/>
+			<a id="def-minor" href="#def-minor" class="g">#minor</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_COMPILER_</i_><E_>NAME</E_><i_>_MINOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the minor version of a compiler.<br/>
+			<br/>
+			<a id="def-patch" href="#def-patch" class="g">#patch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_COMPILER_</i_><E_>NAME</E_><i_>_PATCH</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the patch version of a compiler.<br/>
+			<br/>
+			<a id="def-version" href="#def-version" class="g">#version</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_COMPILER</j_>(<E_>NAME</E_>, <v_>OP</v_>, <v_>MAJOR</v_>, <w_>/* MINOR, PATCH */</w_><k_>...</k_>) <w_>/* boolean expression */</w_></pre>
+			</blockquote>
+			<code><v_>OP</v_></code> must be <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, or <code>!=</code>. Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing a compiler's version to the provided arguments.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def-version"><j_>XTE_COMPILER</j_></a>(<i_>GCC</i_>, &gt;=, <n_>16</n_>,<n_>1</n_>)
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Possible preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/5dMEsvfar" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

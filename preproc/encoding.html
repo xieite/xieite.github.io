@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_ENCODING</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/encoding"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>ENCODING</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/encoding.hpp"><s_>&lt;xte/preproc/encoding.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros for detecting the current character encoding. Definitions are mutually exclusive.<br/>
+			<br/>
+			Replace <code><E_>NAME</E_></code> with one of: <i_>ASCII</i_>, <i_>EBCDIC</i_>, <i_>CP1036</i_>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_ENCODING_</i_><E_>NAME</E_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def"><i_>XTE_ENCODING_ASCII</i_></a>
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Possible preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/GMdrnj6s6" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

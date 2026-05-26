@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::add()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/add"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>add</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/add.hpp"><s_>&lt;xte/math/add.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Computes the sum of multiple values, avoiding undefined behavior from signed integer wrapping. Casts all arguments to their mutual common type. Does not prevent undefined behavior from floating-point addition.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto</k_> <f_>add</f_>(<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>augend</v_>, <a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto...</k_> <v_>addends</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<f_>add</f_></a>(<a target="_blank" href="https://en.cppreference.com/cpp/types/climits"><i_>INT_MAX</i_></a>, <n_>1</n_>) == <a target="_blank" href="https://en.cppreference.com/cpp/types/climits"><i_>INT_MIN</i_></a>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/1b1cfTzhs" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

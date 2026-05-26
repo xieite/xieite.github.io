@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" href="/style.css"/>
 		<link rel="shortcut icon" href="/icon.png"/>
-		<title>XTE_VERSION_...</title>
+		<title>XTE_VERSION</title>
 	</head>
 	<body>
 		<input type="checkbox"/>
@@ -19,7 +19,7 @@
 			<h3><a id="def" href="#def">Definitions</a></h3>
 			<a id="def-major" href="#def-major" class="g">#major</a>
 			<blockquote>
-<pre><p_>#define</p_> <i_>XTE_VERSION_MAJOR</i_> <n_>0</n_></pre>
+<pre><p_>#define</p_> <i_>XTE_VERSION_MAJOR</i_> <w_>/* integer literal */</w_></pre>
 			</blockquote>
 			<br/>
 			<a id="def-minor" href="#def-minor" class="g">#minor</a>
@@ -36,9 +36,9 @@
 			<br/>
 			<a id="def-version" href="#def-version" class="g">#version</a>
 			<blockquote>
-<pre><p_>#define</p_> <j_>XTE_VERSION</j_>(<v_>_operator</v_>, <v_>_major</v_>, <k_>...</k_><w_>/* _minor, _patch */</w_>) <w_>/* boolean expression */</w_></pre>
+<pre><p_>#define</p_> <j_>XTE_VERSION</j_>(<v_>OP</v_>, <v_>MAJOR</v_>, <w_>/* MINOR, PATCH */</w_><k_>...</k_>) <w_>/* boolean expression */</w_></pre>
 			</blockquote>
-			Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing XIEITE's version to the provided arguments.<br/>
+			<code><v_>OP</v_></code> must be <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, or <code>!=</code>. Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing XIEITE's version to the provided arguments.<br/>
 			<br/>
 			<br/>
 			<br/>
@@ -50,7 +50,7 @@
 	nop
 <p_>#endif</p_></pre>
 			</blockquote>
-			<small>Preprocessor output:</small>
+			<small>Possible preprocessor output:</small>
 			<blockquote>
 <pre>yup</pre>
 			</blockquote>

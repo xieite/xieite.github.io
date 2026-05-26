@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::abs()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/abs"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>abs</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/abs.hpp"><s_>&lt;xte/math/abs.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Computes the absolute value of a number. For signed integers, casts to unsigned.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>inline constexpr auto</k_> <f_>abs</f_> = [][[<a_>nodiscard</a_>]](<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>x</v_>) <k_>static noexcept</k_> -&gt; <a href="/trait/try_unsigned"><m_>xte</m_>::<t_>try_unsigned</t_></a>&lt;<k_>decltype</k_>(<v_>x</v_>)&gt; { <w_>/* ... */</w_> };</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<f_>abs</f_></a>(<a target="_blank" href="https://en.cppreference.com/cpp/types/climits"><i_>INT_MIN</i_></a>) == (<a target="_blank" href="https://en.cppreference.com/cpp/types/climits"><i_>INT_MAX</i_></a> + <n_>1u</n_>));
+<k_>static_assert</k_>(<a href="/math/approx_equal"><m_>xte</m_>::<f_>approx_equal</f_>(<a href="#def"><m_>xte</m_>::<f_>abs</f_></a>(<n_>-5.0</n_>), <n_>5.0</n_>));</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/hca7Txs7G" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

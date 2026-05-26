@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_STDLIB</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/lang"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>STDLIB</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/lang.hpp"><s_>&lt;xte/preproc/lang.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros for detecting the standard library. Definitions are compiler-dependent and might not be mutually exclusive.<br/>
+			<br/>
+			Replace <code><E_>NAME</E_></code> with one of: <i_>BIONIC_C</i_>, <i_>CLOUDABI_C</i_>, <i_>COMO_CPP</i_>, <i_>DINKUMWARE_CPP</i_>, <i_>GNU_C</i_>, <i_>GNU_CPP</i_>, <i_>IBM_VA_CPP</i_>, <i_>KLIBC</i_>, <i_>LLVM_C</i_>, <i_>LLVM_CPP</i_>, <i_>METROWERKS_CPP</i_>, <i_>MFC_CPP</i_>, <i_>MODENA_CPP</i_>, <i_>MSVC_C</i_>, <i_>MSVC_CPP</i_>, <i_>PDP_C</i_>, <i_>ROGUEWAVE_CPP</i_>, <i_>SGI_CPP</i_>, <i_>UCLIBC</i_>, <i_>VMS_C</i_>, <i_>Z_C</i_>, <i_>Z88DK_C</i_>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-stdlib" href="#def-stdlib" class="g">#stdlib</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_STDLIB_</i_><E_>NAME</E_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects the presence of an standard library.<br/>
+			<br/>
+			<a id="def-major" href="#def-major" class="g">#major</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_STDLIB_</i_><E_>NAME</E_><i_>_MAJOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the major version of a standard library.<br/>
+			<br/>
+			<a id="def-minor" href="#def-minor" class="g">#minor</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_STDLIB_</i_><E_>NAME</E_><i_>_MINOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the minor version of a standard library.<br/>
+			<br/>
+			<a id="def-patch" href="#def-patch" class="g">#patch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_STDLIB_</i_><E_>NAME</E_><i_>_PATCH</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the patch version of a standard library.<br/>
+			<br/>
+			<a id="def-version" href="#def-version" class="g">#version</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_STDLIB</j_>(<E_>NAME</E_>, <v_>OP</v_>, <v_>MAJOR</v_>, <w_>/* MINOR, PATCH */</w_><k_>...</k_>) <w_>/* boolean expression */</w_></pre>
+			</blockquote>
+			<code><v_>OP</v_></code> must be <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, or <code>!=</code>. Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing a standard library's version to the provided arguments.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def-version"><j_>XTE_STDLIB</j_></a>(<i_>GNU_CPP</i_>, &gt;=, <n_>17</n_>)
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Possible preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/nP8xz7cPv" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

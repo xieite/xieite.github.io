@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_LANG</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/lang"></iframe>
+		<main>
+			<h2><code><a href="/"><i_>XTE</i_></a><i_>_</i_><a href=""><i_>LANG</i_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/lang.hpp"><s_>&lt;xte/preproc/lang.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Macros for detecting the current language. Definitions are compiler-dependent and might not be mutually exclusive.<br/>
+			<br/>
+			Replace <code><E_>NAME</E_></code> with one of: <i_>C</i_>, <i_>CPP</i_>, <i_>CPP_CLI</i_>, <i_>CPP_CX</i_>, <i_>CPP_EMBEDDED</i_>, <i_>CPP_WINRT</i_>, <i_>CUDA</i_>, <i_>GLSL</i_>, <i_>HLSL</i_>, <i_>METAL</i_>, <i_>OBJ_C</i_>, <i_>OBJ_CPP</i_>, <i_>PSSL</i_>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-lang" href="#def-lang" class="g">#lang</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_LANG_</i_><E_>NAME</E_> <w_>/* boolean integer literal */</w_></pre>
+			</blockquote>
+			Detects the presence of an language.<br/>
+			<br/>
+			<a id="def-major" href="#def-major" class="g">#major</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_LANG_</i_><E_>NAME</E_><i_>_MAJOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the major version of a language.<br/>
+			<br/>
+			<a id="def-minor" href="#def-minor" class="g">#minor</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_LANG_</i_><E_>NAME</E_><i_>_MINOR</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the minor version of a language.<br/>
+			<br/>
+			<a id="def-patch" href="#def-patch" class="g">#patch</a>
+			<blockquote>
+<pre><p_>#define</p_> <i_>XTE_LANG_</i_><E_>NAME</E_><i_>_PATCH</i_> <w_>/* integer literal */</w_></pre>
+			</blockquote>
+			Detects the patch version of a language.<br/>
+			<br/>
+			<a id="def-version" href="#def-version" class="g">#version</a>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_LANG</j_>(<E_>NAME</E_>, <v_>OP</v_>, <v_>MAJOR</v_>, <w_>/* MINOR, PATCH */</w_><k_>...</k_>) <w_>/* boolean expression */</w_></pre>
+			</blockquote>
+			<code><v_>OP</v_></code> must be <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, or <code>!=</code>. Allows up to two additional arguments for the minor and patch versions. Expands to an expression comparing a language's version to the provided arguments.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><p_>#if</p_> <a href="#def-version"><j_>XTE_LANG</j_></a>(<i_>CPP</i_>, &gt;=, <n_>2026</n_>)
+	yup
+<p_>#else</p_>
+	nop
+<p_>#endif</p_></pre>
+			</blockquote>
+			<small>Possible preprocessor output:</small>
+			<blockquote>
+<pre>yup</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/1vEeGWrKP" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

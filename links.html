@@ -13,9 +13,9 @@
 		<a target="_top" href="/data/lowercase" id="data/lowercase"><f_>lowercase</f_>()</a>
 		<w_>null
 		opt {}
-		ptr {}
-		ptr_diff()
-		range_cmp()
+		ptr {}</w_>
+		<a target="_top" href="/data/ptr_diff" id="data/ptr_diff"><f_>ptr_diff</f_>()</a>
+		<w_>range_cmp()
 		string {}
 		string_view {}</w_>
 		<a target="_top" href="/data/uppercase" id="data/uppercase"><f_>uppercase</f_>()</a>
@@ -47,10 +47,10 @@
 		radix {}</w_>
 
 	math
-		<w_>abs()
-		add()
-		add_checked()
-		almost_greater_equal()
+		<a target="_top" href="/math/abs" id="math/abs"><f_>abs</f_>()</a>
+		<a target="_top" href="/math/add" id="math/add"><f_>add</f_>()</a>
+		<a target="_top" href="/math/add_checked" id="math/add_checked"><f_>add_checked</f_>()</a>
+		<w_>almost_greater_equal()
 		almost_equal()
 		almost_equal_slope()
 		almost_less_equal()
@@ -80,7 +80,7 @@
 		<a target="_top" href="/math/fibonacci" id="math/fibonacci"><v_>fibonacci</v_>&lt;&gt;</a>
 		<w_>floor()
 		is_finite()
-		is_infinite()
+		is_inf()
 		is_nan()</w_>
 		<a target="_top" href="/math/is_neg" id="math/is_neg"><f_>is_neg</f_>()</a>
 		<w_>is_single_bit()
@@ -135,39 +135,41 @@
 
 	preproc
 		<a target="_top" href="/preproc/any" id="preproc/any"><j_>ANY</j_>()</a>
-		<w_>ARCH</w_>
+		<a target="_top" href="/preproc/arch" id="preproc/arch"><i_>ARCH</i_></a>
 		<a target="_top" href="/preproc/arrow" id="preproc/arrow"><j_>ARROW</j_>()</a>
 		<w_>AT()
 		ATTR
 		CALL()
-		CAT()
-		COMPILER
-		DECLARE()
+		CAT()</w_>
+		<a target="_top" href="/preproc/compiler" id="preproc/compiler"><i_>COMPILER</i_></a>
+		<w_>DECLARE()
 		DEFINE_STATIC_ARRAY()
-		DIAGNOSTIC()</w_>
+		DIAGNOSTIC()
+		DROP()</w_>
 		<a target="_top" href="/preproc/each" id="preproc/each"><j_>EACH</j_>()</a>
-		<w_>EAT()
-		ENCODING
-		ENDIAN
-		EVAL()
+		<w_>EAT()</w_>
+		<a target="_top" href="/preproc/encoding" id="preproc/encoding"><i_>ENCODING</i_></a>
+		<a target="_top" href="/preproc/endian" id="preproc/endian"><i_>ENDIAN</i_></a>
+		<w_>EVAL()
 		FEATURE
-		FUNC</w_>
+		FUNC_SIG</w_>
 		<a target="_top" href="/preproc/fwd" id="preproc/fwd"><j_>FWD</j_>()</a>
 		<w_>HAS_ATTR()
 		HAS_BUILTIN()
 		IF()
 		IS_NOEX()
-		LAMBDA()
-		LANG</w_>
+		LAMBDA()</w_>
+		<a target="_top" href="/preproc/lang" id="preproc/lang"><i_>LANG</i_></a>
 		<a target="_top" href="/preproc/lift" id="preproc/lift"><j_>LIFT</j_>()</a>
-		<w_>PAREN()
-		PLATFORM
-		PRAGMA()
+		<w_>PAREN()</w_>
+		<a target="_top" href="/preproc/platform" id="preproc/platform"><i_>PLATFORM</i_></a>
+		<w_>PRAGMA()
 		QUOTE()
 		REMOVE_EMPTY()</w_>
 		<a target="_top" href="/preproc/scan" id="preproc/scan"><j_>SCAN</j_>()</a>
-		<w_>STATIC_ASSERT()
-		STDLIB
+		<w_>STATIC_ASSERT()</w_>
+		<a target="_top" href="/preproc/stdlib" id="preproc/stdlib"><i_>STDLIB</i_></a>
+		<w_>TAKE()
 		TEMPLATE</w_>
 		<a target="_top" href="/preproc/unwrap" id="preproc/unwrap"><j_>UNWRAP</j_>()</a>
 		<a target="_top" href="/preproc/version" id="preproc/version"><i_>VERSION</i_></a>
