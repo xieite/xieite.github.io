@@ -13,22 +13,23 @@
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>ptr_diff</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/ptr_diff.hpp"><s_>&lt;xte/data/ptr_diff.hpp&gt;</s_></a></code></small><br/>
 			<br/>
-			Computes the absolute difference between two pointers, avoiding signed integer wrapping.<br/>
+			Computes the absolute difference between two pointers belonging to one object, avoiding signed integer wrapping.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <f_>ptr_diff</f_>(<k_>auto*</k_> <v_>first</v_>, <k_>decltype</k_>(<v_>first</v_>) <v_>last</v_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>max</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <f_>ptr_diff</f_>(<k_>auto*</k_> <v_>begin</v_>, <k_>decltype</k_>(<v_>begin</v_>) <v_>end</v_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>size</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
+			<code><v_>begin</v_></code> must point to the start of the object, and <code><v_>size</v_></code> must be the size of the object to which the pointers belong.<br/>
 			<br/>
 			<br/>
 			<br/>
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
-<pre><k_>constexpr</k_> <a href="/data/fixed_array"><m_>xte</m_>::<t_>fixed_array</t_></a> <v_>data</v_> = { <n_>1</n_>, <n_>2</n_>, <n_>3</n_> };
-<k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<f_>ptr_diff</f_></a>(<v_>data</v_>.<a href="/data/fixed_array/begin"><f_>begin</f_></a>(), <v_>data</v_>.<a href="/data/fixed_array/end"><f_>end</f_></a>(), <v_>data</v_>.<a href="/data/fixed_array/size"><f_>size</f_></a>()) == <n_>3</n_>);</pre>
+<pre><k_>constexpr char</k_> <v_>data</v_><k_>[]</k_> = <s_>"hello"</s_>;
+<k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<f_>ptr_diff</f_></a>(<v_>data</v_>, <v_>data</v_> + <n_>3</n_>, <k_>sizeof</k_>(<v_>data</v_>)) == <n_>3</n_>);</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/5o9x1KsKM" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/1xq51qMEr" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
