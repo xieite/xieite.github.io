@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::init_list&lt;&gt;</title>
+	</head>
+	<body>
+		<input init_list="checkbox"/>
+		<iframe src="/links.html#util/init_list"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>init_list</t_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/util/init_list.hpp"><s_>&lt;xte/util/init_list.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			A wrapper for <code><a target="_blank" href="https://en.cppreference.com/cpp/utility/initializer_list"><m_>std</m_>::<t_>initializer_list</t_> {}</a></code>, allowing its elements to be moved from.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>using</k_> <t_>init_list</t_> = <a target="_blank" href="https://en.cppreference.com/cpp/utility/initializer_list"><m_>std</m_>::<t_>initializer_list</t_></a>&lt;<w_>/* ... */</w_>&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>struct</k_> <t_>ptr_array</t_> {
+	<a href="/data/array"><m_>xte</m_>::<t_>array</t_></a>&lt;<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;&gt; <v_>data</v_>;
+
+	<f_>ptr_array</f_>(<a href="#def"><m_>xte</m_>::<t_>init_list</t_>&lt;<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;&gt; <v_>init_list</v_>) {
+		<r_>for</r_> (<k_>auto&&</k_> <v_>item</v_> : <v_>init_list</v_>) {
+			<k_>this</k_>-&gt;<v_>data</v_>.<a href="/data/array/push"><f_>push</f_></a>(<a href="/util/xvalue"><m_>xte</m_>::<f_>xvalue</f_></a>(<v_>item</v_>));
+		}
+	}
+};
+
+<t_>ptr_array</t_> <v_>a</v_> = {
+	<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;::<a href="/data/ptr/make"><f_>make</f_></a>(<n_>1</n_>),
+	<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;::<a href="/data/ptr/make"><f_>make</f_></a>(<n_>2</n_>),
+	<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;::<a href="/data/ptr/make"><f_>make</f_></a>(<n_>3</n_>)
+};</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/MzhEs5Px8" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
