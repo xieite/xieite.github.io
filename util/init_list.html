@@ -27,22 +27,22 @@
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
 <pre><k_>struct</k_> <t_>ptr_array</t_> {
-	<a href="/data/array"><m_>xte</m_>::<t_>array</t_></a>&lt;<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;&gt; <v_>data</v_>;
+	<a target="_blank" href="https://en.cppreference.com/cpp/container/vector"><m_>std</m_>::<t_>vector</t_></a>&lt;<a target="_blank" href="https://en.cppreference.com/cpp/memory/unique_ptr"><m_>std</m_>::<t_>unique_ptr</t_></a>&lt;<k_>int</k_>&gt;&gt; <v_>data</v_>;
 
-	<f_>ptr_array</f_>(<a href="#def"><m_>xte</m_>::<t_>init_list</t_>&lt;<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;&gt; <v_>init_list</v_>) {
+	<f_>ptr_array</f_>(<a href="#def"><m_>xte</m_>::<t_>init_list</t_>&lt;<a target="_blank" href="https://en.cppreference.com/cpp/memory/unique_ptr"><m_>std</m_>::<t_>unique_ptr</t_></a>&lt;<k_>int</k_>&gt;&gt; <v_>init_list</v_>) {
 		<r_>for</r_> (<k_>auto&&</k_> <v_>item</v_> : <v_>init_list</v_>) {
-			<k_>this</k_>-&gt;<v_>data</v_>.<a href="/data/array/push"><f_>push</f_></a>(<a href="/util/xvalue"><m_>xte</m_>::<f_>xvalue</f_></a>(<v_>item</v_>));
+			<k_>this</k_>-&gt;<v_>data</v_>.<a target="_blank" href="https://en.cppreference.com/cpp/container/vector/push_back"><f_>push_back</f_></a>(<a target="_blank" href="https://en.cppreference.com/cpp/utility/move"><m_>std</m_>::<f_>move</f_></a>(<v_>item</v_>));
 		}
 	}
 };
 
 <t_>ptr_array</t_> <v_>a</v_> = {
-	<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;::<a href="/data/ptr/make"><f_>make</f_></a>(<n_>1</n_>),
-	<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;::<a href="/data/ptr/make"><f_>make</f_></a>(<n_>2</n_>),
-	<a href="/data/ptr"><m_>xte</m_>::<t_>ptr</t_></a>&lt;<k_>int</k_>&gt;::<a href="/data/ptr/make"><f_>make</f_></a>(<n_>3</n_>)
+	<a target="_blank" href="https://en.cppreference.com/cpp/memory/unique_ptr/make_unique"><m_>std</m_>::<t_>make_unique</t_></a>&lt;<k_>int</k_>&gt;(<n_>1</n_>),
+	<a target="_blank" href="https://en.cppreference.com/cpp/memory/unique_ptr/make_unique"><m_>std</m_>::<t_>make_unique</t_></a>&lt;<k_>int</k_>&gt;(<n_>2</n_>),
+	<a target="_blank" href="https://en.cppreference.com/cpp/memory/unique_ptr/make_unique"><m_>std</m_>::<t_>make_unique</t_></a>&lt;<k_>int</k_>&gt;(<n_>3</n_>)
 };</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/MzhEs5Px8" class="g">[View in Compiler Explorer]</a></small>
+			<small><a target="_blank" href="https://godbolt.org/z/av67War4s" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>
