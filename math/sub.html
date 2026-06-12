@@ -13,12 +13,12 @@
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>sub</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/sub.hpp"><s_>&lt;xte/math/sub.hpp&gt;</s_></a></code></small><br/>
 			<br/>
-			Computes the difference of multiple values, avoiding undefined behavior from signed integer wrapping. Casts all arguments to their mutual common type. Does not prevent undefined behavior from floating-point subtraction.<br/>
+			Computes the difference of multiple numbers, avoiding undefined behavior from signed integer wrapping. Casts all arguments to their mutual common type. Does not prevent undefined behavior from floating-point subtraction.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto</k_> <f_>sub</f_>(<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>augend</v_>, <a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto...</k_> <v_>addends</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto</k_> <f_>sub</f_>(<a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <k_>auto</k_> <v_>augend</v_>, <a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <k_>auto...</k_> <v_>addends</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>

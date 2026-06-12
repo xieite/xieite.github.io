@@ -13,13 +13,13 @@
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>sign_cast</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/sign_cast.hpp"><s_>&lt;xte/math/sign_cast.hpp&gt;</s_></a></code></small><br/>
 			<br/>
-			Casts an integer or floating-point to the signedness of the destination integer type before converting the value.<br/>
+			Casts a number to the signedness of the destination integer type before converting the value.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_int"><m_>xte</m_>::<c_>is_int</c_></a> <t_>T</t_>&gt;
-<k_>constexpr auto</k_> <f_>sign_cast</f_> = [][[<a_>nodiscard</a_>]](<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>x</v_>) <k_>static noexcept</k_> -&gt; <t_>T</t_> { <w_>/* ... */</w_> };</pre>
+<k_>constexpr auto</k_> <f_>sign_cast</f_> = [][[<a_>nodiscard</a_>]](<a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <k_>auto</k_> <v_>x</v_>) <k_>static noexcept</k_> -&gt; <t_>T</t_> { <w_>/* ... */</w_> };</pre>
 			</blockquote>
 			<br/>
 			<br/>

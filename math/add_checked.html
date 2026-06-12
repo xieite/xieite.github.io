@@ -13,12 +13,12 @@
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>add_checked</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/add_checked.hpp"><s_>&lt;xte/math/add_checked.hpp&gt;</s_></a></code></small><br/>
 			<br/>
-			Computes the sum (wrapped in <code><a href="/data/opt"><m_>xte</m_>::<t_>opt</t_></a> {}</code>) of multiple values (added sequentially). Returns <code><a href="/data/null"><m_>xte</m_>::<v_>null</v_></a></code> if the result of any intermediate operation cannot be represented.<br/>
+			Computes the sum (wrapped in <code><a href="/data/opt"><m_>xte</m_>::<t_>opt</t_></a> {}</code>) of multiple numbers (added sequentially). Casts all arguments to their mutual common type. Returns <code><a href="/data/null"><m_>xte</m_>::<v_>null</v_></a></code> if the result of any intermediate operation cannot be represented.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto</k_> <f_>add_checked</f_>(<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto</k_> <v_>augend</v_>, <a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <k_>auto...</k_> <v_>addends</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>constexpr auto</k_> <f_>add_checked</f_>(<a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <k_>auto</k_> <v_>augend</v_>, <a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <k_>auto...</k_> <v_>addends</v_>) <k_>noexcept</k_>;</pre>
 			</blockquote>
 			<br/>
 			<br/>

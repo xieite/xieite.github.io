@@ -13,12 +13,12 @@
 			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><v_>factorial</v_>&lt;&gt;</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/factorial.hpp"><s_>&lt;xte/math/factorial.hpp&gt;</s_></a></code></small><br/>
 			<br/>
-			A lookup table containing all representable factorial values for a given integer or floating-point type.<br/>
+			A lookup table containing all representable factorial values for an arithmetic type.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre><k_>template</k_>&lt;<a href="/trait/is_number"><m_>xte</m_>::<c_>is_number</c_></a> <t_>T</t_>&gt;
+<pre><k_>template</k_>&lt;<a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <t_>T</t_>&gt;
 <k_>constexpr auto</k_> <v_>factorial</v_> = <a target="_blank" href="https://eel.is/c++draft/meta.define.static"><m_>std</m_>::<f_>define_static_array</t_></a>(<w_>/* ... */</w_>);</pre>
 			</blockquote>
 			<br/>
