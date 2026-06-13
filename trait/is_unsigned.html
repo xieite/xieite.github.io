@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::is_unsigned&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#trait/is_unsigned"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><c_>is_unsigned</c_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/trait/is_unsigned.hpp"><s_>&lt;xte/trait/is_unsigned.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Checks that a given type is an unsigned integer type, excluding <code><k_>bool</k_></code>.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>concept</k_> <c_>is_unsigned</c_> = <a target="_blank" href="https://en.cppreference.com/cpp/concepts/unsigned_integral"><m_>std</m_>::<c_>unsigned_integral</c_></a>&lt;<t_>T</t_>&gt; && !<a href="/trait/is_same_drop_cv"><m_>xte</m_>::<c_>is_same_drop_cv</c_></a>&lt;<t_>T</t_>, <k_>bool</k_>&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<c_>is_unsigned</c_></a>&lt;<k_>unsigned int</k_>&gt;);
+<k_>static_assert</k_>(<k_>not</k_> <a href="#def"><m_>xte</m_>::<c_>is_unsigned</c_></a>&lt;<k_>int</k_>&gt;);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/e9Kbeoe5M" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

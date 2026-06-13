@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::drop_v&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#trait/drop_v"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>drop_v</t_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/trait/drop_v.hpp"><s_>&lt;xte/trait/drop_v.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Removes the <code><k_>volatile</k_></code> qualifier from a given type.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>using</k_> <t_>drop_v</t_> = <w_>/* ... */</w_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="/trait/is_same"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<k_>const int&</k_>, <a href="#def"><m_>xte</m_>::<t_>drop_v</t_></a>&lt;<k_>const volatile int&</k_>&gt;&gt;);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/nK3f45K9a" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

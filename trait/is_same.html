@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::is_same&lt;&gt;</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#trait/is_same"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><c_>is_same</c_>&lt;&gt;</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/trait/is_same.hpp"><s_>&lt;xte/trait/is_same.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Checks that all given types are the same.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <k_>typename...</k_> <t_>Ts</t_>&gt;
+<k_>concept</k_> <c_>is_same</c_> = (... && <a target="_blank" href="https://en.cppreference.com/cpp/concepts/same_as"><m_>std</m_>::<c_>same_as</c_></a>&lt;<t_>T</t_>, <t_>Ts</t_>&gt;);</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<k_>int</k_>, <k_>int</k_>, <k_>int</k_>&gt;);
+<k_>static_assert</k_>(<k_>not</k_> <a href="#def"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<k_>int</k_>, <k_>char</k_>, <k_>int</k_>&gt;);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/9n955qEj6" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
