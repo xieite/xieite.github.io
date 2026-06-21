@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::big_int {}</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/big_int"></iframe>
+		<iframe src="/math/big_int.links.html"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><t_>big_int</t_> {}</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			A <code><k_>constexpr</k_></code> big-integer class.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_unsigned"><m_>xte</m_>::<c_>is_unsigned</c_></a> <t_>T</t_> = <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a>&gt;
+<k_>struct</k_> <t_>big_int</t_> {
+	<a href="/math/big_int/value_type"><k_>using</k_> <t_>value_type</t_> = <t_>T</t_>;</a>
+
+	<a href="/math/big_int/big_int"><span><k_>template</k_>&lt;<m_>xte</m_>::<c_>is_arithmetic</c_> <t_>T</t_> = <t_>U</t_>&gt;</span>
+	<span><k_>explicit</k_>(!<m_>xte</m_>::<c_>is_int</c_>&lt;<t_>U</t_>&gt;)</span>
+	<span><k_>constexpr</k_> <f_>big_int</f_>(<t_>U</t_> = <n_>0</n_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>) = <k_>default</k_>;</span>
+
+	<span><k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>big_int</f_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>noexcept</k_> = <k_>default</k_>;</span>
+
+	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>U</t_>&gt;</span>
+	<span><k_>requires</k_>(!<m_>xte</m_>::<c_>same_as</c_>&lt;<t_>T</t_>, <t_>U</t_>&gt;)</span>
+	<span><k_>explicit constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>U</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>template</k_>&lt;<k_>typename</k_> <t_>Range</t_> = <m_>xte</m_>::<t_>array</t_>&lt;<t_>T</t_>&gt;&gt;</span>
+	<span><k_>constexpr</k_> <f_>big_int</f_>(<m_>std</m_>::<t_>from_range_t</t_>, <t_>Range</t_><k_>&&</k_>, <k_>bool</k_> = <k_>false</k_>) <j_>XTE_ARROW_CTOR</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>template</k_>&lt;<m_>xte</m_>::<t_>is_int</t_> <t_>Radix</t_> = <m_>xte</m_>::<t_>uz</t_>&gt;</span>
+	<span><k_>explicit constexpr</k_> <f_>big_int</f_>(<m_>xte</m_>::<t_>string_view</t_>, <t_>Radix</t_> = <n_>10</n_>, <k_>const</k_> <m_>xte</m_>::<t_>number_format_config</t_><k_>&</k_> = {}) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-assign"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>) = <k_>default</k_>;</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>& noexcept</k_> = <k_>default</k_>;</span></a>
+
+	<a href="/math/big_int/operator-cast"><span><k_>template</k_>&lt;<m_>xte</m_>::<c_>is_arithmetic</c_> <t_>U</t_>&gt;</span>
+	<span><k_>explicit constexpr operator</k_> <t_>U</t_>() <k_>const noexcept</k_>;</span>
+
+	<span><k_>explicit constexpr operator bool</k_>() <k_>const noexcept</k_>;</span></a>
+
+	<a href="/math/big_int/operator-cmp"><span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>;</span>
+
+	<span><k_>friend constexpr bool operator==</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_> = <k_>default</k_>;</span></a>
+
+	<a href="/math/big_int/operator-plus"><span><k_>constexpr auto operator+</k_>(<k_>this auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator+</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator+</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-plus-assign"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator+=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator+=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-incr"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator++</k_>() <k_>& noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator++</k_>(<k_>int</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-minus"><span><k_>constexpr auto operator-</k_>(<k_>this auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+
+	<span><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator-</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator-</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-minus-assign"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator-=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator-=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-decr"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator--</k_>() <k_>& noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator--</k_>(<k_>int</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-mul"><span><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator*</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator*</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-mul-assign"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator*=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator*=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/operator-div"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator/</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-div-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator/=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-rem"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator%</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-rem-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator%=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-compl"><k_>constexpr auto operator~</k_>(<k_>this auto&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-bitand"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator&</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-bitand-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator&=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-bitor"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator|</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-bitor-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator|=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-bitxor"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator^</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-bitxor-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator^=</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-lshift"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator&lt;&lt;</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-lshift-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator&lt;&lt;=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-rshift"><k_>friend constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <k_>operator&gt;&gt;</k_>(<m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/operator-rshift-assign"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>& operator&gt;&gt;=</k_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/abs"><k_>constexpr auto</k_> <f_>abs</f_>(<k_>this auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</a>
+
+	<a href="/math/big_int/pow"><span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>pow</f_>(<k_>this auto&&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span>
+
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>pow</f_>(<k_>this auto&&</k_>, <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&&</k_>) <k_>noexcept</k_>(<k_>false</k_>);</span></a>
+
+	<a href="/math/big_int/root"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>root</f_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/log"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>log</f_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>(<k_>false</k_>);</a>
+
+	<a href="/math/big_int/parse"><k_>static constexpr auto</k_> <v_>parse</v_> = <w_>/* ... */</w_>;</a>
+
+	<a href="/math/big_int/str"><span><k_>template</k_>&lt;<m_>xte</m_>::<c_>is_int</c_> <t_>Radix</t_> = <m_>xte</m_>::<t_>uz</t_>&gt;</span>
+	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>string</t_> <f_>str</f_>(<k_>this auto&&</k_>, <t_>Radix</t_> = <n_>10</n_>, <k_>const</k_> <m_>xte</m_>::<t_>number_format_config</t_><k_>&</k_> = {}) <k_>noexcept</k_>(<k_>false</k_>);</a>
+};</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h4><a id=#literals" href="#literals">Literal suffix</a></h4>
+			<blockquote>
+<pre><k_>namespace</k_> <m_>literal</m_>::<m_>big_int</m_> {
+	<k_>template</k_>&lt;<k_>char...</k_>&gt;
+	<k_>constexpr</k_> <a href="#def"><m_>xte</m_>::<t_>big_int</t_></a>&lt;&gt; <k_>operator""</k_><f_>_big</f_>() <k_>noexcept</k_>(<k_>false</k_>);
+}</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<h4><a id=#format" href="#format">Specialization for formatting</a></h4>
+			<blockquote>
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>&gt;
+<k_>struct</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/format/formatter"><m_>std</m_>::<t_>formatter</t_></a>&lt;<a href="#def"><m_>xte</m_>::<t_>big_int</t_></a>&lt;<t_>T</t_>&gt;&gt;;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <a href="#def"><m_>xte</m_>::<t_>big_int</t_></a>(<n_>99</n_>).<a href="/math/big_int/pow"><f_>pow</f_></a>(<n_>99</n_>));</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>369729637649726772657187905628805440595668764281741102430259972423552570455277523421410650010128232727940978889548326540119429996769494359451621570193644014418071060667659301384999779999159200499899</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/rYY8f736v" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
