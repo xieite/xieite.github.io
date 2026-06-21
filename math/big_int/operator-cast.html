@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::big_int::operator typename()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/big_int"></iframe>
+		<iframe src="/math/big_int.links.html#big_int"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><k_>operator typename</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_arithmetic"><m_>xte</m_>::<c_>is_arithmetic</c_></a> <t_>U</t_>&gt;
+[[<a_>nodiscard</a_>]] <k_>explicit constexpr operator</k_> <t_>U</t_>() <k_>const noexcept</k_>;</pre>
+			</blockquote>
+			Casts to an arithmetic type. Prevents undefined behavior from signed integer wrapping.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>explicit constexpr operator bool</k_>() <k_>const noexcept</k_>;</pre>
+			</blockquote>
+			Returns <code><k_>false</k_></code> if the big-integer is zero, otherwise <code><k_>true</k_></code>.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<k_>static_cast</k_>&lt;<k_>int</k_>&gt;(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a>(<n_>123</n_>)) == <n_>123</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/vsqrbfhK6" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

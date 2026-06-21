@@ -72,8 +72,8 @@ pre:has(a[target="_top"]) {
 main {
 	padding-top: 25px;
 	padding-bottom: 100px;
-	padding-left: calc(var(--sidebar-width) + 10%);
-	padding-right: calc(var(--sidebar-width) + 10%);
+	padding-left: calc(var(--sidebar-width) + 100px); /* 10% */
+	padding-right: calc(var(--sidebar-width) + 100px); /* 10% */
 	flex-grow: 1;
 
 	background-color: #111111;
