@@ -141,7 +141,7 @@
 
 	<a href="/math/big_int/log"><k_>constexpr</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt; <f_>log</f_>(<k_>const</k_> <m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;<k_>&</k_>) <k_>const noexcept</k_>(<k_>false</k_>);</a>
 
-	<a href="/math/big_int/parse"><k_>static constexpr auto</k_> <v_>parse</v_> = <w_>/* ... */</w_>;</a>
+	<a href="/math/big_int/parse"><k_>static constexpr struct</k_> { <w_>/* ... */</w_> } <v_>parse</v_>;</a>
 
 	<a href="/math/big_int/str"><span><k_>template</k_>&lt;<m_>xte</m_>::<c_>is_int</c_> <t_>Radix</t_> = <m_>xte</m_>::<t_>uz</t_>&gt;</span>
 	<span><k_>constexpr</k_> <m_>xte</m_>::<t_>string</t_> <f_>str</f_>(<k_>this auto&&</k_>, <t_>Radix</t_> = <n_>10</n_>, <k_>const</k_> <m_>xte</m_>::<t_>number_format_config</t_><k_>&</k_> = {}) <k_>noexcept</k_>(<k_>false</k_>);</a>
@@ -174,8 +174,7 @@
 			<blockquote>
 <pre>369729637649726772657187905628805440595668764281741102430259972423552570455277523421410650010128232727940978889548326540119429996769494359451621570193644014418071060667659301384999779999159200499899</pre>
 			</blockquote>
-			<small><a target="_blank" href="https://godbolt.org/z/rYY8f736v" class="g">[View in Compiler Explorer]</a></small><!--br/>
-			<small><a target="_blank" href="https://www.wolframalpha.com/input?i=99%5E99" class="g">[Compare with WolframAlpha]</a></small-->
+			<small><a target="_blank" href="https://godbolt.org/z/rYY8f736v" class="g">[View in Compiler Explorer]</a></small>
 		</main>
 	</body>
 </html>

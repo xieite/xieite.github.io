@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::big_int::str()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/big_int"></iframe>
+		<iframe src="/math/big_int.links.html#str"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><f_>str</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/trait/is_int"><m_>xte</m_>::<c_>is_int</c_></a> <t_>Radix</t_> = <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr</k_> <a href="/data/string"><m_>xte</m_>::<t_>string</t_></a> <f_>str</f_>(<k_>this auto&&</k_>, <t_>Radix</t_> <v_>radix</v_> = <n_>10</n_>, <k_>const</k_> <a href="/math/number_format_config"><m_>xte</m_>::<t_>number_format_config</t_></a><k_>&</k_> <v_>config</v_> = {}) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Stringifies the big-integer. Negative radices are supported. May throw if allocation fails.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a>(<n_>99</n_>).<a href="/math/big_int/pow"><f_>pow</f_></a>(<n_>99</n_>).<a href="#def"><f_>str</f_></a>());</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>13C8DB009372548E1D1EE21004B41F9D0A2F1C7A4CA716024FF714032153A5AB531817C13EF1F2F7F401B48535A8C22BBDC1EE93B772F0DD094A8FD9727DAE16CEB8E4A25451BBA34A32099615746B57BC8BB</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/fKKz4ccnr" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

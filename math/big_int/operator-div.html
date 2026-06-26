@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::big_int::operator/()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/big_int"></iframe>
+		<iframe src="/math/big_int.links.html#operator/"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><k_>operator/</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator/</k_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <v_>lhs</v_>, <k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>rhs</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Computes the quotient of two big-integers. May throw if allocation fails or if <code><v_>rhs</v_></code> is zero.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>constexpr auto</k_> <v_>u64_max</v_> = <n_>18446744073709551615ull</n_>;
+<k_>static_assert</k_>((<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a>(<s_>"340282366920938463426481119284349108225"</s_>) / <v_>u64_max</v_>) == <v_>u64_max</v_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/4zb3ETbGr" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
