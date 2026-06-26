@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::big_int::operator&lt;=&gt;()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/big_int"></iframe>
+		<iframe src="/math/big_int.links.html#operator<=>"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><k_>operator&lt;=&gt;</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/compare/strong_ordering"><m_>std</m_>::<t_>strong_ordering</t_></a> <k_>operator&lt;=&gt;</k_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/compare/strong_ordering"><m_>std</m_>::<t_>strong_ordering</t_></a> <k_>operator&lt;=&gt;</k_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <a href="/trait/is_int"><m_>xte</m_>::<c_>is_int</c_></a> <k_>auto</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-2" href="#def-2" class="g">#2</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/compare/partial_ordering"><m_>std</m_>::<t_>partial_ordering</t_></a> <k_>operator&lt;=&gt;</k_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <a href="/trait/is_float"><m_>xte</m_>::<c_>is_float</c_></a> <k_>auto</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			The big-integer argument is cast to the floating-point argument's type. May invoke undefined behavior if the floating-point type cannot represent the big-integer's value (i.e. if infinity is not representable).<br/>
+			<br/>
+			<a id="def-3" href="#def-3" class="g">#3</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr bool operator==</k_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_>, <k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_>) <k_>noexcept</k_> = <k_>default</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-4" href="#def-4" class="g">#4</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr bool operator==</k_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <a href="/trait/is_int"><m_>xte</m_>::<c_>is_int</c_></a> <k_>auto</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			<br/>
+			<a id="def-5" href="#def-5" class="g">#5</a>
+			<blockquote>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr bool operator==</k_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>lhs</v_>, <a href="/trait/is_float"><m_>xte</m_>::<c_>is_float</c_></a> <k_>auto</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+			</blockquote>
+			See note for <a href="#2" class="g">#2</a>. Uses <code><a href="/math/approx_equal"><m_>xte</m_>::<f_>approx_equal</f_>()</a></code> to compare the arguments.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a>(<n_>123</n_>) == <n_>123</n_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/fbehja3K6" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
