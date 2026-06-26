@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::at()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#util/at"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>at</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/at.hpp"><s_>&lt;xte/math/at.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Selects one argument by index.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>&gt;
+[[<a_>nodiscard</a_>]] <k_>constexpr auto&&</k_> <f_>at</f_>(<k_>auto&&...</k_> <v_>args</v_>) <k_>noexcept requires</k_>(<v_>index</v_> &lt; <k_>sizeof...</k_>(<v_>args</v_>));</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>static_assert</k_>(<a href="#def"><m_>xte</m_>::<f_>at</f_></a>&lt;<n_>1</n_>&gt;(<n_>1</n_>, <s_>'2'</s_>, <n_>3.0</n_>, <s_>"4"</s_>) == <s_>'2'</s_>);</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/jM64Eaoc8" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
