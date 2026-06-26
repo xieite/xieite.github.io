@@ -155,7 +155,7 @@ a[target='_top']:target {
 		padding-right: 150px;
 	}
 
-	body:has(iframe[src$=".links.html"]) > main {
+	body:has(iframe[src*=".links.html"]) > main {
 		padding-right: calc(var(--sidebar-width) + 50px);
 	}
 }

@@ -34,13 +34,13 @@
 			<blockquote>
 <pre>[[<a_>nodiscard</a_>]] <k_>explicit</k_>(<k_>false</k_>) <k_>constexpr</k_> <f_>big_int</f_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&&</k_>) <k_>noexcept</k_> = <k_>default</k_>;</pre>
 			</blockquote>
-			The moved-from big-integer is set to zero.<br/>
+			The moved-from big-integer is left in an unspecified state.<br/>
 			<br/>
 			<a id="def-3" href="#def-3" class="g">#3</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>U</t_>&gt;
 <k_>requires</k_>(!<a href="/trait/is_same"><m_>xte</m_>::<c_>is_same</c_></a>&lt;<t_>T</t_>, <t_>U</t_>&gt;)
-[[<a_>nodiscard</a_>]] <k_>explicit</k_> <k_>constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a>&lt;<t_>U</t_>&gt;<k_>&</k_> <v_>other</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+[[<a_>nodiscard</a_>]] <k_>explicit constexpr</k_> <f_>big_int</f_>(<k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a>&lt;<t_>U</t_>&gt;<k_>&</k_> <v_>other</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
 			Constructs from another big-integer which stores chunks of a different type.<br/>
 			<br/>

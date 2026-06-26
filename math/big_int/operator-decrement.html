@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::big_int::operator--()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<input type="checkbox"/>
+		<iframe src="/links.html#math/big_int"></iframe>
+		<iframe src="/math/big_int.links.html#operator--"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_>&lt;<t_>T</t_>&gt;</a>::<a href=""><k_>operator--</k_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definitions</a></h3>
+			<a id="def-0" href="#def-0" class="g">#0</a>
+			<blockquote>
+<pre><k_>constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>& operator--</k_>() <k_>& noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Decrements the big-integer by one. May throw if allocation fails.<br/>
+			<br/>
+			<a id="def-1" href="#def-1" class="g">#1</a>
+			<blockquote>
+<pre><k_>constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator--</k_>(<k_>int</k_>) <k_>& noexcept</k_>(<k_>false</k_>);</pre>
+			</blockquote>
+			Decrements the big-integer by one, and returns the previous value. May throw if allocation fails.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a> <v_>n</v_> = -<n_>9223372036854775807</n_> - <n_>1</n_>;
+--<v_>n</v_>;
+<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"{}"</s_>, <v_>n</v_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>-9223372036854775809</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/Y11beaKTo" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

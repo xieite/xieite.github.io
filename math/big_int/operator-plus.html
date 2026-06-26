@@ -25,15 +25,15 @@
 			<br/>
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator+</k_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <v_>lhs</v_>, <k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator+</k_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <v_>lhs</v_>, <k_>const</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&</k_> <v_>rhs</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
-			Computes the sum of two big-integers.<br/>
+			Computes the sum of two big-integers. May throw if allocation fails.<br/>
 			<br/>
 			<a id="def-2" href="#def-2" class="g">#2</a>
 			<blockquote>
-<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator+</k_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <v_>lhs</v_>, <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&&</k_> <v_>rhs</v_>) <k_>noexcept</k_>;</pre>
+<pre>[[<a_>nodiscard</a_>]] <k_>friend constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator+</k_>(<a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <v_>lhs</v_>, <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a><k_>&&</k_> <v_>rhs</v_>) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
-			Computes the sum of two big-integers. <code><v_>lhs</v_></code> may be destructively moved-from.<br/>
+			Computes the sum of two big-integers. <code><v_>lhs</v_></code> is destructively moved-from. May throw if allocation fails.<br/>
 			<br/>
 			<br/>
 			<br/>
