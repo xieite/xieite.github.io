@@ -12,16 +12,16 @@
 		<iframe src="/links.html#math/big_int"></iframe>
 		<iframe src="/math/big_int.links.html#parse/operator()"></iframe>
 		<main>
-			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_>&lt;<t_>T</t_>&gt;</a>::<a href="/math/big_int/parse"><v_>parse</v_></a>.<a href=""><k_>operator()</k_>()</a></code></h2>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href="/math/big_int"><t_>big_int</t_></a>::<a href="/math/big_int/parse"><v_>parse</v_></a>.<a href=""><k_>operator()</k_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/big_int.hpp"><s_>&lt;xte/math/big_int.hpp&gt;</s_></a></code></small><br/>
 			<br/>
-			Makes <code><a href="/math/big_int/parse"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;::<v_>parse</v_></a></code> callable like a static member function.<br/>
+			Makes <code><a href="/math/big_int/parse"><m_>xte</m_>::<t_>big_int</t_>::<v_>parse</v_></a></code> callable like a static member function.<br/>
 			<br/>
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
 <pre><k_>template</k_>&lt;<a href="/trait/is_int"><m_>xte</m_>::<c_>is_int</c_></a> <t_>Radix</t_> = <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a>&gt;
-[[<a_>nodiscard</a_>]] <k_>static constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_>&lt;<t_>T</t_>&gt;</a> <k_>operator()</k_>(<a href="/data/string_view"><m_>xte</m_>::<t_>string_view</t_></a> <v_>string</v_>, <t_>Radix</t_> <v_>radix</v_> = <n_>10</n_>, <k_>const</k_> <a href="/math/number_format_config"><m_>xte</m_>::<t_>number_format_config</t_></a><k_>&</k_> <v_>config</v_> = {}) <k_>noexcept</k_>(<k_>false</k_>);</pre>
+[[<a_>nodiscard</a_>]] <k_>static constexpr</k_> <a href="/math/big_int"><m_>xte</m_>::<t_>big_int</t_></a> <k_>operator()</k_>(<a href="/data/string_view"><m_>xte</m_>::<t_>string_view</t_></a> <v_>string</v_>, <t_>Radix</t_> <v_>radix</v_> = <n_>10</n_>, <k_>const</k_> <a href="/math/number_format_config"><m_>xte</m_>::<t_>number_format_config</t_></a><k_>&</k_> <v_>config</v_> = {}) <k_>noexcept</k_>(<k_>false</k_>);</pre>
 			</blockquote>
 			Parses an integer value from a string. Reads a sign (<code>+</code> or <code>-</code>), then reads the rest of the string or until a non-digit character is found. Negative radices are supported. May throw if allocation fails.<br/>
 			<br/>
