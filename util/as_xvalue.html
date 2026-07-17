@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::as_xvalue()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#util/as_xvalue"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>as_xvalue</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/as_xvalue.hpp"><s_>&lt;xte/math/as_xvalue.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Casts to as_xvalue.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>inline constexpr auto</k_> <f_>as_xvalue</f_> = [][[<a_>nodiscard</a_>]](<k_>auto&&</k_> <v_>x</v_>) <k_>static noexcept</k_> -&gt; <k_>auto&&</k_> { <w_>/* ... */</w_> };</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>int</k_> <v_>x</v_>;
+<k_>static_assert</k_>(^^<k_>int&&</k_> == ^^<k_>decltype</k_>(<a href="#def"><m_>xte</m_>::<f_>as_xvalue</f_></a>(<v_>x</v_>)));</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/jhE1hj1zo" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

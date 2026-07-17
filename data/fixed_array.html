@@ -20,7 +20,7 @@
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/number_types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
 <k_>struct</k_> <t_>fixed_array</t_> {
 	<a href="/data/array/size_type"><span><k_>using</k_> <t_>size_type</t_> = <m_>xte</m_>::<t_>uz</t_>;</span>
 	<span><k_>using</k_> <t_>difference_type</t_> = <m_>xte</m_>::<t_>iptrdiff</t_>;</span></a>
@@ -41,10 +41,10 @@
 	<a href="/data/fixed_array/size"><k_>static constexpr auto</k_> <v_>size</v_> = <m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>n</v_>&gt;();</a>
 
 	<a href="/data/fixed_array/operator-cmp"><span><k_>template</k_>&lt;<m_>xte</m_>::<t_>uz</t_> <v_>m</v_>&gt;</span>
-	<span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+	<span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_>) <j_>XTE_RETURNS</j_>(<w_>/* ... */</w_>)</span>
 
 	<span><k_>template</k_>&lt;<m_>xte</m_>::<t_>uz</t_> <v_>m</v_>&gt;</span>
-	<span><k_>friend constexpr auto operator==</k_>(<k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+	<span><k_>friend constexpr auto operator==</k_>(<k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>n</v_>&gt;<k_>&</k_>, <k_>const</k_> <m_>xte</m_>::<t_>fixed_array</t_>&lt;<t_>T</t_>, <v_>m</v_>&gt;<k_>&</k_>) <j_>XTE_RETURNS</j_>(<w_>/* ... */</w_>)</span></a>
 
 	<a href="/data/fixed_array/begin"><span><k_>constexpr auto*</k_> <f_>begin</f_>(<k_>this auto&&</k_>) <k_>noexcept</k_>;</span>
 	
@@ -73,7 +73,7 @@
 
 	<a href="/data/fixed_array/operator-add"><span><k_>template</k_>&lt;<k_>typename</k_> <t_>Rhs</t_>&gt;</span>
 	<span><k_>requires</k_>(<w_>/* ... */</w_>)</span>
-	<k_>constexpr auto operator+</k_>(<k_>this auto&&</k_>, <t_>Rhs</t_><k_>&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+	<k_>constexpr auto operator+</k_>(<k_>this auto&&</k_>, <t_>Rhs</t_><k_>&&</k_>) <j_>XTE_RETURNS</j_>(<w_>/* ... */</w_>)</span></a>
 };</pre>
 			</blockquote>
 			<br/>
@@ -87,10 +87,10 @@
 			<br/>
 			<h4><a id=#structured-binding" href="#structured-binding">Specializations for structured binding</a></h4>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href="/util/number_types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
 <k_>struct</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/tuple_size"><m_>std</m_>::<t_>tuple_size</t_></a>&lt;<a href="#def"><m_>xte</m_>::<t_>fixed_array</t_></a>&lt;<t_>T</t_>, <v_>n</v_>&gt;&gt;;
 
-<k_>template</k_>&lt;<a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>, <k_>typename</k_> <t_>T</t_>, <a href="/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
+<k_>template</k_>&lt;<a href="/util/number_types"><m_>xte</m_>::<t_>uz</t_></a> <v_>index</v_>, <k_>typename</k_> <t_>T</t_>, <a href="/util/number_types"><m_>xte</m_>::<t_>uz</t_></a> <v_>n</v_>&gt;
 <k_>struct</k_> <a target="_blank" href="https://en.cppreference.com/cpp/utility/tuple_element"><m_>std</m_>::<t_>tuple_element</t_></a>&lt;<v_>index</v_>, <a href="#def"><m_>xte</m_>::<t_>fixed_array</t_></a>&lt;<t_>T</t_>, <v_>n</v_>&gt;&gt;;</pre>
 			</blockquote>
 			<br/>

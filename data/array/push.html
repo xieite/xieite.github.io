@@ -19,7 +19,7 @@
 			<h3><a id="def" href="#def">Definitions</a></h3>
 			<a id="def-0" href="#def-0" class="g">#0</a>
 			<blockquote>
-<pre><k_>constexpr auto</k_> <f_>push</f_>() <k_>&</k_> <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(
+<pre><k_>constexpr auto</k_> <f_>push</f_>() <k_>&</k_> <a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(
 	<k_>this</k_>-&gt;<a href="/data/array/insert"><f_>insert</f_></a>(<n_>-1uz</n_>)
 )</pre>
 			</blockquote>
@@ -28,7 +28,7 @@
 			<a id="def-1" href="#def-1" class="g">#1</a>
 			<blockquote>
 <pre><k_>template</k_>&lt;<k_>typename</k_> <t_>U</t_> = <t_>T</t_>&gt;
-<k_>constexpr auto</k_> <f_>push</f_>(<t_>U</t_><k_>&&</k_> <v_>arg</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>&</k_> <a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(
+<k_>constexpr auto</k_> <f_>push</f_>(<t_>U</t_><k_>&&</k_> <v_>arg</v_>, <k_>auto&&...</k_> <v_>args</v_>) <k_>&</k_> <a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(
 	<k_>this</k_>-&gt;<a href="/data/array/insert"><f_>insert</f_></a>(<n_>-1uz</n_>, <a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>arg</v_>), <a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>args</v_>)...)
 )</pre>
 			</blockquote>

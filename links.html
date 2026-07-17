@@ -5,13 +5,14 @@
 		<link href="style.css" rel="stylesheet"/>
 	</head>
 	<body>
-<pre><a target="_top" href="/"><m_>xieite</m_> {}</a>
+<pre><a target="_top" href="/"><m_>xte</m_>::</a>
 	data
 		<a target="_top" href="/data/array" id="data/array"><t_>array</t_> {}</a>
 		<a target="_top" href="/data/fixed_array" id="data/fixed_array"><t_>fixed_array</t_> {}</a>
-		<w_>fixed_string {}</w_>
 		<a target="_top" href="/data/lowercase" id="data/lowercase"><f_>lowercase</f_>()</a>
-		<w_>null
+		<w_>non_copyable {}
+		non_movable {}
+		null
 		opt {}
 		ptr {}</w_>
 		<a target="_top" href="/data/ptr_diff" id="data/ptr_diff"><f_>ptr_diff</f_>()</a>
@@ -23,28 +24,29 @@
 	func
 		<w_>all()
 		any()
+		cast_result()
 		defer {}
 		func {}
 		gen()
-		nop()</w_>
+		noop()</w_>
 		<a target="_top" href="/func/unfold" id="func/unfold"><f_>unfold</f_>()</a>
 		<a target="_top" href="/func/unroll" id="func/unroll"><f_>unroll</f_>()</a>
 		<a target="_top" href="/func/visitor" id="func/visitor"><t_>visitor</t_> {}</a>
-		<w_>with_index()
-		with_result()</w_>
+		<w_>with_index()</w_>
 
 	io
 		<w_>eof
 		file {}</w_>
-		<a target="_top" href="/io/logger" id="io/logger"><m_>logger</m_> {}</a>
+		<a target="_top" href="/io/logger" id="io/logger"><m_>logger</m_>::</a>
 		<w_>std {}</w_>
 
 	literal
-		<a target="_top" href="/literal/analog" id="literal/analog"><m_>analog</m_> {}</a>
-		<w_>dedent {}
-		fmt {}
-		numbers {}
-		radix {}</w_>
+		<a target="_top" href="/literal/analog" id="literal/analog"><m_>analog</m_>::</a>
+		<w_>dedent::
+		fmt::
+		info::
+		numbers::
+		radix::</w_>
 
 	math
 		<a target="_top" href="/math/abs" id="math/abs"><f_>abs</f_>()</a>
@@ -114,6 +116,7 @@
 	meta
 		<w_>fake()</w_>
 		<a target="_top" href="/meta/end" id="meta/end"><c_>end</c_>&lt;&gt;</a>
+		<w_>define_struct&lt;&gt;</w_>
 		<a target="_top" href="/meta/fold" id="meta/fold"><v_>fold</v_>&lt;&gt;</a>
 		<w_>make_seq&lt;&gt;
 		meta {}
@@ -136,14 +139,15 @@
 	preproc
 		<a target="_top" href="/preproc/any" id="preproc/any"><j_>ANY</j_>()</a>
 		<a target="_top" href="/preproc/arch" id="preproc/arch"><i_>ARCH</i_></a>
-		<a target="_top" href="/preproc/arrow" id="preproc/arrow"><j_>ARROW</j_>()</a>
 		<w_>AT()
 		ATTR
 		CALL()
 		CAT()</w_>
+		<a target="_top" href="/preproc/constructs" id="preproc/constructs"><j_>CONSTRUCTS</j_>()</a>
 		<a target="_top" href="/preproc/compiler" id="preproc/compiler"><i_>COMPILER</i_></a>
-		<w_>DECLARE()
-		DIAGNOSTIC()
+		<w_>DECLARE()</w_>
+		<a target="_top" href="/preproc/define_cast" id="preproc/define_cast"><j_>DEFINE_CAST</j_>()</a>
+		<w_>DIAGNOSTIC()
 		DROP()</w_>
 		<a target="_top" href="/preproc/each" id="preproc/each"><j_>EACH</j_>()</a>
 		<w_>EAT()</w_>
@@ -164,8 +168,9 @@
 		<a target="_top" href="/preproc/platform" id="preproc/platform"><i_>PLATFORM</i_></a>
 		<w_>PRAGMA()
 		QUOTE()
-		REMOVE_EMPTY()
-		REVIVE()</w_>
+		REMOVE_EMPTY()</w_>
+		<a target="_top" href="/preproc/returns" id="preproc/returns"><j_>RETURNS</j_>()</a>
+		<w_>REVIVE()</w_>
 		<a target="_top" href="/preproc/scan" id="preproc/scan"><j_>SCAN</j_>()</a>
 		<w_>STATIC_ASSERT()</w_>
 		<a target="_top" href="/preproc/stdlib" id="preproc/stdlib"><i_>STDLIB</i_></a>
@@ -187,56 +192,38 @@
 		<a target="_top" href="/sys/segfault" id="sys/segfault"><f_>segfault</f_>()</a>
 
 	trait
-		<w_>add_c&lt;&gt;
-		add_clref&lt;&gt;
-		add_crref&lt;&gt;
+		<w_>add_const&lt;&gt;
 		add_cv&lt;&gt;
-		add_cvlref&lt;&gt;
-		add_cvrref&lt;&gt;
-		add_lref&lt;&gt;
+		add_lvalue_ref&lt;&gt;
 		add_ptr&lt;&gt;
-		add_rref&lt;&gt;
-		add_v&lt;&gt;
-		add_vlref&lt;&gt;
-		add_vrref&lt;&gt;
-		copy_c&lt;&gt;
-		copy_clref&lt;&gt;
+		add_rvalue_ref&lt;&gt;
+		add_volatile&lt;&gt;
+		copy_const&lt;&gt;
 		copy_cref&lt;&gt;
-		copy_crref&lt;&gt;
 		copy_cv&lt;&gt;
-		copy_cvlref&lt;&gt;
 		copy_cvref&lt;&gt;
-		copy_cvrref&lt;&gt;
-		copy_lref&lt;&gt;
+		copy_lvalue_ref&lt;&gt;
 		copy_ref&lt;&gt;
-		copy_rref&lt;&gt;
-		copy_v&lt;&gt;
-		copy_vlref&lt;&gt;
-		copy_vref&lt;&gt;
-		copy_vrref&lt;&gt;</w_>
-		<a target="_top" href="/trait/drop_c" id="trait/drop_c"><t_>drop_c</t_>&lt;&gt;</a>
-		<w_>drop_clref&lt;&gt;
-		drop_crref&lt;&gt;</w_>
+		copy_rvalue_ref&lt;&gt;
+		copy_volatile&lt;&gt;
+		copy_vref&lt;&gt;</w_>
+		<a target="_top" href="/trait/drop_const" id="trait/drop_const"><t_>drop_const</t_>&lt;&gt;</a>
 		<a target="_top" href="/trait/drop_cv" id="trait/drop_cv"><t_>drop_cv</t_>&lt;&gt;</a>
-		<w_>drop_cvlref&lt;&gt;
-		drop_cvref&lt;&gt;
-		drop_cvrref&lt;&gt;
-		drop_lref&lt;&gt;
+		<w_>drop_cvref&lt;&gt;
+		drop_lvalue_ref&lt;&gt;
 		drop_ptr&lt;&gt;
 		drop_ref&lt;&gt;
-		drop_rref&lt;&gt;</w_>
-		<a target="_top" href="/trait/drop_v" id="trait/drop_v"><t_>drop_v</t_>&lt;&gt;</a>
-		<w_>drop_vlref&lt;&gt;
-		drop_vrref&lt;&gt;</w_>
+		drop_rvalue_ref&lt;&gt;</w_>
+		<a target="_top" href="/trait/drop_volatile" id="trait/drop_volatile"><t_>drop_volatile</t_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_arithmetic" id="trait/is_arithmetic"><c_>is_arithmetic</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_arithmetic_or_bool" id="trait/is_arithmetic_or_bool"><c_>is_arithmetic_or_bool</c_>&lt;&gt;</a>
 		<w_>is_assignable&lt;&gt;
 		is_assignable_to&lt;&gt;
 		is_bool_testable&lt;&gt;
 		is_brace_constructible&lt;&gt;
-		is_c&lt;&gt;
+		is_const&lt;&gt;
 		is_callable&lt;&gt;
-		is_callable_lref&lt;&gt;
+		is_callable_lvalue_ref&lt;&gt;
 		is_castable&lt;&gt;
 		is_char&lt;&gt;
 		is_constructible&lt;&gt;
@@ -256,15 +243,14 @@
 		is_input_sized_range&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_int" id="trait/is_int"><c_>is_int</c_>&lt;&gt;</a>
 		<w_>is_invocable&lt;&gt;
-		is_invocable_lref&lt;&gt;
-		is_lref&lt;&gt;
+		is_invocable_lvalue_ref&lt;&gt;
+		is_lvalue_ref&lt;&gt;
 		is_move_assignable&lt;&gt;
 		is_move_constructible&lt;&gt;
 		is_noex_assignable&lt;&gt;
 		is_noex_assignable_to&lt;&gt;
 		is_noex_bool_testable&lt;&gt;
 		is_noex_brace_constructible&lt;&gt;
-		is_noex_callable&lt;&gt;
 		is_noex_castable&lt;&gt;
 		is_noex_constructible&lt;&gt;
 		is_noex_copy_assignable&lt;&gt;
@@ -285,7 +271,7 @@
 		is_ptr&lt;&gt;
 		is_range&lt;&gt;
 		is_ref&lt;&gt;
-		is_rref&lt;&gt;</w_>
+		is_rvalue_ref&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_same" id="trait/is_same"><c_>is_same</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_same_any" id="trait/is_same_any"><c_>is_same_any</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_same_any_drop_cv" id="trait/is_same_any_drop_cv"><c_>is_same_any_drop_cv</c_>&lt;&gt;</a>
@@ -296,37 +282,36 @@
 		<w_>is_sized_range&lt;&gt;
 		is_specialization_of&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_unsigned" id="trait/is_unsigned"><c_>is_unsigned</c_>&lt;&gt;</a>
-		<w_>is_v&lt;&gt;
+		<w_>is_volatile&lt;&gt;
 		is_variadic&lt;&gt;
 		is_void&lt;&gt;
-		non_copyable&lt;&gt;
-		non_movable&lt;&gt;
 		try_signed&lt;&gt;
 		try_unsigned&lt;&gt;</w_>
 
 	util
 		<w_>address()
-		as_c()
+		as()
+		as_const()
 		as_cv()
-		as_not_c()
-		as_not_v()
-		as_v()
-		assign()</w_>
+		as_not_const()
+		as_not_cv()
+		as_not_volatile()
+		as_volatile()</w_>
+		<a target="_top" href="/util/as_lvalue" id="util/as_lvalue"><f_>as_lvalue</f_>()</a>
+		<a target="_top" href="/util/as_prvalue" id="util/as_prvalue"><f_>as_prvalue</f_>()</a>
+		<a target="_top" href="/util/as_xvalue" id="util/as_xvalue"><f_>as_xvalue</f_>()</a>
+		<w_>assign()</w_>
 		<a target="_top" href="/util/at" id="util/at"><f_>at</f_>()</a>
-		<w_>cast()
-		construct()
+		<w_>construct()
 		destroy()
 		error {}
 		exchange()
-		implicitly()</w_>
+		implicit_cast()</w_>
 		<a target="_top" href="/util/init_list" id="util/init_list"><t_>init_list</t_>&lt;&gt;</a>
-		<w_>like()</w_>
-		<a target="_top" href="/util/lvalue" id="util/lvalue"><f_>lvalue</f_>()</a>
-		<a target="_top" href="/util/numbers" id="util/numbers"><m_>numbers</m_> {}</a>
-		<a target="_top" href="/util/prvalue" id="util/prvalue"><f_>prvalue</f_>()</a>
+		<w_>make()</w_>
+		<a target="_top" href="/util/number_types" id="util/number_types">(number types)</a>
 		<w_>reconstruct()
 		synth_three_way()</w_>
-		<a target="_top" href="/util/xvalue" id="util/xvalue"><f_>xvalue</f_>()</a>
 </pre>
 	</body>
 </html>

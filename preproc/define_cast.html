@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>XTE_DEFINE_CAST()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#preproc/define_cast"></iframe>
+		<main>
+			<h2><code><a href="/"><j_>XTE</j_></a><j_>_</j_><a href=""><j_>DEFINE_CAST</j_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/preproc/define_cast.hpp"><s_>&lt;xte/preproc/define_cast.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Deduplicates the repetition required for defining the type, <code><k_>noexcept</k_></code> specifier, <code><k_>requires</k_></code> clause, and body of a conversion function template.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><p_>#define</p_> <j_>XTE_DEFINE_CAST</j_>(<v_>ATTR_SPEC</v_>, <v_>THIS</v_>, <k_>...</k_>)         <i_>\</i_>
+	<v_>ATTR_SPEC</v_> <k_>operator decltype</k_>(<w_>/* ... */</w_>)(<k_>this</k_> <v_>THIS</v_>) <i_>\</i_>
+	<k_>noexcept</k_>(<k_>noexcept</k_>(<v_>__VA_ARGS__</v_>))                   <i_>\</i_>
+	<k_>requires</k_>(<k_>requires</k_> { <v_>__VA_ARGS__</v_>; })               <i_>\</i_>
+	{ <r_>return</r_> (<v_>__VA_ARGS__</v_>); }</pre>
+			</blockquote>
+			<code><v_>ATTR_SPEC</v_></code> and <code><v_>THIS</v_></code> may optionally be wrapped in parentheses.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>struct</k_> <t_>Wrapper</t_> {
+	<k_>int</k_> <v_>value</v_>;
+
+	<a href="#def"><j_>XTE_DEFINE_CAST</j_></a>(<k_>constexpr</k_>, <k_>auto&&</k_> <v_>self</v_>,
+		<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<v_>self</v_>).<v_>value</v_>
+	)
+};
+
+<k_>void</k_> <f_>take_rvalue</f_>(<k_>int&&</k_>) {}
+<k_>static_assert</k_>(<k_>requires</k_> { <f_>take_rvalue</f_>(<t_>Wrapper</t_>(<n_>5</n_>)); });
+
+<k_>void</k_> <f_>take_lvalue</f_>(<k_>int&</k_>) {}
+<k_>static_assert</k_>(<k_>requires</k_> { <f_>take_lvalue</f_>(<a href="/util/as_lvalue"><m_>xte</m_>::<f_>as_lvalue</f_></a>(<t_>Wrapper</t_>(<n_>5</n_>))); });</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/qs6dY5KWT" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>

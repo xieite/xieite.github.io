@@ -28,9 +28,9 @@
 
 	<a href="/meta/wrap_value/operator-call"><k_>static constexpr decltype</k_>(<k_>auto</k_>) <k_>operator()</k_>() <k_>noexcept</k_>;</a>
 
-	<a href="/meta/wrap_value/operator-cmp"><span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>x</v_>&gt;, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span>
+	<a href="/meta/wrap_value/operator-cmp"><span><k_>friend constexpr auto operator&lt;=&gt;</k_>(<m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>x</v_>&gt;, <k_>auto&&</k_>) <j_>XTE_RETURNS</j_>(<w_>/* ... */</w_>)</span>
 
-	<span><k_>friend constexpr auto operator==</k_>(<m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>x</v_>&gt;, <k_>auto&&</k_>) <j_>XTE_ARROW</j_>(<w_>/* ... */</w_>)</span></a>
+	<span><k_>friend constexpr auto operator==</k_>(<m_>xte</m_>::<t_>wrap_value</t_>&lt;<v_>x</v_>&gt;, <k_>auto&&</k_>) <j_>XTE_RETURNS</j_>(<w_>/* ... */</w_>)</span></a>
 };</pre>
 			</blockquote>
 			<br/>
@@ -38,7 +38,7 @@
 			<br/>
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
-<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href=/util/numbers"><m_>xte</m_>::<t_>uz</t_></a> <v_>length</v_>&gt;
+<pre><k_>template</k_>&lt;<k_>typename</k_> <t_>T</t_>, <a href=/util/number_types"><m_>xte</m_>::<t_>uz</t_></a> <v_>length</v_>&gt;
 <k_>struct</k_> <t_>fixed_array</t_> {
 	<k_>static constexpr auto</k_> <o_>size</o_> = <a href="#def"><m_>xte</m_>::<t_>wrap_value</t_></a>&lt;<v_>length</v_>&gt;();
 

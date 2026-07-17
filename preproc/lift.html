@@ -21,7 +21,7 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_LIFT</j_>(<k_>...</k_>)               <i_>\</i_>
 	[](<k_>auto&&...</k_> <w_>/* args */</w_>) <k_>static</k_> <i_>\</i_>
-	<a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* args */</w_>)...))</pre>
+	<a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* args */</w_>)...))</pre>
 			</blockquote>
 			Wraps a callable which accepts any number of arguments.<br/>
 			<br/>
@@ -29,7 +29,7 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_LIFT_UNARY</j_>(<k_>...</k_>)     <i_>\</i_>
 	[](<k_>auto&&</k_> <w_>/* arg */</w_>) <k_>static</k_> <i_>\</i_>
-	<a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* arg */</w_>)))</pre>
+	<a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* arg */</w_>)))</pre>
 			</blockquote>
 			Wraps a callable which only accepts one argument (e.g. <code><k_>static_cast</k_></code>).<br/>
 			<br/>
@@ -37,7 +37,7 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_LIFT_LOCAL</j_>(<k_>...</k_>)   <i_>\</i_>
 	[<k_>&</k_>](<k_>auto&&...</k_> <w_>/* args */</w_>) <i_>\</i_>
-	<a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* args */</w_>)...))</pre>
+	<a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* args */</w_>)...))</pre>
 			</blockquote>
 			Wraps a callable which depends on local variables.<br/>
 			<br/>
@@ -45,7 +45,7 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_LIFT_INFIX</j_>(<k_>...</k_>)                       <i_>\</i_>
 	[](<k_>auto&&</k_> <w_>/* lhs */</w_>, <k_>auto&&</k_> <w_>/* rhs */</w_>) <k_>static</k_> <i_>\</i_>
-	<a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* lhs */</w_>) <v_>__VA_ARGS__</v_> (<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* rhs */</w_>)))</pre>
+	<a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* lhs */</w_>) <v_>__VA_ARGS__</v_> (<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* rhs */</w_>)))</pre>
 			</blockquote>
 			Wraps a binary operator (e.g. <code>+</code>).<br/>
 			<br/>
@@ -53,7 +53,7 @@
 			<blockquote>
 <pre><p_>#define</p_> <j_>XTE_LIFT_MEMBER</j_>(<k_>...</k_>)                          <i_>\</i_>
 	[](<k_>auto&&</k_> <w_>/* obj */</w_>, <k_>auto&&...</k_> <w_>/* args */</w_>) <k_>static</k_> <i_>\</i_>
-	<a href="/preproc/arrow"><j_>XTE_ARROW</j_></a>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* obj */</w_>)<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* args */</w_>)...))</pre>
+	<a href="/preproc/returns"><j_>XTE_RETURNS</j_></a>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* obj */</w_>)<f_>__VA_ARGS__</f_>(<a href="/preproc/fwd"><j_>XTE_FWD</j_></a>(<w_>/* args */</w_>)...))</pre>
 			</blockquote>
 			Wraps a member function, prefixed with <code>.</code> or <code>-&gt;</code>.<br/>
 			<br/>
