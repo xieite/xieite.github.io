@@ -4,13 +4,13 @@
 		<meta name="viewport" content="width=device-width"/>
 		<link rel="stylesheet" href="/style.css"/>
 		<link rel="shortcut icon" href="/icon.png"/>
-		<title>xte::prvalue()</title>
+		<title>xte::as_prvalue()</title>
 	</head>
 	<body>
 		<input type="checkbox"/>
 		<iframe src="/links.html#util/as_prvalue"></iframe>
 		<main>
-			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>prvalue</f_>()</a></code></h2>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>as_prvalue</f_>()</a></code></h2>
 			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/math/as_prvalue.hpp"><s_>&lt;xte/math/as_prvalue.hpp&gt;</s_></a></code></small><br/>
 			<br/>
 			Casts to prvalue.<br/>
@@ -18,7 +18,7 @@
 			<br/>
 			<h3><a id="def" href="#def">Definition</a></h3>
 			<blockquote>
-<pre><k_>inline constexpr auto</k_> <f_>prvalue</f_> = <a href="/preproc/lift"><j_>XTE_LIFT_UNARY</j_></a>(<k_>auto</k_>);</pre>
+<pre><k_>inline constexpr auto</k_> <f_>as_prvalue</f_> = <a href="/preproc/lift"><j_>XTE_LIFT_UNARY</j_></a>(<k_>auto</k_>);</pre>
 			</blockquote>
 			<br/>
 			<br/>
@@ -26,7 +26,7 @@
 			<h3><a id="ex" href="#ex">Example</a></h3>
 			<blockquote>
 <pre><k_>int</k_> <v_>x</v_>;
-<k_>static_assert</k_>(^^<k_>int</k_> == ^^<k_>decltype</k_>(<a href="#def"><m_>xte</m_>::<f_>prvalue</f_></a>(<v_>x</v_>)));</pre>
+<k_>static_assert</k_>(^^<k_>int</k_> == ^^<k_>decltype</k_>(<a href="#def"><m_>xte</m_>::<f_>as_prvalue</f_></a>(<v_>x</v_>)));</pre>
 			</blockquote>
 			<small><a target="_blank" href="https://godbolt.org/z/caTxrbGba" class="g">[View in Compiler Explorer]</a></small>
 		</main>
