@@ -52,10 +52,10 @@
 		<a target="_top" href="/math/abs" id="math/abs"><f_>abs</f_>()</a>
 		<a target="_top" href="/math/add" id="math/add"><f_>add</f_>()</a>
 		<a target="_top" href="/math/add_checked" id="math/add_checked"><f_>add_checked</f_>()</a>
-		<w_>almost_greater_equal()
-		almost_equal()
-		almost_equal_slope()
-		almost_less_equal()
+		<w_>approx_equal()
+		approx_equal_slope()
+		approx_greater_equal()
+		approx_less_equal()
 		as_signed()
 		as_unsigned()
 		avg()
@@ -65,6 +65,7 @@
 		bit_ceil()
 		bit_floor()
 		ceil()
+		compare()
 		diff()
 		div()
 		div_ceil()
@@ -76,11 +77,14 @@
 		div_magnify_half()
 		div_trunc()
 		div_trunc_half()
+		equal()
 		eval()
 		exp_search()</w_>
 		<a target="_top" href="/math/factorial" id="math/factorial"><v_>factorial</v_>&lt;&gt;</a>
 		<a target="_top" href="/math/fibonacci" id="math/fibonacci"><v_>fibonacci</v_>&lt;&gt;</a>
 		<w_>floor()
+		greater()
+		greater_equal()
 		is_finite()
 		is_inf()
 		is_nan()</w_>
@@ -88,6 +92,7 @@
 		<w_>is_single_bit()
 		leading_zeros()
 		less()
+		less_equal()
 		lshift()
 		max()
 		min()
@@ -193,48 +198,124 @@
 
 	trait
 		<w_>add_const&lt;&gt;
+		add_const_func&lt;&gt;
+		add_const_lvalue_ref&lt;&gt;
+		add_const_lvalue_ref_func&lt;&gt;
+		add_const_rvalue_ref&lt;&gt;
+		add_const_rvalue_ref_func&lt;&gt;
 		add_cv&lt;&gt;
+		add_cv_func&lt;&gt;
+		add_cv_lvalue_ref&lt;&gt;
+		add_cv_lvalue_ref_func&lt;&gt;
+		add_cv_rvalue_ref&lt;&gt;
+		add_cv_rvalue_ref_func&lt;&gt;
 		add_lvalue_ref&lt;&gt;
+		add_lvalue_ref_func&lt;&gt;
 		add_ptr&lt;&gt;
 		add_rvalue_ref&lt;&gt;
+		add_rvalue_ref_func&lt;&gt;
 		add_volatile&lt;&gt;
+		add_volatile_func&lt;&gt;
+		add_volatile_lvalue_ref&lt;&gt;
+		add_volatile_lvalue_ref_func&lt;&gt;
+		add_volatile_rvalue_ref&lt;&gt;
+		add_volatile_rvalue_ref_func&lt;&gt;
 		copy_const&lt;&gt;
+		copy_const_func&lt;&gt;
+		copy_const_lvalue_ref&lt;&gt;
+		copy_const_lvalue_ref_func&lt;&gt;
+		copy_const_rvalue_ref&lt;&gt;
+		copy_const_rvalue_ref_func&lt;&gt;
 		copy_cref&lt;&gt;
+		copy_cref_func&lt;&gt;
 		copy_cv&lt;&gt;
+		copy_cv_func&lt;&gt;
+		copy_cv_lvalue_ref&lt;&gt;
+		copy_cv_lvalue_ref_func&lt;&gt;
+		copy_cv_rvalue_ref&lt;&gt;
+		copy_cv_rvalue_ref_func&lt;&gt;
 		copy_cvref&lt;&gt;
+		copy_cvref_func&lt;&gt;
 		copy_lvalue_ref&lt;&gt;
+		copy_lvalue_ref_func&lt;&gt;
 		copy_ref&lt;&gt;
+		copy_ref_func&lt;&gt;
 		copy_rvalue_ref&lt;&gt;
+		copy_rvalue_ref_func&lt;&gt;
 		copy_volatile&lt;&gt;
-		copy_vref&lt;&gt;</w_>
+		copy_volatile_func&lt;&gt;
+		copy_volatile_lvalue_ref&lt;&gt;
+		copy_volatile_lvalue_ref_func&lt;&gt;
+		copy_volatile_rvalue_ref&lt;&gt;
+		copy_volatile_rvalue_ref_func&lt;&gt;
+		copy_vref&lt;&gt;
+		copy_vref_func&lt;&gt;</w_>
 		<a target="_top" href="/trait/drop_const" id="trait/drop_const"><t_>drop_const</t_>&lt;&gt;</a>
+		<w_>drop_const_func&lt;&gt;
+		drop_const_lvalue_ref&lt;&gt;
+		drop_const_lvalue_ref_func&lt;&gt;
+		drop_const_rvalue_ref&lt;&gt;
+		drop_const_rvalue_ref_func&lt;&gt;
+		drop_cref&lt;&gt;
+		drop_cref_func&lt;&gt;</w_>
 		<a target="_top" href="/trait/drop_cv" id="trait/drop_cv"><t_>drop_cv</t_>&lt;&gt;</a>
-		<w_>drop_cvref&lt;&gt;
+		<w_>drop_cv_func&lt;&gt;
+		drop_cv_lvalue_ref&lt;&gt;
+		drop_cv_lvalue_ref_func&lt;&gt;
+		drop_cv_rvalue_ref&lt;&gt;
+		drop_cv_rvalue_ref_func&lt;&gt;
+		drop_cvref&lt;&gt;
+		drop_cvref_func&lt;&gt;
 		drop_lvalue_ref&lt;&gt;
+		drop_lvalue_ref_func&lt;&gt;
 		drop_ptr&lt;&gt;
 		drop_ref&lt;&gt;
-		drop_rvalue_ref&lt;&gt;</w_>
+		drop_ref_func&lt;&gt;
+		drop_rvalue_ref&lt;&gt;
+		drop_rvalue_ref_func&lt;&gt;</w_>
 		<a target="_top" href="/trait/drop_volatile" id="trait/drop_volatile"><t_>drop_volatile</t_>&lt;&gt;</a>
+		<w_>drop_volatile_func&lt;&gt;
+		drop_volatile_lvalue_ref&lt;&gt;
+		drop_volatile_lvalue_ref_func&lt;&gt;
+		drop_volatile_rvalue_ref&lt;&gt;
+		drop_volatile_rvalue_ref_func&lt;&gt;
+		drop_vref&lt;&gt;
+		drop_vref_func&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_arithmetic" id="trait/is_arithmetic"><c_>is_arithmetic</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_arithmetic_or_bool" id="trait/is_arithmetic_or_bool"><c_>is_arithmetic_or_bool</c_>&lt;&gt;</a>
 		<w_>is_assignable&lt;&gt;
 		is_assignable_to&lt;&gt;
 		is_bool_testable&lt;&gt;
 		is_brace_constructible&lt;&gt;
-		is_const&lt;&gt;
 		is_callable&lt;&gt;
 		is_callable_lvalue&lt;&gt;
 		is_castable&lt;&gt;
 		is_char&lt;&gt;
+		is_const&lt;&gt;
+		is_const_func&lt;&gt;
+		is_const_lvalue_ref&lt;&gt;
+		is_const_lvalue_ref_func&lt;&gt;
+		is_const_rvalue_ref&lt;&gt;
+		is_const_rvalue_ref_func&lt;&gt;
 		is_constructible&lt;&gt;
 		is_copy_assignable&lt;&gt;
 		is_copy_constructible&lt;&gt;
+		is_cref&lt;&gt;
+		is_cref_func&lt;&gt;
 		is_cv&lt;&gt;
+		is_cv_func&lt;&gt;
+		is_cv_lvalue_ref&lt;&gt;
+		is_cv_lvalue_ref_func&lt;&gt;
+		is_cv_rvalue_ref&lt;&gt;
+		is_cv_rvalue_ref_func&lt;&gt;
+		is_cvref&lt;&gt;
+		is_cvref_func&lt;&gt;
 		is_default_constructible&lt;&gt;
 		is_derived_from&lt;&gt;
 		is_derived_from_instance_of&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_float" id="trait/is_float"><c_>is_float</c_>&lt;&gt;</a>
-		<w_>is_implicit_castable&lt;&gt;
+		<w_>is_func&lt;&gt;
+		is_implicit_castable&lt;&gt;
 		is_implicit_castable_any&lt;&gt;
 		is_implicit_constructible&lt;&gt;
 		is_implicit_default_constructible&lt;&gt;
@@ -245,6 +326,7 @@
 		<w_>is_invocable&lt;&gt;
 		is_invocable_lvalue&lt;&gt;
 		is_lvalue_ref&lt;&gt;
+		is_lvalue_ref_func&lt;&gt;
 		is_move_assignable&lt;&gt;
 		is_move_constructible&lt;&gt;
 		is_noex_assignable&lt;&gt;
@@ -271,7 +353,9 @@
 		is_ptr&lt;&gt;
 		is_range&lt;&gt;
 		is_ref&lt;&gt;
-		is_rvalue_ref&lt;&gt;</w_>
+		is_ref_func&lt;&gt;
+		is_rvalue_ref&lt;&gt;
+		is_rvalue_ref_func&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_same" id="trait/is_same"><c_>is_same</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_same_any" id="trait/is_same_any"><c_>is_same_any</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_same_any_drop_cv" id="trait/is_same_any_drop_cv"><c_>is_same_any_drop_cv</c_>&lt;&gt;</a>
@@ -282,9 +366,16 @@
 		<w_>is_sized_range&lt;&gt;
 		is_specialization_of&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_unsigned" id="trait/is_unsigned"><c_>is_unsigned</c_>&lt;&gt;</a>
-		<w_>is_volatile&lt;&gt;
-		is_variadic&lt;&gt;
+		<w_>is_variadic_func&lt;&gt;
 		is_void&lt;&gt;
+		is_volatile&lt;&gt;
+		is_volatile_func&lt;&gt;
+		is_volatile_lvalue_ref&lt;&gt;
+		is_volatile_lvalue_ref_func&lt;&gt;
+		is_volatile_rvalue_ref&lt;&gt;
+		is_volatile_rvalue_ref_func&lt;&gt;
+		is_vref&lt;&gt;
+		is_vref_func&lt;&gt;
 		try_signed&lt;&gt;
 		try_unsigned&lt;&gt;</w_>
 
@@ -310,8 +401,7 @@
 		<a target="_top" href="/util/init_list" id="util/init_list"><t_>init_list</t_>&lt;&gt;</a>
 		<w_>make()</w_>
 		<a target="_top" href="/util/number_types" id="util/number_types">(number types)</a>
-		<w_>reconstruct()
-		synth_three_way()</w_>
+		<w_>reconstruct()</w_>
 </pre>
 	</body>
 </html>
