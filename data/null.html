@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::null</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#data/null"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><v_>null</v_></a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/data/null.hpp"><s_>&lt;xte/data/null.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Used to indicate that a <code><a href="/data/opt"><m_>xte</m_>::<t_>opt</t_> {}</a></code> has no value.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>inline constexpr struct</k_> {} <v_>null</v_>;</pre>
+			</blockquote>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><a href="/data/opt"><m_>xte</m_>::<t_>opt</t_></a>&lt;<k_>int</k_>&gt; <f_>divide</f_>(<k_>int</k_> <v_>a</v_>, <k_>int</k_> <v_>a</v_>) {
+	<r_>if</r_> (<v_>b</v_> == <n_>0</n_>) {
+		<r_>return</r_> <a href="#def"><m_>xte</m_>::<v_>null</v_></a>;
+	}
+	<r_>return</r_> <v_>a</v_> / <v_>b</v_>;
+}</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/sxMM81zqn" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
