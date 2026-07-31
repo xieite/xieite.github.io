@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="stylesheet" href="/style.css"/>
+		<link rel="shortcut icon" href="/icon.png"/>
+		<title>xte::rotate_swap()</title>
+	</head>
+	<body>
+		<input type="checkbox"/>
+		<iframe src="/links.html#func/rotate_swap"></iframe>
+		<main>
+			<h2><code><a href="/"><m_>xte</m_></a>::<a href=""><f_>rotate_swap</f_>()</a></code></h2>
+			<small>Defined in header <code><a target="_blank" href="https://github.com/Eczbek/xieite/blob/main/include/xte/func/rotate_swap.hpp"><s_>&lt;xte/func/rotate_swap.hpp&gt;</s_></a></code></small><br/>
+			<br/>
+			Assigns each argument the value of the next argument. Uses the least number of temporary objects for swapping.<br/>
+			<br/>
+			<br/>
+			<h3><a id="def" href="#def">Definition</a></h3>
+			<blockquote>
+<pre><k_>template</k_>&lt;<a href="/util/number_types"><m_>xte</m_>::<t_>uz</t_></a> <v_>distance</v_> = <n_>1</n_>&gt;
+<k_>constexpr</k_> <w_>/* void */</w_> <f_>rotate_swap</f_>(<k_>auto&</k_>... <v_>args</v_>) <a href="/preproc/returns"><j_>XTE_RETURNS</k_></a>(<w_>/* ... */</w_>);</pre>
+			</blockquote>
+			<code><v_>distance</v_></code> is how far the next argument from which to get a value is.<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h3><a id="ex" href="#ex">Example</a></h3>
+			<blockquote>
+<pre><k_>int</k_> <v_>a</v_> = <n_>1</n_>;
+<k_>int</k_> <v_>b</v_> = <n_>2</n_>;
+<k_>int</k_> <v_>c</v_> = <n_>3</n_>;
+<k_>int</k_> <v_>d</v_> = <n_>4</n_>;
+<a href="#def"><m_>xte</m_>::<f_>rotate_swap</f_></a>(<v_>a</v_>, <v_>b</v_>, <v_>c</v_>, <v_>d</v_>);
+<a target="_blank" href="https://en.cppreference.com/w/cpp/io/println"><m_>std</m_>::<f_>println</f_></a>(<s_>"a={}, b={}, c={}, d={}"</s_>, <v_>a</v_>, <v_>b</v_>, <v_>c</v_>, <v_>d</v_>);</pre>
+			</blockquote>
+			<small>Output:</small>
+			<blockquote>
+<pre>a=2, b=3, c=4, d=1</pre>
+			</blockquote>
+			<small><a target="_blank" href="https://godbolt.org/z/68Wzf198f" class="g">[View in Compiler Explorer]</a></small>
+		</main>
+	</body>
+</html>
