@@ -294,12 +294,19 @@
 		<a target="_top" href="/trait/is_arithmetic" id="trait/is_arithmetic"><c_>is_arithmetic</c_>&lt;&gt;</a>
 		<a target="_top" href="/trait/is_arithmetic_or_bool" id="trait/is_arithmetic_or_bool"><c_>is_arithmetic_or_bool</c_>&lt;&gt;</a>
 		<w_>is_assignable&lt;&gt;
+		is_assignable_noex&lt;&gt;
 		is_assignable_to&lt;&gt;
+		is_assignable_to_noex&lt;&gt;
 		is_bool_testable&lt;&gt;
+		is_bool_testable_noex&lt;&gt;
 		is_brace_constructible&lt;&gt;
+		is_brace_constructible_noex&lt;&gt;
 		is_callable&lt;&gt;
 		is_callable_lvalue&lt;&gt;
 		is_castable&lt;&gt;
+		is_castable_implicit&lt;&gt;
+		is_castable_implicit_noex&lt;&gt;
+		is_castable_noex&lt;&gt;
 		is_char&lt;&gt;
 		is_const&lt;&gt;
 		is_const_func&lt;&gt;
@@ -308,8 +315,13 @@
 		is_const_rvalue_ref&lt;&gt;
 		is_const_rvalue_ref_func&lt;&gt;
 		is_constructible&lt;&gt;
+		is_constructible_implicit&lt;&gt;
+		is_constructible_implicit_noex&lt;&gt;
+		is_constructible_noex&lt;&gt;
 		is_copy_assignable&lt;&gt;
+		is_copy_assignable_noex&lt;&gt;
 		is_copy_constructible&lt;&gt;
+		is_copy_constructible_noex&lt;&gt;
 		is_cref&lt;&gt;
 		is_cref_func&lt;&gt;
 		is_cv&lt;&gt;
@@ -320,48 +332,30 @@
 		is_cv_rvalue_ref_func&lt;&gt;
 		is_cvref&lt;&gt;
 		is_cvref_func&lt;&gt;
-		is_default_constructible&lt;&gt;
 		is_derived_from&lt;&gt;
-		is_derived_from_instance_of&lt;&gt;</w_>
+		is_derived_from_instance_of&lt;&gt;
+		is_destructor_noex&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_float" id="trait/is_float"><c_>is_float</c_>&lt;&gt;</a>
 		<w_>is_func&lt;&gt;
-		is_implicit_castable&lt;&gt;
-		is_implicit_castable_any&lt;&gt;
-		is_implicit_constructible&lt;&gt;
-		is_implicit_default_constructible&lt;&gt;
-		is_implicit_move_constructible&lt;&gt;
 		is_input_range&lt;&gt;
 		is_input_sized_range&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_int" id="trait/is_int"><c_>is_int</c_>&lt;&gt;</a>
 		<w_>is_invocable&lt;&gt;
 		is_invocable_lvalue&lt;&gt;
+		is_iter_noex&lt;&gt;
 		is_lvalue_ref&lt;&gt;
 		is_lvalue_ref_func&lt;&gt;
 		is_move_assignable&lt;&gt;
+		is_move_assignable_noex&lt;&gt;
 		is_move_constructible&lt;&gt;
-		is_noex_assignable&lt;&gt;
-		is_noex_assignable_to&lt;&gt;
-		is_noex_bool_testable&lt;&gt;
-		is_noex_brace_constructible&lt;&gt;
-		is_noex_castable&lt;&gt;
-		is_noex_constructible&lt;&gt;
-		is_noex_copy_assignable&lt;&gt;
-		is_noex_copy_constructible&lt;&gt;
-		is_noex_dtor&lt;&gt;
-		is_noex_implicit_castable&lt;&gt;
-		is_noex_implicit_constructible&lt;&gt;
-		is_noex_implicit_default_constructible&lt;&gt;
-		is_noex_implicit_move_constructible&lt;&gt;
-		is_noex_iter&lt;&gt;
-		is_noex_move_assignable&lt;&gt;
-		is_noex_move_constructible&lt;&gt;
-		is_noex_range&lt;&gt;
-		is_noex_sentinel&lt;&gt;
-		is_noex_swappable&lt;&gt;
+		is_move_constructible_implicit&lt;&gt;
+		is_move_constructible_implicit_noex&lt;&gt;
+		is_move_constructible_noex&lt;&gt;
 		is_order&lt;&gt;
 		is_privately_derived_from&lt;&gt;
 		is_ptr&lt;&gt;
 		is_range&lt;&gt;
+		is_range_noex&lt;&gt;
 		is_ref&lt;&gt;
 		is_ref_func&lt;&gt;
 		is_rvalue_ref&lt;&gt;
@@ -371,10 +365,12 @@
 		<a target="_top" href="/trait/is_same_any_drop_cv" id="trait/is_same_any_drop_cv"><c_>is_same_any_drop_cv</c_>&lt;&gt;</a>
 		<w_>is_same_any_drop_cvref&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_same_drop_cv" id="trait/is_same_drop_cv"><c_>is_same_drop_cv</c_>&lt;&gt;</a>
-		<w_>is_same_drop_cvref&lt;&gt;</w_>
+		<w_>is_same_drop_cvref&lt;&gt;
+		is_sentinel_noex&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_signed" id="trait/is_signed"><c_>is_signed</c_>&lt;&gt;</a>
 		<w_>is_sized_range&lt;&gt;
-		is_specialization_of&lt;&gt;</w_>
+		is_specialization_of&lt;&gt;
+		is_swappable_noex&lt;&gt;</w_>
 		<a target="_top" href="/trait/is_unsigned" id="trait/is_unsigned"><c_>is_unsigned</c_>&lt;&gt;</a>
 		<w_>is_variadic_func&lt;&gt;
 		is_void&lt;&gt;
@@ -391,7 +387,6 @@
 
 	util
 		<w_>address()
-		as()
 		as_const()
 		as_cv()
 		as_not_const()
@@ -408,7 +403,8 @@
 		exchange()
 		implicit_cast()</w_>
 		<a target="_top" href="/util/init_list" id="util/init_list"><t_>init_list</t_>&lt;&gt;</a>
-		<w_>make()</w_>
+		<w_>like()
+		make()</w_>
 		<a target="_top" href="/util/number_types" id="util/number_types">(number types)</a>
 		<w_>reconstruct()</w_>
 </pre>
